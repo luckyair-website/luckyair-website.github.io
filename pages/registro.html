@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,113 +7,119 @@
 </head>
 <body>
 
-    <!-- Inicio contenedor Main Jose -->
     <main>
-        <center>
-        <div>
-            <img src="" alt="logo empresa">
-        </div>
-        <div>
-            <h2>
-                Crear cuenta
-            </h2>
-        </div>
-        <div>
-            
-                <form action="">
-                    <label for="">Nombres:</label>
-                    <input 
-                        type="text" 
-                        placeholder="user" 
-                        required
-                    >
-                    <br>
-                    <label for="">Apellidos:</label>
-                    <input 
-                        type="text" 
-                        placeholder="user" 
-                        required
-                    >
-                    <br>
-                    <label for="">Email:</label>
-                    <input 
-                        type="email" 
-                        placeholder="user@user.com" 
-                        required
-                    >
-                    <br>
-                    <label for="">Dni:</label>
-                    <input 
-                        type="number" 
-                        min="00000000" 
-                        max="99999999" 
-                        placeholder="78455623"
-                        required
-                    >
-                    <br>
-                    <label for="">Contraseña:</label>
-                    <input 
-                        type="password" 
-                        minlength="8"
-                        required
-                    >
-                    <br>
-                    <label for="">Comfirmar Contraseña:</label>
-                    <input 
-                        type="password" 
-                        minlength="8"
-                        required
-                    >
-                    <br>
-                    <input 
-                        type="checkbox"
-                        required
-                        > Acceptar T&C
-                    <br>
-                    <input 
-                        type="checkbox"
-                        required
-                        > Recibir promociones via e-mail
-                    <br>
-                    <button type="submit">Enviar</button>
-                </form>
-            
-        </div>
-        <div style="display: flex; align-items: center; text-align: center;">
-            <hr style="flex: 1; border: none; border-top: 1px solid #ccc;">
-            <span style="padding: 0 10px; font-weight: bold;">O, ingresar con:</span>
-        <hr style="flex: 1; border: none; border-top: 1px solid #ccc;">
-        </div>
-        <br>
-        <div>
-            <img src="" alt="icono google">
-            <img src="" alt="icono microsoft">
-            <img src="" alt="icono facebook">
-            <img src="" alt="icono apple">
-        </div>
-        <div>
+        <!-- Logo y título -->
+        <table width="60%" align="center">
+            <tr align="center">
+                <td>
+                    <img src="../assets/images/png/logo.png" alt="logo empresa" width="250" height="150">
+                </td>
+            </tr>
+            <tr align="center">
+                <td><h3>Crear cuenta</h3></td>
+            </tr>
+        </table>
+
+        <!-- Formulario -->
+        <form>
+            <table width="60%" align="center" cellspacing="8">
+                <tr>
+                    <td align="right"><label for="nombres">Nombres:</label></td>
+                    <td><input type="text" id="nombres" placeholder="Ingresa tus Nombres" required></td>
+                </tr>
+                <tr>
+                    <td align="right"><label for="apellidos">Apellidos:</label></td>
+                    <td><input type="text" id="apellidos" placeholder="Ingresa tus Apellidos" required></td>
+                </tr>
+                <tr>
+                    <td align="right"><label for="correo">Correo Electrónico:</label></td>
+                    <td><input type="email" id="correo" placeholder="Ingresa tu email" required></td>
+                </tr>
+                <tr>
+                    <td align="right">Documento de Identidad:</td>
+                    <td>
+                        <input type="radio" name="doc" value="dni" required> DNI
+                        <input type="radio" name="doc" value="pasaporte" required> Pasaporte
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right"><label for="numdoc">Número de Documento:</label></td>
+                    <td><input type="number" id="numdoc" placeholder="Número" required></td>
+                </tr>
+                <tr>
+                    <td align="right"><label for="pass">Contraseña:</label></td>
+                    <td><input type="password" id="pass" minlength="8" placeholder="Ingresa tu contraseña" required></td>
+                </tr>
+                <tr>
+                    <td align="right"><label for="confpass">Confirma tu Contraseña:</label></td>
+                    <td><input type="password" id="confpass" minlength="8" placeholder="Confirma tu contraseña" required></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="checkbox" required> Aceptar T&C</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="checkbox"> Recibir promociones vía e-mail</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button type="submit">Enviar</button></td>
+                </tr>
+            </table>
+        </form>
+
+        <!-- Login alternativo -->
+        <table align="center" width="60%">
+            <tr>
+                <td>
+                    <fieldset align="center">
+                        <legend><h3>O, ingresar con:</h3></legend>
+                        <table align="center" cellspacing="10">
+                            <tr align="center">
+                                <td>
+                                    <img src="../assets/images/png/google.png" alt="Google" width="40">
+                                </td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    <img src="../assets/images/png/microsoft.png" alt="Microsoft" width="40">
+                                </td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    <img src="../assets/images/png/facebook.png" alt="Facebook" width="40">
+                                </td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    <img src="../assets/images/png/apple.png" alt="Apple" width="40">
+                                </td>
+                            </tr>
+                        </table>
+                    </fieldset>
+                </td>
+            </tr>
+        </table>
+
+        <!-- Link a login -->
+        <div align="center">
             <p>
-                Ya estas registrado? 
-                    <a 
-                        href="login.html"
-                        style="text-decoration: none;"
-                        >
-                            <span 
-                                style="color: blue; 
-                                font-weight: bolder;"> 
-                                Ingresa aca
-                            </span>
-                    </a>
+                ¿Ya estás registrado? 
+                <a href="login.html" style="text-decoration: none; color: blue; font-weight: bold;">
+                    Ingresa acá
+                </a>
             </p>
         </div>
-        </center>
     </main>
-    <!-- Inicio contenedor Main Jose -->
 
-    <!-- INICIO FOOTER OMAR-->
+    <!-- Footer -->
     <footer>
-
+        <marquee><small>Ucal - Grupo 05 - 2026</small></marquee>
     </footer>
-    <!-- FIN FOOTER OMAR-->
+
 </body>
 </html>
