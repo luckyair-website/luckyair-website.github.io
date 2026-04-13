@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro de usuario</title>
 </head>
-<body>
+<body bgcolor="#1E3A8A">
 
     <main>
+        <font color="#fff">
         <!-- Logo y título -->
         <table width="60%" align="center">
             <tr align="center">
@@ -38,8 +39,10 @@
                 <tr>
                     <td align="right">Documento de Identidad:</td>
                     <td>
-                        <input type="radio" name="doc" value="dni" required> DNI
-                        <input type="radio" name="doc" value="pasaporte" required> Pasaporte
+                        <input type="radio" name="doc" id="dni" required>
+                        <label for="dni">DNI</label> 
+                        <input type="radio" name="doc" id="pasaporte" required>
+                        <label for="pasaporte">Pasaporte</label> 
                     </td>
                 </tr>
                 <tr>
@@ -56,11 +59,17 @@
                 </tr>
                 <tr>
                     <td></td>
-                    <td><input type="checkbox" required> Aceptar T&C</td>
+                    <td>
+                        <input type="checkbox" id="check-tc" required> 
+                        <label for="check-tc">Aceptar T&C</label>
+                    </td>
                 </tr>
                 <tr>
                     <td></td>
-                    <td><input type="checkbox"> Recibir promociones vía e-mail</td>
+                    <td>
+                        <input type="checkbox" id="check-promo"> 
+                        <label for="check-promo">Recibir promociones vía e-mail</label>
+                    </td>
                 </tr>
                 <tr>
                     <td></td>
@@ -78,25 +87,33 @@
                         <table align="center" cellspacing="10">
                             <tr align="center">
                                 <td>
-                                    <img src="../assets/images/png/google.png" alt="Google" width="40">
+                                    <a href="https://www.gmail.com" target="_blank">
+                                        <img src="../assets/images/png/google.png" alt="Google" width="40">
+                                    </a>
                                 </td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
                                 <td>
-                                    <img src="../assets/images/png/microsoft.png" alt="Microsoft" width="40">
+                                    <a href="https://www.microsoft.com" target="_blank">
+                                        <img src="../assets/images/png/microsoft.png" alt="Microsoft" width="40">
+                                    </a>
                                 </td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
                                 <td>
-                                    <img src="../assets/images/png/facebook.png" alt="Facebook" width="40">
+                                    <a href="https://www.facebook.com" target="_blank">
+                                        <img src="../assets/images/png/facebook.png" alt="Facebook" width="40">
+                                    </a>
                                 </td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
                                 <td>
-                                    <img src="../assets/images/png/apple.png" alt="Apple" width="40">
+                                    <a href="https://www.apple.com/" target="_blank">
+                                        <img src="../assets/images/png/apple.png" alt="Apple" width="40">
+                                    </a>
                                 </td>
                             </tr>
                         </table>
@@ -109,16 +126,20 @@
         <div align="center">
             <p>
                 ¿Ya estás registrado? 
-                <a href="login.html" style="text-decoration: none; color: blue; font-weight: bold;">
+                <a href="login.html" style="text-decoration: none; color: #ffff00; font-weight: bold;">
                     Ingresa acá
                 </a>
             </p>
         </div>
+        </font>
     </main>
 
     <!-- Footer -->
     <footer>
-        <marquee><small>Ucal - Grupo 05 - 2026</small></marquee>
+        <marquee>
+            <font color="#fff">
+                <small>Ucal - Grupo 05 - 2026</small></marquee>
+            </font>
     </footer>
 
 </body>
