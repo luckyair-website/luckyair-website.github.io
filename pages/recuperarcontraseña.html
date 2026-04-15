@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar Contraseña</title>
+</head>
+<body bgcolor="#1E3A8A">
+
+    <main>
+        <font color="#fff">
+
+        <!-- Logo y título -->
+        <table width="60%" align="center">
+            <tr align="center">
+                <td>
+                    <img src="../assets/images/png/logo.png" alt="logo empresa" width="250" height="150">
+                </td>
+            </tr>
+            <tr align="center">
+                <td><h3>Recuperar Contraseña</h3></td>
+            </tr>
+            <tr align="center">
+                <td>
+                    <p><small>Ingresa tu correo electrónico registrado y te enviaremos un enlace para restablecer tu contraseña.</small></p>
+                </td>
+            </tr>
+        </table>
+
+        <!-- Paso 1: Ingresar correo -->
+        <form id="form-recuperar">
+            <table width="60%" align="center" cellspacing="8">
+                <tr>
+                    <td align="right"><label for="correo">Correo Electrónico:</label></td>
+                    <td><input type="email" id="correo" placeholder="Ingresa tu email registrado" required></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button type="submit">Enviar enlace de recuperación</button></td>
+                </tr>
+            </table>
+        </form>
+
+        <!-- Divider -->
+        <table width="60%" align="center">
+            <tr>
+                <td><hr color="#ffffff50"></td>
+            </tr>
+        </table>
+
+        <!-- Paso 2: Ingresar nueva contraseña (visible tras verificación) -->
+        <form id="form-nueva-pass">
+            <table width="60%" align="center" cellspacing="8">
+                <tr align="center">
+                    <td colspan="2"><h4>Restablecer Contraseña</h4></td>
+                </tr>
+                <tr>
+                    <td align="right"><label for="codigo">Código de Verificación:</label></td>
+                    <td><input type="text" id="codigo" placeholder="Ingresa el código recibido" required></td>
+                </tr>
+                <tr>
+                    <td align="right"><label for="nueva-pass">Nueva Contraseña:</label></td>
+                    <td><input type="password" id="nueva-pass" minlength="8" placeholder="Ingresa tu nueva contraseña" required></td>
+                </tr>
+                <tr>
+                    <td align="right"><label for="conf-nueva-pass">Confirmar Contraseña:</label></td>
+                    <td><input type="password" id="conf-nueva-pass" minlength="8" placeholder="Confirma tu nueva contraseña" required></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button type="submit">Restablecer Contraseña</button></td>
+                </tr>
+            </table>
+        </form>
+
+        <!-- Links de navegación -->
+        <div align="center">
+            <p>
+                ¿Recordaste tu contraseña? 
+                <a href="login.html" style="text-decoration: none; color: #ffff00; font-weight: bold;">
+                    Ingresar acá
+                </a>
+            </p>
+            <p>
+                ¿No tienes una cuenta? 
+                <a href="registro.html" style="text-decoration: none; color: #ffff00; font-weight: bold;">
+                    Regístrate acá
+                </a>
+            </p>
+        </div>
+
+        </font>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <marquee>
+            <font color="#fff">
+                <small>Ucal - Grupo 05 - 2026</small>
+            </font>
+        </marquee>
+    </footer>
+
+</body>
+</html>
