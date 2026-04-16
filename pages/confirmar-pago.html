@@ -6,149 +6,113 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Confirmar Pago - Lucky Air</title>
 </head>
-<body>
 
-<!-- HEADER PRINCIPAL -->
+<body bgcolor="#1E3A8A">
+
+<!-- HEADER CONSISTENTE -->
 <header>
-    <figure>
-        <img src="logo.png" alt="Logo Lucky Air" width="120">
-        <figcaption>Lucky Air</figcaption>
-    </figure>
 
-    <nav>
-        <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Vuelos</a></li>
-            <li><a href="#">Beneficios</a></li>
-        </ul>
-    </nav>
+    <table width="100%" height="80" bgcolor="#1E3A8A">
+        <tr>
 
-    <section>
-        <hgroup>
-            <h1>Revisar y Confirmar</h1>
-            <h2>Verifica tus datos antes de continuar</h2>
-        </hgroup>
-    </section>
+            <!-- LOGO -->
+            <td align="left" width="200">
+                <a href="/index.html">
+                    <img src="/assets/images/png/logo.png" width="200" height="100">
+                </a>
+            </td>
+
+            <!-- TITULO DEL PROCESO (SIN NAV) -->
+            <td align="center">
+                <font color="white" size="5">
+                    Confirmar y pagar
+                </font>
+            </td>
+
+            <!-- USER -->
+            <td align="center" width="200">
+                <a href="/pages/login.html">
+                    <img src="/assets/images/svg/user.svg" width="40">
+                </a>
+            </td>
+
+        </tr>
+    </table>
+
 </header>
 
-<!-- CONTENIDO PRINCIPAL -->
+<!-- CONTENIDO -->
+<div align="center">
+
 <main>
 
-    <!-- DETALLES DEL VIAJE -->
-    <section>
-        <header>
-            <h3>Detalles del viaje</h3>
-        </header>
+    <font color="white">
+        <h2>Revisa tu compra</h2>
+        <p>Verifica los datos antes de pagar</p>
+    </font>
 
-        <article>
-            <dl>
-                <dt>Origen:</dt>
-                <dd>Lima</dd>
+    <br>
 
-                <dt>Destino:</dt>
-                <dd>Cusco</dd>
+    <!-- DETALLES -->
+    <table bgcolor="white" cellpadding="20" width="30%">
 
-                <dt>Fechas:</dt>
-                <dd>
-                    <time datetime="2026-06-25">25 Junio</time> -
-                    <time datetime="2026-06-30">30 Junio</time>
-                </dd>
+        <tr>
+            <td>
+                 <center>   
+                <h3>Detalles del viaje</h3>
 
-                <dt>Vuelo:</dt>
-                <dd>LK2345</dd>
+                <p><strong>Origen:</strong> Lima</p>
+                <p><strong>Destino:</strong> Cusco</p>
+                <p><strong>Fechas:</strong> 25 - 30 Junio</p>
+                <p><strong>Vuelo:</strong> LK2345</p>
+                <p><strong>Duración:</strong> 1h 20m</p>
 
-                <dt>Duración:</dt>
-                <dd>1h 20m</dd>
-            </dl>
-        </article>
-    </section>
+                <hr>
 
-    <hr>
+                <h3>Pasajero</h3>
+                <p>Juan Pérez</p>
 
-    <!-- PASAJERO -->
-    <section>
-        <header>
-            <h3>Información del pasajero</h3>
-        </header>
+                <hr>
 
-        <article>
-            <p><strong>Nombre:</strong> <span>Juan Pérez</span></p>
-            <p><strong>Asientos:</strong> <mark>12A, 12B</mark></p>
-        </article>
-    </section>
+                <h3>Pago</h3>
+                <p>Visa **** 1234</p>
 
-    <hr>
+                <hr>
 
-    <!-- MÉTODO DE PAGO -->
-    <section>
-        <header>
-            <h3>Método de pago</h3>
-        </header>
+                <h3>Total</h3>
+                <p><strong>$850 USD</strong></p>
 
-        <article>
-            <p><strong>Tarjeta:</strong> <code>Visa **** 1234</code></p>
-            <p><strong>Expira:</strong> <time datetime="2026-08">08/26</time></p>
-        </article>
-    </section>
+                <br>
 
-    <hr>
+                <a href="/index.html">
+                    <button type="button">← Volver</button>
+                </a>
 
-    <!-- RESUMEN -->
-    <section>
-        <header>
-            <h3>Resumen de pago</h3>
-        </header>
+                <a href="/pages/pagofinal.html">
+                    <button type="button">Confirmar y pagar</button>
+                </a>
+    </center>   
+            </td>
+        </tr>
 
-        <article>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Concepto</th>
-                        <th>Monto</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Tarifa del vuelo</td>
-                        <td>$700</td>
-                    </tr>
-                    <tr>
-                        <td>Impuestos</td>
-                        <td>$150</td>
-                    </tr>
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <td><strong>Total</strong></td>
-                        <td><strong>$850 USD</strong></td>
-                    </tr>
-                </tfoot>
-            </table>
-        </article>
-    </section>
-
-    <aside>
-        <p>
-            <small>
-                Se enviará un correo con los detalles de tu reserva.
-            </small>
-        </p>
-    </aside>
+    </table>
 
 </main>
 
-<!-- FOOTER -->
-<footer>
-    <section>
-        <button type="button">← Volver</button>
-        <button type="submit">Confirmar y pagar</button>
-    </section>
+</div>
 
-    <address>
-        Contacto: soporte@luckyair.com
-    </address>
+<br><br>
 
-    <p><small>Lucky Air © 2026</small></p>
+<!-- FOOTER SIMPLE -->
+<footer align="center">
+
+    <font color="white">
+
+        <p>Contacto: soporte@luckyair.com</p>
+        <p>Lucky Air © 2026</p>
+
+    </font>
+
 </footer>
 
 </body>
