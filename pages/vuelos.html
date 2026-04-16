@@ -30,20 +30,20 @@
             <fieldset>
                 <legend>Buscar vuelos</legend>
 
-                <label>Origen:</label>
-                <input type="text">
+                <label for="origen">Origen:</label>
+                <input id="origen" type="text" placeholder="Ej: Lima" required>
 
-                <label>Destino:</label>
-                <input type="text">
+                <label for="destino">Destino:</label>
+                <input id="destino" type="text" placeholder="Ej: Cusco" required>
 
-                <label>Fecha ida:</label>
-                <input type="date">
+                <label for="ida">Fecha ida:</label>
+                <input id="ida" type="date" required>
 
-                <label>Fecha vuelta:</label>
-                <input type="date">
+                <label for="vuelta">Fecha vuelta:</label>
+                <input id="vuelta" type="date">
 
-                <label>Pasajeros:</label>
-                <input type="number" min="1" value="1">
+                <label for="pasajeros">Pasajeros:</label>
+                <input id="pasajeros" type="number" min="1" value="1" required>
 
                 <button type="submit">Buscar vuelos</button>
             </fieldset>
