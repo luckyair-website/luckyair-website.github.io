@@ -2,62 +2,146 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vuelos</title>
+    <title>Buscar Vuelos - Lucky Air</title>
 </head>
+
 <body bgcolor="#1E3A8A">
 
-    <!-- Inicio contenedor header -->
-    <header>
+<!-- HEADER -->
+<header>
 
-        <table width="100%" height="80" border="1">
-            <tr>
-                <!-- Inicio contenedor-logo -->
-                <td align="left" width="200" height="100">
-                    <a href="../index.html">
-                        <img src="../assets/images/png/logo.png" alt="Logo de la empresa" width="200px" height="100px">
-                    </a>
-                </td>
-                <!-- Fin contenedor-logo -->
+    <table width="100%" height="80" bgcolor="#1E3A8A">
+        <tr>
 
-                <!-- Inicio contenedor de navegacion -->
-                <td align="center">
-                    <nav>
-                        <font size="5">
-                            <a href="../index.html">
-                                <font color="blue">
-                                    <small>Home</small>
-                                </font>
-                            </a>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a href="vuelos.html">
-                                <font color="green">
-                                    <strong>Vuelos</strong>
-                                </font>
-                            </a>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a href="beneficios.html">
-                                <font color="blue">
-                                    <small>Beneficios</small>
-                                </font>
-                            </a>
-                        </font>
-                    </nav>
-                </td>
-                <!-- Fin contenedor de navegacion -->
+            <!-- LOGO -->
+            <td align="left" width="200">
+                <a href="/index.html">
+                    <img src="/assets/images/png/logo.png" width="200" height="100">
+                </a>
+            </td>
 
-                <!-- Inicio contenedor de Icono usuario -->
-                <td align="center" width="200">
-                    <a href="../pages/login.html">
-                        <img src="../assets/images/svg/user.svg" alt="Icono de usuario" width="40">
-                    </a>
-                    
-                </td>
-                <!-- Fin contenedor de Icono usuario -->
-            </tr>
-        </table>
-    </header>
-    <!-- Fin contenedor header -->
-    
+            <!-- NAV -->
+            <td align="center">
+                <font size="5" color="white">
+
+                    <a href="/index.html"><font color="white"><strong>Home</strong></font></a>
+
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                    <a href="/pages/vuelos.html"><font color="white">Vuelos</font></a>
+
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                    <a href="/pages/beneficios.html"><font color="white">Beneficios</font></a>
+
+                </font>
+            </td>
+
+            <!-- USER -->
+            <td align="center" width="200">
+                <a href="/pages/login.html">
+                    <img src="/assets/images/svg/user.svg" width="40">
+                </a>
+            </td>
+
+        </tr>
+    </table>
+
+</header>
+
+<!-- CONTENIDO -->
+<div align="center">
+
+<main>
+
+    <!-- TITULO -->
+    <font color="white">
+        <h2>Encuentra tu próximo destino</h2>
+        <p>Vuela barato y fácil con Lucky Air</p>
+    </font>
+
+    <br>
+
+    <!-- FORMULARIO -->
+    <form>
+
+        <fieldset style="width:60%; background:white; padding:15px;">
+
+           <center> <legend>Buscar vuelos</legend> </center>
+
+            <p>Origen: <input type="text"></p>
+            <p>Destino: <input type="text"></p>
+            <p>Ida: <input type="date"></p>
+            <p>Vuelta: <input type="date"></p>
+            <p>Pasajeros: <input type="number" min="1" value="1"></p>
+
+            <button type="submit">Buscar vuelos</button>
+
+        </fieldset>
+
+    </form>
+
+    <br><br>
+
+    <!-- OFERTAS -->
+    <font color="white">
+        <h2>Ofertas del día</h2>
+    </font>
+
+    <table bgcolor="white" cellpadding="25" cellspacing="25">
+
+        <tr>
+
+            <td align="center" width="250">
+
+                <h3>Lima → Cusco</h3>
+                <p>Desde $120</p>
+
+                <a href="/pages/pago.html">
+                    <button type="button">Seleccionar</button>
+                </a>
+
+            </td>
+
+            <td width="50"></td>
+
+            <td align="center" width="250">
+
+                <h3>Lima → Arequipa</h3>
+                <p>Desde $95</p>
+
+                <a href="/pages/pago.html">
+                    <button type="button">Seleccionar</button>
+                </a>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+</main>
+
+</div>
+
+<br><br>
+
+<!-- FOOTER -->
+<footer align="center">
+
+    <font color="white">
+
+        <h3>Redes sociales</h3>
+        <p>📘 📷 🐦</p>
+
+        <h3>Contacto</h3>
+        <p>luckyaircontactos@gmail.com</p>
+
+        <p>Lucky Air © 2026</p>
+
+    </font>
+
+</footer>
+
 </body>
 </html>
