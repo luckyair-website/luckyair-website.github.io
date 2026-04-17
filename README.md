@@ -65,3 +65,10 @@ En esta actualización se realizaron ajustes y mejoras tanto en index.html como 
 
 ## 🧩 Descripción de cambios recientes 15/04 -> Jose Torres
 En esta actualizacion se inserto el header y footer empleando la etiqueta "<iframe>" en el index, vuelos, beneficios y login.
+
+## 🧩 Descripción de cambios recientes 16/04 -> Jose Torres
+- **fix:** Se reemplazo el formato del logo del iframe referente al header y del banner principal del index.html a formato webp.
+- **feat:** Se coloco los metadatos descriptivos del index.html.
+- **feat:** Se coloco el "title" a la etiqueta <iframe>.
+- **feat:** Se coloco el "role" a la etiqueta nav y footer de los iframe.
+Con actualizaciones se logro maximizar nuestra puntuacion de performance, accesibilidad, best practices y SEO de nuestro "index.html".
