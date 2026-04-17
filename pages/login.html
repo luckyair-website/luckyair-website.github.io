@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+
+<body bgcolor="#ebedf1">
+
+    <!-- Inicio contenedor header -->
+    <header>
+
+        <table width="100%" height="80">
+            <tr>
+                <!-- Inicio contenedor-logo -->
+                <td align="left" width="200" height="100">
+                    <a href="../index.html">
+                        <img src="../assets/images/png/logo.png" alt="Logo de la empresa" width="200px" height="100px">
+                    </a>
+                </td>
+                <!-- Fin contenedor-logo -->
+
+                <!-- Inicio contenedor de navegacion -->
+                <td align="center">
+                    <nav>
+                        <font size="5">
+                            <a href="../index.html">
+                                <font color="blue">
+                                    <small>Home</small>
+                                </font>
+                            </a>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <a href="vuelos.html">
+                                <font color="blue">
+                                    <small>Vuelos</small>
+                                </font>
+                            </a>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <a href="beneficios.html">
+                                <font color="blue">
+                                    <small>Beneficios</small>
+                                </font>
+                            </a>
+                        </font>
+                    </nav>
+                </td>
+                <!-- Fin contenedor de navegacion -->
+
+                <!-- Inicio contenedor de Icono usuario -->
+                <td align="center" width="200">
+                    <a href="login.html">
+                        <img src="../assets/images/svg/user.svg" alt="Icono de usuario" width="40">
+                    </a>
+
+                </td>
+                <!-- Fin contenedor de Icono usuario -->
+            </tr>
+        </table>
+    </header>
+    <!-- Fin contenedor header -->
+
+    <!-- INICIO MAIN EDGAR-->
+
+    <main>
+        <font color="#fff">  
+            <!-- Título-->
+            <table width="60%" align="center">
+                <tr align="center">
+                    <td>
+                        <h1>Iniciar sesión</h1>
+                        <p>Bienvenido de nuevo.<br>Ingresa tus credenciales.</p>
+                    </td>
+                </tr>
+            </table>
+
+            <!-- Login por gmail -->
+            <table width="60%" align="center">
+                <tr align="center">
+                    <td>
+                        <button type="button"><img src="../assets/images/png/google.png" width="16" height="16">&nbsp;Continuar con Google</button>
+                        <button type="button"><img src="../assets/images/png/facebook.png" width="16" height="16">&nbsp;Continuar con Facebook</button>
+                    </td>
+                </tr>
+                <tr align="center">
+                    <td>
+                        <p>— o continúa con tu correo —</p>
+                    </td>
+                </tr>
+            </table>
+
+            <!-- Formulario -->
+            <form action="" method="POST">
+                <table width="60%" align="center" cellspacing="8">
+                    <tr>
+                        <td align="right"><label for="email-field">Correo electrónico:</label></td>
+                        <td><input type="email" id="email-field" name="email" placeholder="ejemplo@correo.com" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right"><label for="password-field">Contraseña:</label></td>
+                        <td>
+                            <input type="password" id="password-field" name="password" placeholder="Mínimo 8 caracteres"
+                                required>
+                            <button type="button">👁</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input type="checkbox" id="remember-check" name="remember">
+                            <label for="remember-check">Recordarme</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center">
+                            <a href="recuperarcontraseña.html" style="text-decoration: none;">¿Olvidaste tu contraseña?</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center"><button type="submit"><a href="../index.html">Iniciar sesión</a></button></td>
+                    </tr>
+                </table>
+            </form>
+
+            <!-- Link a registro -->
+            <div align="center">
+                <p>
+                    ¿No tienes una cuenta? &nbsp;
+                    <a href="registro.html">
+                        Regístrate aquí
+                    </a>
+                </p>
+            </div>
+        </font>
+    </main>
+
+
+    <!-- FIN MAIN EDGAR-->
+
+    <!-- INICIO FOOTER -->
+    <footer>
+
+    </footer>
+    <!-- FIN FOOTER -->
+
+
+</body>
+
+</html>
