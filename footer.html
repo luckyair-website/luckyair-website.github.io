@@ -8,7 +8,7 @@
 <body>
 
     <footer role="contentinfo">
-        <table width="100%" height="400">
+        <table width="100%" height="400" border="1">
             
             <tr align="center">
                 <td>
@@ -36,7 +36,7 @@
                             <h3>
                                 Contactanos / Reclamos
                             </h3>
-                            <p>📞 51+ *********</p>
+                            <p>📞 51+ 999 666 999</p>
                             <p>📧 luckyaircontactos@gmail.com</p>
                         </font>
                     </div>
@@ -44,13 +44,19 @@
                 <td>
                     <!-- Formulario -->
                     <div>
-                        <font color="white">
-                            <h3>Mándanos un mensaje</h3>
-                        </font>
-                        <input type="email" placeholder="Tu correo@" >
-                        <button>
-                            Enviar
-                        </button>
+                        <form action="">
+                            <font color="white">
+                                <h3>Escribenos</h3>
+                            </font>
+                            <input type="text" id="nombres" placeholder="Nombre y Apellidos" ><br><br>
+                            <input type="text" id="asunto" placeholder="Asunto" ><br><br>
+                            <input type="email" id="email" placeholder="Correo electronico" ><br>
+                            <br>
+                            <textarea id="comentarios" name="comentarios" rows="3" cols="20" placeholder="Escribe aquí tu mensaje..."></textarea><br><br>
+                            <button type="submit">
+                                Contactanos
+                            </button>
+                        </form>
                     </div>
                 </td>
             </tr>

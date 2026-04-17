@@ -20,7 +20,70 @@
 
         <!-- INICIO SECTION BUSQUEDA VUELO DIEGO -->
         <section>
+            <!-- TITULO -->
+            <font color="white" align="center">
+                <h1>Encuentra tu próximo destino</h1>
+                <p>Vuela barato y fácil con Lucky Air</p>
+            </font>
 
+            <br>
+
+            <table bgcolor="white" cellpadding="25" cellspacing="25" align="center">
+            <!-- FORMULARIO -->
+                <td></td>
+                <td>
+                    <form action="">
+
+                        <fieldset>
+
+                            <legend>Buscar vuelos</legend> 
+                            <br>
+                            <label id="origen" for="origen">
+                                Origen: 
+                                <select id="origen" name="origen">
+                                    <option>--Seleccionar--</option>
+                                    <option value="lima">Lima</option>
+                                    <option value="arequipa">Arequipa</option>
+                                    <option value="piura">Piura</option>
+                                    <option value="cusco">Cusco</option>
+                                </select>
+                            </label><br><br>
+                            <label id="destino" for="destino">
+                                Destino: 
+                                <select id="origen" name="origen">
+                                    <option>--Seleccionar--</option>
+                                    <option value="arequipa">Arequipa</option>
+                                    <option value="piura">Piura</option>
+                                    <option value="cusco">Cusco</option>
+                                    <option value="lima">Lima</option>
+                                </select>
+                            </label><br><br>
+                            <label id="ida" for="ida">
+                                Ida: 
+                                <input type="date" id="destino" required>
+                            </label><br><br>
+                            <label id="vuelta" for="vuelta">
+                                Vuelta: 
+                                <input type="date" id="destino" required>
+                            </label><br><br>
+                            <label id="pasajeros" for="pasajeros">
+                                Pasajeros: 
+                                <input type="number" id="destino" min="1" placeholder="1">
+                            </label>
+                            <br><br>
+                            <center>
+                                <button type="submit">Buscar vuelos</button>
+                            </center>
+                            
+
+                        </fieldset>
+
+                    </form>
+                </td>
+                <td></td>
+                
+            </table>
+            <br><br>
         </section>
         <!-- FIN SECTION BUSQUEDA VUELO DIEGO-->
 
