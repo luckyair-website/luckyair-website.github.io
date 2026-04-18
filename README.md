@@ -72,3 +72,7 @@ En esta actualizacion se inserto el header y footer empleando la etiqueta "<ifra
 - **feat:** Se coloco el "title" a la etiqueta <iframe>.
 - **feat:** Se coloco el "role" a la etiqueta nav y footer de los iframe.
 Con actualizaciones se logro maximizar nuestra puntuacion de performance, accesibilidad, best practices y SEO de nuestro "index.html".
+
+## 🧩 Descripción de cambios recientes 16/04 -> Jose Torres
+- **fix** correccion de desface de ramas
+- **fix** optimizacion de accesibilidad index.html
