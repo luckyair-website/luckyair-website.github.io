@@ -65,7 +65,6 @@
 
     <main>
         <font color="#fff">
-            <!-- Título-->
             <table width="60%" align="center">
                 <tr align="center">
                     <td>
@@ -75,7 +74,6 @@
                 </tr>
             </table>
 
-            <!-- Login por gmail -->
             <table width="60%" align="center">
                 <tr align="center">
                     <td>
@@ -92,26 +90,25 @@
                 </tr>
             </table>
 
-            <!-- Formulario -->
-            <form action="" method="POST">
+            <form action="../index.html" method="GET">
                 <table width="60%" align="center" cellspacing="8">
                     <tr>
                         <td align="right"><label for="email-field">Correo electrónico:</label></td>
-                        <td><input type="email" id="email-field" name="" placeholder="ejemplo@correo.com" required>
-                        </td>
+                        <td><input type="email" id="email-field" name="usuario_email" placeholder="ejemplo@correo.com"
+                                required></td>
                     </tr>
                     <tr>
                         <td align="right"><label for="password-field">Contraseña:</label></td>
                         <td>
-                            <input type="password" id="password-field" name="" placeholder="Mínimo 8 caracteres"
-                                required>
+                            <input type="password" id="password-field" name="usuario_pass"
+                                placeholder="Mínimo 8 caracteres" required>
                             <button type="button" aria-label="Mostrar contraseña">👁</button>
                         </td>
                     </tr>
                     <tr>
                         <td></td>
                         <td>
-                            <input type="checkbox" id="remember-check" name="">
+                            <input type="checkbox" id="remember-check" name="recordar">
                             <label for="remember-check">Recordarme</label>
                         </td>
                     </tr>
@@ -121,19 +118,17 @@
                         </td>
                     </tr>
                     <tr>
-                        <td colspan="2" align="center"><button type="submit"><a href="../index.html">Iniciar
-                                    sesión</a></button></td>
+                        <td colspan="2" align="center">
+                            <button type="submit">Iniciar sesión</button>
+                        </td>
                     </tr>
                 </table>
             </form>
 
-            <!-- Link a registro -->
             <div align="center">
                 <p>
                     ¿No tienes una cuenta? &nbsp;
-                    <a href="registro.html">
-                        Regístrate aquí
-                    </a>
+                    <a href="registro.html">Regístrate aquí</a>
                 </p>
             </div>
         </font>

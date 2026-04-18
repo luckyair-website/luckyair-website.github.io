@@ -70,33 +70,34 @@
                                 <font color="green">GUARDADO</font>
                             </small></h3>
 
-                        <table width="100%" cellpadding="5">
-                            <tr>
-                                <td>
-                                    <input type="radio" name="pago" id="visa-prev" checked>
-                                    <label for="visa-prev">
-                                        <img src="../assets/images/png/card.png" alt="Visa" width="30">
-                                        <b>Visa **** 1234</b><br>
-                                        <small>Vence 08/27</small>
-                                    </label>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <input type="radio" name="pago" id="mc-prev">
-                                    <label for="mc-prev">
-                                        <img src="../assets/images/png/card.png" alt="Mastercard" width="30">
-                                        <b>Mastercard **** 5678</b><br>
-                                        <small>Vence 03/26</small>
-                                    </label>
-                                </td>
-                            </tr>
-                        </table>
-
-                        <br>
-                        <div align="center">
-                            <button type="submit"><a href="../pages/pagofinal.html">Pagar ahora</a></button>
-                        </div>
+                        <form action="../pages/pagofinal.html" method="GET">
+                            <table width="100%" cellpadding="5">
+                                <tr>
+                                    <td>
+                                        <input type="radio" name="pago" id="visa-prev" checked>
+                                        <label for="visa-prev">
+                                            <img src="../assets/images/png/card.png" alt="Visa" width="30">
+                                            <b>Visa **** 1234</b><br>
+                                            <small>Vence 08/27</small>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="radio" name="pago" id="mc-prev">
+                                        <label for="mc-prev">
+                                            <img src="../assets/images/png/card.png" alt="Mastercard" width="30">
+                                            <b>Mastercard **** 5678</b><br>
+                                            <small>Vence 03/26</small>
+                                        </label>
+                                    </td>
+                                </tr>
+                            </table>
+                            <br>
+                            <div align="center">
+                                <button type="submit">Pagar ahora</button>
+                            </div>
+                        </form>
 
                         <br>
                         <details>
@@ -124,54 +125,57 @@
                                 <font color="green">PRIMERA VEZ</font>
                             </small></h3>
 
-                        <table width="100%" cellpadding="5">
-                            <tr>
-                                <td colspan="2">
-                                    <img src="../assets/images/png/card.png" alt="tarjeta" width="30">&nbsp;
-                                    <label for="card-num">Número de tarjeta:</label><br>
-                                    <input type="text" id="card-num" placeholder="0000 0000 0000 0000" size="30" name=""
-                                        required>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td width="50%">
-                                    <label for="exp">Vencimiento:</label><br>
-                                    <input type="text" id="exp" placeholder="MM/AA" size="10" required>
-                                </td>
-                                <td width="50%">
-                                    <label for="cvv">CVV:</label><br>
-                                    <input type="password" id="cvv" placeholder="123" size="5" required>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="2">
-                                    <label for="card-name">Nombre en tarjeta:</label><br>
-                                    <input type="text" id="card-name" placeholder="Nombre Apellido" size="30" required>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="2" align="center">
-                                    <hr>
-                                    <p><small>O escanea para pago rápido</small></p>
-                                    <table cellpadding="5">
-                                        <tr>
-                                            <td><img src="../assets/images/png/qr.png" alt="QR pequeño" width="150">
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="2">
-                                    <input type="checkbox" id="save" name=""> <label for="save"><small>Guardar
-                                            tarjeta</small></label>
-                                </td>
-                            </tr>
-                        </table>
-                        <br>
-                        <div align="center">
-                            <button type="submit"><a href="../pages/pagofinal.html">Pagar ahora</a></button>
-                        </div>
+                        <form action="../pages/confirmar-pago.html" method="GET">
+                            <table width="100%" cellpadding="5">
+                                <tr>
+                                    <td colspan="2">
+                                        <img src="../assets/images/png/card.png" alt="tarjeta" width="30">&nbsp;
+                                        <label for="card-num">Número de tarjeta:</label><br>
+                                        <input type="text" id="card-num" placeholder="0000 0000 0000 0000" size="30"
+                                            required>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="50%">
+                                        <label for="exp">Vencimiento:</label><br>
+                                        <input type="text" id="exp" placeholder="MM/AA" size="10" required>
+                                    </td>
+                                    <td width="50%">
+                                        <label for="cvv">CVV:</label><br>
+                                        <input type="password" id="cvv" placeholder="123" size="5" required>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <label for="card-name">Nombre en tarjeta:</label><br>
+                                        <input type="text" id="card-name" placeholder="Nombre Apellido" size="30"
+                                            required>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" align="center">
+                                        <hr>
+                                        <p><small>O escanea para pago rápido</small></p>
+                                        <table cellpadding="5">
+                                            <tr>
+                                                <td><img src="../assets/images/png/qr.png" alt="QR pequeño" width="150">
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <input type="checkbox" id="save">
+                                        <label for="save"><small>Guardar tarjeta</small></label>
+                                    </td>
+                                </tr>
+                            </table>
+                            <br>
+                            <div align="center">
+                                <button type="submit">Pagar ahora</button>
+                            </div>
+                        </form>
                     </td>
                 </tr>
             </table>
