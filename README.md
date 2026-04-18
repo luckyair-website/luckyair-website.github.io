@@ -56,16 +56,11 @@ LUCKYAIR-WEBSITE.GITHUB.IO/
 
 ✍️ **Nota:** Este README se irá actualizando conforme avance el proyecto y se integren nuevas tecnologías.
 
-<<<<<<< HEAD
 ## 🧩 Descripción de cambios recientes 12/04 -> Jose Torres
-=======
-## 🧩 Descripción de cambios recientes 12/24 -> Jose Torres
->>>>>>> katherine-zelada
 En esta actualización se realizaron ajustes y mejoras tanto en index.html como en registro.html, centrados en accesibilidad y experiencia de usuario:
 - **fix:** Se aplicó un color de fondo azul (bgcolor="#1E3A8A") y texto en blanco (text="#FFFFFF") para mejorar el contraste y la legibilidad general.
 - **fix:** En el archivo registro.html, se optimizó la accesibilidad conectando correctamente las etiquetas <label> con sus respectivos elementos de formulario (checkbox y campos de entrada).
 - **fix:** Se ajustó el color del vínculo de acceso al login, que anteriormente no contrastaba adecuadamente con el fondo.
-<<<<<<< HEAD
 - **feat:** Se implementaron enlaces externos navegables en los iconos de login alternativo, añadiendo el atributo target="_blank" para abrirlos en una nueva pestaña.
 
 ## 🧩 Descripción de cambios recientes 15/04 -> Jose Torres
@@ -77,6 +72,3 @@ En esta actualizacion se inserto el header y footer empleando la etiqueta "<ifra
 - **feat:** Se coloco el "title" a la etiqueta <iframe>.
 - **feat:** Se coloco el "role" a la etiqueta nav y footer de los iframe.
 Con actualizaciones se logro maximizar nuestra puntuacion de performance, accesibilidad, best practices y SEO de nuestro "index.html".
-=======
-- **feat:** Se implementaron enlaces externos navegables en los iconos de login alternativo, añadiendo el atributo target="_blank" para abrirlos en una nueva pestaña.
->>>>>>> katherine-zelada
