@@ -13,6 +13,7 @@
 @import url('custom/vuelos.css');
 @import url('custom/beneficios.css');
 @import url('custom/login.css');
+@import url('custom/registro.css');
 
 /* Layout */
 @import url('layout/header.css');
@@ -21,4 +22,5 @@
 @import url('custom/vuelos.css');
 @import url('custom/beneficios.css');
 @import url('custom/login.css');
+@import url('custom/registro.css');
 
