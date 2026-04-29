@@ -1,0 +1,89 @@
+/* Estilos generales */
+/* importacion de fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans:wght@300;600&family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+
+:root {
+    
+  /* Tipografía */
+  --font-size-12: 12px;
+  --font-size-14: 14px;
+  --font-size-16: 16px;
+  --font-size-18: 18px;
+  --font-size-20: 20px;
+  --font-size-24: 24px; /* Encabezados */
+  --font-size-28: 28px;
+  --font-size-32: 32px;
+  --font-size-36: 36px;
+  --font-size-48: 48px;
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+
+  --line-height: 1.5; 
+
+  --letter-spacing-small: 0.5px;  /* texto pequeño */
+  --letter-spacing-medium: 0.25px;  /* texto mediano */
+  --letter-spacing-big: -0.5px; /* titulos mayores a 32px */
+
+
+  --font-family-primary-montserrat: "Montserrat", sans-serif;
+  --font-family-primary-poppins: "Poppins", sans-serif;
+  --font-family-secundaria-roboto: "Roboto", sans-serif;
+  --font-family-secundaria-opensans: "Open Sans", sans-serif;
+
+  /* Colores principales */
+  --color-primary: #041936;   /* Azul base */
+  --color-secondary: #FFFFFF; /* Blanco */
+  --color-text-muted: #807A7A;
+
+  /* Amarillos (accent) */
+  --color-accent-light: #F0B02D;
+  --color-accent: #F0BE2B;
+  --color-accent-dark: #AE7A15;
+  --color-accent-500: #F6BF19;
+
+  /* Colores individuales */
+  --color-button-gradient-start: #AE7A15;
+  --color-button-gradient-end: #F0B02D;
+
+  /* Degradado completo */
+  --gradient-button-primary: linear-gradient(
+    to right,
+    var(--color-button-gradient-start),
+    var(--color-button-gradient-end)
+  );
+  
+}
+
+body {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+}
+
+main {
+  padding-top: 100px;
+}
+
+header {
+  height: 10vh;
+}
+
+footer {
+  height: 90vh;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-secondary); 
+}
