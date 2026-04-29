@@ -1,0 +1,107 @@
+/* Layout del footer */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-content-footer {
+    flex: 8;
+    width: 90vw;
+    padding-top: 4rem;
+}
+
+.hr-footer {
+    flex: 1;
+    width: 90vw; 
+    padding-top: 2rem;
+}
+
+.secundary-content-footer {
+    flex: 1;
+}
+
+.left-content-footer {
+    flex: 1;
+    gap: 2rem;
+}
+
+.middle-content-footer {
+    flex: 1;
+    align-items: start;
+    gap: 1.5rem;
+}
+
+.right-content-footer {
+    flex: 1;
+    /* flex */
+}
+
+.redes-content-footer {
+    gap: 1.5rem;
+}
+
+.redes-content-footer ul {
+    gap: 0.75rem;
+}
+
+li {
+    display: inline-block;
+}
+
+.horario-content-footer {
+    gap: 0.875rem;
+    padding-bottom: 0.75rem;
+}
+
+.horario-content-footer div {
+    gap: 0.875rem;
+}
+
+.p-content-footer {
+    text-align: center;
+}
+
+.info-middle-footer {
+    margin: 0 6rem;
+    gap: 1.4rem;
+}
+
+.right-content-footer form {
+    gap: 1.25rem;
+    width: 100%;
+}
+
+.contactanos-form {
+    width: 80%;
+    height: 2.8rem;
+    border-radius: 20px;
+    padding-left: 1.3rem;
+}
+
+textarea {
+    width: 80%;
+    border-radius: 20px;
+    padding-left: 1.3rem;
+    padding-top: 1rem;
+}
+
+.boton-form {
+    width: 80%;
+    height: 2.8rem;
+    border-radius: 20px;
+    padding-left: 1.3rem;
+}
+
+.icono-redes{
+    width: 40px;
+    aspect-ratio: 1 / 1;
+    height: auto; /* asegura proporción */
+    display: block; /* evita que line-height afecte */
+}
+
+.redes-sociales li a {
+  line-height: 0; /* evita que el alto del texto afecte la caja */
+}

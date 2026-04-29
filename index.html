@@ -4,15 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Lucky Air ofrece vuelos accesibles y frecuentes desde Perú. Más vuelos, menos costo.">
-
+    <link rel="stylesheet" href="css/main.css">
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?
+        family=Montserrat:ital,wght@0,100..900;1,100..900&
+        family=Open+Sans:ital,wght@0,300..800;1,300..800&
+        family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&
+        family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>Lucky Air - Viaja con nosotros</title>
     
 </head>
-<body bgcolor="#1E3A8A">  
+<body>  
     <!-- INICIO HEADER JOSE-->
-    
-    <iframe src="header.html"  width="100%" height="120" scrolling="no" frameborder="0" title="Encabezado del sitio Lucky Air"></iframe>
+    <header class="flex-row align-center">
+        <!-- Inicio contenedor-logo -->
+        <a href="/" class="flex-row justify-center logo-header">
+            <img src="assets/images/header/logo.webp" alt="Logo de LuckyAir" width="200" height="100">
+        </a>
+        <!-- Fin contenedor-logo -->
 
+        <!-- Inicio contenedor de navegacion -->
+        <nav role="navigation" class="text-contenido-16 font-montserrat">    
+            <ul class="flex-row">
+                <li>
+                    <a href="/" class="nav-link active bold">Home</a>
+                </li>
+                <li>
+                    <a href="pages/vuelos.html" class="nav-link bold">Vuelos</a>
+                </li>
+                <li>
+                    <a href="pages/beneficios.html" class="nav-link bold">Beneficios</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- Fin contenedor de navegacion -->
+
+        <!-- Inicio contenedor de Icono usuario -->
+        <div class="flex-row justify-center login-header">
+            <a href="pages/login.html" class="flex-row align-center">
+                <img src="assets/images/header/usuario.svg" alt="icono usuario" width="32">
+                <span class="text-contenido-18 font-roboto bold">INGRESAR</span>
+            </a>
+        </div>     
+        <!-- Fin contenedor de Icono usuario -->
+    </header>
     <!-- FIN HEADER JOSE-->
 
     <!-- INICIO MAIN -->
@@ -136,9 +173,89 @@
     </main>
     <!-- FIN MAIN -->
 
-    <!-- INICIO FOOTER OMAR-->
-    <iframe src="footer.html" width="100%" height="600" scrolling="no" frameborder="0" title="Pie de página con enlaces y contacto"></iframe>
-    <!-- FIN FOOTER OMAR-->
+    <!-- INICIO FOOTER JOSE-->
+    <footer role="contentinfo">
+        <div class="main-content-footer flex-row">
+            <section class="flex-column align-center left-content-footer">
+                <section class="flex-column align-center redes-content-footer" aria-labelledby="redes-title">
+                    <h3 class="text-encabezado-20 medium font-poppins" id="redes-title">SIGUENOS EN REDES</h3>
+                    <ul class="flex-row">
+                        <li>
+                            <a href="https://www.facebook.com" target="_blank" aria-label="Abrir Facebook">
+                                <img src="assets/images/footer/facebook.png" alt="Facebook" class="icono-redes">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com" target="_blank" aria-label="Abrir Instagram">
+                                <img src="assets/images/footer/instagram.png" alt="Instagram" class="icono-redes">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.x.com" target="_blank" aria-label="Abrir X">
+                                <img src="assets/images/footer/x.png" alt="X" class="icono-redes">
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+                <section class="flex-column align-center horario-content-footer" aria-labelledby="horario-atencion">
+                    <h3 class="text-encabezado-20 medium font-poppins" id="horario-atencion">HORARIO DE ATENCIÓN</h3>
+                    <div class="flex-row align-center">
+                        <img src="assets/images/footer/reloj.png" alt="icono reloj" width="40">
+                        <p class="text-contenido-14 regular font-roboto">
+                            Lunes a Viernes: 08:00 AM - 08:00 PM <br>
+                            Sábados y Domingos: 09:00 AM - 05:00 PM
+                        </p>
+                    </div>
+                </section>
+                <section class="flex-row p-content-footer">
+                    <h4 class="text-contenido-18 regular font-roboto">
+                        Llevándote más alto, <br> con la seguridad que mereces.
+                    </h4>
+                </section>
+            </section>
+            <section class="flex-column middle-content-footer" aria-labelledby="title-contactanos">
+                <h3 class="text-encabezado-20 medium text-center font-poppins" id="title-contactanos">CONTACTANOS / RECLAMOS</h3>
+                <section class="flex-row info-middle-footer">
+                    <img src="assets/images/footer/phone.png" alt="icono telephono" width="48">
+                    <div class="text-contenido-14 font-roboto">
+                        <h3 class="medium">Télefono:</h3>
+                        <h3 class="regular">+51 999 666 999</h3>
+                    </div>
+                </section>
+                <section class="flex-row info-middle-footer">
+                    <img src="assets/images/footer/email.png" alt="icono de email" width="48">
+                    <div class="text-contenido-14 font-roboto">
+                        <h3 class="medium">Correo:</h3>
+                        <h3 class="regular">luckyaircontactos@gmail.com</h3>
+                    </div>
+                </section>
+                <section class="flex-row info-middle-footer">
+                    <img src="assets/images/footer/ubication.png" alt="icono de ubicacion" width="48">
+                    <div class="text-contenido-14 font-roboto">
+                        <h3 class="medium">Oficina Central:</h3>
+                        <h3 class="regular">Av. Aviación 123, Lima - Perú</h3>
+                    </div>
+                </section>
+            </section>
+            <section class="right-content-footer" aria-labelledby="title-escribenos">
+                <form class="flex-column align-center">
+                    <h3 class="text-encabezado-20 medium font-poppins" id="title-escribenos">ESCRÍBENOS</h3>
+                    <input class="contactanos-form regular" type="text" placeholder="Nombre y Apellidos">
+                    <input class="contactanos-form regular" type="text" placeholder="Asunto">
+                    <input class="contactanos-form regular" type="email" placeholder="Correo electrónico">
+                    <textarea class="regular"  rows="5" placeholder="Escribe aquí tu mensaje..."></textarea>
+                    <input class="text-encabezado-20 bold font-roboto boton-form" type="submit" value="CONTACTANOS">
+                </form>
+            </section>
+        </div>
+        <div class="flex-row align-center justify-center hr-footer">
+            <hr width="100%">
+        </div>
+        <div class="flex-row text-contenido-12 font-montserrat secundary-content-footer">
+            <p>Lucky Air © 2026 | Todos los derechos reservados</p> 
+        </div> 
+    </footer>
+    <!-- FIN FOOTER JOSE-->
 
 </body>
 </html>

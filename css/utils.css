@@ -1,0 +1,94 @@
+/* Clases reutilizables  */
+
+/* Flex */
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+
+
+
+/* Tipografia */
+.text-contenido-12 {
+    font-size: var(--font-size-12);
+    line-height: var(--line-height);
+    letter-spacing: var(--letter-spacing-small);
+}
+
+.text-contenido-14 {
+    font-size: var(--font-size-14);
+    line-height: var(--line-height);
+    letter-spacing: var(--letter-spacing-small);
+}
+
+.text-contenido-16 {
+    font-size: var(--font-size-16);
+    line-height: var(--line-height);
+    letter-spacing: var(--letter-spacing-small);
+}
+
+.text-contenido-18 {
+    font-size: var(--font-size-18);
+    line-height: var(--line-height);
+    letter-spacing: var(--letter-spacing-small);
+}
+
+.text-encabezado-20 {
+    font-size: var(--font-size-20);
+    line-height: var(--line-height);
+    letter-spacing: var(--letter-spacing-medium);
+}
+
+
+
+.regular {
+    font-weight: var(--font-weight-regular);
+}
+
+.medium {
+    font-weight: var(--font-weight-medium);
+}
+
+.bold {
+    font-weight: var(--font-weight-bold);
+}
+
+.extra-extrabold {
+    font-weight: var(--font-weight-extrabold);
+}
+
+.font-poppins {
+    font-family: var(--font-family-primary-poppins);
+}
+
+.font-montserrat {
+    font-family: var(--font-family-primary-montserrat);
+}
+
+.font-roboto {
+    font-family: var(--font-family-secundaria-roboto);
+}
+
+.font-opensans {
+    font-family: var(--font-family-secundaria-opensans);
+}
+
+.text-center{
+    text-align: center;
+    width: 100%; 
+}

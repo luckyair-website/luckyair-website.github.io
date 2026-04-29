@@ -17,15 +17,13 @@
     <!-- INICIO MAIN EDGAR-->
 
     <main>
-        <br><br>
-        <font color="#000">
-            <table width="55%" align="center" cellpadding="20" cellspacing="10" bgcolor="#FFFFFF" border="1">
-                <tr valign="top">
-                    <td width="50%">
-                        <h3>USUARIO FRECUENTE&nbsp;&nbsp;&nbsp;<small>
-                                <font color="green">GUARDADO</font>
-                            </small></h3>
-
+    <font color="#000">
+        <table width="55%" align="center" cellpadding="20" cellspacing="10" bgcolor="#FFFFFF" border="1">
+            <tr valign="top">
+                <td width="50%">
+                    <h3>USUARIO FRECUENTE&nbsp;&nbsp;&nbsp;<small><font color="green">GUARDADO</font></small></h3>
+                    
+                    <form action="../pages/pagofinal.html" method="GET">
                         <table width="100%" cellpadding="5">
                             <tr>
                                 <td>
@@ -48,45 +46,43 @@
                                 </td>
                             </tr>
                         </table>
-
                         <br>
                         <div align="center">
-                            <button type="submit"><a href="../pages/pagofinal.html">Pagar ahora</a></button>
+                            <button type="submit">Pagar ahora</button>
                         </div>
+                    </form>
 
-                        <br>
-                        <details>
-                            <summary><b>Ver QR de pago</b></summary>
-                            <div align="center">
-                                <br>
-                                <table cellpadding="5">
-                                    <tr>
-                                        <td><img src="../assets/images/png/qr.png" alt="QR de pago" width="150"></td>
-                                    </tr>
-                                </table>
-                            </div>
-                        </details>
+                    <br>
+                    <details>
+                        <summary><b>Ver QR de pago</b></summary>
+                        <div align="center">
+                            <br>
+                            <table cellpadding="5">
+                                <tr>
+                                    <td><img src="../assets/images/png/qr.png" alt="QR de pago" width="150"></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </details>
 
-                        <p align="center">
-                            <small>Compatible con:</small><br>
-                            <img src="../assets/images/png/alipay.png" alt="Alipay" width="40">
-                            <img src="../assets/images/png/wechat.png" alt="WeChat" width="40">
-                            <img src="../assets/images/png/unionpay.png" alt="UnionPay" width="40">
-                        </p>
-                    </td>
+                    <p align="center">
+                        <small>Compatible con:</small><br>
+                        <img src="../assets/images/png/alipay.png" alt="Alipay" width="40">
+                        <img src="../assets/images/png/wechat.png" alt="WeChat" width="40">
+                        <img src="../assets/images/png/unionpay.png" alt="UnionPay" width="40">
+                    </p>
+                </td>
 
-                    <td width="50%">
-                        <h3>USUARIO NUEVO&nbsp;&nbsp;&nbsp;<small>
-                                <font color="green">PRIMERA VEZ</font>
-                            </small></h3>
+                <td width="50%">
+                    <h3>USUARIO NUEVO&nbsp;&nbsp;&nbsp;<small><font color="green">PRIMERA VEZ</font></small></h3>
 
+                    <form action="../pages/confirmar-pago.html" method="GET">
                         <table width="100%" cellpadding="5">
                             <tr>
                                 <td colspan="2">
                                     <img src="../assets/images/png/card.png" alt="tarjeta" width="30">&nbsp;
                                     <label for="card-num">Número de tarjeta:</label><br>
-                                    <input type="text" id="card-num" placeholder="0000 0000 0000 0000" size="30" name=""
-                                        required>
+                                    <input type="text" id="card-num" placeholder="0000 0000 0000 0000" size="30" required>
                                 </td>
                             </tr>
                             <tr>
@@ -111,29 +107,28 @@
                                     <p><small>O escanea para pago rápido</small></p>
                                     <table cellpadding="5">
                                         <tr>
-                                            <td><img src="../assets/images/png/qr.png" alt="QR pequeño" width="150">
-                                            </td>
+                                            <td><img src="../assets/images/png/qr.png" alt="QR pequeño" width="150"></td>
                                         </tr>
                                     </table>
                                 </td>
                             </tr>
                             <tr>
                                 <td colspan="2">
-                                    <input type="checkbox" id="save" name=""> <label for="save"><small>Guardar
-                                            tarjeta</small></label>
+                                    <input type="checkbox" id="save"> 
+                                    <label for="save"><small>Guardar tarjeta</small></label>
                                 </td>
                             </tr>
                         </table>
                         <br>
                         <div align="center">
-                            <button type="submit"><a href="../pages/confirmar-pago.html">Pagar ahora</a></button>
+                            <button type="submit">Pagar ahora</button>
                         </div>
-                    </td>
-                </tr>
-            </table>
-        </font>
-        <br><br>
-    </main>
+                    </form>
+                </td>
+            </tr>
+        </table>
+    </font>
+</main>
 
 
     <!-- FIN MAIN EDGAR-->
