@@ -55,6 +55,82 @@
     <!-- INICIO MAIN -->
     <main>
 
+        <section class="buscar-vuelos">
+            <div class="origen">
+                <img src="assets/images/index/avion-origen.png" alt="icono de origen" width="40">
+                <label for="origen">Origen:</label>
+                <select name="origen" id="origen">
+                    <option value="" disabled>Selecciona tu origen/option>
+                    <option value="lima">Lima</option>
+                    <option value="cusco">Cusco</option>
+                    <option value="arequipa">Arequipa</option>
+                </select>
+            </div>
+            <div class="origen">
+                <img src="assets/images/index/avion-destino.png" alt="icono de destino" width="40">
+                <label for="destino">Destino:</label>
+                <select name="destino" id="origen">
+                    <option value="" disabled>Selecciona tu destino/option>
+                    <option value="lima">Lima</option>
+                    <option value="cusco">Cusco</option>
+                    <option value="arequipa">Arequipa</option>
+                </select>
+            </div>
+            <div class="fechas flex-column align-center justify-center">
+                <div class="flex-row align-center">
+                    <img src="assets/images/index/calendario.png" alt="icono de calendario" width="40">
+                    <p>Fechas</p>
+                </div>
+                <div class="flex-column">
+                    <label for="ida">Ida:</label>
+                    <input type="date" id="ida">
+                    <label for="vuelta">Vuelta:</label>
+                    <input type="date" id="vuelta">
+                </div>
+            </div>
+            <div class="pasajeros flex-column">
+                <div class="flex-row align-center justify-center">
+                    <img src="assets/images/index/pasajeros.png" alt="icono de destino" width="40">
+                    <p>Pasajeros</p>
+                </div>
+                <div class="flex-column justify-center align-center">
+                    <input type="text" placeholder="Seleccionar">
+                    <button>BUSCAR VUELOS</button>
+                </div>
+                
+            </div>
+        </section>
+
+        <section>
+            <h1>OFERTAS DESTACADAS</h1>
+            <div class="cards flex-row align-center justify-center">
+                <div class="card">
+                    <img src="assets/images/index/machupicchu.png" alt="imagen de machu picchu" width="200">
+                    <p>LIMA - MACHU PICCHU</p>
+                    <h2>$200.00</h2>
+                    <button>COMPRAR</button>
+                </div>
+                <div class="card">
+                    <img src="assets/images/index/arequipa.png" alt="imagen de machu picchu" width="200">
+                    <p>LIMA - AREQUIPA</p>
+                    <h2>$100.00</h2>
+                    <button>COMPRAR</button>
+                </div>
+                <div class="card">
+                    <img src="assets/images/index/tacna.png" alt="imagen de machu picchu" width="200">
+                    <p>LIMA - TACNA</p>
+                    <h2>$80.00</h2>
+                    <button>COMPRAR</button>
+                </div>
+                <div class="card">
+                    <img src="assets/images/index/mancora.png" alt="imagen de machu picchu" width="200">
+                    <p>LIMA - MANCORA</p>
+                    <h2>$180.00</h2>
+                    <button>COMPRAR</button>
+                </div>
+            </div>
+        </section>
+
         <!-- INICIO SECTION BUSQUEDA VUELO DIEGO -->
         <section>
             <!-- TITULO -->

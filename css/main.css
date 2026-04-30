@@ -18,9 +18,9 @@
 /* Layout */
 @import url('layout/header.css');
 @import url('layout/footer.css');
-@import url('custom/home.css');
-@import url('custom/vuelos.css');
-@import url('custom/beneficios.css');
-@import url('custom/login.css');
-@import url('custom/registro.css');
+@import url('layout/home.css');
+@import url('layout/vuelos.css');
+@import url('layout/beneficios.css');
+@import url('layout/login.css');
+@import url('layout/registro.css');
 
