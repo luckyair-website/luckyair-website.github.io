@@ -1,0 +1,38 @@
+/* Estilos personalizados footer */
+
+.contactanos-form {
+    font-size: var(--font-size-16);
+    line-height: var(--line-height);
+    letter-spacing: var(--letter-spacing-small);
+    font-family: var(--font-family-secundaria-roboto);
+    
+}
+
+.contactanos-form::placeholder {
+    font-size: var(--font-size-16);
+    line-height: var(--line-height);
+    letter-spacing: var(--letter-spacing-small);
+    font-family: var(--font-family-secundaria-roboto);
+    
+}
+
+textarea {
+    font-size: var(--font-size-16);
+    line-height: var(--line-height);
+    letter-spacing: var(--letter-spacing-small);
+    font-family: var(--font-family-secundaria-roboto);
+    font-weight: var(--font-weight-regular);
+}
+
+textarea::placeholder {
+    font-size: var(--font-size-16);
+    line-height: var(--line-height);
+    letter-spacing: var(--letter-spacing-small);
+    font-family: var(--font-family-secundaria-roboto);
+    font-weight: var(--font-weight-regular);
+}
+
+.boton-form {
+    background: var(--color-accent-500);
+    color: var(--color-primary);
+}

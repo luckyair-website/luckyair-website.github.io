@@ -3,166 +3,335 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lucky Air ofrece vuelos accesibles y frecuentes desde Perú. Más vuelos, menos costo.">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?
+        family=Montserrat:ital,wght@0,100..900;1,100..900&
+        family=Open+Sans:ital,wght@0,300..800;1,300..800&
+        family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&
+        family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>Lucky Air - Viaja con nosotros</title>
+    
 </head>
-<body bgcolor="#1E3A8A">  
+<body>  
     <!-- INICIO HEADER JOSE-->
-    <header>
+    <header class="flex-row align-center">
+        <!-- Inicio contenedor-logo -->
+        <a href="/" class="flex-row justify-center logo-header">
+            <img src="assets/images/header/logo.webp" alt="Logo de LuckyAir" width="200" height="100">
+        </a>
+        <!-- Fin contenedor-logo -->
 
-        <table width="100%" height="80" >
-            <tr>
-                <!-- Inicio contenedor-logo -->
-                <td align="left" width="200" height="100">
-                    <a href="index.html">
-                        <img src="assets/images/png/logo.png" alt="Logo de la empresa" width="200px" height="100px">
-                    </a>
-                </td>
-                <!-- Fin contenedor-logo -->
+        <!-- Inicio contenedor de navegacion -->
+        <nav role="navigation" class="text-contenido-16 font-montserrat">    
+            <ul class="flex-row">
+                <li>
+                    <a href="/" class="nav-link active bold">Home</a>
+                </li>
+                <li>
+                    <a href="pages/vuelos.html" class="nav-link bold">Vuelos</a>
+                </li>
+                <li>
+                    <a href="pages/beneficios.html" class="nav-link bold">Beneficios</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- Fin contenedor de navegacion -->
 
-                <!-- Inicio contenedor de navegacion -->
-                <td align="center">
-                    <nav>
-                        <font size="5">
-                            <a href="index.html">
-                                <font color="white">
-                                    <strong>Home</strong>
-                                </font>
-                            </a>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a href="pages/vuelos.html">
-                                <font color="white">
-                                    <small>Vuelos</small>
-                                </font>
-                            </a>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <a href="pages/beneficios.html">
-                                <font color="white">
-                                    <small>Beneficios</small>
-                                </font>
-                            </a>
-                        </font>
-                    </nav>
-                </td>
-                <!-- Fin contenedor de navegacion -->
-
-                <!-- Inicio contenedor de Icono usuario -->
-                <td align="center" width="200">
-                    <a href="pages/login.html">
-                        <img src="assets/images/svg/user.svg" alt="Icono de usuario" width="40">
-                    </a>
-                    
-                </td>
-                <!-- Fin contenedor de Icono usuario -->
-            </tr>
-        </table>
+        <!-- Inicio contenedor de Icono usuario -->
+        <div class="flex-row justify-center login-header">
+            <a href="pages/login.html" class="flex-row align-center">
+                <img src="assets/images/header/usuario.svg" alt="icono usuario" width="32">
+                <span class="text-contenido-18 font-roboto bold">INGRESAR</span>
+            </a>
+        </div>     
+        <!-- Fin contenedor de Icono usuario -->
     </header>
     <!-- FIN HEADER JOSE-->
 
     <!-- INICIO MAIN -->
     <main>
 
+        <section class="buscar-vuelos">
+            <div class="origen">
+                <img src="assets/images/index/avion-origen.png" alt="icono de origen" width="40">
+                <label for="origen">Origen:</label>
+                <select name="origen" id="origen">
+                    <option value="" disabled>Selecciona tu origen/option>
+                    <option value="lima">Lima</option>
+                    <option value="cusco">Cusco</option>
+                    <option value="arequipa">Arequipa</option>
+                </select>
+            </div>
+            <div class="origen">
+                <img src="assets/images/index/avion-destino.png" alt="icono de destino" width="40">
+                <label for="destino">Destino:</label>
+                <select name="destino" id="origen">
+                    <option value="" disabled>Selecciona tu destino/option>
+                    <option value="lima">Lima</option>
+                    <option value="cusco">Cusco</option>
+                    <option value="arequipa">Arequipa</option>
+                </select>
+            </div>
+            <div class="fechas flex-column align-center justify-center">
+                <div class="flex-row align-center">
+                    <img src="assets/images/index/calendario.png" alt="icono de calendario" width="40">
+                    <p>Fechas</p>
+                </div>
+                <div class="flex-column">
+                    <label for="ida">Ida:</label>
+                    <input type="date" id="ida">
+                    <label for="vuelta">Vuelta:</label>
+                    <input type="date" id="vuelta">
+                </div>
+            </div>
+            <div class="pasajeros flex-column">
+                <div class="flex-row align-center justify-center">
+                    <img src="assets/images/index/pasajeros.png" alt="icono de destino" width="40">
+                    <p>Pasajeros</p>
+                </div>
+                <div class="flex-column justify-center align-center">
+                    <input type="text" placeholder="Seleccionar">
+                    <button>BUSCAR VUELOS</button>
+                </div>
+                
+            </div>
+        </section>
+
+        <section>
+            <h1>OFERTAS DESTACADAS</h1>
+            <div class="cards flex-row align-center justify-center">
+                <div class="card">
+                    <img src="assets/images/index/machupicchu.png" alt="imagen de machu picchu" width="200">
+                    <p>LIMA - MACHU PICCHU</p>
+                    <h2>$200.00</h2>
+                    <button>COMPRAR</button>
+                </div>
+                <div class="card">
+                    <img src="assets/images/index/arequipa.png" alt="imagen de machu picchu" width="200">
+                    <p>LIMA - AREQUIPA</p>
+                    <h2>$100.00</h2>
+                    <button>COMPRAR</button>
+                </div>
+                <div class="card">
+                    <img src="assets/images/index/tacna.png" alt="imagen de machu picchu" width="200">
+                    <p>LIMA - TACNA</p>
+                    <h2>$80.00</h2>
+                    <button>COMPRAR</button>
+                </div>
+                <div class="card">
+                    <img src="assets/images/index/mancora.png" alt="imagen de machu picchu" width="200">
+                    <p>LIMA - MANCORA</p>
+                    <h2>$180.00</h2>
+                    <button>COMPRAR</button>
+                </div>
+            </div>
+        </section>
+
         <!-- INICIO SECTION BUSQUEDA VUELO DIEGO -->
         <section>
+            <!-- TITULO -->
+            <font color="white" align="center">
+                <h1>Encuentra tu próximo destino</h1>
+                <p>Vuela barato y fácil con Lucky Air</p>
+            </font>
 
+            <br>
+
+            <table bgcolor="white" cellpadding="25" cellspacing="25" align="center">
+            <!-- FORMULARIO -->
+                <td></td>
+                <td>
+                    <form action="">
+
+                        <fieldset>
+
+                            <legend>Buscar vuelos</legend> 
+                            <br>
+                            <label id="origen" for="origen">
+                                Origen: 
+                                <select id="origen" name="origen">
+                                    <option>--Seleccionar--</option>
+                                    <option value="lima">Lima</option>
+                                    <option value="arequipa">Arequipa</option>
+                                    <option value="piura">Piura</option>
+                                    <option value="cusco">Cusco</option>
+                                </select>
+                            </label><br><br>
+                            <label id="destino" for="destino">
+                                Destino: 
+                                <select id="origen" name="origen">
+                                    <option>--Seleccionar--</option>
+                                    <option value="arequipa">Arequipa</option>
+                                    <option value="piura">Piura</option>
+                                    <option value="cusco">Cusco</option>
+                                    <option value="lima">Lima</option>
+                                </select>
+                            </label><br><br>
+                            <label id="ida" for="ida">
+                                Ida: 
+                                <input type="date" id="destino" required>
+                            </label><br><br>
+                            <label id="vuelta" for="vuelta">
+                                Vuelta: 
+                                <input type="date" id="vuelta" required>
+                            </label><br><br>
+                            <label id="pasajeros" for="pasajeros">
+                                Pasajeros: 
+                                <input type="number" id="destino" min="1" placeholder="1">
+                            </label>
+                            <br><br>
+                            <center>
+                                <button type="submit">Buscar vuelos</button>
+                            </center>
+                            
+
+                        </fieldset>
+
+                    </form>
+                </td>
+                <td></td>
+                
+            </table>
+            <br><br>
         </section>
         <!-- FIN SECTION BUSQUEDA VUELO DIEGO-->
 
         <!-- INICIO SECTION BANNER JOSE -->
-        <section style="position: relative;">
-            <img src="assets/images/png/banner.png" 
+        <section>
+            <img src="assets/images/others/banner.webp" 
                 alt="Banner Avión Lucky Air" 
                 width="100%" 
                 height="auto">
-            <span style="position: absolute; bottom: 50px; right: 40px; 
-                font-size: 32px; font-family: Arial; font-weight: bold; 
-                background-color: rgba(0,0,0,0.5); 
-                color: white; padding: 10px;">
-                    Más vuelos, menos costo.
-            </span>
+            
         </section>
         <!-- FIN SECTION BANNER JOSE -->
 
         <!-- INICIO SECTION RESEÑAS KATHERINE-->
     
-        </section>
        <section id="reseñas">
-        <div class="container">
+            <div class="container">
+                <font color="white" align="center">
+                    <h2>Reseñas de nuestros pasajeros <img src="assets/images/png/avion.png" alt="avion icono" width="60"></h2>
 
-            <h2>Reseñas de nuestros pasajeros ✈️</h2>
+                    <div class="reseña">
+                        <h3>María López <span>
+                    <img src="assets/images/png/estrella.png" alt="estrellas calificacion" width="150">
+                </span></h3>
+                        <p>Excelente experiencia con Lucky Air. El vuelo fue puntual y el personal muy amable.</p>
+                    </div>
 
-            <div class="reseña">
-                <h3>María López ⭐⭐⭐⭐⭐</h3>
-                <p>Excelente experiencia con Lucky Air. El vuelo fue puntual y el personal muy amable.</p>
+                    <div class="reseña">
+                        <h3>Carlos Pérez <span>
+                    <img src="assets/images/png/estrella.png" alt="estrellas calificacion" width="150">
+                </span></h3>
+                        <p>Buen servicio y comodidad durante el vuelo. Definitivamente volvería a viajar con esta aerolínea.</p>
+                    </div>
+
+                    <div class="reseña">
+                        <h3>Ana Torres <span>
+                    <img src="assets/images/png/estrella.png" alt="estrellas calificacion" width="150">
+                </span></h3>
+                        <p>Me encantó la atención y la organización del vuelo. Muy recomendable.</p>
+                    </div>
+                    <div class="reseña">
+                        <h3>Maximiliano Constantine <span>
+                    <img src="assets/images/png/estrella.png" alt="estrellas calificacion" width="150">
+                </span></h3>
+                        <p>Excelente servicio rapido y intuitivo a la hora de pagar</p>
+                    </div>
+                </font>
             </div>
-
-            <div class="reseña">
-                <h3>Carlos Pérez ⭐⭐⭐⭐</h3>
-                <p>Buen servicio y comodidad durante el vuelo. Definitivamente volvería a viajar con esta aerolínea.</p>
-            </div>
-
-            <div class="reseña">
-                <h3>Ana Torres ⭐⭐⭐⭐⭐</h3>
-                <p>Me encantó la atención y la organización del vuelo. Muy recomendable.</p>
-            </div>
-            <div class="reseña">
-                <h3>Maximiliano Constantine ⭐⭐⭐⭐</h3>
-                <p>Excelente servicio rapido y intuitivo a la hora de pagar</p>
-
-
-        </div>
-    </section>
-
+        </section>
     </main>
     <!-- FIN MAIN -->
 
-    <!-- INICIO FOOTER OMAR-->
-    <footer>
-<footer style="background:cadetblue; padding:30px; font-family:Arial;">
-
-    <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap;">
-
-        <!-- Redes sociales -->
-        <div>
-            <h3 style="border:2px solid blue; display:inline-block; padding:5px;">
-                Redes sociales
-            </h3>
-            <div style="margin-top:15px; font-size:24px;">
-                <span style="margin-right:15px;">📘</span>
-                <span style="margin-right:15px;">📷</span>
-                <span>🐦</span>
-            </div>
+    <!-- INICIO FOOTER JOSE-->
+    <footer role="contentinfo">
+        <div class="main-content-footer flex-row">
+            <section class="flex-column align-center left-content-footer">
+                <section class="flex-column align-center redes-content-footer" aria-labelledby="redes-title">
+                    <h3 class="text-encabezado-20 medium font-poppins" id="redes-title">SIGUENOS EN REDES</h3>
+                    <ul class="flex-row">
+                        <li>
+                            <a href="https://www.facebook.com" target="_blank" aria-label="Abrir Facebook">
+                                <img src="assets/images/footer/facebook.png" alt="Facebook" class="icono-redes">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com" target="_blank" aria-label="Abrir Instagram">
+                                <img src="assets/images/footer/instagram.png" alt="Instagram" class="icono-redes">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.x.com" target="_blank" aria-label="Abrir X">
+                                <img src="assets/images/footer/x.png" alt="X" class="icono-redes">
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+                <section class="flex-column align-center horario-content-footer" aria-labelledby="horario-atencion">
+                    <h3 class="text-encabezado-20 medium font-poppins" id="horario-atencion">HORARIO DE ATENCIÓN</h3>
+                    <div class="flex-row align-center">
+                        <img src="assets/images/footer/reloj.png" alt="icono reloj" width="40">
+                        <p class="text-contenido-14 regular font-roboto">
+                            Lunes a Viernes: 08:00 AM - 08:00 PM <br>
+                            Sábados y Domingos: 09:00 AM - 05:00 PM
+                        </p>
+                    </div>
+                </section>
+                <section class="flex-row p-content-footer">
+                    <h4 class="text-contenido-18 regular font-roboto">
+                        Llevándote más alto, <br> con la seguridad que mereces.
+                    </h4>
+                </section>
+            </section>
+            <section class="flex-column middle-content-footer" aria-labelledby="title-contactanos">
+                <h3 class="text-encabezado-20 medium text-center font-poppins" id="title-contactanos">CONTACTANOS / RECLAMOS</h3>
+                <section class="flex-row info-middle-footer">
+                    <img src="assets/images/footer/phone.png" alt="icono telephono" width="48">
+                    <div class="text-contenido-14 font-roboto">
+                        <h3 class="medium">Télefono:</h3>
+                        <h3 class="regular">+51 999 666 999</h3>
+                    </div>
+                </section>
+                <section class="flex-row info-middle-footer">
+                    <img src="assets/images/footer/email.png" alt="icono de email" width="48">
+                    <div class="text-contenido-14 font-roboto">
+                        <h3 class="medium">Correo:</h3>
+                        <h3 class="regular">luckyaircontactos@gmail.com</h3>
+                    </div>
+                </section>
+                <section class="flex-row info-middle-footer">
+                    <img src="assets/images/footer/ubication.png" alt="icono de ubicacion" width="48">
+                    <div class="text-contenido-14 font-roboto">
+                        <h3 class="medium">Oficina Central:</h3>
+                        <h3 class="regular">Av. Aviación 123, Lima - Perú</h3>
+                    </div>
+                </section>
+            </section>
+            <section class="right-content-footer" aria-labelledby="title-escribenos">
+                <form class="flex-column align-center">
+                    <h3 class="text-encabezado-20 medium font-poppins" id="title-escribenos">ESCRÍBENOS</h3>
+                    <input class="contactanos-form regular" type="text" placeholder="Nombre y Apellidos">
+                    <input class="contactanos-form regular" type="text" placeholder="Asunto">
+                    <input class="contactanos-form regular" type="email" placeholder="Correo electrónico">
+                    <textarea class="regular"  rows="5" placeholder="Escribe aquí tu mensaje..."></textarea>
+                    <input class="text-encabezado-20 bold font-roboto boton-form" type="submit" value="CONTACTANOS">
+                </form>
+            </section>
         </div>
-
-        <!-- Contacto -->
-        <div>
-            <h3 style="border:2px solid blue; display:inline-block; padding:5px;">
-                Contactanos / Reclamos
-            </h3>
-            <p>📞 51+ *********</p>
-            <p>📧 luckyaircontactos@gmail.com</p>
+        <div class="flex-row align-center justify-center hr-footer">
+            <hr width="100%">
         </div>
-
-        <!-- Formulario -->
-        <div>
-            <h3>Mándanos un mensaje</h3>
-            <input type="email" placeholder="Tu correo@" 
-                   style="padding:8px; margin-right:10px;">
-            <button style="padding:8px 15px; border:2px solid blue; background:white;">
-                Enviar
-            </button>
-        </div>
-
-    </div>
-
-    <!-- Línea inferior -->
-    <p style="text-align:center; margin-top:20px;">
-        lucky air @ 2026
-    </p>
-
-</footer>
+        <div class="flex-row text-contenido-12 font-montserrat secundary-content-footer">
+            <p>Lucky Air © 2026 | Todos los derechos reservados</p> 
+        </div> 
     </footer>
-    <!-- FIN FOOTER OMAR-->
-
+    <!-- FIN FOOTER JOSE-->
 
 </body>
 </html>

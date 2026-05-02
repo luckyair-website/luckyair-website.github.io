@@ -1,0 +1,23 @@
+/* Layout del header */
+
+header {
+    justify-content: space-between;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.logo-header {
+    flex: 2;
+}
+
+nav ul{
+    gap: 7rem;
+    flex: 5;
+}
+
+.login-header {
+    flex: 2;
+}

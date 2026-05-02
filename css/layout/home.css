@@ -1,0 +1,74 @@
+/* Layout home */
+
+.buscar-vuelos {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    height: 25vh;
+    width: 95%;
+    border-radius: 20px;
+    color: var(--color-primary);
+}
+
+.origen {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+
+
+.destinos {
+    display: flex;
+    flex: 1;
+}
+
+.fechas {
+    display: flex;
+    flex: 1;
+    
+}
+
+.fechas div {
+    gap: 10px;
+}
+
+.pasajeros {
+    display: flex;
+    flex: 1;
+    gap: 12px;
+}
+
+.pasajeros div {
+    gap: 10px;
+}
+
+.cards {
+    height: 55vh;
+    gap: 10px;
+    border: 1px solid pink;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 250px;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding-bottom: 20px;
+
+}
+
+.card p {
+    text-align: center;
+}
