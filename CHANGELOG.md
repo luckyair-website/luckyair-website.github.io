@@ -22,4 +22,7 @@ Con actualizaciones se logro maximizar nuestra puntuacion de performance, accesi
 - **fix** optimizacion de accesibilidad index.html
 
 ## 🧩 Creacion de estructura de css
-- **feature** index terminado con css y diseño responsivo
+- **feature** index terminado con css y diseño responsivo.
+
+## 🧩 Creacion de estructura de css 04/05 
+- **feature** implementacion del header y footer en las paginas principales (vuelos.html, beneficios.html y login.html).
