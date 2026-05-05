@@ -3,129 +3,223 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Lucky Air ofrece vuelos accesibles y frecuentes desde Perú. Más vuelos, menos costo.">
+    <title>Lucky Air - Beneficios</title>
+    <!-- Corregido: Se cerraron correctamente las comillas y etiquetas -->
     <link rel="stylesheet" href="../css/main.css">
-    <title>Beneficios</title>
+    <link rel="stylesheet" href="../css/beneficios.css">
 </head>
-<body>
-    
-    <!-- Inicio Header -->
-    <header>
-        <nav class="flex-row align-center justify-between" role="navigation">
-            <a href="/" class="logo__nav flex-row align-center">
-                <img src="../assets/images/header/logo.png" alt="Logo de Lucky Air" >
-            </a>
-            <input type="checkbox" id="menu-toggle" />
-            <label for="menu-toggle" class="menu-icon">&#9776;</label>
-            <ul class="enlaces__nav flex-row align-center justify-between">
-                <li>
-                    <a href="/" class="nav-link ">Home</a>
-                </li>
-                <li>
-                    <a href="vuelos.html" class="nav-link ">Vuelos</a>
-                </li>
-                <li>
-                    <a href="beneficios.html" class="nav-link active">Beneficios</a>
-                </li>
-                <li class="enlace-login__nav">
-                    <a href="login.html">Login</a>
-                </li>
-            </ul>
-            <a href="login.html" class="boton-login__nav flex-row align-center justify-center">
-                <img src="../assets/images/header/usuario.svg" alt="Icono de usuario" class="icono-user__nav">
-                <span class="">INGRESAR</span>
-            </a>
-        </nav>
-    </header>
-    <!-- Fin Header -->
+<body class="reset-body">
 
-    <main class="flex">
-        <section>
-            <div class="tarjeta">
+<header class="main-header">
+    <nav class="nav-full flex-row align-center justify-between" role="navigation">
+        
+        <a href="/" class="logo__nav flex-row align-center">
+            <img src="../assets/images/header/logo.png" alt="Logo de Lucky Air">
+        </a>
 
-                <div class="contenido">
-                    <img src="../assets/images/png/cusco.png" alt="">
-                    <h3>Ahorraaa! el 50%</h3>
-                    <h2>Machu Picchu</h2>
-                    <a href="">COMPRA</a>
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+
+        <ul class="enlaces__nav flex-row align-center justify-between">
+            <li><a href="/" class="nav-link">Home</a></li>
+            <li><a href="vuelos.html" class="nav-link">Vuelos</a></li>
+            <li><a href="beneficios.html" class="nav-link active">Beneficios</a></li>
+            <li class="enlace-login__nav">
+                <a href="login.html">Login</a>
+            </li>
+        </ul>
+
+        <a href="login.html" class="boton-login__nav flex-row align-center justify-center">
+            <img src="../assets/images/header/usuario.svg" alt="Icono de usuario" class="icono-user__nav">
+            <span>INGRESAR</span>
+        </a>
+
+    </nav>
+</header>
+
+<main>
+    <!-- SECCIÓN HERO ACTUALIZADA -->
+    <section class="rewards-hero flex-column align-center">
+        <h1 class="hero-title">Tus viajes te premian.<br>Bienvenido a Lucky Rewards.</h1>
+        
+        <div class="user-card flex-column align-center">
+            <p class="user-name">Hola, Juan Martinez</p>
+            <h2 class="points-balance">Saldo de Puntos: 14,500 pts</h2>
+            
+            <div class="level-info-container">
+                <div class="level-labels flex-row justify-between">
+                    <span class="current-level">Nivel: Plata</span>
+                    <span class="next-level-hint">Gana 500 pts más para el nivel ORO</span>
                 </div>
-
+                <div class="progress-bar-container">
+                    <div class="progress-bar-fill"></div>
+                </div>
             </div>
-            <div class="tarjeta">
 
-                <div class="contenido">
-                    <img src="../assets/images/png/arequipa.png" alt="">
-                    <h3>Ahorraaa! el 30%</h3>
-                    <h2>Arequipa</h2>
-                    <a href="">COMPRA</a>
+            <div class="card-buttons flex-row">
+                <button class="btn-yellow-pill">Canjear Puntos</button>
+                <button class="btn-white-pill">Como ganar más</button>
+            </div>
+        </div>
+    </section>
+</main>
+
+        <!-- SECCIÓN AHORRO EN VIAJES -->
+<!-- CONTENEDOR BLANCO TOTAL -->
+<div class="bg-white-full">
+    
+    <!-- SECCIÓN: ¿CÓMO FUNCIONA? -->
+    <section class="steps-section flex-column align-center">
+        <h2 class="section-title">¿Cómo funciona?</h2>
+        <div class="steps-grid">
+            <div class="step-card">
+                <img src="../assets/images/beneficios/registrate.png" alt="Registro">
+                <h3>REGÍSTRATE</h3>
+                <p>Crea tu cuenta<br>y únete al programa.</p>
+            </div>
+            <div class="step-card">
+                <img src="../assets/images/beneficios/vuela.png" alt="Vuelo">
+                <h3>VUELA CON NOSOTROS</h3>
+                <p>Acumula beneficios<br>cada vez que viajes.</p>
+            </div>
+            <div class="step-card">
+                <img src="../assets/images/beneficios/compra.png" alt="Socio">
+                <h3>COMPRA CON SOCIOS</h3>
+                <p>Obtén puntos comprando<br>con nuestros aliados.</p>
+            </div>
+            <div class="step-card">
+                <img src="../assets/images/beneficios/premios.png" alt="Premio">
+                <h3>DISFRUTA TUS PREMIOS</h3>
+                <p>Canjea tus puntos<br>por recompensas exclusivas.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN: AHORRO EN VIAJES -->
+    <section class="savings-section flex-column align-center">
+        <h2 class="dark-title main-title">Ahorro en viajes</h2>
+        <p class="subtitle">Beneficios clave para ahorrar en tus viajes</p>
+
+        <div class="savings-grid">
+            <div class="save-card flex-column align-center">
+                <div class="save-icon">
+                    <img src="../assets/images/beneficios/equipaje.png" alt="Equipaje">
                 </div>
+                <h3>EQUIPAJE ADICIONAL</h3>
+                <p>Desde 500 puntos</p>
+                <button class="btn-canjear">Canjear</button>
+            </div>
 
+            <div class="save-card flex-column align-center">
+                <div class="save-icon">
+                    <img src="../assets/images/beneficios/asientos.png" alt="Asientos">
+                </div>
+                <h3>SELECCIÓN DE ASIENTOS</h3>
+                <p>Desde 300 puntos</p>
+                <button class="btn-canjear">Canjear</button>
+            </div>
+
+            <div class="save-card flex-column align-center">
+                <div class="save-icon">
+                    <img src="../assets/images/beneficios/descuento.png" alt="Descuento">
+                </div>
+                <h3>DESCUENTO EN TICKET</h3>
+                <p>Desde 1000 puntos</p>
+                <button class="btn-canjear">Canjear</button>
+            </div>
+        </div>
+    </section>
+</div>
+
+        <!-- TIENDA: Fondo azul marino total -->
+        <section class="lucky-shop flex-column align-center">
+            <h2 class="white-title">La tienda del tio Lucky</h2>
+            <div class="shop-grid">
+                <div class="product-item">
+                    <div class="product-img-box"><img src="../assets/images/beneficios/item1.png"></div>
+                    <h3>Almohada</h3>
+                    <p class="puntos-tag">3,500 pts + $15</p>
+                    <button class="btn-yellow-sm">Añadir a Carrito</button>
+                </div>
+                <div class="product-item">
+                    <div class="product-img-box"><img src="../assets/images/beneficios/item2.png"></div>
+                    <h3>Merch T-shirt</h3>
+                    <p class="puntos-tag">3,500 pts + $15</p>
+                    <button class="btn-yellow-sm">Añadir a Carrito</button>
+                </div>
+                <div class="product-item">
+                    <div class="product-img-box"><img src="../assets/images/beneficios/item3.png"></div>
+                    <h3>Power adapter</h3>
+                    <p class="puntos-tag">3,500 pts + $15</p>
+                    <button class="btn-yellow-sm">Añadir a Carrito</button>
+                </div>
             </div>
         </section>
     </main>
-    <!-- Inicio Footer -->
-    <footer class="flex-column">
-        <div class="footer-main flex-row justify-between">
-            <div class="section-footer">
-                <h2 class="h1-banner">SIGUENOS EN REDES</h2>
-                <div class="img-redes-container__footer">
-                    <img class="img-redes" src="../assets/images/footer/facebook.png" alt="Icono de facebook">
-                    <img class="img-redes" src="../assets/images/footer/instagram.png" alt="Icono de instagram">
-                    <img class="img-redes" src="../assets/images/footer/x.png" alt="Icono de x">
-                </div>
-                <h2 class="h1-banner">HORARIO DE ATENCION</h2>
-                <div class="flex-row horario-footer">
-                    <img src="../assets/images/footer/reloj.png" alt="icono de reloj" width="40">
-                    <div>
-                        <h4>Lunes a Viernes: 08:00 AM - 08:00 PM.</h4>
-                        <h4>Lunes a Viernes: 08:00 AM - 08:00 PM.</h4>
-                    </div>
-                </div>
-                <h3>Llevandote mas alto, con la <br>
-                    seguridad que mereces.</h3>
+
+    <footer class="main-footer">
+    <div class="footer-content">
+
+        <!-- REDES + HORARIO -->
+        <div class="footer-section">
+            <h3>SÍGUENOS EN REDES</h3>
+
+            <div class="social-icons">
+                <img src="../assets/images/footer/facebook.png">
+                <img src="../assets/images/footer/instagram.png">
+                <img src="../assets/images/footer/x.png">
             </div>
-            <div class="section-footer">
-                <h2 class="h1-banner">CONTACTANOS / RECLAMOS</h2>
-                <div class="reclamos__footer flex-column">
-                    <div class="flex-row section-reclamos__footer">
-                        <img src="../assets/images/footer/phone.png" alt="icono telephono" width="40">
-                        <div >
-                            <h4 >Télefono:</h4>
-                            <h4 >+51 999 666 999</h4>
-                        </div>
-                    </div>
-                    <div class="flex-row section-reclamos__footer">
-                        <img src="../assets/images/footer/email.png" alt="icono de email" width="40">
-                        <div >
-                            <h4 >Correo:</h4>
-                            <h4 >luckyaircontactos@gmail.com</h4>
-                        </div>
-                    </div>
-                    <div class="flex-row section-reclamos__footer">
-                        <img src="../assets/images/footer/ubication.png" alt="icono de ubicacion" width="40">
-                        <div >
-                            <h4 >Oficina Central:</h4>
-                            <h4 >Av. Aviación 123, Lima - Perú</h4>
-                        </div>
-                    </div>
-                </div>
+
+            <h3>HORARIO DE ATENCIÓN</h3>
+            <p>Lunes a Viernes: 08:00 AM - 08:00 PM</p>
+            <p>Sábados y Domingos: 09:00 AM - 05:00 PM</p>
+
+            <p class="slogan">
+                “Llevándote más alto, con la seguridad que mereces.”
+            </p>
+        </div>
+
+        <!-- CONTACTO -->
+        <div class="footer-section">
+            <h3>CONTACTANOS / RECLAMOS</h3>
+
+            <div class="contact-item">
+                <span>📞</span>
+                <p>+51 999 666 999</p>
             </div>
-            <div class="section-footer">
-                <h2 class="h1-banner">ESCRIBENOS</h2>
-                <form action="" class="flex-column align-center form-escribenos__footer">
-                    <input type="text" placeholder="Nombres y Apellidos" required>
-                    <input type="text" placeholder="Asunto" required>
-                    <input type="email" placeholder="Correo electronico" required>
-                    <textarea name="" id="" cols="6" placeholder="Escribe tu mensaje" required></textarea>
-                    <button type="submit" class="flex-column align-center justify-center">CONTACTANOS</button>
-                </form>
+
+            <div class="contact-item">
+                <span>📧</span>
+                <p>luckyaircontactos@gmail.com</p>
+            </div>
+
+            <div class="contact-item">
+                <span>📍</span>
+                <p>Av. Aviación 123, Lima - Perú</p>
             </div>
         </div>
-        <div class="footer-sub flex-column align-center justify-end">
-            <hr width="90%"> 
-            <h4>Lucky Air @2025 | Todos los derechos reservados</h4>
+
+        <!-- FORMULARIO -->
+        <div class="footer-section">
+            <h3>ESCRÍBENOS</h3>
+
+            <form class="contact-form">
+                <input type="text" placeholder="Nombre y Apellidos">
+                <input type="text" placeholder="Asunto">
+                <input type="email" placeholder="Correo electrónico">
+                <textarea rows="3" placeholder="Escribe tu mensaje..."></textarea>
+
+                <button type="submit">CONTACTANOS</button>
+            </form>
         </div>
-    </footer>
-    <!-- Fin footer -->
+
+    </div>
+
+    <div class="footer-legal">
+        <hr>
+        <p>Lucky Air © 2026 | Todos los derechos reservados</p>
+    </div>
+</footer>
+
 </body>
 </html>
