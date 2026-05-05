@@ -1,74 +1,158 @@
-/* Layout home */
+ /* Layout home */
 
-.buscar-vuelos {
+/* 
+.vuelos-index {
+    height: 40vh;
+    box-sizing: border-box;
     display: flex;
-    flex-direction: row;
-    gap: 50px;
-    background-color: white;
-    justify-content: center;
-    align-items: center;
-    height: 25vh;
-    width: 95%;
-    border-radius: 20px;
-    color: var(--color-primary);
-}
-
-.origen {
-    display: flex;
-    flex: 1;
     flex-direction: column;
+}
+
+.hero-buscar {
+    width: 90%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    flex: 1;
+}
+
+
+
+.buscar-vuelos-section  {
+    flex: 5;
+    margin-bottom: 1rem;
+    width: 95%;
+    margin: 0 auto;
+    border-radius: 20px;
+    box-sizing: border-box;
+    max-height: 70%;
+    margin-bottom: 2rem;
+}
+
+.buscar-container {
+    flex: 1;
+}
+
+
+
+.ofertas-index {
+    min-height: 50vh; 
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    box-sizing: border-box;
+    justify-content: space-between; 
+}
+
+
+.card-img-ofertas {
+    width: 100%;
+    height: 40%; 
+    max-height: 60%; 
+    object-fit: cover;  
+    border-radius: 20px 20px 0 0;
+}
+
+.card a {
+    background: var(--color-secondary);
+    height: 35px;
+    width: 200px;
+    border-radius: 20px;
+    display: flex;
     align-items: center;
     justify-content: center;
-    gap: 12px;
-}
-
-
-
-.destinos {
-    display: flex;
-    flex: 1;
-}
-
-.fechas {
-    display: flex;
-    flex: 1;
     
 }
 
-.fechas div {
-    gap: 10px;
-}
 
-.pasajeros {
+.banner-index {
     display: flex;
-    flex: 1;
-    gap: 12px;
+    flex-direction: column; 
+    height: 90vh;         
+    width: 100%;
+    overflow: hidden;     
+    box-sizing: border-box;
+    margin-top: 1rem;
 }
 
-.pasajeros div {
-    gap: 10px;
+.banner-index h2, 
+.banner-index h4 {
+    flex-shrink: 0;       
+    margin-bottom: 10px;   
 }
 
-.cards {
-    height: 55vh;
-    gap: 10px;
-    border: 1px solid pink;
+.banner-index img {
+    flex-grow: 1;        
+    min-height: 0;         
+    object-fit: contain;   
+    width: 100%;           
 }
 
-.card {
+.beneficios-index {
+    height: 45vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    width: 200px;
-    height: 250px;
-    gap: 10px;
-    justify-content: center;
     align-items: center;
-    border: 1px solid white;
-    border-radius: 10px;
-    padding-bottom: 20px;
-
+    justify-content: space-between;
+    padding-top: 2rem;
+    gap: 1rem;
+    background: red;
 }
 
-.card p {
+.p {
     text-align: center;
 }
+
+
+
+.resenas-index {
+    height: 45vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-top: 1rem;
+}
+
+.cards-reseñas {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+    width: 100%;
+    padding: 0 8rem 0 8rem;
+    gap: 2rem;
+}
+
+.card-reseña {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+    max-width: 25%;
+    min-width: 200px;
+    background: var(--color-secondary);
+    color: var(--color-primary);
+    border-radius: 20px;
+    text-align: center;
+    
+}
+
+.avatar-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 0 1rem 0;
+}
+
+.avatar-img {
+    background: var(--color-text-muted);
+    border-radius: 30px;
+}
+ */

@@ -1,0 +1,14 @@
+/* Responsive footer */
+
+@media (max-width: 400px)  {
+
+    footer {
+        height: 150vh;
+    }
+
+    .footer-main {
+        flex-direction: column;
+    }
+
+
+}

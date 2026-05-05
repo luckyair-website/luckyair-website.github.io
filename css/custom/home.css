@@ -1,1 +1,318 @@
-/* Estilos personalizados home */
+/* /* Estilos personalizados home */
+/* 
+
+.hero-buscar h1 {
+    font-size: clamp(12px, 4vw, var(--font-size-28));
+    line-height: var(--line-height);
+    letter-spacing: var(--letter-spacing-big);
+    color: var(--color-accent);
+    font-family: var(--font-family-secundaria-roboto);
+    font-weight: var(--font-weight-bold);
+}
+
+.hero-buscar h3 {
+    font-size: clamp(8px, 2vw, var(--font-size-14));
+    line-height: var(--line-height);
+    letter-spacing: var(--letter-spacing-small);
+    font-family: var(--font-family-secundaria-roboto);
+    font-weight: var(--font-weight-medium);
+}
+
+.buscar-vuelos-section {
+    background: var(--color-secondary);
+}
+
+.input-select {
+    display: inline-block;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none; 
+    
+    margin-top: 1rem;
+    height: 45px;
+    width: 220px;
+    border-radius: 20px;
+ 
+    padding: 0 1rem;
+    font-family: var(--font-family-primary-montserrat);
+    font-size: clamp(8px, 1vw, var(--font-size-12));
+    line-height: var(--line-height);
+    letter-spacing: var(--letter-spacing-small);
+    font-weight: var(--font-weight-bold);
+    background: url("../../assets/images/index/flecha-ampliar.png") no-repeat right 0.75rem center;
+    background-size: 2rem;
+    border-color: var(--color-primary);
+}
+
+.input-select {
+  color: var(--color-text-muted); 
+}
+
+.input-select:invalid {
+  color: var(--color-text-muted); 
+}
+
+.input-select:valid {
+  color: var(--color-primary);   
+}
+
+ .input-date-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.input-date {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  height: 45px;
+  width: 220px;
+  border-radius: 20px;
+  padding: 0 1rem;
+  font-family: var(--font-family-primary-montserrat);
+  font-size: var(--font-size-12);
+  font-weight: var(--font-weight-bold);
+  line-height: 45px; 
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+
+.input-date:invalid {
+  color: var(--color-text-muted);
+}
+
+
+.input-date:invalid::before {
+  content: attr(placeholder);
+  color: var(--color-text-muted);
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%); 
+  pointer-events: none;
+}
+
+
+.input-number {
+    display: inline-block;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none; 
+    font: inherit; 
+    margin-top: 1rem;
+    height: 45px;
+    width: 220px;
+    border-radius: 20px;
+    color: var(--color-primary);
+    padding: 0 1rem;
+    font-family: var(--font-family-primary-montserrat);
+    font-size: var(--font-size-12);
+    line-height: var(--line-height);
+    letter-spacing: var(--letter-spacing-small);
+    font-weight: var(--font-weight-bold);
+    border-color: var(--color-primary);
+}
+
+.input-number::value {
+    color: var(--color-text-muted);
+}
+
+.input-number::placeholder {
+    display: inline-block;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none; 
+    font: inherit; 
+    margin-top: 1rem;
+    height: 45px;
+    width: 220px;
+    border-radius: 20px;
+    color: var(--color-text-muted);
+    padding: 0 1rem;
+    font-family: var(--font-family-primary-montserrat);
+    font-size: var(--font-size-12);
+    line-height: var(--line-height);
+    letter-spacing: var(--letter-spacing-small);
+    font-weight: var(--font-weight-bold);
+}
+
+.buscar-button {
+    height: 45px;
+    width: 220px;
+    background: var(--color-accent);
+    border-radius: 20px;
+    margin-top: 1.5rem;
+    font-family: var(--font-family-primary-montserrat);
+    font-size: clamp(10px, 1vw, var(--font-size-14));
+    line-height: var(--line-height);
+    letter-spacing: var(--letter-spacing-small);
+    font-weight: var(--font-weight-bold);
+    background: var(--color-accent) url("../../assets/images/index/buscar.png") no-repeat right 0.75rem center;
+    background-size: 2rem;
+    padding-right: 0.5rem;
+}
+
+.buscar-container label {
+    color: var(--color-primary);
+}
+
+
+
+
+
+
+
+
+@media (max-width: 1150px) {
+
+   
+    nav a{
+        font-size: var(--font-size-12);
+        justify-content: center;
+    }
+
+
+    .buscar-vuelos-section {
+        height: 80vh;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .buscar-container {
+        padding: 1rem 0 1rem 0;
+        flex: 0 0 48%;        
+        margin: 2rem 0 3rem;  
+    }
+
+    .input-select, .input-date, .input-number, .buscar-button {
+        height: 30px;
+        width: 150px;
+        background-size: 1rem;
+    }
+
+
+    .ofertas-index {
+        height: auto;
+        flex-direction: row;
+        margin-top: 50vh;
+    }
+
+    .cards {
+        justify-content: space-around; 
+        height: 80vh;
+        flex: 1;                  
+        flex-wrap: wrap;          
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .banner-index {
+        margin-top: 100vh;
+    }
+
+  
+    .beneficios-section {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    gap: 2rem;
+  }
+
+  .beneficio-container {
+    flex: none;               
+    width: 100%;              
+    max-width: 400px;         
+    margin: 0 auto;           
+  }
+
+   
+
+    .resenas-index {
+        flex-direction: row;
+        height: auto;
+        min-height: 90vh;
+        justify-content: center;
+        background: red;
+        margin-top: 2rem;
+    }
+
+    .cards-reseñas {
+        flex-direction: row;
+        justify-content: center;
+        height: auto;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 550px) {
+    nav {
+        font-size: var(--font-size-12);
+    }
+   
+    nav ul {
+        width: 100%;
+        justify-content: start;
+        display: none;
+    }
+    .buscar-vuelos-section {
+        display: flex;
+        flex-direction: column;   
+        align-items: stretch;    
+        height: auto;            
+        gap: 20px;               
+    }
+
+    .buscar-container {
+        flex: 1 1 100%;           
+        width: 100%;              
+        margin-bottom: 0;      
+    }
+
+    .menu-icon {
+        display: block; 
+    }
+
+    .menu-links {
+        display: none; 
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        background: #222;
+        padding: 20px;
+    }
+
+
+    #menu-toggle:checked ~ .menu-links {
+        display: flex;
+    }
+
+
+
+    .ofertas-index {
+        height: 90hv;
+        flex-direction: row;
+        margin-top: 100vh;
+    }
+
+    .ofertas-index {
+        height: 180hv;
+        flex-direction: row;
+        margin-top: 95vh;
+    }
+
+
+
+    .resenas-index {
+        justify-content: center;
+        align-items: center;
+        margin-top: 5rem;
+        min-height: 150vh;
+        background: violet;
+    }
+}
+
+ */ 

@@ -14,6 +14,7 @@
 :root {
     
   /* Tipografía */
+  --font-size-10: 10px;
   --font-size-12: 12px;
   --font-size-14: 14px;
   --font-size-16: 16px;
@@ -66,27 +67,39 @@
   
 }
 
+html {
+  height: 100%; /* referencia */
+}
+
 body {
+  min-height: 90vh;   /* al menos el alto de la ventana */
+  width: 95%;          /* ancho fijo */
+  margin: 0 auto;      /* centrado horizontal */
+  display: flex;
+  flex-direction: column;
   background-color: var(--color-primary);
   color: var(--color-secondary);
 }
 
-main {
-  padding-top: 100px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 header {
   height: 10vh;
+  width: 95%;          
+  position: fixed;
+  top: 0;
+  left: 50%;              
+  transform: translateX(-50%); 
+  z-index: 1000;
+  background-color: var(--color-primary);
+}
+
+
+
+
+main {
+  flex: 1;                /* ocupa el espacio restante dinámicamente */
+  margin-top: 10vh;
 }
 
 footer {
   height: 90vh;
-}
-
-a {
-    text-decoration: none;
-    color: var(--color-secondary); 
 }

@@ -1,78 +1,83 @@
-# 🌐 LuckyAir Website
+# LuckyAir Website
 
-## 📌 Descripción
-Este proyecto corresponde a la primera etapa del desarrollo de **LuckyAir Website**, una aplicación web colaborativa construida inicialmente con **HTML puro**.  
-El objetivo es diseñar la estructura básica de la página y sus principales componentes.
+📌 **Descripción**  
+LuckyAir Website es una aplicación web colaborativa en desarrollo.  
+La primera etapa se construyó con **HTML puro**, y actualmente estamos integrando **CSS** para mejorar la presentación y accesibilidad.
 
-## 🚀 Funcionalidades implementadas
-- **Header**:
-  - Logo de la empresa.
-  - Barra de navegación funcional.
-  - Ícono de usuario que redirige al login.
+---
 
-- **Banner principal**:
-  - Slogan corporativo destacado.
+🚀 **Funcionalidades actuales**
+- **Header** con logo, barra de navegación y acceso a login.
+- **Banner principal** con slogan corporativo.
+- **Página de registro** con formulario validado (nombres, apellidos, correo, documento, contraseña, confirmación).
+- Checkboxes para T&C y promociones.
+- Botón de envío funcional.
+- Opciones de ingreso alternativo (Google, Microsoft, Facebook, Apple).
 
-- **Página de registro**:
-  - Formulario con campos: nombres, apellidos, correo, documento de identidad, número de documento, contraseña y confirmación.
-  - Validaciones básicas (`required`, `minlength`, `type`).
-  - Checkboxes para aceptar T&C y suscribirse a promociones.
-  - Botón de envío funcional.
-  - Opciones de ingreso alternativo con íconos de Google, Microsoft, Facebook y Apple.
+---
+
+📂 **Estructura del proyecto**
 
 ## 📂 Estructura del proyecto
+```text
 LUCKYAIR-WEBSITE.GITHUB.IO/
 │
 ├── assets/
 │   ├── images/
+│   │   ├── beneficios
+│   │   ├── footer
+│   │   ├── header
+│   │   ├── index
+│   │   ├── login
+│   │   ├── others     
 │   │   ├── png/ (logo, banner, íconos)
 │   │   └── svg/ (ícono usuario)
-│   ├── css/ (pendiente)
-│   ├── js/ (pendiente)
-│   └── videos/ (pendiente)
+│   └── videos/ 
+├── css/ 
+│   │   ├── custom/
+│   │   ├── layout/
+│   │   └── responsive/
+│   ├── global.css
+│   ├── main.css
+│   └── utils.css
+├── js/ (pendiente)
+│   
 │
 ├── pages/
 │   ├── beneficios.html
+│   ├── confirmar-pago.html
 │   ├── login.html
+│   ├── pago.html
+│   ├── pagofinal.html
+│   ├── recuperarcontraseña.html
 │   ├── registro.html
 │   └── vuelos.html
 │
 ├── index.html
+├── CHANGELOG.md
 └── README.md
 
 
 ## 🛠️ Tecnologías utilizadas
 - HTML5
 - Validaciones nativas de formularios
-- Sin CSS ni JS en esta primera etapa
+- CSS (en progreso)
+- JavaScript (pendiente)
 
 ## 📌 Próximos pasos
-- Implementar estilos con CSS para mejorar la presentación.
+- Completar estilos con CSS → versión **2.0**.
 - Añadir interactividad con JavaScript.
 - Conectar el formulario de registro a un backend.
 - Extender la navegación con más páginas y funcionalidades.
 
 ---
 
-✍️ **Nota:** Este README se irá actualizando conforme avance el proyecto y se integren nuevas tecnologías.
+📜 **Versionado**
+- **v1.0** → Proyecto inicial solo con HTML.  
+- **v1.5 (actual)** → Index terminado con HTML + CSS.  
+- **v2.0 (futuro)** → Proyecto completo estilizado con CSS.
 
-## 🧩 Descripción de cambios recientes 12/04 -> Jose Torres
-En esta actualización se realizaron ajustes y mejoras tanto en index.html como en registro.html, centrados en accesibilidad y experiencia de usuario:
-- **fix:** Se aplicó un color de fondo azul (bgcolor="#1E3A8A") y texto en blanco (text="#FFFFFF") para mejorar el contraste y la legibilidad general.
-- **fix:** En el archivo registro.html, se optimizó la accesibilidad conectando correctamente las etiquetas <label> con sus respectivos elementos de formulario (checkbox y campos de entrada).
-- **fix:** Se ajustó el color del vínculo de acceso al login, que anteriormente no contrastaba adecuadamente con el fondo.
-- **feat:** Se implementaron enlaces externos navegables en los iconos de login alternativo, añadiendo el atributo target="_blank" para abrirlos en una nueva pestaña.
+---
 
-## 🧩 Descripción de cambios recientes 15/04 -> Jose Torres
-En esta actualizacion se inserto el header y footer empleando la etiqueta "<iframe>" en el index, vuelos, beneficios y login.
-
-## 🧩 Descripción de cambios recientes 16/04 -> Jose Torres
-- **fix:** Se reemplazo el formato del logo del iframe referente al header y del banner principal del index.html a formato webp.
-- **feat:** Se coloco los metadatos descriptivos del index.html.
-- **feat:** Se coloco el "title" a la etiqueta <iframe>.
-- **feat:** Se coloco el "role" a la etiqueta nav y footer de los iframe.
-Con actualizaciones se logro maximizar nuestra puntuacion de performance, accesibilidad, best practices y SEO de nuestro "index.html".
-
-## 🧩 Descripción de cambios recientes 16/04 -> Jose Torres
-- **fix** correccion de desface de ramas
-- **fix** optimizacion de accesibilidad index.html
+✍️ **Notas**
+El detalle de cambios (fix, feat, etc.) se documenta en el historial de commits y en `CHANGELOG.md`.

@@ -1,6 +1,68 @@
 /* Layout del footer */
 
 footer {
+    width: 100%;
+}
+
+.footer-main {
+    width: 100%;
+    flex: 9;
+}
+
+.footer-sub {
+    width: 100%;
+    flex: 1;
+    gap: 1rem;
+}
+
+.section-footer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.img-redes-container__footer {
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.img-redes {
+    width: 56px;
+    height: auto;
+    display: block;
+}
+
+.form-escribenos__footer {
+    width: 100%;
+    gap: 1rem;
+}
+
+.form-escribenos__footer input, button {
+    height: 32px;
+    width: 60%;
+    border-radius: 20px;
+    padding: 1rem;
+}
+
+.form-escribenos__footer textarea {
+    width: 60%;
+    border-radius: 20px;
+    padding: 1rem;
+    resize: none;
+}
+
+.horario-footer {
+    gap: 1rem;
+}
+
+
+/* 
+footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -36,7 +98,7 @@ footer {
 
 .right-content-footer {
     flex: 1;
-    /* flex */
+    
 }
 
 .redes-content-footer {
@@ -98,10 +160,11 @@ textarea {
 .icono-redes{
     width: 40px;
     aspect-ratio: 1 / 1;
-    height: auto; /* asegura proporción */
-    display: block; /* evita que line-height afecte */
+    height: auto; 
+    display: block; 
 }
 
 .redes-sociales li a {
-  line-height: 0; /* evita que el alto del texto afecte la caja */
+  line-height: 0; 
 }
+ */

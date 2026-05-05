@@ -16,9 +16,26 @@
     align-items: center;
 }
 
+.align-end {
+    align-items: end;
+}
+
+.justify-start {
+    justify-content: start;
+}
+
 .justify-center {
     justify-content: center;
 }
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-end {
+    justify-content: end;
+}
+
 
 
 
@@ -36,13 +53,13 @@
     letter-spacing: var(--letter-spacing-small);
 }
 
-.text-contenido-16 {
+.text-16 {
     font-size: var(--font-size-16);
     line-height: var(--line-height);
     letter-spacing: var(--letter-spacing-small);
 }
 
-.text-contenido-18 {
+.text-18 {
     font-size: var(--font-size-18);
     line-height: var(--line-height);
     letter-spacing: var(--letter-spacing-small);
@@ -53,6 +70,25 @@
     line-height: var(--line-height);
     letter-spacing: var(--letter-spacing-medium);
 }
+
+.text-encabezado-24 {
+    font-size: var(--font-size-24);
+    line-height: var(--line-height);
+    letter-spacing: var(--letter-spacing-medium);
+}
+
+.text-encabezado-28 {
+    font-size: var(--font-size-28);
+    line-height: var(--line-height);
+    letter-spacing: var(--letter-spacing-big);
+}
+
+.text-encabezado-32 {
+    font-size: var(--font-size-32);
+    line-height: var(--line-height);
+    letter-spacing: var(--letter-spacing-big);
+}
+
 
 
 
@@ -91,4 +127,52 @@
 .text-center{
     text-align: center;
     width: 100%; 
+}
+
+.text-color-accent {
+    color: var(--color-accent);
+}
+
+.text-color-white {
+    color: var(--color-secondary);
+}
+
+.text-color-primary {
+    color: var(--color-primary);
+}
+
+
+
+/* CARDS */
+.cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-xy {
+    width: 240px;
+    height: 100%;  
+    max-height: 100%; 
+    padding-bottom: 0.5rem;
+}
+
+/* BORDES */
+.borde-white {
+    border: 1px solid white;
+    border-radius: 20px;
+}
+
+/* GAP */
+.gap-1 {
+    gap: 1rem;
 }

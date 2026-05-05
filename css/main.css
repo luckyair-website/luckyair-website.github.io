@@ -24,3 +24,26 @@
 @import url('layout/login.css');
 @import url('layout/registro.css');
 
+
+/* Estilos personalizados home */
+@import url('custom/home/buscar-vuelos.css');
+@import url('custom/home/ofertas.css');
+@import url('custom/home/banner-principal.css');
+@import url('custom/home/beneficios.css');
+@import url('custom/home/resenas.css');
+
+/* Layout home */
+@import url('layout/home/buscar-vuelos.css');
+@import url('layout/home/ofetas.css');
+@import url('layout/home/banner-principal.css');
+@import url('layout/home/beneficios.css');
+@import url('layout/home/resenas.css');
+
+/* Responsive */
+@import url('responsive/header.css');
+@import url('responsive/buscar-vuelos.css');
+@import url('responsive/ofertas.css');
+@import url('responsive/banner-principal.css');
+@import url('responsive/beneficios.css');
+@import url('responsive/resenas.css');
+@import url('responsive/footer.css');

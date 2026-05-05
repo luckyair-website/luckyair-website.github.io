@@ -1,0 +1,44 @@
+/* Layout reseñas home */
+
+.resenas__home {
+    height: 45vh;
+}
+
+.cards-resenas__home {
+    flex: 1;
+    width: 100%;
+    padding: 0 12rem;
+}
+
+.card-resenas__home {
+    height: 200px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-center;
+    color: var(--color-primary);
+    background: var(--color-secondary);
+    border-radius: 20px;
+    padding-bottom: 1rem;
+}
+
+.card-resenas__home p {
+    text-align: center;
+}
+
+.avatar-container__home {
+    gap: 1rem;
+    padding-top: 1rem;
+}
+
+.avatar-container__home img {
+    background: gray;
+    border-radius: 30px;
+}
+
+.puntuacion-resenas img {
+    width: 24px;
+    height: auto;
+    padding-top: 0.5rem;
+}

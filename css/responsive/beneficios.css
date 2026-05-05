@@ -1,0 +1,18 @@
+/* Responsive beneficios home */
+
+@media (max-width: 400px)  {
+
+    .beneficios__home {
+        height: 90vh;
+    }
+
+    .cards-beneficios__home {
+        flex-direction: column;
+    }
+
+    .card-beneficios__home {
+        height: 200px;
+        width: 250px;
+    }
+
+}
