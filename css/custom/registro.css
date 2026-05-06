@@ -1,0 +1,117 @@
+/* Estilos personalizados registro */
+
+/* Contador */
+.paso-indicador {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+}
+
+/* Barra de progreso */
+.progreso-segmento {
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: background-color 0.3s;
+}
+
+.progreso-segmento.activo {
+    background: var(--gradient-button-primary);
+}
+
+/* Tarjeta */
+.registro-card {
+    background-color: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--color-secondary);
+}
+
+/* Logo */
+.logo-avion {
+    font-size: var(--font-size-20);
+    color: var(--color-accent);
+}
+
+.logo-air {
+    color: var(--color-accent);
+}
+
+/* Inputs */
+.registro-input {
+    background-color: rgba(255, 255, 255, 0.85);
+    color: #333;
+    transition: background-color 0.2s;
+}
+
+.registro-input:focus {
+    background-color: var(--color-secondary);
+}
+
+.registro-input::placeholder {
+    color: var(--color-text-muted);
+}
+
+/* Social */
+.icono-instagram {
+    border-radius: 50%;
+}
+
+/* Selector doc */
+.doc-selector {
+    border: 2px solid var(--color-secondary);
+}
+
+.doc-btn {
+    background: transparent;
+    color: var(--color-secondary);
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.doc-btn-activo {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+}
+
+/* T&C */
+.tc-check input[type="checkbox"] {
+    accent-color: var(--color-accent);
+}
+
+/* Link login */
+.link-login {
+    color: var(--color-accent);
+    text-decoration: underline;
+}
+
+/* Botón SIGUIENTE */
+.btn-siguiente {
+    background: var(--gradient-button-primary);
+    color: var(--color-primary);
+    transition: opacity 0.2s;
+}
+
+.btn-siguiente:hover {
+    opacity: 0.85;
+}
+
+/* Botón VOLVER */
+.btn-volver {
+    background: transparent;
+    color: var(--color-secondary);
+    border: 2px solid var(--color-secondary);
+    transition: background-color 0.2s;
+}
+
+.btn-volver:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Botón REGISTRARME */
+.btn-registrar {
+    background: var(--gradient-button-primary);
+    color: var(--color-primary);
+    letter-spacing: var(--letter-spacing-small);
+    transition: opacity 0.2s;
+}
+
+.btn-registrar:hover {
+    opacity: 0.85;
+}
