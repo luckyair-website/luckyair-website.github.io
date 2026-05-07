@@ -1,6 +1,6 @@
 /* Responsive banner principal home */
 
-@media (max-width: 400px)  {
+@media (max-width: 480px)  {
 
     .banner__principal {
         height: 40vh;

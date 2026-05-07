@@ -1,6 +1,6 @@
 /* Responsive beneficios home */
 
-@media (max-width: 400px)  {
+@media (max-width: 480px)  {
 
     .beneficios__home {
         height: 90vh;

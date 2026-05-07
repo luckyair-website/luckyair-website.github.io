@@ -26,3 +26,6 @@ Con actualizaciones se logro maximizar nuestra puntuacion de performance, accesi
 
 ## 🧩 Creacion de estructura de css 04/05 
 - **feature** implementacion del header y footer en las paginas principales (vuelos.html, beneficios.html y login.html).
+
+## 🧩 Creacion de estructura de css 06/05 
+- **fix** correccion de sobre escritura de estilos aplicados en beneficios.html, que alteraban toda la web.

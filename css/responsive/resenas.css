@@ -1,6 +1,6 @@
 /* Responsive reseñas home */
 
-@media (max-width: 400px)  {
+@media (max-width: 480px)  {
 
     .resenas__home {
         height: 120vh;

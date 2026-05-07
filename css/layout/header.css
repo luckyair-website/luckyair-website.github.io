@@ -37,6 +37,7 @@ nav {
     gap: 1.25rem;
     border: 1px solid white;
     border-radius: 20px;
+    color: var(--color-secondary);
 }
 
 .nav-link {

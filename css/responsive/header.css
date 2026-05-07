@@ -1,28 +1,7 @@
 /* Header responsive */
 
-.menu-icon {
-    font-size: 28px;
-    cursor: pointer;
-    display: none;
-}
 
-
-#menu-toggle {
-    display: none;
-}
-
-.login-header {
-    display: inline-flex;
-    border-radius: 20px;
-    
-    background: var(--gradient-button-primary);
-}
-
-.enlace-login__nav {
-    display: none;
-}
-
-@media (max-width: 400px)  {
+@media (max-width: 480px)  {
 
     .enlaces__nav, .boton-login__nav {
         display: none;
