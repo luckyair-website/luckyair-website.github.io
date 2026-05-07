@@ -393,3 +393,86 @@ header nav {
     width: 18px;
     height: 18px;
 }
+/* ===== TIENDA ===== */
+
+.shop-title {
+    color: white;
+    font-size: 28px;
+    margin-bottom: 40px;
+}
+
+/* GRID 3x3 */
+.shop-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* TARJETAS */
+.product-card {
+    background: #e5e5e5;
+    border-radius: 20px;
+    padding: 25px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+/* HOVER SUAVE */
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+/* IMAGEN */
+.product-img {
+    background: #dcdcdc;
+    border-radius: 15px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.product-img img {
+    width: 100%;
+    max-height: 140px;
+    object-fit: contain;
+}
+
+/* TEXTO */
+.product-card h3 {
+    color: #001026;
+    margin: 10px 0;
+}
+
+.product-card p {
+    font-size: 22px;
+    font-weight: bold;
+    color: #001026;
+}
+
+/* BOTON */
+.product-card button {
+    margin-top: 15px;
+    background: #f1c40f;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* CONTROLES ABAJO */
+.shop-controls {
+    margin-top: 40px;
+}
+
+.arrow {
+    background: #2c2c2c;
+    color: white;
+    border: none;
+    font-size: 22px;
+    padding: 10px 18px;
+    border-radius: 10px;
+    margin: 0 5px;
+    cursor: pointer;
+}
