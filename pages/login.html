@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Lucky Air ofrece vuelos accesibles y frecuentes desde Perú. Más vuelos, menos costo.">
+    <title>Login - Lucky Air</title>
     <link rel="stylesheet" href="../css/main.css">
-    <title>Login</title>
 </head>
 
 <body>
@@ -15,7 +15,7 @@
     <header>
         <nav class="flex-row align-center justify-between" role="navigation">
             <a href="/" class="logo__nav flex-row align-center">
-                <img src="../assets/images/header/logo.png" alt="Logo de Lucky Air" >
+                <img src="../assets/images/header/logo.png" alt="Logo de Lucky Air">
             </a>
             <input type="checkbox" id="menu-toggle" />
             <label for="menu-toggle" class="menu-icon">&#9776;</label>
@@ -43,73 +43,115 @@
 
     <!-- INICIO MAIN EDGAR-->
 
-    <main>
-    <font color="#fff">
-        <table width="60%" align="center">
-            <tr align="center">
-                <td>
-                    <h1>Iniciar sesión</h1>
-                    <p>Bienvenido de nuevo.<br>Ingresa tus credenciales.</p>
-                </td>
-            </tr>
-        </table>
+    <main class="login-main flex-row">
 
-        <table width="60%" align="center">
-            <tr align="center">
-                <td>
-                    <button type="button"><img src="../assets/images/png/google.png" width="16" alt="logo de google">&nbsp;Continuar con Google</button>
-                    <button type="button"><img src="../assets/images/png/facebook.png" width="16" alt="logo de facebook">&nbsp;Continuar con Facebook</button>
-                </td>
-            </tr>
-            <tr align="center">
-                <td>
-                    <p>— o continúa con tu correo —</p>
-                </td>
-            </tr>
-        </table>
+        <!-- Lado izquierdo: banner decorativo -->
+        <section class="login-banner flex-column align-center justify-center">
+            <h1 class="login-banner__titulo text-encabezado-32 bold font-poppins text-color-white text-center">
+                Vuela con nosotros,<br>vuela seguro
+            </h1>
+            <img
+                src="../assets/images/login/avion-luckyair.png"
+                alt="Avión Lucky Air"
+                class="login-banner__avion"
+            />
+        </section>
 
-        <form action="../index.html" method="GET">
-            <table width="60%" align="center" cellspacing="8">
-                <tr>
-                    <td align="right"><label for="email-field">Correo electrónico:</label></td>
-                    <td><input type="email" id="email-field" name="usuario_email" placeholder="ejemplo@correo.com" required></td>
-                </tr>
-                <tr>
-                    <td align="right"><label for="password-field">Contraseña:</label></td>
-                    <td>
-                        <input type="password" id="password-field" name="usuario_pass" placeholder="Mínimo 8 caracteres" required>
-                        <button type="button" aria-label="Mostrar contraseña">👁</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>
-                        <input type="checkbox" id="remember-check" name="recordar">
-                        <label for="remember-check">Recordarme</label>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2" align="center">
-                        <a href="recuperarcontraseña.html">¿Olvidaste tu contraseña?</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2" align="center">
-                        <button type="submit">Iniciar sesión</button>
-                    </td>
-                </tr>
-            </table>
-        </form>
+        <!-- Lado derecho: card con formulario -->
+        <section class="login-section flex-column align-center justify-center">
 
-        <div align="center">
-            <p>
-                ¿No tienes una cuenta? &nbsp;
-                <a href="registro.html">Regístrate aquí</a>
-            </p>
-        </div>
-    </font>
-</main>
+            <div class="login-card flex-column align-center">
 
+                <!-- Título de la card -->
+                <div class="login-card__header flex-row align-center justify-center">
+                    <img src="../assets/images/login/avion.png" alt="Avión Lucky Air" class="login-card__logo-avion" />
+                    <h2 class="text-encabezado-24 font-poppins text-color-white">
+                        <span class="bold">Lucky</span> <span class="bold text-color-accent">Air</span>
+                    </h2>
+                </div>
+
+                <p class="login-card__subtitulo text-contenido-14 font-montserrat text-color-white text-center">
+                    O ingresa con:
+                </p>
+
+                <!-- Botones sociales -->
+                <div class="login-social flex-row justify-center">
+                    <button class="login-social__btn flex-row align-center justify-center">
+                        <img src="../assets/images/login/google.png" alt="Google" class="login-social__icon" />
+                        <span class="text-contenido-12 bold font-roboto">Continuar con Google</span>
+                    </button>
+                    <button class="login-social__btn flex-row align-center justify-center">
+                        <img src="../assets/images/login/facebook.png" alt="Facebook" class="login-social__icon" />
+                        <span class="text-contenido-12 bold font-roboto">Continuar con Facebook</span>
+                    </button>
+                </div>
+
+                <!-- Separador -->
+                <p class="login-divider text-contenido-14 font-montserrat text-color-white">
+                    O continúa con tu correo:
+                </p>
+
+                <!-- Formulario -->
+                <div class="login-form flex-column">
+
+                    <div class="login-form__grupo flex-column">
+                        <label for="correo" class="login-form__label text-contenido-14 font-montserrat text-color-white">
+                            Correo electrónico
+                        </label>
+                        <input
+                            type="email"
+                            id="correo"
+                            name="correo"
+                            placeholder="ejemplo@correo.com"
+                            class="login-form__input text-contenido-14 font-opensans"
+                        />
+                    </div>
+
+                    <div class="login-form__grupo flex-column">
+                        <label for="contrasena" class="login-form__label text-contenido-14 font-montserrat text-color-white">
+                            Contraseña
+                        </label>
+                        <div class="login-form__input-wrapper">
+                            <input
+                                type="password"
+                                id="contrasena"
+                                name="contrasena"
+                                placeholder="Mínimo 8 caracteres"
+                                class="login-form__input text-contenido-14 font-opensans"
+                            />
+                            <button type="button" class="login-form__toggle-pass" aria-label="Mostrar contraseña">
+                                <img src="../assets/images/login/esconder.png" alt="Ver contraseña" />
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Recordarme / Olvidé contraseña -->
+                    <div class="login-form__opciones flex-row align-center justify-between">
+                        <label class="login-form__recordar flex-row align-center text-contenido-14 font-montserrat text-color-white">
+                            <input type="checkbox" checked /> Recordarme
+                        </label>
+                        <a href="recuperarcontrasena.html" class="login-form__olvide text-contenido-14 font-montserrat text-color-accent">
+                            ¿Olvidaste tu contraseña?
+                        </a>
+                    </div>
+
+                    <!-- Botón submit -->
+                    <button type="submit" class="login-form__submit bold font-roboto text-color-primary">
+                        INICIAR SESIÓN
+                    </button>
+
+                    <!-- Link registro -->
+                    <p class="login-form__registro text-contenido-14 font-montserrat text-color-white text-center">
+                        ¿No tienes una cuenta?
+                        <a href="registro.html" class="text-color-accent bold">Regístrate aquí</a>
+                    </p>
+
+                </div>
+            </div>
+
+        </section>
+
+    </main>
 
     <!-- FIN MAIN EDGAR-->
 
@@ -139,23 +181,23 @@
                 <div class="reclamos__footer flex-column">
                     <div class="flex-row section-reclamos__footer">
                         <img src="../assets/images/footer/phone.png" alt="icono telephono" width="40">
-                        <div >
-                            <h4 >Télefono:</h4>
-                            <h4 >+51 999 666 999</h4>
+                        <div>
+                            <h4>Télefono:</h4>
+                            <h4>+51 999 666 999</h4>
                         </div>
                     </div>
                     <div class="flex-row section-reclamos__footer">
                         <img src="../assets/images/footer/email.png" alt="icono de email" width="40">
-                        <div >
-                            <h4 >Correo:</h4>
-                            <h4 >luckyaircontactos@gmail.com</h4>
+                        <div>
+                            <h4>Correo:</h4>
+                            <h4>luckyaircontactos@gmail.com</h4>
                         </div>
                     </div>
                     <div class="flex-row section-reclamos__footer">
                         <img src="../assets/images/footer/ubication.png" alt="icono de ubicacion" width="40">
-                        <div >
-                            <h4 >Oficina Central:</h4>
-                            <h4 >Av. Aviación 123, Lima - Perú</h4>
+                        <div>
+                            <h4>Oficina Central:</h4>
+                            <h4>Av. Aviación 123, Lima - Perú</h4>
                         </div>
                     </div>
                 </div>
@@ -172,7 +214,7 @@
             </div>
         </div>
         <div class="footer-sub flex-column align-center justify-end">
-            <hr width="90%"> 
+            <hr width="90%">
             <h4>Lucky Air @2025 | Todos los derechos reservados</h4>
         </div>
     </footer>
