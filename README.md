@@ -76,3 +76,5 @@ Con actualizaciones se logro maximizar nuestra puntuacion de performance, accesi
 ## 🧩 Descripción de cambios recientes 16/04 -> Jose Torres
 - **fix** correccion de desface de ramas
 - **fix** optimizacion de accesibilidad index.html
+## 🧩 Descripción de cambios recientes 09/05 -> Diego Reynaldo Zapata Valencia
+-**feat:** Se mejoró el diseño de la página vuelos agregando cards interactivas, imágenes y animaciones CSS.
