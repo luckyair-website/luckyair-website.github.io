@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/main.css">
+    <title>Dashboard</title>
+</head>
+<body>
+    <!-- Inicio Header -->
+    <header>
+        <nav class="flex-row align-center justify-between" role="navigation">
+            <a href="/" class="logo__nav flex-row align-center">
+                <img src="../assets/images/header/logo.png" alt="Logo de Lucky Air">
+            </a>
+            <input type="checkbox" id="menu-toggle" />
+            <label for="menu-toggle" class="menu-icon">&#9776;</label>
+            <ul class="enlaces__nav flex-row align-center justify-between">
+                <li>
+                    <a href="/" class="nav-link ">Home</a>
+                </li>
+                <li>
+                    <a href="vuelos.html" class="nav-link ">Vuelos</a>
+                </li>
+                <li>
+                    <a href="beneficios.html" class="nav-link">Beneficios</a>
+                </li>
+                <li class="enlace-login__nav">
+                    <a href="login.html">Login</a>
+                </li>
+            </ul>
+            <a href="login.html"  class="boton-login__nav flex-row align-center justify-center hidden-boton">
+                <img src="../assets/images/header/usuario.svg" alt="Icono de usuario" class="icono-user__nav">
+                <span class="">INGRESAR</span>
+            </a>
+        </nav>
+    </header>
+    <!-- Fin Header -->
+    <main >
+        <section class="dashboard-header">
+            <div class="dashboard-hero flex-column align-center">
+                <h2 class="h2-dash">Hola, Juan Martínez</h2>
+                <h3 class="h3-dash">Bienvenido a tu Panel de Control de Lucky Air</h3>
+            </div>
+            <div class="dashboards-user flex-row align-center">
+                <a href="#">
+                    <span>Juan Martínez</span>
+                    <img src="../assets/images/dashboard/user3.png" alt="Imagen del usuario">
+                </a>
+            </div>
+        </section>
+        <section class="dashboard-container">
+            <div class="dashboard-main">
+                <div class="items destacado">
+                    <h2 class="h2-dash">
+                        <span class="span-dash">Nivel</span> PLATA
+                    </h2>
+                    <progress value="70" max="100"></progress>
+                    <h1 class="h1-dash text-center">Puntos: 14,500 pts</h1>
+                    <div class="dash-boton-container">
+                        <a href="#" class="dash-boton primary">CANJEAR PUNTOS</a>
+                        <a href="#" class="dash-boton">COMO GANAR MAS</a>
+                    </div>
+                </div>
+                <div class="items dash-card">
+                    <img class="dash-icons" src="../assets/images/dashboard/airplane5.png" alt="Imagen de avion">
+                    <h2 class="h2-dash ">CHECK-IN</h2>
+                    <p class="text-center">Disponible para vuelos <br>
+                        dentro de 48h.</p>
+                    <a href="#" class="dash-boton primary">HACER CHECK-IN</a>
+                </div>
+                <div class="items dash-card">
+                    <img class="dash-icons" src="../assets/images/dashboard/user2.png" alt="Imagen de avion">
+                    <h2 class="h2-dash ">EDITAR</h2>
+                    <p class="hidden-boton">Disponible para vuelos <br>
+                        dentro de 48h.</p>
+                    <a href="#" class="dash-boton primary">EDITAR PERFIL</a>
+                </div>
+                <div class="items dash-card">
+                    <img class="dash-icons" src="../assets/images/dashboard/gift.png" alt="Imagen de avion">
+                    <h2 class="h2-dash ">PUNTOS</h2>
+                    <p class="hidden-boton">Disponible para vuelos <br>
+                        dentro de 48h.</p>
+                    <a href="#" class="dash-boton primary">IR A LA TIENDA</a>
+                </div>
+
+                <div class="items destacado2 prox-dash">
+                    <h2 class="h2-prox ">MIS PROXIMOS VIAJES</h2>
+                    <div class="tickets-container">
+                        <div class="ticket">
+                            <img class="ticket-dash" src="../assets/images/dashboard/ticket.png" alt="Imagen de ticket">
+                            <div>
+                                <div class="ticket-content">
+                                    <div class="header-ticket">
+                                        <img class="img-prox" src="../assets/images/dashboard/airplane6.png" alt="Imagen de avion">
+                                        <h3 class="h3-hist">LIMA</h3>
+                                        <img class="img-prox" src="../assets/images/dashboard/arrow.png" alt="Imagen de flecha a la derecha">
+                                        <h3 class="h3-hist">CUSCO</h3>
+                                        <h3 class="h3-hist">PNR:</h3>
+                                    </div>
+                                    <div class="desc-ticket">
+                                        <h4 class="h4-hist">25 de Junio</h4>
+                                        <h4 class="h4-hist">LK2345</h4>
+                                        <h4 class="h4-hist">LKQ4R7</h4>
+                                    </div>
+                                    <div class="botons-containet-ticket">
+                                        <a href="#" class="boton-ticket primary">GESTIONAR RESERVA</a>
+                                        <a href="#" class="boton-ticket">VER PASE</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ticket">
+                            <img class="ticket-dash" src="../assets/images/dashboard/ticket.png" alt="Imagen de ticket">
+                            <div>
+                                <div class="ticket-content">
+                                    <div class="header-ticket">
+                                        <img class="img-prox" src="../assets/images/dashboard/airplane6.png" alt="Imagen de avion">
+                                        <h3 class="h3-hist">CUSCO</h3>
+                                        <img class="img-prox" src="../assets/images/dashboard/arrow.png" alt="Imagen de flecha a la derecha">
+                                        <h3 class="h3-hist">LIMA</h3>
+                                        <h3 class="h3-hist">PNR:</h3>
+                                    </div>
+                                    <div class="desc-ticket">
+                                        <h4 class="h4-hist">30 de Junio</h4>
+                                        <h4 class="h4-hist">LK2345</h4>
+                                        <h4 class="h4-hist">LKQ4R7</h4>
+                                    </div>
+                                    <div class="botons-containet-ticket">
+                                        <a href="#" class="boton-ticket primary">GESTIONAR RESERVA</a>
+                                        <a href="#" class="boton-ticket">VER PASE</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="items destacado2 hist-dash">
+                    <h2 class="h2-prox ">HISTORIAL DE VIAJES</h2>
+                    <div class="tickets-container">
+                        <div class="hist-ticket">
+                            <div class="flex-row">
+                                <div class="hist-dest">
+                                    <h4>LIMA</h4>
+                                    <img class="img-prox" src="../assets/images/dashboard/arrow.png" alt="Imagen de flecha a la derecha">
+                                    <h4>TACNA</h4>
+                                </div>
+                                <div class="hist-check">
+                                    <img class="img-prox" src="../assets/images/dashboard/check2.png" alt="">
+                                    <p>Vuelo completado</p>
+                                </div>
+                            </div>
+                            <div>
+                                <h4>
+                                    14/02/2026
+                                </h4>
+                            </div>
+                            <div class="hist-puntos">
+                                <p>Puntos ganados: <span class="hist-span">500 pts</span></p>
+                            </div>
+                        </div>
+                        <div class="hist-ticket">
+                            <div class="flex-row">
+                                <div class="hist-dest">
+                                    <h4>TACNA</h4>
+                                    <img class="img-prox" src="../assets/images/dashboard/arrow.png" alt="Imagen de flecha a la derecha">
+                                    <h4>PIURA</h4>
+                                </div>
+                                <div class="hist-check">
+                                    <img class="img-prox" src="../assets/images/dashboard/check2.png" alt="">
+                                    <p>Vuelo completado</p>
+                                </div>
+                            </div>
+                            <div>
+                                <h4>
+                                    21/02/2026
+                                </h4>
+                            </div>
+                            <div class="hist-puntos">
+                                <p>Puntos ganados: <span class="hist-span">600 pts</span></p>
+                            </div>
+                        </div>
+                        <div class="hist-ticket">
+                            <div class="flex-row">
+                                <div class="hist-dest">
+                                    <h4>PIURA</h4>
+                                    <img class="img-prox" src="../assets/images/dashboard/arrow.png" alt="Imagen de flecha a la derecha">
+                                    <h4>LIMA</h4>
+                                </div>
+                                <div class="hist-check">
+                                    <img class="img-prox" src="../assets/images/dashboard/check2.png" alt="">
+                                    <p>Vuelo completado</p>
+                                </div>
+                            </div>
+                            <div>
+                                <h4>
+                                    29/02/2026
+                                </h4>
+                            </div>
+                            <div class="hist-puntos">
+                                <p>Puntos ganados: <span class="hist-span">200 pts</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </div>
+    <!-- Inicio Footer -->
+    <footer class="flex-column">
+        <div class="footer-main flex-row justify-between">
+            <div class="section-footer">
+                <h2 class="h1-banner">SIGUENOS EN REDES</h2>
+                <div class="img-redes-container__footer">
+                    <img class="img-redes" src="../assets/images/footer/facebook.png" alt="Icono de facebook">
+                    <img class="img-redes" src="../assets/images/footer/instagram.png" alt="Icono de instagram">
+                    <img class="img-redes" src="../assets/images/footer/x.png" alt="Icono de x">
+                </div>
+                <h2 class="h1-banner">HORARIO DE ATENCION</h2>
+                <div class="flex-row horario-footer">
+                    <img src="../assets/images/footer/reloj.png" alt="icono de reloj" width="40">
+                    <div>
+                        <h4>Lunes a Viernes: 08:00 AM - 08:00 PM.</h4>
+                        <h4>Lunes a Viernes: 08:00 AM - 08:00 PM.</h4>
+                    </div>
+                </div>
+                <h3>Llevandote mas alto, con la <br>
+                    seguridad que mereces.</h3>
+            </div>
+            <div class="section-footer">
+                <h2 class="h1-banner">CONTACTANOS / RECLAMOS</h2>
+                <div class="reclamos__footer flex-column">
+                    <div class="flex-row section-reclamos__footer">
+                        <img src="../assets/images/footer/phone.png" alt="icono telephono" width="40">
+                        <div>
+                            <h4>Télefono:</h4>
+                            <h4>+51 999 666 999</h4>
+                        </div>
+                    </div>
+                    <div class="flex-row section-reclamos__footer">
+                        <img src="../assets/images/footer/email.png" alt="icono de email" width="40">
+                        <div>
+                            <h4>Correo:</h4>
+                            <h4>luckyaircontactos@gmail.com</h4>
+                        </div>
+                    </div>
+                    <div class="flex-row section-reclamos__footer">
+                        <img src="../assets/images/footer/ubication.png" alt="icono de ubicacion" width="40">
+                        <div>
+                            <h4>Oficina Central:</h4>
+                            <h4>Av. Aviación 123, Lima - Perú</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-footer">
+                <h2 class="h1-banner">ESCRIBENOS</h2>
+                <form action="" class="flex-column align-center form-escribenos__footer">
+                    <input type="text" placeholder="Nombres y Apellidos" required>
+                    <input type="text" placeholder="Asunto" required>
+                    <input type="email" placeholder="Correo electronico" required>
+                    <textarea name="" id="" cols="6" placeholder="Escribe tu mensaje" required></textarea>
+                    <button type="submit" class="flex-column align-center justify-center">CONTACTANOS</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-sub flex-column align-center justify-end">
+            <hr width="90%">
+            <h4>Lucky Air @2025 | Todos los derechos reservados</h4>
+        </div>
+    </footer>
+    <!-- Fin footer -->
+    
+</body>
+</html>

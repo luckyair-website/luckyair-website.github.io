@@ -13,6 +13,7 @@
 @import url('custom/beneficios.css');
 @import url('custom/login.css');
 @import url('custom/registro.css');
+@import url('custom/dashboard.css');
 
 /* Layout */
 @import url('layout/header.css');
@@ -21,6 +22,8 @@
 @import url('layout/beneficios.css');
 @import url('layout/login.css');
 @import url('layout/registro.css');
+@import url('layout/pago.css');
+@import url('layout/dashboard.css');
 
 
 /* Estilos personalizados home */
@@ -46,3 +49,4 @@
 @import url('responsive/resenas.css');
 @import url('responsive/footer.css');
 @import url('responsive/login.css');
+@import url('responsive/dashboard.css');

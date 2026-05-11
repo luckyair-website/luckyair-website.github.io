@@ -1,0 +1,137 @@
+/* Responsive dashboard */
+
+
+
+@media (max-width: 480px)  {
+
+    .dashboard-hero {
+        margin-top: 4rem;
+    }
+
+    .dashboards-user a {
+        height: 32px;
+        width: 148px;
+        font-size: var(--font-size-12);
+    }
+
+    .dashboards-user img {
+        height: 24px;
+        width: auto;
+    }
+
+    .dashboard-main {
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 32vh;
+    }
+
+    .dash-boton {
+        font-size: var(--font-size-10);
+    }
+
+    .dash-boton-container {
+        gap: 2rem;
+    }
+
+    .dash-icons {
+        height: 32px;
+        width: auto;
+    }
+
+    .items {
+        min-width: 90px;
+    }
+
+    .h2-dash {
+        font-size: var(--font-size-14);
+    }
+
+    .dash-card p {
+        font-size: var(--font-size-10);
+    }
+
+    .dash-boton {
+        font-size: var(--font-size-10);
+        text-align: center;
+    }
+
+    .ticket-dash {
+        width: 320px;   
+        height: auto;
+    }
+
+    .ticket-content {
+        padding: 0.1rem 0.5rem;
+        gap: 0.2rem;
+    }
+
+    .header-ticket {
+        gap: 0.5rem;
+    }
+
+    .img-prox {
+        width: 24px;
+        height: auto;
+    }
+
+    .h3-hist{
+        font-size: var(--font-size-20);
+    }
+
+    .h4-hist {
+        font-size: var(--font-size-12);
+    }
+
+    .desc-ticket {
+        gap: 2rem;
+        padding-left: 0.5rem;
+    }
+
+    .botons-containet-ticket {
+        gap: 0.5rem;
+        padding-top: 0.2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .boton-ticket {
+        font-size: var(--font-size-8);
+        height: 28px;
+        width: 120px;
+    }
+
+    .hist-dash {
+        margin-top: -10rem;
+    }
+
+    .hist-ticket {
+        width: 320px;   
+        height: 80px;
+    }
+
+    .hist-dest {
+        gap: 1rem; 
+    }
+
+    .hist-check {
+        font-size: var(--font-size-10);
+    }
+
+    .hist-ticket h4 {
+        color: var(--color-primary);
+        font-size: var(--font-size-12);
+        font-weight: bold;
+        line-height: var(--line-height);
+        letter-spacing: var(--letter-spacing-small);
+        font-family: var(--font-family-primary-poppins);
+    }
+
+    .hist-puntos {
+        font-size: var(--font-size-10);
+        font-weight: normal;
+        line-height: var(--line-height);
+        letter-spacing: var(--letter-spacing-small);
+        font-family: var(--font-family-primary-poppins);
+    }
+
+}

@@ -5,18 +5,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pago</title>
+    <link rel="stylesheet" href="../css/main.css">
 </head>
 
 <body bgcolor="#1E3A8A">
     
-    <!-- INICIO HEADER -->
-    <iframe src="../header.html"  width="100%" height="120" scrolling="no" frameborder="0"></iframe>
-    <!-- FIN HEADER -->
+    <!-- Inicio Header -->
+    <header>
+        <nav class="flex-row align-center justify-between" role="navigation">
+            <a href="/" class="logo__nav flex-row align-center">
+                <img src="../assets/images/header/logo.png" alt="Logo de Lucky Air">
+            </a>
+            <input type="checkbox" id="menu-toggle" />
+            <label for="menu-toggle" class="menu-icon">&#9776;</label>
+            <ul class="enlaces__nav flex-row align-center justify-between">
+                <li>
+                    <a href="/" class="nav-link ">Home</a>
+                </li>
+                <li>
+                    <a href="vuelos.html" class="nav-link ">Vuelos</a>
+                </li>
+                <li>
+                    <a href="beneficios.html" class="nav-link">Beneficios</a>
+                </li>
+                <li class="enlace-login__nav">
+                    <a href="login.html">Login</a>
+                </li>
+            </ul>
+            <a href="login.html" class="boton-login__nav flex-row align-center justify-center">
+                <img src="../assets/images/header/usuario.svg" alt="Icono de usuario" class="icono-user__nav">
+                <span class="">INGRESAR</span>
+            </a>
+        </nav>
+    </header>
+    <!-- Fin Header -->
 
     <br>
     <!-- INICIO MAIN EDGAR-->
 
     <main>
+        <section class="pago-container">
+            <div class="mosaico">
+                <div class="item destacado1 flex-column">
+                    <img src="" alt="imagen tarjeta de credito">
+                    <p>Tarjeta de Crédito/Débito</p>
+                </div>
+                <div class="item destacado1 flex-column">
+                    <img src="" alt="imagen tarjeta de credito">
+                    <p>Billeteras Digitales</p>
+                </div>
+                <div class="item destacado1 flex-column">
+                    <img src="" alt="imagen tarjeta de credito">
+                    <p>Pago Rápido con QR</p>
+                </div>
+                <div class="item destacado2">4</div>
+                <div class="item destacado2">5</div>
+            </div>
+        </section>
+
     <font color="#000">
         <table width="55%" align="center" cellpadding="20" cellspacing="10" bgcolor="#FFFFFF" border="1">
             <tr valign="top">
@@ -133,9 +179,70 @@
 
     <!-- FIN MAIN EDGAR-->
 
-    <!-- INICIO FOOTER -->
-    <iframe src="../footer.html"  width="100%" height="600" scrolling="no" frameborder="0"></iframe>
-    <!-- FIN FOOTER -->
+    <!-- Inicio Footer -->
+    <footer class="flex-column">
+        <div class="footer-main flex-row justify-between">
+            <div class="section-footer">
+                <h2 class="h1-banner">SIGUENOS EN REDES</h2>
+                <div class="img-redes-container__footer">
+                    <img class="img-redes" src="../assets/images/footer/facebook.png" alt="Icono de facebook">
+                    <img class="img-redes" src="../assets/images/footer/instagram.png" alt="Icono de instagram">
+                    <img class="img-redes" src="../assets/images/footer/x.png" alt="Icono de x">
+                </div>
+                <h2 class="h1-banner">HORARIO DE ATENCION</h2>
+                <div class="flex-row horario-footer">
+                    <img src="../assets/images/footer/reloj.png" alt="icono de reloj" width="40">
+                    <div>
+                        <h4>Lunes a Viernes: 08:00 AM - 08:00 PM.</h4>
+                        <h4>Lunes a Viernes: 08:00 AM - 08:00 PM.</h4>
+                    </div>
+                </div>
+                <h3>Llevandote mas alto, con la <br>
+                    seguridad que mereces.</h3>
+            </div>
+            <div class="section-footer">
+                <h2 class="h1-banner">CONTACTANOS / RECLAMOS</h2>
+                <div class="reclamos__footer flex-column">
+                    <div class="flex-row section-reclamos__footer">
+                        <img src="../assets/images/footer/phone.png" alt="icono telephono" width="40">
+                        <div>
+                            <h4>Télefono:</h4>
+                            <h4>+51 999 666 999</h4>
+                        </div>
+                    </div>
+                    <div class="flex-row section-reclamos__footer">
+                        <img src="../assets/images/footer/email.png" alt="icono de email" width="40">
+                        <div>
+                            <h4>Correo:</h4>
+                            <h4>luckyaircontactos@gmail.com</h4>
+                        </div>
+                    </div>
+                    <div class="flex-row section-reclamos__footer">
+                        <img src="../assets/images/footer/ubication.png" alt="icono de ubicacion" width="40">
+                        <div>
+                            <h4>Oficina Central:</h4>
+                            <h4>Av. Aviación 123, Lima - Perú</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-footer">
+                <h2 class="h1-banner">ESCRIBENOS</h2>
+                <form action="" class="flex-column align-center form-escribenos__footer">
+                    <input type="text" placeholder="Nombres y Apellidos" required>
+                    <input type="text" placeholder="Asunto" required>
+                    <input type="email" placeholder="Correo electronico" required>
+                    <textarea name="" id="" cols="6" placeholder="Escribe tu mensaje" required></textarea>
+                    <button type="submit" class="flex-column align-center justify-center">CONTACTANOS</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-sub flex-column align-center justify-end">
+            <hr width="90%">
+            <h4>Lucky Air @2025 | Todos los derechos reservados</h4>
+        </div>
+    </footer>
+    <!-- Fin footer -->
 </body>
 
 </html>
