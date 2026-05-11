@@ -30,5 +30,8 @@ Con actualizaciones se logro maximizar nuestra puntuacion de performance, accesi
 ## 🧩 Creacion de estructura de css 06/05 
 - **fix** correccion de sobre escritura de estilos aplicados en beneficios.html, que alteraban toda la web.
 
-## 🧩 Implementacion de dashboard.html 06/05 
+## 🧩 Implementacion de dashboard.html 10/05 
 - **feature** se realizo la implementacion del dashboard, aplicando grid.
+
+## 🧩 Implementacion estilos 10/05 
+- **feature** se realizo la implementacion de hojas de estilos.

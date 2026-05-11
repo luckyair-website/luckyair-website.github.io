@@ -14,6 +14,9 @@
 @import url('custom/login.css');
 @import url('custom/registro.css');
 @import url('custom/dashboard.css');
+@import url('custom/pago-final.css');
+@import url('custom/confirmar-pago.css');
+@import url('custom/recuperarcontraseña.css');
 
 /* Layout */
 @import url('layout/header.css');
@@ -24,6 +27,9 @@
 @import url('layout/registro.css');
 @import url('layout/pago.css');
 @import url('layout/dashboard.css');
+@import url('layout/confirmar-pago.css');
+@import url('layout/pago-final.css');
+@import url('layout/recuperarcontraseña.css');
 
 
 /* Estilos personalizados home */
