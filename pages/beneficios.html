@@ -6,7 +6,6 @@
     <title>Lucky Air - Beneficios</title>
     <!-- Corregido: Se cerraron correctamente las comillas y etiquetas -->
     <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/beneficios.css">
 </head>
 <body class="reset-body">
 
@@ -45,25 +44,28 @@
     <section class="rewards-hero flex-column align-center">
         <h1 class="hero-title">Tus viajes te premian.<br>Bienvenido a Lucky Rewards.</h1>
         
-        <div class="user-card flex-column align-center">
-            <p class="user-name">Hola, Juan Martinez</p>
-            <h2 class="points-balance">Saldo de Puntos: 14,500 pts</h2>
-            
-            <div class="level-info-container">
-                <div class="level-labels flex-row justify-between">
-                    <span class="current-level">Nivel: Plata</span>
-                    <span class="next-level-hint">Gana 500 pts más para el nivel ORO</span>
-                </div>
-                <div class="progress-bar-container">
-                    <div class="progress-bar-fill"></div>
-                </div>
-            </div>
+        <div class="user-card">
+    <h2 class="user-name">Hola, Juan Martinez</h2>
 
-            <div class="card-buttons flex-row">
-                <button class="btn-yellow-pill">Canjear Puntos</button>
-                <button class="btn-white-pill">Como ganar más</button>
-            </div>
-        </div>
+    <div class="points-box">
+        <p class="points-label">Saldo de Puntos</p>
+        <h1 class="points-number">14,500 pts</h1>
+    </div>
+
+    <div class="level-info">
+        <span class="level-badge">Nivel: Plata</span>
+        <p>Gana 500 pts más para el nivel <strong>ORO</strong></p>
+    </div>
+
+    <div class="progress-bg">
+        <div class="progress-fill" style="width: 80%;"></div>
+    </div>
+
+    <div class="card-buttons">
+        <button class="btn-primary">Canjear Puntos</button>
+        <button class="btn-secondary">Cómo ganar más</button>
+    </div>
+</div>
     </section>
 </main>
 
