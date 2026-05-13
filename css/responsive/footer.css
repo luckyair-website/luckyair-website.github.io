@@ -1,6 +1,6 @@
 /* Responsive footer */
 
-@media (max-width: 400px)  {
+@media (max-width: 480px)  {
 
     footer {
         height: 150vh;

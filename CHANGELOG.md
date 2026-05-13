@@ -26,3 +26,18 @@ Con actualizaciones se logro maximizar nuestra puntuacion de performance, accesi
 
 ## 🧩 Creacion de estructura de css 04/05 
 - **feature** implementacion del header y footer en las paginas principales (vuelos.html, beneficios.html y login.html).
+
+## 🧩 Creacion de estructura de css 06/05 
+- **fix** correccion de sobre escritura de estilos aplicados en beneficios.html, que alteraban toda la web.
+
+## 🧩 Implementacion de dashboard.html 10/05 
+- **feature** se realizo la implementacion del dashboard, aplicando grid.
+
+## 🧩 Implementacion estilos 10/05 
+- **feature** se realizo la implementacion de hojas de estilos.
+## 🧩 Implementacion estilos 5/05 --> Omar Vargas
+- **feature** se realizo la implementacion de hojas de estilos.
+## 🧩 Avance Beneficios 7/05 
+- **feature** se realizo lo ultimo dellates en la pagina de beneficios.
+## 🧩 Avance pago final  13/05 
+- **feature** se realizo la implementacion de hojas de estilos y avance en la pagina.

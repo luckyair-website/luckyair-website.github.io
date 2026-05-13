@@ -1,6 +1,6 @@
 /* Responsice ofertas home */
 
-@media (max-width: 400px)  {
+@media (max-width: 480px)  {
 
     .ofertas__vuelos {
         height: 180vh;

@@ -25,6 +25,7 @@ LUCKYAIR-WEBSITE.GITHUB.IO/
 ├── assets/
 │   ├── images/
 │   │   ├── beneficios
+│   │   ├── dashboard   
 │   │   ├── footer
 │   │   ├── header
 │   │   ├── index
@@ -46,6 +47,7 @@ LUCKYAIR-WEBSITE.GITHUB.IO/
 ├── pages/
 │   ├── beneficios.html
 │   ├── confirmar-pago.html
+│   ├── dashboard.html
 │   ├── login.html
 │   ├── pago.html
 │   ├── pagofinal.html
