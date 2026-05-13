@@ -35,3 +35,9 @@ Con actualizaciones se logro maximizar nuestra puntuacion de performance, accesi
 
 ## 🧩 Implementacion estilos 10/05 
 - **feature** se realizo la implementacion de hojas de estilos.
+## 🧩 Implementacion estilos 5/05 --> Omar Vargas
+- **feature** se realizo la implementacion de hojas de estilos.
+## 🧩 Avance Beneficios 7/05 
+- **feature** se realizo lo ultimo dellates en la pagina de beneficios.
+## 🧩 Avance pago final  13/05 
+- **feature** se realizo la implementacion de hojas de estilos y avance en la pagina.
