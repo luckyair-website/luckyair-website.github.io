@@ -1,0 +1,65 @@
+/* Layout recuperar contraseña */
+
+.recuperar-main {
+    min-height: calc(100vh - 10vh);
+    gap: 10px;
+    padding: 24px 16px 60px;
+    background-image: url('../../assets/images/others/banner.webp');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.recuperar-main::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(4, 25, 54, 0.55);
+    z-index: 0;
+}
+
+.recuperar-main > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Barra de progreso — solo 2 segmentos */
+.recuperar-main .progreso-barra {
+    gap: 6px;
+    width: 100%;
+    max-width: 460px;
+}
+
+/* Tarjeta */
+.recuperar-card {
+    width: 100%;
+    max-width: 460px;
+    gap: 0;
+    padding: 28px 32px;
+    border-radius: 16px;
+}
+
+/* Título dentro de cada paso */
+.recuperar-titulo {
+    margin-bottom: 20px;
+}
+
+/* Botones de navegación paso 1 (Iniciar sesión / Regístrate) */
+.recuperar-nav {
+    gap: 16px;
+    margin-top: 4px;
+}
+
+.btn-recuperar-nav {
+    flex: 1;
+    padding: 10px 0;
+    border-radius: 30px;
+    text-align: center;
+    border: 2px solid var(--color-secondary);
+    color: var(--color-secondary);
+    transition: background-color 0.2s;
+}
+
+.btn-recuperar-nav:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
