@@ -16,7 +16,7 @@
 @import url('custom/dashboard.css');
 @import url('custom/pago-final.css');
 @import url('custom/confirmar-pago.css');
-@import url('custom/recuperarcontraseña.css');
+@import url('custom/recuperarcontrasena.css');
 
 /* Layout */
 @import url('layout/header.css');
@@ -29,7 +29,7 @@
 @import url('layout/dashboard.css');
 @import url('layout/confirmar-pago.css');
 @import url('layout/pago-final.css');
-@import url('layout/recuperarcontraseña.css');
+@import url('layout/recuperarcontrasena.css');
 
 
 /* Estilos personalizados home */
@@ -56,3 +56,4 @@
 @import url('responsive/footer.css');
 @import url('responsive/login.css');
 @import url('responsive/dashboard.css');
+@import url('responsive/recuperarcontrasena.css');

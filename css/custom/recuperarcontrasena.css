@@ -1,0 +1,16 @@
+/* Estilos personalizados recuperar contraseña */
+
+/* Tarjeta — mismo estilo glassmorphism que registro */
+.recuperar-card {
+    background-color: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--color-secondary);
+}
+
+/* Centrado vertical del texto en botones de esta página */
+.recuperar-card .btn-registrar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
