@@ -41,3 +41,6 @@ Con actualizaciones se logro maximizar nuestra puntuacion de performance, accesi
 - **feature** se realizo lo ultimo dellates en la pagina de beneficios.
 ## 🧩 Avance pago final  13/05 
 - **feature** se realizo la implementacion de hojas de estilos y avance en la pagina.
+- .
+## 🧩 Avance recuperar contrasena  13/05 --> Edgard Huaman
+- **feature** se realizo la implementacion de hojas de estilos y avance en la pagina.
