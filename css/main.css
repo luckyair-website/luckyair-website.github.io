@@ -17,6 +17,7 @@
 @import url('custom/pago-final.css');
 @import url('custom/confirmar-pago.css');
 @import url('custom/recuperarcontrasena.css');
+@import url('custom/pago.css');
 
 /* Layout */
 @import url('layout/header.css');
@@ -57,3 +58,4 @@
 @import url('responsive/login.css');
 @import url('responsive/dashboard.css');
 @import url('responsive/recuperarcontrasena.css');
+@import url('responsive/pago.css');
