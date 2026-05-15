@@ -12,28 +12,35 @@
 
 <body>
 
-   <!-- INICIO HEADER JOSE-->
-    <header class="flex-row align-center">
-        <a href="/" class="flex-row justify-center logo-header">
-            <img src="../assets/images/header/logo.webp" alt="Logo de LuckyAir" width="200" height="100">
-        </a>
-
-        <nav role="navigation" class="text-contenido-16 font-montserrat">    
-            <ul class="flex-row">
-                <li><a href="/" class="nav-link bold">Home</a></li>
-                <li><a href="vuelos.html" class="nav-link bold active">Vuelos</a></li>
-                <li><a href="beneficios.html" class="nav-link bold">Beneficios</a></li>
-            </ul>
-        </nav>
-
-        <div class="flex-row justify-center login-header">
-            <a href="login.html" class="flex-row align-center">
-                <img src="../assets/images/header/usuario.svg" alt="icono usuario" width="32">
-                <span class="text-contenido-18 font-roboto bold">INGRESAR</span>
+   <!-- Inicio Header -->
+    <header>
+        <nav class="flex-row align-center justify-between" role="navigation">
+            <a href="/" class="logo__nav flex-row align-center">
+                <img src="../assets/images/header/logo.png" alt="Logo de Lucky Air" >
             </a>
-        </div>     
+            <input type="checkbox" id="menu-toggle" />
+            <label for="menu-toggle" class="menu-icon">&#9776;</label>
+            <ul class="enlaces__nav flex-row align-center justify-between">
+                <li>
+                    <a href="/" class="nav-link ">Home</a>
+                </li>
+                <li>
+                    <a href="vuelos.html" class="nav-link ">Vuelos</a>
+                </li>
+                <li>
+                    <a href="beneficios.html" class="nav-link active">Beneficios</a>
+                </li>
+                <li class="enlace-login__nav">
+                    <a href="login.html">Login</a>
+                </li>
+            </ul>
+            <a href="login.html" class="boton-login__nav flex-row align-center justify-center">
+                <img src="../assets/images/header/usuario.svg" alt="Icono de usuario" class="icono-user__nav">
+                <span class="">INGRESAR</span>
+            </a>
+        </nav>
     </header>
-    <!-- FIN HEADER JOSE-->
+    <!-- Fin Header -->
 
 
 <!-- INICIO MAIN CONFIRMAR -->
