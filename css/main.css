@@ -14,6 +14,7 @@
 @import url('custom/beneficios.css');
 @import url('custom/login.css');
 @import url('custom/registro.css');
+@import url('custom/confirmar-pago.css');
 
 /* Layout */
 @import url('layout/header.css');
@@ -23,4 +24,5 @@
 @import url('layout/beneficios.css');
 @import url('layout/login.css');
 @import url('layout/registro.css');
+@import url('layout/confirmar-pago.css');
 

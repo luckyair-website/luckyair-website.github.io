@@ -33,8 +33,22 @@
 
 .form-vuelos input{
     border:1px solid #ccc;
+
     border-radius:10px;
+
     font-size:16px;
+
+    background:white;
+
+    color:#1c1c1c;
+}
+
+.form-vuelos input::placeholder{
+    color:#666;
+}
+
+.form-vuelos h2{
+    color:var(--color-primary);
 }
 
 .input-box label{
@@ -46,7 +60,7 @@
     padding:15px;
     border:none;
     border-radius:10px;
-    background:#0b57d0;
+    background:var(--gradient-button-primary);
     color:white;
     cursor:pointer;
     font-size:16px;
@@ -73,7 +87,7 @@
     position:absolute;
     top:15px;
     left:15px;
-    background:#ff9800;
+    background:var(--gradient-button-primary);
     color:white;
     padding:6px 14px;
     border-radius:20px;
@@ -116,7 +130,7 @@
     padding:12px 28px;
     border:none;
     border-radius:10px;
-    background:#0b57d0;
+    background:var(--gradient-button-primary);
     color:white;
     cursor:pointer;
     font-weight:bold;
