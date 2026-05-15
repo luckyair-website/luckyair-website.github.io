@@ -4,168 +4,330 @@
     <meta charset="UTF-8">
     <meta name="description" content="Confirmación de pago de vuelos Lucky Air">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Confirmar Pago - Lucky Air</title>
+
     <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/custom/confirmar-pago.css">
+    <link rel="stylesheet" href="../css/layout/confirmar-pago.css">
+    
+
+    <title>Confirmar Pago - Lucky Air</title>
 </head>
 
-<body bgcolor="#1E3A8A">
+<body>
 
-    <!-- Inicio Header -->
-    <header>
-        <nav class="flex-row align-center justify-between" role="navigation">
-            <a href="/" class="logo__nav flex-row align-center">
-                <img src="../assets/images/header/logo.png" alt="Logo de Lucky Air">
-            </a>
-            <input type="checkbox" id="menu-toggle" />
-            <label for="menu-toggle" class="menu-icon">&#9776;</label>
-            <ul class="enlaces__nav flex-row align-center justify-between">
-                <li>
-                    <a href="/" class="nav-link ">Home</a>
-                </li>
-                <li>
-                    <a href="vuelos.html" class="nav-link ">Vuelos</a>
-                </li>
-                <li>
-                    <a href="beneficios.html" class="nav-link">Beneficios</a>
-                </li>
-                <li class="enlace-login__nav">
-                    <a href="login.html">Login</a>
-                </li>
+   <!-- INICIO HEADER JOSE-->
+    <header class="flex-row align-center">
+        <a href="/" class="flex-row justify-center logo-header">
+            <img src="../assets/images/header/logo.webp" alt="Logo de LuckyAir" width="200" height="100">
+        </a>
+
+        <nav role="navigation" class="text-contenido-16 font-montserrat">    
+            <ul class="flex-row">
+                <li><a href="/" class="nav-link bold">Home</a></li>
+                <li><a href="vuelos.html" class="nav-link bold active">Vuelos</a></li>
+                <li><a href="beneficios.html" class="nav-link bold">Beneficios</a></li>
             </ul>
-            <a href="login.html"  class="boton-login__nav flex-row align-center justify-center hidden-boton">
-                <img src="../assets/images/header/usuario.svg" alt="Icono de usuario" class="icono-user__nav">
-                <span class="">INGRESAR</span>
-            </a>
         </nav>
+
+        <div class="flex-row justify-center login-header">
+            <a href="login.html" class="flex-row align-center">
+                <img src="../assets/images/header/usuario.svg" alt="icono usuario" width="32">
+                <span class="text-contenido-18 font-roboto bold">INGRESAR</span>
+            </a>
+        </div>     
     </header>
-    <!-- Fin Header -->
+    <!-- FIN HEADER JOSE-->
 
-<!-- CONTENIDO -->
-<div align="center">
 
-<main>
+<!-- INICIO MAIN CONFIRMAR -->
+<main class="main-confirmar">
 
-    <font color="white">
-        <h2>Revisa tu compra</h2>
-        <p>Verifica los datos antes de pagar</p>
-    </font>
+    <section class="card-confirmacion">
 
-    <br>
+        <!-- HEADER -->
+        <div class="top-confirmacion">
 
-    <!-- DETALLES -->
-    <table bgcolor="white" cellpadding="20" width="30%">
+            <img src="../assets/images/header/logo.webp" alt="Logo avión">
 
-        <tr>
-            <td>
-                 <center>   
-                <h3>Detalles del viaje</h3>
+            <h1 class="text-encabezado-32 bold font-poppins">
+                RESUMEN DE TU COMPRA SEGURA
+            </h1>
 
-                <p><strong>Origen:</strong> Lima</p>
-                <p><strong>Destino:</strong> Cusco</p>
-                <p><strong>Fechas:</strong> 25 - 30 Junio</p>
-                <p><strong>Vuelo:</strong> LK2345</p>
-                <p><strong>Duración:</strong> 1h 20m</p>
+        </div>
 
-                <hr>
+        <!-- CONTENIDO -->
+        <div class="contenido-confirmacion">
 
-                <h3>Pasajero</h3>
-                <p>Juan Pérez</p>
+            <!-- DETALLES -->
+            <section class="detalle-section">
 
-                <hr>
+                <!-- TITULO -->
+                <div class="titulo-section">
 
-                <h3>Pago</h3>
-                <p>Visa **** 1234</p>
+                    <img src="../assets/images/header/logo.webp" alt="Plane">
 
-                <hr>
+                    <h2 class="text-encabezado-24 medium font-poppins">
+                        Detalles del Viaje
+                    </h2>
 
-                <h3>Total</h3>
-                <p><strong>$850 USD</strong></p>
+                </div>
 
-                <br>
+                <!-- RUTA -->
+                <div class="ruta-vuelo">
+
+                    <h2 class="text-encabezado-40 bold font-poppins">
+                        LIMA → CUSCO
+                    </h2>
+
+                </div>
+
+                <!-- INFO -->
+                <div class="info-vuelo-grid">
+
+                    <!-- FECHAS -->
+                    <div class="item-info">
+
+                        <span class="icono-mini">
+                            📅
+                        </span>
+
+                        <div>
+
+                            <p class="text-contenido-14 regular font-roboto">
+                                Fechas
+                            </p>
+
+                            <strong class="text-contenido-18 bold font-roboto">
+                                25 - 30 Junio
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                    <!-- VUELO -->
+                    <div class="item-info">
+
+                        <span class="icono-mini">
+                            ✈
+                        </span>
+
+                        <div>
+
+                            <p class="text-contenido-14 regular font-roboto">
+                                Vuelo
+                            </p>
+
+                            <strong class="text-contenido-18 bold font-roboto">
+                                LK2345
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                    <!-- DURACION -->
+                    <div class="item-info">
+
+                        <span class="icono-mini">
+                            🕒
+                        </span>
+
+                        <div>
+
+                            <p class="text-contenido-14 regular font-roboto">
+                                Duración
+                            </p>
+
+                            <strong class="text-contenido-18 bold font-roboto">
+                                1h 20m
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- PASAJERO -->
+            <section class="fila-info">
+
+                <div class="info-lateral">
+
+                    <span class="icono-info">
+                        👤
+                    </span>
+
+                    <h3 class="text-encabezado-20 medium font-poppins">
+                        Pasajero
+                    </h3>
+
+                </div>
+
+                <strong class="text-contenido-20 bold font-roboto">
+                    JUAN PÉREZ
+                </strong>
+
+            </section>
+
+            <!-- PAGO -->
+            <section class="fila-info">
+
+                <div class="info-lateral">
+
+                    <span class="icono-info">
+                        💳
+                    </span>
+
+                    <h3 class="text-encabezado-20 medium font-poppins">
+                        Pago
+                    </h3>
+
+                </div>
+
+                <strong class="text-contenido-20 bold font-roboto">
+                    Visa **** **** **** 1234
+                </strong>
+
+            </section>
+
+            <!-- TOTAL -->
+            <section class="total-confirmacion">
+
+                <h3 class="text-encabezado-24 bold font-poppins">
+                    TOTAL
+                </h3>
+
+                <h2 class="precio-total text-encabezado-40 bold font-poppins">
+                    $850 USD
+                </h2>
+
+            </section>
+
+            <!-- BOTONES -->
+            <div class="botones-confirmacion">
 
                 <a href="pago.html">
-                    <button type="button">← Volver</button>
+
+                    <button type="button" class="boton-volver">
+                        VOLVER
+                    </button>
+
                 </a>
 
                 <a href="pagofinal.html">
-                    <button type="button">Confirmar y pagar</button>
-                </a>
-    </center>   
-            </td>
-        </tr>
 
-    </table>
+                    <button type="button" class="boton-confirmar">
+                        CONFIRMAR Y PAGAR
+                    </button>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
 
 </main>
+<!-- FIN MAIN CONFIRMAR -->
 
-</div>
+   
 
-<br><br>
 
-    <!-- Inicio Footer -->
-    <footer class="flex-column">
-        <div class="footer-main flex-row justify-between">
-            <div class="section-footer">
-                <h2 class="h1-banner">SIGUENOS EN REDES</h2>
-                <div class="img-redes-container__footer">
-                    <img class="img-redes" src="../assets/images/footer/facebook.png" alt="Icono de facebook">
-                    <img class="img-redes" src="../assets/images/footer/instagram.png" alt="Icono de instagram">
-                    <img class="img-redes" src="../assets/images/footer/x.png" alt="Icono de x">
-                </div>
-                <h2 class="h1-banner">HORARIO DE ATENCION</h2>
-                <div class="flex-row horario-footer">
-                    <img src="../assets/images/footer/reloj.png" alt="icono de reloj" width="40">
-                    <div>
-                        <h4>Lunes a Viernes: 08:00 AM - 08:00 PM.</h4>
-                        <h4>Lunes a Viernes: 08:00 AM - 08:00 PM.</h4>
+    <!-- INICIO FOOTER -->
+  <footer role="contentinfo">
+        <div class="main-content-footer flex-row">
+            <section class="flex-column align-center left-content-footer">
+                <section class="flex-column align-center redes-content-footer" aria-labelledby="redes-title">
+                    <h3 class="text-encabezado-20 medium font-poppins" id="redes-title">SIGUENOS EN REDES</h3>
+                    <ul class="flex-row">
+                        <li>
+                            <a href="https://www.facebook.com" target="_blank" aria-label="Abrir Facebook">
+                                <img src="../assets/images/footer/facebook.png" alt="Facebook" class="icono-redes">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com" target="_blank" aria-label="Abrir Instagram">
+                                <img src="../assets/images/footer/instagram.png" alt="Instagram" class="icono-redes">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.x.com" target="_blank" aria-label="Abrir X">
+                                <img src="../assets/images/footer/x.png" alt="X" class="icono-redes">
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="flex-column align-center horario-content-footer" aria-labelledby="horario-atencion">
+                    <h3 class="text-encabezado-20 medium font-poppins" id="horario-atencion">HORARIO DE ATENCIÓN</h3>
+                    <div class="flex-row align-center">
+                        <img src="../assets/images/footer/reloj.png" alt="icono reloj" width="40">
+                        <p class="text-contenido-14 regular font-roboto">
+                            Lunes a Viernes: 08:00 AM - 08:00 PM <br>
+                            Sábados y Domingos: 09:00 AM - 05:00 PM
+                        </p>
                     </div>
-                </div>
-                <h3>Llevandote mas alto, con la <br>
-                    seguridad que mereces.</h3>
-            </div>
-            <div class="section-footer">
-                <h2 class="h1-banner">CONTACTANOS / RECLAMOS</h2>
-                <div class="reclamos__footer flex-column">
-                    <div class="flex-row section-reclamos__footer">
-                        <img src="../assets/images/footer/phone.png" alt="icono telephono" width="40">
-                        <div>
-                            <h4>Télefono:</h4>
-                            <h4>+51 999 666 999</h4>
-                        </div>
+                </section>
+
+                <section class="flex-row p-content-footer">
+                    <h4 class="text-contenido-18 regular font-roboto">
+                        Llevándote más alto, <br> con la seguridad que mereces.
+                    </h4>
+                </section>
+            </section>
+
+            <section class="flex-column middle-content-footer" aria-labelledby="title-contactanos">
+                <h3 class="text-encabezado-20 medium text-center font-poppins" id="title-contactanos">CONTACTANOS / RECLAMOS</h3>
+
+                <section class="flex-row info-middle-footer">
+                    <img src="../assets/images/footer/phone.png" alt="icono telephono" width="48">
+                    <div class="text-contenido-14 font-roboto">
+                        <h3 class="medium">Télefono:</h3>
+                        <h3 class="regular">+51 999 666 999</h3>
                     </div>
-                    <div class="flex-row section-reclamos__footer">
-                        <img src="../assets/images/footer/email.png" alt="icono de email" width="40">
-                        <div>
-                            <h4>Correo:</h4>
-                            <h4>luckyaircontactos@gmail.com</h4>
-                        </div>
+                </section>
+
+                <section class="flex-row info-middle-footer">
+                    <img src="../assets/images/footer/email.png" alt="icono de email" width="48">
+                    <div class="text-contenido-14 font-roboto">
+                        <h3 class="medium">Correo:</h3>
+                        <h3 class="regular">luckyaircontactos@gmail.com</h3>
                     </div>
-                    <div class="flex-row section-reclamos__footer">
-                        <img src="../assets/images/footer/ubication.png" alt="icono de ubicacion" width="40">
-                        <div>
-                            <h4>Oficina Central:</h4>
-                            <h4>Av. Aviación 123, Lima - Perú</h4>
-                        </div>
+                </section>
+
+                <section class="flex-row info-middle-footer">
+                    <img src="../assets/images/footer/ubication.png" alt="icono de ubicacion" width="48">
+                    <div class="text-contenido-14 font-roboto">
+                        <h3 class="medium">Oficina Central:</h3>
+                        <h3 class="regular">Av. Aviación 123, Lima - Perú</h3>
                     </div>
-                </div>
-            </div>
-            <div class="section-footer">
-                <h2 class="h1-banner">ESCRIBENOS</h2>
-                <form action="" class="flex-column align-center form-escribenos__footer">
-                    <input type="text" placeholder="Nombres y Apellidos" required>
-                    <input type="text" placeholder="Asunto" required>
-                    <input type="email" placeholder="Correo electronico" required>
-                    <textarea name="" id="" cols="6" placeholder="Escribe tu mensaje" required></textarea>
-                    <button type="submit" class="flex-column align-center justify-center">CONTACTANOS</button>
+                </section>
+            </section>
+
+            <section class="right-content-footer" aria-labelledby="title-escribenos">
+                <form class="flex-column align-center">
+                    <h3 class="text-encabezado-20 medium font-poppins" id="title-escribenos">ESCRÍBENOS</h3>
+                    <input class="contactanos-form regular" type="text" placeholder="Nombre y Apellidos">
+                    <input class="contactanos-form regular" type="text" placeholder="Asunto">
+                    <input class="contactanos-form regular" type="email" placeholder="Correo electrónico">
+                    <textarea class="regular" rows="5" placeholder="Escribe aquí tu mensaje..."></textarea>
+                    <input class="text-encabezado-20 bold font-roboto boton-form" type="submit" value="CONTACTANOS">
                 </form>
-            </div>
+            </section>
         </div>
-        <div class="footer-sub flex-column align-center justify-end">
-            <hr width="90%">
-            <h4>Lucky Air @2025 | Todos los derechos reservados</h4>
+
+        <div class="flex-row align-center justify-center hr-footer">
+            <hr width="100%">
         </div>
+
+        <div class="flex-row text-contenido-12 font-montserrat secundary-content-footer">
+            <p>Lucky Air © 2026 | Todos los derechos reservados</p> 
+        </div> 
     </footer>
-    <!-- Fin footer -->
 
 </body>
 </html>
