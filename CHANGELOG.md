@@ -47,5 +47,5 @@ Con actualizaciones se logro maximizar nuestra puntuacion de performance, accesi
 ## 🧩 Descripción de cambios recientes - 14/05 --> Diego Zapata
 - **fix**: Se completó y reemplazó la página confirmar-pago.html para corregir estructura y flujo de confirmación.
 - **fix**: Se completó y reemplazó la página vuelos.html para corregir estructura y flujo de confirmación.
--**Feature** style: Se implementaron y reorganizaron estilos en vuelos.css, separándolos en módulos layout y custom para mejor mantenibilidad.
--**Feature**style: Se implementaron y reorganizaron estilos en confirmar-pago.css, separándolos también en layout y custom para consistencia del proyecto.
+- **Feature** style: Se implementaron y reorganizaron estilos en vuelos.css, separándolos en módulos layout y custom para mejor mantenibilidad.
+- **Feature**style: Se implementaron y reorganizaron estilos en confirmar-pago.css, separándolos también en layout y custom para consistencia del proyecto.
