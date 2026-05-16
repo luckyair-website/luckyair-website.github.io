@@ -4,17 +4,19 @@
     <meta charset="UTF-8">
     <meta name="description" content="Confirmación de pago de vuelos Lucky Air">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Confirmar Pago - Lucky Air</title>
+
     <link rel="stylesheet" href="../css/main.css">
+
+    <title>Confirmar Pago - Lucky Air</title>
 </head>
 
-<body bgcolor="#1E3A8A">
+<body>
 
-    <!-- Inicio Header -->
+   <!-- Inicio Header -->
     <header>
         <nav class="flex-row align-center justify-between" role="navigation">
             <a href="/" class="logo__nav flex-row align-center">
-                <img src="../assets/images/header/logo.png" alt="Logo de Lucky Air">
+                <img src="../assets/images/header/logo.png" alt="Logo de Lucky Air" >
             </a>
             <input type="checkbox" id="menu-toggle" />
             <label for="menu-toggle" class="menu-icon">&#9776;</label>
@@ -26,13 +28,13 @@
                     <a href="vuelos.html" class="nav-link ">Vuelos</a>
                 </li>
                 <li>
-                    <a href="beneficios.html" class="nav-link">Beneficios</a>
+                    <a href="beneficios.html" class="nav-link active">Beneficios</a>
                 </li>
                 <li class="enlace-login__nav">
                     <a href="login.html">Login</a>
                 </li>
             </ul>
-            <a href="login.html"  class="boton-login__nav flex-row align-center justify-center hidden-boton">
+            <a href="login.html" class="boton-login__nav flex-row align-center justify-center">
                 <img src="../assets/images/header/usuario.svg" alt="Icono de usuario" class="icono-user__nav">
                 <span class="">INGRESAR</span>
             </a>
@@ -40,67 +42,203 @@
     </header>
     <!-- Fin Header -->
 
-<!-- CONTENIDO -->
-<div align="center">
 
-<main>
+<!-- INICIO MAIN CONFIRMAR -->
+<main class="main-confirmar">
 
-    <font color="white">
-        <h2>Revisa tu compra</h2>
-        <p>Verifica los datos antes de pagar</p>
-    </font>
+    <section class="card-confirmacion">
 
-    <br>
+        <!-- HEADER -->
+        <div class="top-confirmacion">
 
-    <!-- DETALLES -->
-    <table bgcolor="white" cellpadding="20" width="30%">
+            <img src="../assets/images/header/logo.webp" alt="Logo avión">
 
-        <tr>
-            <td>
-                 <center>   
-                <h3>Detalles del viaje</h3>
+            <h1 class="text-encabezado-32 bold font-poppins">
+                RESUMEN DE TU COMPRA SEGURA
+            </h1>
 
-                <p><strong>Origen:</strong> Lima</p>
-                <p><strong>Destino:</strong> Cusco</p>
-                <p><strong>Fechas:</strong> 25 - 30 Junio</p>
-                <p><strong>Vuelo:</strong> LK2345</p>
-                <p><strong>Duración:</strong> 1h 20m</p>
+        </div>
 
-                <hr>
+        <!-- CONTENIDO -->
+        <div class="contenido-confirmacion">
 
-                <h3>Pasajero</h3>
-                <p>Juan Pérez</p>
+            <!-- DETALLES -->
+            <section class="detalle-section">
 
-                <hr>
+                <!-- TITULO -->
+                <div class="titulo-section">
 
-                <h3>Pago</h3>
-                <p>Visa **** 1234</p>
+                    <img src="../assets/images/header/logo.webp" alt="Plane">
 
-                <hr>
+                    <h2 class="text-encabezado-24 medium font-poppins">
+                        Detalles del Viaje
+                    </h2>
 
-                <h3>Total</h3>
-                <p><strong>$850 USD</strong></p>
+                </div>
 
-                <br>
+                <!-- RUTA -->
+                <div class="ruta-vuelo">
+
+                    <h2 class="text-encabezado-40 bold font-poppins">
+                        LIMA → CUSCO
+                    </h2>
+
+                </div>
+
+                <!-- INFO -->
+                <div class="info-vuelo-grid">
+
+                    <!-- FECHAS -->
+                    <div class="item-info">
+
+                        <span class="icono-mini">
+                            📅
+                        </span>
+
+                        <div>
+
+                            <p class="text-contenido-14 regular font-roboto">
+                                Fechas
+                            </p>
+
+                            <strong class="text-contenido-18 bold font-roboto">
+                                25 - 30 Junio
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                    <!-- VUELO -->
+                    <div class="item-info">
+
+                        <span class="icono-mini">
+                            ✈
+                        </span>
+
+                        <div>
+
+                            <p class="text-contenido-14 regular font-roboto">
+                                Vuelo
+                            </p>
+
+                            <strong class="text-contenido-18 bold font-roboto">
+                                LK2345
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                    <!-- DURACION -->
+                    <div class="item-info">
+
+                        <span class="icono-mini">
+                            🕒
+                        </span>
+
+                        <div>
+
+                            <p class="text-contenido-14 regular font-roboto">
+                                Duración
+                            </p>
+
+                            <strong class="text-contenido-18 bold font-roboto">
+                                1h 20m
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- PASAJERO -->
+            <section class="fila-info">
+
+                <div class="info-lateral">
+
+                    <span class="icono-info">
+                        👤
+                    </span>
+
+                    <h3 class="text-encabezado-20 medium font-poppins">
+                        Pasajero
+                    </h3>
+
+                </div>
+
+                <strong class="text-contenido-20 bold font-roboto">
+                    JUAN PÉREZ
+                </strong>
+
+            </section>
+
+            <!-- PAGO -->
+            <section class="fila-info">
+
+                <div class="info-lateral">
+
+                    <span class="icono-info">
+                        💳
+                    </span>
+
+                    <h3 class="text-encabezado-20 medium font-poppins">
+                        Pago
+                    </h3>
+
+                </div>
+
+                <strong class="text-contenido-20 bold font-roboto">
+                    Visa **** **** **** 1234
+                </strong>
+
+            </section>
+
+            <!-- TOTAL -->
+            <section class="total-confirmacion">
+
+                <h3 class="text-encabezado-24 bold font-poppins">
+                    TOTAL
+                </h3>
+
+                <h2 class="precio-total text-encabezado-40 bold font-poppins">
+                    $850 USD
+                </h2>
+
+            </section>
+
+            <!-- BOTONES -->
+            <div class="botones-confirmacion">
 
                 <a href="pago.html">
-                    <button type="button">← Volver</button>
+
+                    <button type="button" class="boton-volver">
+                        VOLVER
+                    </button>
+
                 </a>
 
                 <a href="pagofinal.html">
-                    <button type="button">Confirmar y pagar</button>
-                </a>
-    </center>   
-            </td>
-        </tr>
 
-    </table>
+                    <button type="button" class="boton-confirmar">
+                        CONFIRMAR Y PAGAR
+                    </button>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
 
 </main>
+<!-- FIN MAIN CONFIRMAR -->
 
-</div>
-
-<br><br>
+   
 
     <!-- Inicio Footer -->
     <footer class="flex-column">
@@ -128,23 +266,23 @@
                 <div class="reclamos__footer flex-column">
                     <div class="flex-row section-reclamos__footer">
                         <img src="../assets/images/footer/phone.png" alt="icono telephono" width="40">
-                        <div>
-                            <h4>Télefono:</h4>
-                            <h4>+51 999 666 999</h4>
+                        <div >
+                            <h4 >Télefono:</h4>
+                            <h4 >+51 999 666 999</h4>
                         </div>
                     </div>
                     <div class="flex-row section-reclamos__footer">
                         <img src="../assets/images/footer/email.png" alt="icono de email" width="40">
-                        <div>
-                            <h4>Correo:</h4>
-                            <h4>luckyaircontactos@gmail.com</h4>
+                        <div >
+                            <h4 >Correo:</h4>
+                            <h4 >luckyaircontactos@gmail.com</h4>
                         </div>
                     </div>
                     <div class="flex-row section-reclamos__footer">
                         <img src="../assets/images/footer/ubication.png" alt="icono de ubicacion" width="40">
-                        <div>
-                            <h4>Oficina Central:</h4>
-                            <h4>Av. Aviación 123, Lima - Perú</h4>
+                        <div >
+                            <h4 >Oficina Central:</h4>
+                            <h4 >Av. Aviación 123, Lima - Perú</h4>
                         </div>
                     </div>
                 </div>
@@ -161,7 +299,7 @@
             </div>
         </div>
         <div class="footer-sub flex-column align-center justify-end">
-            <hr width="90%">
+            <hr width="90%"> 
             <h4>Lucky Air @2025 | Todos los derechos reservados</h4>
         </div>
     </footer>

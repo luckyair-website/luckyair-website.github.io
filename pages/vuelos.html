@@ -9,7 +9,7 @@
 </head>
 <body>
 
-    <!-- Inicio Header -->
+  <!-- Inicio Header -->
     <header>
         <nav class="flex-row align-center justify-between" role="navigation">
             <a href="/" class="logo__nav flex-row align-center">
@@ -22,10 +22,10 @@
                     <a href="/" class="nav-link ">Home</a>
                 </li>
                 <li>
-                    <a href="vuelos.html" class="nav-link active">Vuelos</a>
+                    <a href="vuelos.html" class="nav-link ">Vuelos</a>
                 </li>
                 <li>
-                    <a href="beneficios.html" class="nav-link">Beneficios</a>
+                    <a href="beneficios.html" class="nav-link active">Beneficios</a>
                 </li>
                 <li class="enlace-login__nav">
                     <a href="login.html">Login</a>
@@ -39,85 +39,87 @@
     </header>
     <!-- Fin Header -->
 
+    <!-- INICIO MAIN VUELOS -->
+    <main class="main-vuelos flex-column align-center">
 
-    <main align="center">
+        <!-- HERO -->
+        <section class="hero-vuelos flex-column align-center justify-center">
+            <h1 class="text-encabezado-40 bold font-poppins">Encuentra tu próximo destino</h1>
+            <p class="text-contenido-18 regular font-roboto">Vuela barato y fácil con Lucky Air</p>
+        </section>
 
-        <!-- TITULO -->
-        <font color="white">
-            <h2>Encuentra tu próximo destino</h2>
-            <p>Vuela barato y fácil con Lucky Air</p>
-        </font>
+        <!-- FORMULARIO BUSQUEDA -->
+        <section class="buscador-vuelos">
+            <form class="form-vuelos flex-column">
+                <h2 class="text-encabezado-24 medium font-poppins">Buscar vuelos</h2>
 
-        <br>
+                <div class="grupo-inputs flex-row">
+                    <input type="text" placeholder="Origen">
+                    <input type="text" placeholder="Destino">
+                </div>
 
-        <table bgcolor="white" cellpadding="25" cellspacing="25" align="center">
-        <!-- FORMULARIO -->
-            <td></td>
-            <td>
-                <form>
+               <div class="grupo-inputs flex-row">
 
-                    <fieldset>
+        <div class="input-box flex-column">
+        <label class="text-contenido-16 medium font-roboto">Fecha de ida</label>
+        <input type="date">
+        </div>
 
-                    <center> <legend>Buscar vuelos</legend> </center>
+         <div class="input-box flex-column">
+        <label class="text-contenido-16 medium font-roboto">Fecha de vuelta</label>
+        <input type="date">
+         </div>
 
-                        <p>Origen: <input type="text"></p>
-                        <p>Destino: <input type="text"></p>
-                        <p>Ida: <input type="date"></p>
-                        <p>Vuelta: <input type="date"></p>
-                        <p>Pasajeros: <input type="number" min="1" value="1"></p>
+</div>
 
-                        <button type="submit">Buscar vuelos</button>
+                <div class="grupo-inputs flex-row">
+                    <input type="number" min="1" value="1" placeholder="Pasajeros">
+                </div>
 
-                    </fieldset>
-
-                </form>
-            </td>
-            <td></td>
-            
-        </table>
-
-        <br><br>
+                <button type="submit" class="boton-buscar">Buscar vuelos</button>
+            </form>
+        </section>
 
         <!-- OFERTAS -->
-        <font color="white">
-            <h2>Ofertas del día</h2>
-        </font>
+        <section class="ofertas-vuelos flex-column align-center">
+    <h2 class="text-encabezado-32 bold font-poppins titulo-ofertas">Ofertas del día</h2>
 
-        <table bgcolor="white" cellpadding="25" cellspacing="25" align="center">
+    <div class="cards-ofertas flex-row justify-center">
 
-            <tr>
+        <article class="card-vuelo flex-column align-center">
+            <img src="../assets/images/vuelos/cusco.png" alt="Destino Cusco">
+            <h3 class="text-encabezado-24 medium font-poppins">Lima → Cusco</h3>
+            <p class="text-contenido-18 regular font-roboto">Desde $120</p>
+            <a href="pago.html">
+                <button type="button">Seleccionar</button>
+            </a>
+        </article>
 
-                <td align="center" width="250">
+        <article class="card-vuelo flex-column align-center">
+            <img src="../assets/images/vuelos/arequipa.png" alt="Destino Arequipa">
+            <h3 class="text-encabezado-24 medium font-poppins">Lima → Arequipa</h3>
+            <p class="text-contenido-18 regular font-roboto">Desde $95</p>
+            <a href="pago.html">
+                <button type="button">Seleccionar</button>
+            </a>
+        </article>
 
-                    <h3>Lima → Cusco</h3>
-                    <p>Desde $120</p>
+        <article class="card-vuelo flex-column align-center">
+            <img src="../assets/images/vuelos/piura.png" alt="Destino Mancora">
+            <h3 class="text-encabezado-24 medium font-poppins">Lima → Piura</h3>
+            <p class="text-contenido-18 regular font-roboto">Desde $135</p>
+            <a href="pago.html">
+                <button type="button">Seleccionar</button>
+            </a>
+        </article>
 
-                    <a href="pago.html">
-                        <button type="button">Seleccionar</button>
-                    </a>
-
-                </td>
-
-                <td width="50"></td>
-
-                <td align="center" width="250">
-
-                    <h3>Lima → Arequipa</h3>
-                    <p>Desde $95</p>
-
-                    <a href="pago.html">
-                        <button type="button">Seleccionar</button>
-                    </a>
-
-                </td>
-
-            </tr>
-
-        </table>
+    </div>
+</section>
 
     </main>
+    <!-- FIN MAIN VUELOS -->
 
-    <!-- Inicio Footer -->
+ <!-- Inicio Footer -->
     <footer class="flex-column">
         <div class="footer-main flex-row justify-between">
             <div class="section-footer">
@@ -181,6 +183,7 @@
         </div>
     </footer>
     <!-- Fin footer -->
+
 
 </body>
 </html>

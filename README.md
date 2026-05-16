@@ -1,25 +1,19 @@
-# LuckyAir Website
+LuckyAir Website
+📌 Descripción
+LuckyAir Website es una aplicación web colaborativa en desarrollo.
+La primera etapa se construyó con HTML puro, y actualmente estamos integrando CSS para mejorar la presentación y accesibilidad.
 
-📌 **Descripción**  
-LuckyAir Website es una aplicación web colaborativa en desarrollo.  
-La primera etapa se construyó con **HTML puro**, y actualmente estamos integrando **CSS** para mejorar la presentación y accesibilidad.
+🚀 Funcionalidades actuales
 
----
+Header con logo, barra de navegación y acceso a login.
+Banner principal con slogan corporativo.
+Página de registro con formulario validado (nombres, apellidos, correo, documento, contraseña, confirmación).
+Checkboxes para T&C y promociones.
+Botón de envío funcional.
+Opciones de ingreso alternativo (Google, Microsoft, Facebook, Apple).
+📂 Estructura del proyecto
 
-🚀 **Funcionalidades actuales**
-- **Header** con logo, barra de navegación y acceso a login.
-- **Banner principal** con slogan corporativo.
-- **Página de registro** con formulario validado (nombres, apellidos, correo, documento, contraseña, confirmación).
-- Checkboxes para T&C y promociones.
-- Botón de envío funcional.
-- Opciones de ingreso alternativo (Google, Microsoft, Facebook, Apple).
-
----
-
-📂 **Estructura del proyecto**
-
-## 📂 Estructura del proyecto
-```text
+📂 Estructura del proyecto
 LUCKYAIR-WEBSITE.GITHUB.IO/
 │
 ├── assets/

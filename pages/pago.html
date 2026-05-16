@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    
+
     <!-- Inicio Header -->
     <header>
         <nav class="flex-row align-center justify-between" role="navigation">
@@ -32,7 +32,7 @@
                     <a href="login.html">Login</a>
                 </li>
             </ul>
-            <a href="login.html"  class="boton-login__nav flex-row align-center justify-center hidden-boton">
+            <a href="login.html" class="boton-login__nav flex-row align-center justify-center hidden-boton">
                 <img src="../assets/images/header/usuario.svg" alt="Icono de usuario" class="icono-user__nav">
                 <span class="">INGRESAR</span>
             </a>
@@ -41,143 +41,172 @@
     <!-- Fin Header -->
 
     <br>
-    <!-- INICIO MAIN EDGAR-->
+    <!-- INICIO MAIN -->
 
     <main>
         <section class="pago-container">
-            <div class="mosaico">
-                <div class="item destacado1 flex-column">
-                    <img src="" alt="imagen tarjeta de credito">
-                    <p>Tarjeta de Crédito/Débito</p>
-                </div>
-                <div class="item destacado1 flex-column">
-                    <img src="" alt="imagen tarjeta de credito">
-                    <p>Billeteras Digitales</p>
-                </div>
-                <div class="item destacado1 flex-column">
-                    <img src="" alt="imagen tarjeta de credito">
-                    <p>Pago Rápido con QR</p>
-                </div>
-                <div class="item destacado2">4</div>
-                <div class="item destacado2">5</div>
+
+            <!-- TÍTULO -->
+            <div class="pago-header flex-column align-center">
+                <h1 class="font-poppins bold text-encabezado-28 text-center">
+                    Completa tu reserva y paga de forma segura
+                </h1>
+                <p class="font-montserrat regular text-18 text-center">
+                    LIMA - CUSCO | TOTAL: <span class="text-color-accent bold">$120.00</span>
+                </p>
             </div>
-        </section>
 
-    <font color="#000">
-        <table width="55%" align="center" cellpadding="20" cellspacing="10" bgcolor="#FFFFFF" border="1">
-            <tr valign="top">
-                <td width="50%">
-                    <h3>USUARIO FRECUENTE&nbsp;&nbsp;&nbsp;<small><font color="green">GUARDADO</font></small></h3>
-                    
-                    <form action="../pages/pagofinal.html" method="GET">
-                        <table width="100%" cellpadding="5">
-                            <tr>
-                                <td>
-                                    <input type="radio" name="pago" id="visa-prev" checked>
-                                    <label for="visa-prev">
-                                        <img src="../assets/images/png/card.png" alt="Visa" width="30">
-                                        <b>Visa **** 1234</b><br>
-                                        <small>Vence 08/27</small>
-                                    </label>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <input type="radio" name="pago" id="mc-prev">
-                                    <label for="mc-prev">
-                                        <img src="../assets/images/png/card.png" alt="Mastercard" width="30">
-                                        <b>Mastercard **** 5678</b><br>
-                                        <small>Vence 03/26</small>
-                                    </label>
-                                </td>
-                            </tr>
-                        </table>
-                        <br>
-                        <div align="center">
-                            <button type="submit">Pagar ahora</button>
-                        </div>
-                    </form>
+            <!-- GRID MÉTODOS DE PAGO: 3 columnas -->
+            <div class="pago-metodos">
 
-                    <br>
-                    <details>
-                        <summary><b>Ver QR de pago</b></summary>
-                        <div align="center">
-                            <br>
-                            <table cellpadding="5">
-                                <tr>
-                                    <td><img src="../assets/images/png/qr.png" alt="QR de pago" width="150"></td>
-                                </tr>
-                            </table>
-                        </div>
-                    </details>
-
-                    <p align="center">
-                        <small>Compatible con:</small><br>
-                        <img src="../assets/images/png/alipay.png" alt="Alipay" width="40">
-                        <img src="../assets/images/png/wechat.png" alt="WeChat" width="40">
-                        <img src="../assets/images/png/unionpay.png" alt="UnionPay" width="40">
+                <div class="pago-metodo-card flex-column align-center justify-center">
+                    <img src="../assets/images/pago/credit-card.png" alt="Tarjeta de crédito">
+                    <p class="font-montserrat bold text-contenido-14 text-color-primary text-center">
+                        Tarjeta de Crédito/Débito
                     </p>
-                </td>
+                </div>
 
-                <td width="50%">
-                    <h3>USUARIO NUEVO&nbsp;&nbsp;&nbsp;<small><font color="green">PRIMERA VEZ</font></small></h3>
-
-                    <form action="../pages/confirmar-pago.html" method="GET">
-                        <table width="100%" cellpadding="5">
-                            <tr>
-                                <td colspan="2">
-                                    <img src="../assets/images/png/card.png" alt="tarjeta" width="30">&nbsp;
-                                    <label for="card-num">Número de tarjeta:</label><br>
-                                    <input type="text" id="card-num" placeholder="0000 0000 0000 0000" size="30" required>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td width="50%">
-                                    <label for="exp">Vencimiento:</label><br>
-                                    <input type="text" id="exp" placeholder="MM/AA" size="10" required>
-                                </td>
-                                <td width="50%">
-                                    <label for="cvv">CVV:</label><br>
-                                    <input type="password" id="cvv" placeholder="123" size="5" required>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="2">
-                                    <label for="card-name">Nombre en tarjeta:</label><br>
-                                    <input type="text" id="card-name" placeholder="Nombre Apellido" size="30" required>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="2" align="center">
-                                    <hr>
-                                    <p><small>O escanea para pago rápido</small></p>
-                                    <table cellpadding="5">
-                                        <tr>
-                                            <td><img src="../assets/images/png/qr.png" alt="QR pequeño" width="150"></td>
-                                        </tr>
-                                    </table>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="2">
-                                    <input type="checkbox" id="save"> 
-                                    <label for="save"><small>Guardar tarjeta</small></label>
-                                </td>
-                            </tr>
-                        </table>
-                        <br>
-                        <div align="center">
-                            <button type="submit">Pagar ahora</button>
+                <div class="pago-metodo-card flex-column align-center justify-center">
+                    <div class="flex-row align-center pago-billeteras-wrap">
+                        <img src="../assets/images/pago/smartphone.png" alt="Smartphone" class="pago-phone-img">
+                        <div class="pago-logos-grid">
+                            <img src="../assets/images/pago/mastercard.png" alt="Mastercard">
+                            <img src="../assets/images/pago/visa-icon.png" alt="Visa">
+                            <img src="../assets/images/pago/wepay.png" alt="WePay">
+                            <img src="../assets/images/pago/applepay.png" alt="Apple Pay">
+                            <img src="../assets/images/pago/gpay.png" alt="Google Pay">
+                            <img src="../assets/images/pago/alibabapay.png" alt="Alipay">
                         </div>
-                    </form>
-                </td>
-            </tr>
-        </table>
-    </font>
-</main>
+                    </div>
+                    <p class="font-montserrat bold text-contenido-14 text-color-primary text-center">
+                        Billeteras Digitales
+                    </p>
+                </div>
 
+                <div class="pago-metodo-card flex-column align-center justify-center">
+                    <img src="../assets/images/pago/qr.png" alt="Código QR" class="pago-qr-img">
+                    <p class="font-montserrat bold text-contenido-14 text-color-primary text-center">
+                        Pago Rápido con QR
+                    </p>
+                </div>
 
-    <!-- FIN MAIN EDGAR-->
+            </div>
+
+            <!-- GRID PANELES: 2 columnas -->
+            <div class="pago-paneles">
+
+                <!-- PANEL IZQUIERDO: Usuario frecuente -->
+                <div class="pago-panel flex-column">
+
+                    <h2 class="font-poppins bold text-encabezado-24 text-color-primary">
+                        Usuario frecuente
+                    </h2>
+
+                    <!-- Tarjeta Visa (activa) -->
+                    <label class="pago-tarjeta pago-tarjeta--activa flex-row align-center" for="r-visa">
+                        <input type="radio" id="r-visa" name="tarjeta" checked>
+                        <img src="../assets/images/pago/creditcard2.png" alt="Visa" class="pago-card-img">
+                        <div class="flex-column">
+                            <span class="font-montserrat bold text-16 text-color-primary">
+                                Visa **** **** 1234
+                            </span>
+                            <span class="font-roboto regular text-contenido-14 text-color-primary">
+                                Vence: 08/30
+                            </span>
+                        </div>
+                    </label>
+
+                    <!-- Tarjeta Mastercard -->
+                    <label class="pago-tarjeta flex-row align-center" for="r-mc">
+                        <input type="radio" id="r-mc" name="tarjeta">
+                        <img src="../assets/images/pago/creditcard3.png" alt="Mastercard" class="pago-card-img">
+                        <div class="flex-column">
+                            <span class="font-montserrat bold text-16 text-color-primary">
+                                Mastercard **** **** 4321
+                            </span>
+                            <span class="font-roboto regular text-contenido-14 text-color-primary">
+                                Vence: 01/28
+                            </span>
+                        </div>
+                    </label>
+
+                    <button class="pago-btn font-montserrat bold text-16"
+                        onclick="window.location.href='confirmar-pago.html'">
+                        PAGAR AHORA CON ESTA TARJETA
+                    </button>
+
+                </div>
+
+                <!-- PANEL DERECHO: Nuevo Usuario -->
+                <div class="pago-panel flex-column">
+
+                    <h2 class="font-poppins bold text-encabezado-24 text-color-primary">
+                        Nuevo Usuario
+                    </h2>
+
+                    <!-- Fila: número + CVV -->
+                    <div class="pago-form-fila">
+                        <div class="flex-column pago-field pago-field--grow">
+                            <label class="font-montserrat regular text-contenido-14 text-color-primary"
+                                for="num-tarjeta">
+                                Número de tarjeta:
+                            </label>
+                            <input class="pago-input font-roboto regular text-contenido-14" type="text" id="num-tarjeta"
+                                placeholder="0000 0000 0000 0000" maxlength="19">
+                        </div>
+                        <div class="flex-column pago-field pago-field--cvv">
+                            <label class="font-montserrat regular text-contenido-14 text-color-primary" for="fecha-exp">
+                                CVV:
+                            </label>
+                            <div class="flex-row pago-cvv-row">
+                                <input class="pago-input font-roboto regular text-contenido-14" type="text"
+                                    id="fecha-exp" placeholder="MM/AA" maxlength="5">
+                                <input class="pago-input font-roboto regular text-contenido-14" type="text" id="cvv"
+                                    placeholder="123" maxlength="3">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Nombre en tarjeta -->
+                    <div class="flex-column pago-field">
+                        <label class="font-montserrat regular text-contenido-14 text-color-primary"
+                            for="nombre-tarjeta">
+                            Nombre en tarjeta:
+                        </label>
+                        <input class="pago-input font-roboto regular text-contenido-14" type="text" id="nombre-tarjeta"
+                            placeholder="Nombre y apellido">
+                    </div>
+
+                    <!-- Guardar tarjeta -->
+                    <div class="flex-row align-center pago-check-row">
+                        <input type="checkbox" id="guardar">
+                        <label class="font-montserrat regular text-contenido-14 text-color-primary" for="guardar">
+                            Guardar tarjeta
+                        </label>
+                    </div>
+
+                    <!-- Botón PAGAR + QR -->
+                    <div class="pago-bottom flex-row align-center justify-between">
+                        <button class="pago-btn font-montserrat bold text-16"
+                            onclick="window.location.href='confirmar-pago.html'">
+                            PAGAR
+                        </button>
+                        <div class="flex-column align-center pago-qr-wrap">
+                            <span class="font-montserrat regular text-contenido-14 text-color-primary">
+                                O escanea el QR:
+                            </span>
+                            <img src="../assets/images/pago/qr.png" alt="QR de pago">
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+    </main>
+
+    <!-- FIN MAIN -->
 
     <!-- Inicio Footer -->
     <footer class="flex-column">
