@@ -1,20 +1,108 @@
 /* Responsive buscar vuelos */
 
 
+@media (max-width: 1024px)  {
+
+    .buscar-vuelos__home {
+        height: 35vh;
+    }
+
+    .boton-buscar__home {
+        height: 32px;
+        width: 140px;
+        font-size: var(--font-size-12);
+        line-height: var(--line-height);
+        letter-spacing: var(--letter-spacing-small);
+        font-family: var(--font-family-secundaria-roboto);
+        padding-left: 0.5rem;
+    }
+
+    .icons__buscar {
+        width: 32px;
+        height: auto;
+    }
+
+    .buscar-icon__buscar {
+        width: 24px;
+        height: auto;
+    }
+
+    .input-select {
+        height: 30px;
+        width: 140px;
+        background-size: 0.75rem;
+        font-size: var(--font-size-10);
+    }
+
+    .input-date__vuelos input, .input-number {
+        height: 30px;
+        width: 140px;
+        font-size: var(--font-size-10);
+    }
+
+   .input-date__vuelos, .input-number{
+        gap: 0.2rem;
+   }
+}
+
+@media (max-width: 768px)  {
+
+    .h1-hero {
+        font-size: var(--font-size-20);
+        padding-left: 6rem;
+    }
+
+    .h2-hero {
+        font-size: var(--font-size-12);
+        padding-right: 6rem;
+    }
+    
+    .buscar-container__home {
+        display: flex;
+        flex-direction: row;   /* seguimos usando fila */
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .buscar-block__buscar {
+        flex: 0 0 40%;         /* cada bloque ocupa la mitad del ancho */
+        max-width: 50%;        /* asegura que sean dos columnas */
+        padding: 1rem 0;
+    }
+
+}
+
+
+
 
 @media (max-width: 480px)  {
 
+
     .buscar-vuelos__home {
-        height: 90vh;
+        flex: 1;
+        margin: 5vh 0 70vh 0;
+    }
+
+    .buscar-block__buscar {
+        flex: 1;
+        min-width: 90%;
+        margin: auto;
     }
 
     .buscar-container__home {
         flex-direction: column;
-        width: 100%;
+        gap: 0;
     }
 
+    .hero-container__buscar {
+        width: 80%;
+        margin: auto;
+    }
+
+
     .h1-hero {
-        font-size: var(--font-size-20);
+        font-size: var(--font-size-16);
         padding-left: 0;
     }
 
@@ -22,5 +110,33 @@
         font-size: var(--font-size-10);
         padding-right: 0;
     }
+
+    .banner__principal {
+        margin-top: 40vh;
+    }
+
+    .resenas__home {
+        margin-top: 35vh;
+    }
+
+    .cards-resenas__home {
+        gap: 1rem;
+    }
+
+    footer {
+        margin-top: 15vh;
+        flex: 1;
+        gap: 1rem;
+    }
+
+    .input-select:invalid {
+        font-size: var(--font-size-8);
+    }
+
+
+
+
+
+
 
 }

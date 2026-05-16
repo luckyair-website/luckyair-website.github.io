@@ -6,8 +6,9 @@
 }
 
 .logo__nav img {
-    width: 200px;
+    max-width: 200px;
     height: auto;
+    display: block;
 }
 
 .icono-user__nav {

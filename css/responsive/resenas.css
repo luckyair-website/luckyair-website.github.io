@@ -1,9 +1,52 @@
 /* Responsive reseñas home */
 
+@media (max-width: 1024px)  {
+
+    .resenas__home {
+        margin-top: 5vh;
+    }
+
+    .card-resenas__home {
+        width: 180px;
+    }
+
+    .avatar-container__home {
+        padding-top: 0.3rem;
+    }
+
+    .puntuacion-resenas img {
+        width: 20px;
+        height: auto;
+    }
+
+    .card-resenas__home h3 {
+        font-size: var(--font-size-16);
+    }
+
+    .card-resenas__home p {
+        font-size: var(--font-size-12);
+    }
+
+}
+
+@media (max-width: 768px)  {
+
+    .resenas__home {
+        margin-top: 5vh;
+    }
+
+    .cards-resenas__home {
+        width: 80%;
+        padding: 0 0;
+    }
+
+}
+
 @media (max-width: 480px)  {
 
     .resenas__home {
-        height: 120vh;
+        height: 100%;
+        
     }
 
     .cards-resenas__home {
@@ -46,3 +89,4 @@
     }
 
 }
+

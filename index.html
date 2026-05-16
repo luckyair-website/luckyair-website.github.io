@@ -21,7 +21,7 @@
     <header>
         <nav class="flex-row align-center justify-between" role="navigation">
             <a href="/" class="logo__nav flex-row align-center">
-                <img src="assets/images/header/logo.png" alt="Logo de Lucky Air" >
+                <img src="assets/images/header/logo.webp" alt="Logo de Lucky Air" >
             </a>
             <input type="checkbox" id="menu-toggle" />
             <label for="menu-toggle" class="menu-icon">&#9776;</label>
@@ -50,14 +50,14 @@
     <main>
         <!-- Inicio seccion buscar vuelos -->
         <section class="buscar-vuelos__home flex-column">
-            <div class="flex-row align-end justify-between">
+            <div class="hero-container__buscar flex-row align-end justify-between">
                 <h1 class="h1-hero">Buscar Vuelos</h4>
                 <h2 class="h2-hero">Todos los campos son obligatorios</h3>
             </div>
             <div class="flex-row buscar-container__home">
                 <div class="flex-column align-center buscar-block__buscar">
                     <img src="assets/images/index/avion-origen.png" alt="icono de origen" class="icons__buscar">
-                    <h3 class="bold font-montserrat">Origen</h3>
+                    <label for="origen" class="bold font-montserrat">Origen</label>
                     <select name="origen" id="origen" class="input-select text-contenido-14" required>
                         <option value="" selected hidden>Selecciona tu origen</option>
                         <option value="lima">Lima</option>
@@ -67,8 +67,8 @@
                 </div>
                 <div class="flex-column align-center  buscar-block__buscar">
                     <img src="assets/images/index/avion-destino.png" alt="icono de origen" class="icons__buscar">
-                    <h3 class=" bold font-montserrat">Destino</h3>
-                    <select name="origen" id="origen" class="input-select text-contenido-14" required>
+                    <label for="destino" class=" bold font-montserrat">Destino</label>
+                    <select name="origen" id="destino" class="input-select text-contenido-14" required>
                         <option value="" selected hidden>Selecciona tu origen</option>
                         <option value="lima">Lima</option>
                         <option value="cusco">Cusco</option>
@@ -78,9 +78,9 @@
                 <div class="flex-column align-center  buscar-block__buscar">
                     <div class="flex-row align-center">
                         <img src="assets/images/index/calendario.png" alt="Icono de calendario" class="icons__buscar">
-                        <h3 class="bold font-montserrat">Fechas</h3>
+                        <label for="fechas" class="bold font-montserrat">Fechas</label>
                     </div>
-                    <div class="input-date__vuelos flex-column">
+                    <div id="fechas" class="input-date__vuelos flex-column">
                         <label for="ida">Ida:</label>
                         <input type="date" id="ida" class="text-contenido-14" required> 
                         <label for="vuelta">Vuelta:</label>
@@ -90,10 +90,10 @@
                 <div class="flex-column align-center  buscar-block__buscar">
                     <div class="flex-row align-center pd-bt__pasajeros">
                         <img src="assets/images/index/pasajeros.png" alt="Icono de pasajeros" class="icons__buscar">
-                        <h3 class="bold font-montserrat">Pasajeros</h3>
+                        <label for="pasajeros" class="bold font-montserrat">Pasajeros</label>
                     </div>
-                    <input class="input-number text-contenido-14" type="number" placeholder="Seleccionar" required>
-                    <a href="" class="flex-row align-center justify-center boton-buscar__home">
+                    <input id="pasajeros" class="input-number text-contenido-14" type="number" placeholder="Seleccionar" required>
+                    <a href="pages/pago.html" class="flex-row align-center justify-center boton-buscar__home">
                         <span class="span__buscar ">Buscar vuelos</span>
                         <img src="assets/images/index/buscar.png" alt="Icono de buscar" class="buscar-icon__buscar">
                     </a>
@@ -103,33 +103,33 @@
         <!-- Fin seccion buscar vuelos -->
         <!-- Inicio seccion ofertas -->
         <section class="ofertas__vuelos flex-column align-center">
-            <div class="">
+            <div class="tittle-ofertas">
                 <h1 class="h1-ofertas">OFERTAS DESTACADAS</h1>
             </div>
             <div class="cards flex-row">
                 <div class="card-ofertas__home flex-column align-center justify-between">
                     <img src="assets/images/index/machupicchu.png" alt="Imagen de Machu Picchu">
-                    <h4 class="h4-ofertas">LIMA - MACHU PICCHU</h4>
+                    <h4 class="h4-ofertas">LIMA - CUSCO</h4>
                     <h2 class="h2-ofertas">$200.00</h2>
-                    <a href="">COMPRAR</a>
+                    <a href="pages/pago.html">COMPRAR</a>
                 </div>
                 <div class="card-ofertas__home flex-column align-center justify-between">
                     <img src="assets/images/index/machupicchu.png" alt="Imagen de Machu Picchu">
-                    <h4 class="h4-ofertas">LIMA - MACHU PICCHU</h4>
+                    <h4 class="h4-ofertas">LIMA - CUSCO</h4>
                     <h2 class="h2-ofertas">$200.00</h2>
-                    <a href="">COMPRAR</a>
+                    <a href="pages/pago.html">COMPRAR</a>
                 </div>
                 <div class="card-ofertas__home flex-column align-center justify-between">
                     <img src="assets/images/index/machupicchu.png" alt="Imagen de Machu Picchu">
-                    <h4 class="h4-ofertas">LIMA - MACHU PICCHU</h4>
+                    <h4 class="h4-ofertas">LIMA - CUSCO</h4>
                     <h2 class="h2-ofertas">$200.00</h2>
-                    <a href="">COMPRAR</a>
+                    <a href="pages/pago.html">COMPRAR</a>
                 </div>
                 <div class="card-ofertas__home flex-column align-center justify-between">
                     <img src="assets/images/index/machupicchu.png" alt="Imagen de Machu Picchu">
-                    <h4 class="h4-ofertas">LIMA - MACHU PICCHU</h4>
+                    <h4 class="h4-ofertas">LIMA - CUSCO</h4>
                     <h2 class="h2-ofertas">$200.00</h2>
-                    <a href="">COMPRAR</a>
+                    <a href="pages/pago.html">COMPRAR</a>
                 </div>
             </div>
         </section>
@@ -246,7 +246,7 @@
                 </div>
                 <h2 class="h1-banner">HORARIO DE ATENCION</h2>
                 <div class="flex-row horario-footer">
-                    <img src="assets/images/footer/reloj.png" alt="icono de reloj" width="40">
+                    <img src="assets/images/footer/reloj.png" alt="icono de reloj" width="40" class="img-icon-footer">
                     <div>
                         <h4>Lunes a Viernes: 08:00 AM - 08:00 PM.</h4>
                         <h4>Lunes a Viernes: 08:00 AM - 08:00 PM.</h4>
@@ -259,21 +259,21 @@
                 <h2 class="h1-banner">CONTACTANOS / RECLAMOS</h2>
                 <div class="reclamos__footer flex-column">
                     <div class="flex-row section-reclamos__footer">
-                        <img src="assets/images/footer/phone.png" alt="icono telephono" width="40">
+                        <img src="assets/images/footer/phone.png" alt="icono telephono" width="40" class="img-icon-footer">
                         <div >
                             <h4 >Télefono:</h4>
                             <h4 >+51 999 666 999</h4>
                         </div>
                     </div>
                     <div class="flex-row section-reclamos__footer">
-                        <img src="assets/images/footer/email.png" alt="icono de email" width="40">
+                        <img src="assets/images/footer/email.png" alt="icono de email" width="40" class="img-icon-footer">
                         <div >
                             <h4 >Correo:</h4>
                             <h4 >luckyaircontactos@gmail.com</h4>
                         </div>
                     </div>
                     <div class="flex-row section-reclamos__footer">
-                        <img src="assets/images/footer/ubication.png" alt="icono de ubicacion" width="40">
+                        <img src="assets/images/footer/ubication.png" alt="icono de ubicacion" width="40" class="img-icon-footer">
                         <div >
                             <h4 >Oficina Central:</h4>
                             <h4 >Av. Aviación 123, Lima - Perú</h4>

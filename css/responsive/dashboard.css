@@ -1,8 +1,127 @@
 /* Responsive dashboard */
+@media (max-width: 1024px) {
 
+    .dashboard-main {
+        grid-auto-rows: 40vh;
+        gap: 1rem;
+    }
+
+    .dash-icons {
+        width: 44px;
+        height: auto;
+    }
+
+    .dash-boton {
+        font-size: var(--font-size-10);
+    }
+
+    .dash-card {
+        width: 100%;
+        margin-left: -0.5rem;
+    }
+
+    .dash-boton-container {
+        display: flex;
+        width: 100%;
+        gap: 4rem;
+        padding: 0 1rem;
+    }
+
+    .boton-ticket {
+        height: 32px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .h2-dash {
+        font-size: var(--font-size-16);
+        letter-spacing: var(--letter-spacing-small);
+    }
+
+    .h2-prox {
+        font-size: var(--font-size-16);
+        letter-spacing: var(--letter-spacing-small);
+    }
+
+    .h3-dash {
+        font-size: var(--font-size-14);
+        letter-spacing: var(--letter-spacing-small);
+    }
+
+    .span-dash {
+        font-size: var(--font-size-16);
+        letter-spacing: var(--letter-spacing-small);
+    }
+
+    .h1-dash {
+        font-size: var(--font-size-20);
+    }
+
+    .dash-boton {
+        font-size: var(--font-size-8);
+    }
+
+    .dash-card p {
+        font-size: var(--font-size-12);
+    }
+
+    .dash-icons {
+        height: 32px;
+        width: auto;
+    }
+
+    .dashboard-main {
+        grid-auto-rows: 35vh;
+        gap: 1rem;
+    }
+
+    .dashboards-user a {
+        height: 32px;
+        width: 140px;
+        font-size: var(--font-size-12);
+    }
+
+    .dashboards-user img {
+        height: 20px;
+        width: auto;
+    }
+
+    .prox-dash {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hist-dash {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .destacado2 {
+        grid-column: span 6;
+    }
+
+
+}
 
 
 @media (max-width: 480px)  {
+
+    .dashboard-main {
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 35vh;
+    }
+
+    .destacado {
+        grid-column: span 6;
+    }
+
+
+    .items {
+        flex-direction: column;
+        margin: 0.5rem;
+    }
+
 
     .dashboard-hero {
         margin-top: 4rem;
@@ -19,10 +138,7 @@
         width: auto;
     }
 
-    .dashboard-main {
-        grid-template-columns: repeat(3, 1fr);
-        grid-auto-rows: 32vh;
-    }
+    
 
     .dash-boton {
         font-size: var(--font-size-10);

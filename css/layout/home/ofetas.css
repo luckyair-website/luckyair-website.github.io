@@ -18,8 +18,10 @@
 }
 
 .card-ofertas__home img{
+    max-width: 240px;
     height: auto;
-    width: 240px;
+    display: block;
+    overflow: hidden;
 }
 
 .card-ofertas__home a{

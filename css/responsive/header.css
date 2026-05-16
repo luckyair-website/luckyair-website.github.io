@@ -28,3 +28,26 @@
     }
 
 }
+
+@media (max-width: 768px)  {
+
+    .enlaces__nav {
+        font-size: var(--font-size-14);
+    }
+
+    .boton-login__nav {
+        font-size: var(--font-size-14);
+    }
+
+    .boton-login__nav {
+        height: 36px;
+        width: 140px;
+        gap: 1rem;
+    }
+
+    .icono-user__nav {
+        width: 20px;
+        height: auto;
+    }
+
+}
