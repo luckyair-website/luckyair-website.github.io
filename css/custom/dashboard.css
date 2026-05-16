@@ -1,0 +1,115 @@
+/* Custom dashboard */
+
+
+
+.h2-dash {
+    font-size: var(--font-size-24);
+    font-weight: bold;
+    line-height: var(--line-height);
+    letter-spacing: var(--letter-spacing-medium);
+    font-family: var(--font-family-primary-poppins);
+}
+
+.h2-prox {
+    font-size: var(--font-size-24);
+    font-weight: bold;
+    line-height: var(--line-height);
+    letter-spacing: var(--letter-spacing-medium);
+    font-family: var(--font-family-primary-poppins);
+    color: var(--color-secondary);
+}
+
+.h3-dash {
+    font-size: var(--font-size-20);
+    font-weight: 500;
+    line-height: var(--line-height);
+    letter-spacing: var(--letter-spacing-medium);
+    font-family: var(--font-family-primary-poppins);
+    text-align: center;
+}
+
+.span-dash {
+    font-size: var(--font-size-24);
+    font-weight: normal;
+    line-height: var(--line-height);
+    letter-spacing: var(--letter-spacing-medium);
+    font-family: var(--font-family-primary-poppins);
+}
+
+.h1-dash {
+    font-size: var(--font-size-32);
+    font-weight: bold;
+    line-height: var(--line-height);
+    letter-spacing: var(--letter-spacing-medium);
+    font-family: var(--font-family-primary-poppins);
+}
+
+.dash-boton {
+    color: var(--color-primary);
+    font-size: var(--font-size-14);
+    font-weight: bold;
+    line-height: var(--line-height);
+    letter-spacing: var(--letter-spacing-small);
+    font-family: var(--font-family-primary-poppins);
+}
+
+.boton-ticket {
+    color: var(--color-primary);
+    font-size: var(--font-size-12);
+    font-weight: bold;
+    line-height: var(--line-height);
+    letter-spacing: var(--letter-spacing-small);
+    font-family: var(--font-family-primary-poppins);
+}
+
+.primary {
+    background: var(--gradient-button-primary);
+}
+
+.hist-puntos {
+    color: var(--color-primary);
+    font-size: var(--font-size-14);
+    font-weight: normal;
+    line-height: var(--line-height);
+    letter-spacing: var(--letter-spacing-small);
+    font-family: var(--font-family-primary-poppins);
+}
+
+.hist-span {
+    font-weight: bold;
+}
+
+.h3-hist {
+    font-size: var(--font-size-20);
+    font-weight: 500;
+    line-height: var(--line-height);
+    letter-spacing: var(--letter-spacing-medium);
+    font-family: var(--font-family-primary-poppins);
+    text-align: center;
+}
+
+.h4-hist {
+    font-size: var(--font-size-14);
+    font-weight: 500;
+    line-height: var(--line-height);
+    letter-spacing: var(--letter-spacing-small);
+    font-family: var(--font-family-primary-poppins);
+    text-align: center;
+}
+
+.hist-ticket h4 {
+    color: var(--color-primary);
+    font-size: var(--font-size-16);
+    font-weight: 500;
+    line-height: var(--line-height);
+    letter-spacing: var(--letter-spacing-small);
+    font-family: var(--font-family-primary-poppins);
+}
+
+.hist-puntos {
+    font-size: var(--font-size-14);
+    font-weight: normal;
+    line-height: var(--line-height);
+    letter-spacing: var(--letter-spacing-small);
+    font-family: var(--font-family-primary-poppins);
+}

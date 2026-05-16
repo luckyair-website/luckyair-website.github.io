@@ -1,38 +1,57 @@
 /* Estilos personalizados footer */
 
-.contactanos-form {
-    font-size: var(--font-size-16);
+.horario-footer div {
+    color: var(--color-secundary);
+    font-size: var(--font-size-12);
     line-height: var(--line-height);
     letter-spacing: var(--letter-spacing-small);
     font-family: var(--font-family-secundaria-roboto);
-    
+    font-weight: 200;
 }
 
-.contactanos-form::placeholder {
-    font-size: var(--font-size-16);
+.section-footer h3 {
+    color: var(--color-secundary);
+    font-size: var(--font-size-20);
     line-height: var(--line-height);
     letter-spacing: var(--letter-spacing-small);
     font-family: var(--font-family-secundaria-roboto);
-    
+    font-weight: 200;
+    text-align: center;
 }
 
-textarea {
-    font-size: var(--font-size-16);
+.reclamos__footer {
+    gap: 2rem;
+}
+
+.section-reclamos__footer {
+    gap: 1rem;
+}
+
+.section-reclamos__footer div {
+    color: var(--color-secundary);
+    font-size: var(--font-size-12);
     line-height: var(--line-height);
     letter-spacing: var(--letter-spacing-small);
     font-family: var(--font-family-secundaria-roboto);
-    font-weight: var(--font-weight-regular);
+    font-weight: 200;
 }
 
-textarea::placeholder {
-    font-size: var(--font-size-16);
-    line-height: var(--line-height);
-    letter-spacing: var(--letter-spacing-small);
-    font-family: var(--font-family-secundaria-roboto);
-    font-weight: var(--font-weight-regular);
-}
-
-.boton-form {
-    background: var(--color-accent-500);
+.form-escribenos__footer button {
+    background: var(--color-accent);
     color: var(--color-primary);
+    font-size: var(--font-size-20);
+    line-height: var(--line-height);
+    letter-spacing: var(--letter-spacing-small);
+    font-family: var(--font-family-secundaria-roboto);
+    font-weight: 600;
+    text-align: center;
 }
+
+.footer-sub h4 {
+    color: var(--color-secundary);
+    font-size: var(--font-size-12);
+    line-height: var(--line-height);
+    letter-spacing: var(--letter-spacing-small);
+    font-family: var(--font-family-secundaria-roboto);
+    font-weight: 200;
+} 

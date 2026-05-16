@@ -1,0 +1,29 @@
+/* Custom resenas home */
+
+
+.card-resenas__home h3 {
+    color: var(--color-secundary);
+    font-size: var(--font-size-18);
+    line-height: var(--line-height);
+    letter-spacing: var(--letter-spacing-small);
+    font-family: var(--font-family-primary-poppins);
+    font-weight: 700;
+}
+
+.card-resenas__home p {
+    color: var(--color-secundary);
+    font-size: var(--font-size-12);
+    line-height: var(--line-height);
+    letter-spacing: var(--letter-spacing-small);
+    font-family: var(--font-family-secundaria-roboto);
+    font-weight: 200;
+}
+
+.avatar-container__home h4 {
+    color: var(--color-secundary);
+    font-size: var(--font-size-14);
+    line-height: var(--line-height);
+    letter-spacing: var(--letter-spacing-small);
+    font-family: var(--font-family-secundaria-roboto);
+    font-weight: 600;
+}

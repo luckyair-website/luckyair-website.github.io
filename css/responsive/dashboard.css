@@ -1,0 +1,253 @@
+/* Responsive dashboard */
+@media (max-width: 1024px) {
+
+    .dashboard-main {
+        grid-auto-rows: 40vh;
+        gap: 1rem;
+    }
+
+    .dash-icons {
+        width: 44px;
+        height: auto;
+    }
+
+    .dash-boton {
+        font-size: var(--font-size-10);
+    }
+
+    .dash-card {
+        width: 100%;
+        margin-left: -0.5rem;
+    }
+
+    .dash-boton-container {
+        display: flex;
+        width: 100%;
+        gap: 4rem;
+        padding: 0 1rem;
+    }
+
+    .boton-ticket {
+        height: 32px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .h2-dash {
+        font-size: var(--font-size-16);
+        letter-spacing: var(--letter-spacing-small);
+    }
+
+    .h2-prox {
+        font-size: var(--font-size-16);
+        letter-spacing: var(--letter-spacing-small);
+    }
+
+    .h3-dash {
+        font-size: var(--font-size-14);
+        letter-spacing: var(--letter-spacing-small);
+    }
+
+    .span-dash {
+        font-size: var(--font-size-16);
+        letter-spacing: var(--letter-spacing-small);
+    }
+
+    .h1-dash {
+        font-size: var(--font-size-20);
+    }
+
+    .dash-boton {
+        font-size: var(--font-size-8);
+    }
+
+    .dash-card p {
+        font-size: var(--font-size-12);
+    }
+
+    .dash-icons {
+        height: 32px;
+        width: auto;
+    }
+
+    .dashboard-main {
+        grid-auto-rows: 35vh;
+        gap: 1rem;
+    }
+
+    .dashboards-user a {
+        height: 32px;
+        width: 140px;
+        font-size: var(--font-size-12);
+    }
+
+    .dashboards-user img {
+        height: 20px;
+        width: auto;
+    }
+
+    .prox-dash {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hist-dash {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .destacado2 {
+        grid-column: span 6;
+    }
+
+
+}
+
+
+@media (max-width: 480px)  {
+
+    .dashboard-main {
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 35vh;
+    }
+
+    .destacado {
+        grid-column: span 6;
+    }
+
+
+    .items {
+        flex-direction: column;
+        margin: 0.5rem;
+    }
+
+
+    .dashboard-hero {
+        margin-top: 4rem;
+    }
+
+    .dashboards-user a {
+        height: 32px;
+        width: 148px;
+        font-size: var(--font-size-12);
+    }
+
+    .dashboards-user img {
+        height: 24px;
+        width: auto;
+    }
+
+    
+
+    .dash-boton {
+        font-size: var(--font-size-10);
+    }
+
+    .dash-boton-container {
+        gap: 2rem;
+    }
+
+    .dash-icons {
+        height: 32px;
+        width: auto;
+    }
+
+    .items {
+        min-width: 90px;
+    }
+
+    .h2-dash {
+        font-size: var(--font-size-14);
+    }
+
+    .dash-card p {
+        font-size: var(--font-size-10);
+    }
+
+    .dash-boton {
+        font-size: var(--font-size-10);
+        text-align: center;
+    }
+
+    .ticket-dash {
+        width: 320px;   
+        height: auto;
+    }
+
+    .ticket-content {
+        padding: 0.1rem 0.5rem;
+        gap: 0.2rem;
+    }
+
+    .header-ticket {
+        gap: 0.5rem;
+    }
+
+    .img-prox {
+        width: 24px;
+        height: auto;
+    }
+
+    .h3-hist{
+        font-size: var(--font-size-20);
+    }
+
+    .h4-hist {
+        font-size: var(--font-size-12);
+    }
+
+    .desc-ticket {
+        gap: 2rem;
+        padding-left: 0.5rem;
+    }
+
+    .botons-containet-ticket {
+        gap: 0.5rem;
+        padding-top: 0.2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .boton-ticket {
+        font-size: var(--font-size-8);
+        height: 28px;
+        width: 120px;
+    }
+
+    .hist-dash {
+        margin-top: -10rem;
+    }
+
+    .hist-ticket {
+        width: 320px;   
+        height: 80px;
+    }
+
+    .hist-dest {
+        gap: 1rem; 
+    }
+
+    .hist-check {
+        font-size: var(--font-size-10);
+    }
+
+    .hist-ticket h4 {
+        color: var(--color-primary);
+        font-size: var(--font-size-12);
+        font-weight: bold;
+        line-height: var(--line-height);
+        letter-spacing: var(--letter-spacing-small);
+        font-family: var(--font-family-primary-poppins);
+    }
+
+    .hist-puntos {
+        font-size: var(--font-size-10);
+        font-weight: normal;
+        line-height: var(--line-height);
+        letter-spacing: var(--letter-spacing-small);
+        font-family: var(--font-family-primary-poppins);
+    }
+
+}

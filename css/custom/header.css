@@ -1,33 +1,44 @@
 /* Estilos personalizados para header */
 
-header {
-    background-color: var(--color-primary);
-}
-
-nav a {
-    font-size: var(--font-size-16);
-    font-weight: var(--font-weight-medium);
+.menu-icon {
+    font-size: 28px;
+    cursor: pointer;
+    display: none;
 }
 
 
-.login-header a {
-    gap: 1.25rem;
-    padding: 6px 37px 6px 20px;
+#menu-toggle {
+    display: none;
+}
+
+.login-header {
+    display: inline-flex;
     border-radius: 20px;
+    
     background: var(--gradient-button-primary);
 }
 
-.nav-link {
-    padding: 8px 12px;
-    position: relative;          /* necesario para el pseudo-elemento */
+.enlace-login__nav {
+    display: none;
 }
 
-.nav-link.active::after {
-    content: "";
-    position: absolute;
-    bottom: 0;                   /* coloca la línea debajo del texto */
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: var(--gradient-button-primary); /* color de la linea */
+.enlaces__nav {
+    font-size: var(--font-size-18);
+    line-height: var(--line-height);
+    letter-spacing: var(--letter-spacing-small);
+    font-weight: var(--font-weight-bold);
+    font-family: var(--font-family-primary-montserrat);
 }
+
+.boton-login__nav {
+    background: var(--gradient-button-primary);
+    color: var(--color-secondary);
+    font-size: var(--font-size-16);
+    line-height: var(--line-height);
+    letter-spacing: var(--letter-spacing-small);
+    font-weight: var(--font-weight-bold);
+    font-family: var(--font-family-secundaria-roboto);
+}
+
+
+

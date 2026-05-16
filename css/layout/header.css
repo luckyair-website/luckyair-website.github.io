@@ -1,23 +1,58 @@
 /* Layout del header */
-
-header {
-    justify-content: space-between;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
+.logo__nav {
+    width: 200px;
+    height: 100px;
+    
 }
 
-.logo-header {
-    flex: 2;
+.logo__nav img {
+    max-width: 200px;
+    height: auto;
+    display: block;
 }
 
-nav ul{
-    gap: 7rem;
-    flex: 5;
+.icono-user__nav {
+    width: 28px;
+    height: auto;
 }
 
-.login-header {
-    flex: 2;
+.enlaces__nav {
+    list-style-type: none;
+    width: 30%;
+}
+
+.enlaces__nav li a {
+    color: var(--color-secondary);
+}
+
+
+nav {
+    background: var(--color-primary);
+    height: 10vh;
+    overflow: hidden;
+}
+
+.boton-login__nav {
+    height: 44px;
+    width: 200px;
+    gap: 1.25rem;
+    border: 1px solid white;
+    border-radius: 20px;
+    color: var(--color-secondary);
+}
+
+.nav-link {
+    position: relative;
+    padding-bottom: 0.5rem;          
+}
+
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%; 
+  height: 4px; 
+  background: var(--gradient-button-primary);
+  border-radius: 2px;
 }

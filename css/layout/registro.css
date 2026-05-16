@@ -1,0 +1,160 @@
+/* Layout registro */
+
+.registro-main {
+    min-height: calc(100vh - 10vh);
+    gap: 10px;
+    padding: 24px 16px 60px;
+    background-image: url('../../assets/images/others/banner.webp');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.registro-main::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(4, 25, 54, 0.55);
+    z-index: 0;
+}
+
+.registro-main > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Contador "1 de 3" */
+.paso-indicador {
+    padding: 4px 24px;
+    border-radius: 20px;
+}
+
+/* Barra de progreso */
+.progreso-barra {
+    gap: 6px;
+    width: 100%;
+    max-width: 460px;
+}
+
+.progreso-segmento {
+    flex: 1;
+    height: 6px;
+    border-radius: 4px;
+}
+
+/* Tarjeta */
+.registro-card {
+    width: 100%;
+    max-width: 460px;
+    gap: 0;
+    padding: 28px 32px;
+    border-radius: 16px;
+}
+
+/* Logo */
+.registro-logo {
+    gap: 8px;
+    margin-bottom: 4px;
+}
+
+.registro-titulo {
+    margin-bottom: 20px;
+}
+
+/* Campos */
+.campo-grupo {
+    gap: 5px;
+    margin-bottom: 14px;
+}
+
+.registro-input {
+    width: 100%;
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+/* Divisor */
+.registro-hr {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    margin: 16px 0;
+}
+
+/* Social */
+.social-registro {
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.social-iconos {
+    gap: 10px;
+}
+
+.social-iconos img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+/* Selector doc */
+.doc-selector {
+    border-radius: 30px;
+    overflow: hidden;
+    margin-bottom: 16px;
+}
+
+.doc-btn {
+    flex: 1;
+    padding: 8px 24px;
+    border: none;
+    cursor: pointer;
+}
+
+/* T&C */
+.tc-check {
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.tc-check input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+/* Botones de nav paso 2 */
+.paso-nav {
+    justify-content: space-between;
+    gap: 12px;
+}
+
+/* Paso oculto */
+.paso.oculto {
+    display: none;
+}
+
+/* Botones */
+.btn-siguiente {
+    padding: 10px 36px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.btn-volver {
+    padding: 10px 28px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.btn-registrar {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 4px;
+}

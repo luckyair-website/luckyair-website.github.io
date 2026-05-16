@@ -9,202 +9,181 @@
 </head>
 <body>
 
-    <!-- INICIO HEADER JOSE-->
-    <header class="flex-row align-center">
-        <!-- Inicio contenedor-logo -->
-        <a href="/" class="flex-row justify-center logo-header">
-            <img src="../assets/images/header/logo.webp" alt="Logo de LuckyAir" width="200" height="100">
-        </a>
-        <!-- Fin contenedor-logo -->
-
-        <!-- Inicio contenedor de navegacion -->
-        <nav role="navigation" class="text-contenido-16 font-montserrat">    
-            <ul class="flex-row">
+  <!-- Inicio Header -->
+    <header>
+        <nav class="flex-row align-center justify-between" role="navigation">
+            <a href="/" class="logo__nav flex-row align-center">
+                <img src="../assets/images/header/logo.png" alt="Logo de Lucky Air" >
+            </a>
+            <input type="checkbox" id="menu-toggle" />
+            <label for="menu-toggle" class="menu-icon">&#9776;</label>
+            <ul class="enlaces__nav flex-row align-center justify-between">
                 <li>
-                    <a href="/" class="nav-link bold">Home</a>
+                    <a href="/" class="nav-link ">Home</a>
                 </li>
                 <li>
-                    <a href="vuelos.html" class="nav-link bold active">Vuelos</a>
+                    <a href="vuelos.html" class="nav-link active">Vuelos</a>
                 </li>
                 <li>
-                    <a href="beneficios.html" class="nav-link bold">Beneficios</a>
+                    <a href="beneficios.html" class="nav-link ">Beneficios</a>
+                </li>
+                <li class="enlace-login__nav">
+                    <a href="login.html">Login</a>
                 </li>
             </ul>
-        </nav>
-        <!-- Fin contenedor de navegacion -->
-
-        <!-- Inicio contenedor de Icono usuario -->
-        <div class="flex-row justify-center login-header">
-            <a href="login.html" class="flex-row align-center">
-                <img src="../assets/images/header/usuario.svg" alt="icono usuario" width="32">
-                <span class="text-contenido-18 font-roboto bold">INGRESAR</span>
+            <a href="login.html" class="boton-login__nav flex-row align-center justify-center">
+                <img src="../assets/images/header/usuario.svg" alt="Icono de usuario" class="icono-user__nav">
+                <span class="">INGRESAR</span>
             </a>
-        </div>     
-        <!-- Fin contenedor de Icono usuario -->
+        </nav>
     </header>
-    <!-- FIN HEADER JOSE-->
+    <!-- Fin Header -->
 
+    <!-- INICIO MAIN VUELOS -->
+    <main class="main-vuelos flex-column align-center">
 
-    <main align="center">
+        <!-- HERO -->
+        <section class="hero-vuelos flex-column align-center justify-center">
+            <h1 class="text-encabezado-40 bold font-poppins">Encuentra tu próximo destino</h1>
+            <p class="text-contenido-18 regular font-roboto">Vuela barato y fácil con Lucky Air</p>
+        </section>
 
-        <!-- TITULO -->
-        <font color="white">
-            <h2>Encuentra tu próximo destino</h2>
-            <p>Vuela barato y fácil con Lucky Air</p>
-        </font>
+        <!-- FORMULARIO BUSQUEDA -->
+        <section class="buscador-vuelos">
+            <form class="form-vuelos flex-column">
+                <h2 class="text-encabezado-24 medium font-poppins">Buscar vuelos</h2>
 
-        <br>
+                <div class="grupo-inputs flex-row">
+                    <input type="text" placeholder="Origen">
+                    <input type="text" placeholder="Destino">
+                </div>
 
-        <table bgcolor="white" cellpadding="25" cellspacing="25" align="center">
-        <!-- FORMULARIO -->
-            <td></td>
-            <td>
-                <form>
+               <div class="grupo-inputs flex-row">
 
-                    <fieldset>
+        <div class="input-box flex-column">
+        <label class="text-contenido-16 medium font-roboto">Fecha de ida</label>
+        <input type="date">
+        </div>
 
-                    <center> <legend>Buscar vuelos</legend> </center>
+         <div class="input-box flex-column">
+        <label class="text-contenido-16 medium font-roboto">Fecha de vuelta</label>
+        <input type="date">
+         </div>
 
-                        <p>Origen: <input type="text"></p>
-                        <p>Destino: <input type="text"></p>
-                        <p>Ida: <input type="date"></p>
-                        <p>Vuelta: <input type="date"></p>
-                        <p>Pasajeros: <input type="number" min="1" value="1"></p>
+</div>
 
-                        <button type="submit">Buscar vuelos</button>
+                <div class="grupo-inputs flex-row">
+                    <input type="number" min="1" value="1" placeholder="Pasajeros">
+                </div>
 
-                    </fieldset>
-
-                </form>
-            </td>
-            <td></td>
-            
-        </table>
-
-        <br><br>
+                <button type="submit" class="boton-buscar">Buscar vuelos</button>
+            </form>
+        </section>
 
         <!-- OFERTAS -->
-        <font color="white">
-            <h2>Ofertas del día</h2>
-        </font>
+        <section class="ofertas-vuelos flex-column align-center">
+    <h2 class="text-encabezado-32 bold font-poppins titulo-ofertas">Ofertas del día</h2>
 
-        <table bgcolor="white" cellpadding="25" cellspacing="25" align="center">
+    <div class="cards-ofertas flex-row justify-center">
 
-            <tr>
+        <article class="card-vuelo flex-column align-center">
+            <img src="../assets/images/vuelos/cusco.png" alt="Destino Cusco">
+            <h3 class="text-encabezado-24 medium font-poppins">Lima → Cusco</h3>
+            <p class="text-contenido-18 regular font-roboto">Desde $120</p>
+            <a href="pago.html">
+                <button type="button">Seleccionar</button>
+            </a>
+        </article>
 
-                <td align="center" width="250">
+        <article class="card-vuelo flex-column align-center">
+            <img src="../assets/images/vuelos/arequipa.png" alt="Destino Arequipa">
+            <h3 class="text-encabezado-24 medium font-poppins">Lima → Arequipa</h3>
+            <p class="text-contenido-18 regular font-roboto">Desde $95</p>
+            <a href="pago.html">
+                <button type="button">Seleccionar</button>
+            </a>
+        </article>
 
-                    <h3>Lima → Cusco</h3>
-                    <p>Desde $120</p>
+        <article class="card-vuelo flex-column align-center">
+            <img src="../assets/images/vuelos/piura.png" alt="Destino Mancora">
+            <h3 class="text-encabezado-24 medium font-poppins">Lima → Piura</h3>
+            <p class="text-contenido-18 regular font-roboto">Desde $135</p>
+            <a href="pago.html">
+                <button type="button">Seleccionar</button>
+            </a>
+        </article>
 
-                    <a href="pago.html">
-                        <button type="button">Seleccionar</button>
-                    </a>
-
-                </td>
-
-                <td width="50"></td>
-
-                <td align="center" width="250">
-
-                    <h3>Lima → Arequipa</h3>
-                    <p>Desde $95</p>
-
-                    <a href="pago.html">
-                        <button type="button">Seleccionar</button>
-                    </a>
-
-                </td>
-
-            </tr>
-
-        </table>
+    </div>
+</section>
 
     </main>
+    <!-- FIN MAIN VUELOS -->
 
-    <!-- INICIO FOOTER JOSE-->
-    <footer role="contentinfo">
-        <div class="main-content-footer flex-row">
-            <section class="flex-column align-center left-content-footer">
-                <section class="flex-column align-center redes-content-footer" aria-labelledby="redes-title">
-                    <h3 class="text-encabezado-20 medium font-poppins" id="redes-title">SIGUENOS EN REDES</h3>
-                    <ul class="flex-row">
-                        <li>
-                            <a href="https://www.facebook.com" target="_blank" aria-label="Abrir Facebook">
-                                <img src="../assets/images/footer/facebook.png" alt="Facebook" class="icono-redes">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.instagram.com" target="_blank" aria-label="Abrir Instagram">
-                                <img src="../assets/images/footer/instagram.png" alt="Instagram" class="icono-redes">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.x.com" target="_blank" aria-label="Abrir X">
-                                <img src="../assets/images/footer/x.png" alt="X" class="icono-redes">
-                            </a>
-                        </li>
-                    </ul>
-                </section>
-                <section class="flex-column align-center horario-content-footer" aria-labelledby="horario-atencion">
-                    <h3 class="text-encabezado-20 medium font-poppins" id="horario-atencion">HORARIO DE ATENCIÓN</h3>
-                    <div class="flex-row align-center">
-                        <img src="../assets/images/footer/reloj.png" alt="icono reloj" width="40">
-                        <p class="text-contenido-14 regular font-roboto">
-                            Lunes a Viernes: 08:00 AM - 08:00 PM <br>
-                            Sábados y Domingos: 09:00 AM - 05:00 PM
-                        </p>
+ <!-- Inicio Footer -->
+    <footer class="flex-column">
+        <div class="footer-main flex-row justify-between">
+            <div class="section-footer">
+                <h2 class="h1-banner">SIGUENOS EN REDES</h2>
+                <div class="img-redes-container__footer">
+                    <img class="img-redes" src="../assets/images/footer/facebook.png" alt="Icono de facebook">
+                    <img class="img-redes" src="../assets/images/footer/instagram.png" alt="Icono de instagram">
+                    <img class="img-redes" src="../assets/images/footer/x.png" alt="Icono de x">
+                </div>
+                <h2 class="h1-banner">HORARIO DE ATENCION</h2>
+                <div class="flex-row horario-footer">
+                    <img src="../assets/images/footer/reloj.png" alt="icono de reloj" width="40">
+                    <div>
+                        <h4>Lunes a Viernes: 08:00 AM - 08:00 PM.</h4>
+                        <h4>Lunes a Viernes: 08:00 AM - 08:00 PM.</h4>
                     </div>
-                </section>
-                <section class="flex-row p-content-footer">
-                    <h4 class="text-contenido-18 regular font-roboto">
-                        Llevándote más alto, <br> con la seguridad que mereces.
-                    </h4>
-                </section>
-            </section>
-            <section class="flex-column middle-content-footer" aria-labelledby="title-contactanos">
-                <h3 class="text-encabezado-20 medium text-center font-poppins" id="title-contactanos">CONTACTANOS / RECLAMOS</h3>
-                <section class="flex-row info-middle-footer">
-                    <img src="../assets/images/footer/phone.png" alt="icono telephono" width="48">
-                    <div class="text-contenido-14 font-roboto">
-                        <h3 class="medium">Télefono:</h3>
-                        <h3 class="regular">+51 999 666 999</h3>
+                </div>
+                <h3>Llevandote mas alto, con la <br>
+                    seguridad que mereces.</h3>
+            </div>
+            <div class="section-footer">
+                <h2 class="h1-banner">CONTACTANOS / RECLAMOS</h2>
+                <div class="reclamos__footer flex-column">
+                    <div class="flex-row section-reclamos__footer">
+                        <img src="../assets/images/footer/phone.png" alt="icono telephono" width="40">
+                        <div >
+                            <h4 >Télefono:</h4>
+                            <h4 >+51 999 666 999</h4>
+                        </div>
                     </div>
-                </section>
-                <section class="flex-row info-middle-footer">
-                    <img src="../assets/images/footer/email.png" alt="icono de email" width="48">
-                    <div class="text-contenido-14 font-roboto">
-                        <h3 class="medium">Correo:</h3>
-                        <h3 class="regular">luckyaircontactos@gmail.com</h3>
+                    <div class="flex-row section-reclamos__footer">
+                        <img src="../assets/images/footer/email.png" alt="icono de email" width="40">
+                        <div >
+                            <h4 >Correo:</h4>
+                            <h4 >luckyaircontactos@gmail.com</h4>
+                        </div>
                     </div>
-                </section>
-                <section class="flex-row info-middle-footer">
-                    <img src="../assets/images/footer/ubication.png" alt="icono de ubicacion" width="48">
-                    <div class="text-contenido-14 font-roboto">
-                        <h3 class="medium">Oficina Central:</h3>
-                        <h3 class="regular">Av. Aviación 123, Lima - Perú</h3>
+                    <div class="flex-row section-reclamos__footer">
+                        <img src="../assets/images/footer/ubication.png" alt="icono de ubicacion" width="40">
+                        <div >
+                            <h4 >Oficina Central:</h4>
+                            <h4 >Av. Aviación 123, Lima - Perú</h4>
+                        </div>
                     </div>
-                </section>
-            </section>
-            <section class="right-content-footer" aria-labelledby="title-escribenos">
-                <form class="flex-column align-center">
-                    <h3 class="text-encabezado-20 medium font-poppins" id="title-escribenos">ESCRÍBENOS</h3>
-                    <input class="contactanos-form regular" type="text" placeholder="Nombre y Apellidos">
-                    <input class="contactanos-form regular" type="text" placeholder="Asunto">
-                    <input class="contactanos-form regular" type="email" placeholder="Correo electrónico">
-                    <textarea class="regular"  rows="5" placeholder="Escribe aquí tu mensaje..."></textarea>
-                    <input class="text-encabezado-20 bold font-roboto boton-form" type="submit" value="CONTACTANOS">
+                </div>
+            </div>
+            <div class="section-footer">
+                <h2 class="h1-banner">ESCRIBENOS</h2>
+                <form action="" class="flex-column align-center form-escribenos__footer">
+                    <input type="text" placeholder="Nombres y Apellidos" required>
+                    <input type="text" placeholder="Asunto" required>
+                    <input type="email" placeholder="Correo electronico" required>
+                    <textarea name="" id="" cols="6" placeholder="Escribe tu mensaje" required></textarea>
+                    <button type="submit" class="flex-column align-center justify-center">CONTACTANOS</button>
                 </form>
-            </section>
+            </div>
         </div>
-        <div class="flex-row align-center justify-center hr-footer">
-            <hr width="100%">
+        <div class="footer-sub flex-column align-center justify-end">
+            <hr width="90%"> 
+            <h4>Lucky Air @2025 | Todos los derechos reservados</h4>
         </div>
-        <div class="flex-row text-contenido-12 font-montserrat secundary-content-footer">
-            <p>Lucky Air © 2026 | Todos los derechos reservados</p> 
-        </div> 
     </footer>
-    <!-- FIN FOOTER JOSE-->
+    <!-- Fin footer -->
+
 
 </body>
 </html>

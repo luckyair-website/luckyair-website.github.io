@@ -1,0 +1,202 @@
+/* Layout pago */
+
+/* ── Contenedor principal ───────────────────────── */
+.pago-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem 0 3rem;
+}
+
+/* ── Título ─────────────────────────────────────── */
+.pago-header {
+    gap: 0.4rem;
+}
+
+/* ── GRID métodos de pago (fila superior, 3 cols) ─ */
+.pago-metodos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.pago-metodo-card {
+    background: var(--color-secondary);
+    border-radius: 20px;
+    padding: 1.75rem 1rem 1.25rem;
+    gap: 1rem;
+    min-height: 150px;
+}
+
+.pago-metodo-card > img {
+    max-height: 72px;
+    object-fit: contain;
+}
+
+.pago-qr-img {
+    max-height: 80px;
+    object-fit: contain;
+}
+
+/* Billeteras digitales */
+.pago-billeteras-wrap {
+    gap: 0.75rem;
+}
+
+.pago-phone-img {
+    height: 64px;
+    object-fit: contain;
+}
+
+.pago-logos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 36px);
+    gap: 0.35rem;
+}
+
+.pago-logos-grid img {
+    width: 36px;
+    height: 24px;
+    object-fit: contain;
+}
+
+/* ── GRID paneles (fila inferior, 2 cols) ────────── */
+.pago-paneles {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    align-items: start;
+}
+
+.pago-panel {
+    background: var(--color-secondary);
+    border-radius: 20px;
+    padding: 2rem;
+    gap: 1.25rem;
+}
+
+/* ── Tarjetas guardadas ─────────────────────────── */
+.pago-tarjeta {
+    border: 2px solid #d0d0d0;
+    border-radius: 14px;
+    padding: 1rem 1.25rem;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+.pago-tarjeta--activa {
+    border-color: var(--color-accent);
+}
+
+.pago-tarjeta input[type="radio"] {
+    accent-color: var(--color-accent);
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.pago-card-img {
+    height: 52px;
+    object-fit: contain;
+}
+
+/* ── Formulario nuevo usuario ───────────────────── */
+.pago-form-fila {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 1rem;
+    align-items: end;
+}
+
+.pago-field {
+    gap: 0.35rem;
+    width: 100%;
+}
+
+.pago-field--grow {
+    flex: 1;
+}
+
+.pago-field--cvv {
+    width: auto;
+}
+
+.pago-cvv-row {
+    gap: 0.5rem;
+}
+
+.pago-input {
+    padding: 0.65rem 1rem;
+    border: 1.5px solid #c8c8c8;
+    border-radius: 10px;
+    outline: none;
+    background: var(--color-secondary);
+    color: var(--color-primary);
+    width: 100%;
+}
+
+.pago-input:focus {
+    border-color: var(--color-accent);
+}
+
+/* inputs CVV pequeños */
+.pago-cvv-row .pago-input {
+    width: 90px;
+}
+
+/* input nombre (ancho completo) */
+.pago-field > .pago-input {
+    width: 100%;
+}
+
+/* ── Checkbox guardar tarjeta ───────────────────── */
+.pago-check-row {
+    gap: 0.5rem;
+}
+
+.pago-check-row input[type="checkbox"] {
+    width: 17px;
+    height: 17px;
+    accent-color: var(--color-accent);
+    cursor: pointer;
+}
+
+/* ── Fila inferior panel derecho ────────────────── */
+.pago-bottom {
+    gap: 1rem;
+    margin-top: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pago-qr-wrap {
+    gap: 0.3rem;
+}
+
+.pago-qr-wrap img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+}
+
+/* ── Botón pagar ────────────────────────────────── */
+.pago-btn {
+    background: var(--gradient-button-primary);
+    color: var(--color-primary);
+    border: none;
+    padding: 14px 24px;
+    border-radius: 50px;
+    cursor: pointer;
+    letter-spacing: var(--letter-spacing-small);
+    transition: opacity 0.2s;
+    white-space: nowrap;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pago-btn:hover {
+    opacity: 0.88;
+}

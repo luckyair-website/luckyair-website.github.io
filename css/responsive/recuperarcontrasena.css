@@ -1,0 +1,30 @@
+/* Responsive recuperar contraseña */
+
+@media (max-width: 768px) {
+    .recuperar-card {
+        padding: 20px 18px;
+    }
+
+    .recuperar-nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn-recuperar-nav {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .recuperar-main {
+        padding: 16px 8px 40px;
+    }
+
+    .recuperar-card {
+        padding: 16px 14px;
+    }
+
+    .recuperar-titulo {
+        font-size: var(--font-size-16);
+    }
+}

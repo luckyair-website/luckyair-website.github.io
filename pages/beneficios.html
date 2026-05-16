@@ -3,153 +3,275 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Lucky Air ofrece vuelos accesibles y frecuentes desde Perú. Más vuelos, menos costo.">
+    <title>Lucky Air - Beneficios</title>
+    <!-- Corregido: Se cerraron correctamente las comillas y etiquetas -->
     <link rel="stylesheet" href="../css/main.css">
-    <title>Beneficios</title>
 </head>
-<body>
-    
-    <!-- INICIO HEADER JOSE-->
-    <header class="flex-row align-center">
-        <!-- Inicio contenedor-logo -->
-        <a href="/" class="flex-row justify-center logo-header">
-            <img src="../assets/images/header/logo.webp" alt="Logo de LuckyAir" width="200" height="100">
-        </a>
-        <!-- Fin contenedor-logo -->
+<body class="reset-body">
 
-        <!-- Inicio contenedor de navegacion -->
-        <nav role="navigation" class="text-contenido-16 font-montserrat">    
-            <ul class="flex-row">
+    <!-- Inicio Header -->
+    <header>
+        <nav class="flex-row align-center justify-between" role="navigation">
+            <a href="/" class="logo__nav flex-row align-center">
+                <img src="../assets/images/header/logo.png" alt="Logo de Lucky Air" >
+            </a>
+            <input type="checkbox" id="menu-toggle" />
+            <label for="menu-toggle" class="menu-icon">&#9776;</label>
+            <ul class="enlaces__nav flex-row align-center justify-between">
                 <li>
-                    <a href="/" class="nav-link bold">Home</a>
+                    <a href="/" class="nav-link ">Home</a>
                 </li>
                 <li>
-                    <a href="vuelos.html" class="nav-link bold ">Vuelos</a>
+                    <a href="vuelos.html" class="nav-link ">Vuelos</a>
                 </li>
                 <li>
-                    <a href="beneficios.html" class="nav-link bold active">Beneficios</a>
+                    <a href="beneficios.html" class="nav-link active">Beneficios</a>
+                </li>
+                <li class="enlace-login__nav">
+                    <a href="login.html">Login</a>
                 </li>
             </ul>
-        </nav>
-        <!-- Fin contenedor de navegacion -->
-
-        <!-- Inicio contenedor de Icono usuario -->
-        <div class="flex-row justify-center login-header">
-            <a href="login.html" class="flex-row align-center">
-                <img src="../assets/images/header/usuario.svg" alt="icono usuario" width="32">
-                <span class="text-contenido-18 font-roboto bold">INGRESAR</span>
+            <a href="login.html" class="boton-login__nav flex-row align-center justify-center">
+                <img src="../assets/images/header/usuario.svg" alt="Icono de usuario" class="icono-user__nav">
+                <span class="">INGRESAR</span>
             </a>
-        </div>     
-        <!-- Fin contenedor de Icono usuario -->
+        </nav>
     </header>
-    <!-- FIN HEADER JOSE-->
+    <!-- Fin Header -->
 
-    <main class="flex">
-        <section>
-            <div class="tarjeta">
+<main>
+    <!-- SECCIÓN HERO ACTUALIZADA -->
+    <section class="rewards-hero flex-column align-center">
+        <h1 class="hero-title">Tus viajes te premian.<br>Bienvenido a Lucky Rewards.</h1>
+        
+        <div class="user-card">
+    <h2 class="user-name">Hola, Juan Martinez</h2>
 
-                <div class="contenido">
-                    <img src="../assets/images/png/cusco.png" alt="">
-                    <h3>Ahorraaa! el 50%</h3>
-                    <h2>Machu Picchu</h2>
-                    <a href="">COMPRA</a>
-                </div>
+    <div class="points-box">
+        <p class="points-label">Saldo de Puntos</p>
+        <h1 class="points-number">14,500 pts</h1>
+    </div>
 
+    <div class="level-info">
+        <span class="level-badge">Nivel: Plata</span>
+        <p>Gana 500 pts más para el nivel <strong>ORO</strong></p>
+    </div>
+
+    <div class="progress-bg">
+        <div class="progress-fill" style="width: 80%;"></div>
+    </div>
+
+    <div class="card-buttons">
+        <button class="btn-primary">Canjear Puntos</button>
+        <button class="btn-secondary">Cómo ganar más</button>
+    </div>
+</div>
+    </section>
+</main>
+
+        <!-- SECCIÓN AHORRO EN VIAJES -->
+<!-- CONTENEDOR BLANCO TOTAL -->
+<div class="bg-white-full">
+    
+    <!-- SECCIÓN: ¿CÓMO FUNCIONA? -->
+    <section class="steps-section flex-column align-center">
+        <h2 class="section-title">¿Cómo funciona?</h2>
+        <div class="steps-grid">
+            <div class="step-card">
+                <img src="../assets/images/beneficios/registrate.png" alt="Registro">
+                <h3>REGÍSTRATE</h3>
+                <p>Crea tu cuenta<br>y únete al programa.</p>
             </div>
-            <div class="tarjeta">
-
-                <div class="contenido">
-                    <img src="../assets/images/png/arequipa.png" alt="">
-                    <h3>Ahorraaa! el 30%</h3>
-                    <h2>Arequipa</h2>
-                    <a href="">COMPRA</a>
-                </div>
-
+            <div class="step-card">
+                <img src="../assets/images/beneficios/vuela.png" alt="Vuelo">
+                <h3>VUELA CON NOSOTROS</h3>
+                <p>Acumula beneficios<br>cada vez que viajes.</p>
             </div>
-        </section>
+            <div class="step-card">
+                <img src="../assets/images/beneficios/compra.png" alt="Socio">
+                <h3>COMPRA CON SOCIOS</h3>
+                <p>Obtén puntos comprando<br>con nuestros aliados.</p>
+            </div>
+            <div class="step-card">
+                <img src="../assets/images/beneficios/premios.png" alt="Premio">
+                <h3>DISFRUTA TUS PREMIOS</h3>
+                <p>Canjea tus puntos<br>por recompensas exclusivas.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN: AHORRO EN VIAJES -->
+    <section class="savings-section flex-column align-center">
+        <h2 class="dark-title main-title">Ahorro en viajes</h2>
+        <p class="subtitle">Beneficios clave para ahorrar en tus viajes</p>
+
+        <div class="savings-grid">
+            <div class="save-card flex-column align-center">
+                <div class="save-icon">
+                    <img src="../assets/images/beneficios/equipaje.png" alt="Equipaje">
+                </div>
+                <h3>EQUIPAJE ADICIONAL</h3>
+                <p>Desde 500 puntos</p>
+                <button class="btn-canjear">Canjear</button>
+            </div>
+
+            <div class="save-card flex-column align-center">
+                <div class="save-icon">
+                    <img src="../assets/images/beneficios/asientos.png" alt="Asientos">
+                </div>
+                <h3>SELECCIÓN DE ASIENTOS</h3>
+                <p>Desde 300 puntos</p>
+                <button class="btn-canjear">Canjear</button>
+            </div>
+
+            <div class="save-card flex-column align-center">
+                <div class="save-icon">
+                    <img src="../assets/images/beneficios/descuento.png" alt="Descuento">
+                </div>
+                <h3>DESCUENTO EN TICKET</h3>
+                <p>Desde 1000 puntos</p>
+                <button class="btn-canjear">Canjear</button>
+            </div>
+        </div>
+    </section>
+</div>
+
+        <!-- TIENDA: Fondo azul marino total -->
+        <section class="lucky-shop">
+    <h2 class="shop-title">La tienda del tio Lucky</h2>
+
+    <div class="shop-grid">
+
+        <!-- ITEM 1 -->
+        <div class="product-card">
+            <div class="product-img">
+                <img src="../assets/images/beneficios/almohada.png">
+            </div>
+            <h3>Almohada</h3>
+            <p>3,500 pts + $15</p>
+            <button>Añadir a Carrito</button>
+        </div>
+
+        <!-- ITEM 2 -->
+        <div class="product-card">
+            <div class="product-img">
+                <img src="../assets/images/beneficios/merch1.png">
+            </div>
+            <h3>Merch T-shirt</h3>
+            <p>3,500 pts + $15</p>
+            <button>Añadir a Carrito</button>
+        </div>
+
+        <!-- ITEM 3 -->
+        <div class="product-card">
+            <div class="product-img">
+                <img src="../assets/images/beneficios/merch2.png">
+            </div>
+            <h3>Merch T-shirt</h3>
+            <p>3,000 pts + $15</p>
+            <button>Añadir a Carrito</button>
+        </div>
+
+        <!-- ITEM 4 -->
+        <div class="product-card">
+            <div class="product-img">
+                <img src="../assets/images/beneficios/merch3.png">
+            </div>
+            <h3>Merch T-shirt</h3>
+            <p>4,000 pts + $15</p>
+            <button>Añadir a Carrito</button>
+        </div>
+
+        <!-- ITEM 5 -->
+        <div class="product-card">
+            <div class="product-img">
+                <img src="../assets/images/beneficios/gorra.png">
+            </div>
+            <h3>Gorra</h3>
+            <p>1,500 pts + $10</p>
+            <button>Añadir a Carrito</button>
+        </div>
+
+        <!-- ITEM 6 -->
+       <div class="product-card">
+            <div class="product-img">
+                <img src="../assets/images/beneficios/power-adapter.png">
+            </div>
+            <h3>Power adapter</h3>
+            <p>1,500 pts + $10</p>
+            <button>Añadir a Carrito</button>
+        </div>
+
+    </div>
+
+
+</section>
     </main>
-    <!-- INICIO FOOTER JOSE-->
-    <footer role="contentinfo">
-        <div class="main-content-footer flex-row">
-            <section class="flex-column align-center left-content-footer">
-                <section class="flex-column align-center redes-content-footer" aria-labelledby="redes-title">
-                    <h3 class="text-encabezado-20 medium font-poppins" id="redes-title">SIGUENOS EN REDES</h3>
-                    <ul class="flex-row">
-                        <li>
-                            <a href="https://www.facebook.com" target="_blank" aria-label="Abrir Facebook">
-                                <img src="../assets/images/footer/facebook.png" alt="Facebook" class="icono-redes">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.instagram.com" target="_blank" aria-label="Abrir Instagram">
-                                <img src="../assets/images/footer/instagram.png" alt="Instagram" class="icono-redes">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.x.com" target="_blank" aria-label="Abrir X">
-                                <img src="../assets/images/footer/x.png" alt="X" class="icono-redes">
-                            </a>
-                        </li>
-                    </ul>
-                </section>
-                <section class="flex-column align-center horario-content-footer" aria-labelledby="horario-atencion">
-                    <h3 class="text-encabezado-20 medium font-poppins" id="horario-atencion">HORARIO DE ATENCIÓN</h3>
-                    <div class="flex-row align-center">
-                        <img src="../assets/images/footer/reloj.png" alt="icono reloj" width="40">
-                        <p class="text-contenido-14 regular font-roboto">
-                            Lunes a Viernes: 08:00 AM - 08:00 PM <br>
-                            Sábados y Domingos: 09:00 AM - 05:00 PM
-                        </p>
+
+    <!-- Inicio Footer -->
+    <footer class="flex-column">
+        <div class="footer-main flex-row justify-between">
+            <div class="section-footer">
+                <h2 class="h1-banner">SIGUENOS EN REDES</h2>
+                <div class="img-redes-container__footer">
+                    <img class="img-redes" src="../assets/images/footer/facebook.png" alt="Icono de facebook">
+                    <img class="img-redes" src="../assets/images/footer/instagram.png" alt="Icono de instagram">
+                    <img class="img-redes" src="../assets/images/footer/x.png" alt="Icono de x">
+                </div>
+                <h2 class="h1-banner">HORARIO DE ATENCION</h2>
+                <div class="flex-row horario-footer">
+                    <img src="../assets/images/footer/reloj.png" alt="icono de reloj" width="40">
+                    <div>
+                        <h4>Lunes a Viernes: 08:00 AM - 08:00 PM.</h4>
+                        <h4>Lunes a Viernes: 08:00 AM - 08:00 PM.</h4>
                     </div>
-                </section>
-                <section class="flex-row p-content-footer">
-                    <h4 class="text-contenido-18 regular font-roboto">
-                        Llevándote más alto, <br> con la seguridad que mereces.
-                    </h4>
-                </section>
-            </section>
-            <section class="flex-column middle-content-footer" aria-labelledby="title-contactanos">
-                <h3 class="text-encabezado-20 medium text-center font-poppins" id="title-contactanos">CONTACTANOS / RECLAMOS</h3>
-                <section class="flex-row info-middle-footer">
-                    <img src="../assets/images/footer/phone.png" alt="icono telephono" width="48">
-                    <div class="text-contenido-14 font-roboto">
-                        <h3 class="medium">Télefono:</h3>
-                        <h3 class="regular">+51 999 666 999</h3>
+                </div>
+                <h3>Llevandote mas alto, con la <br>
+                    seguridad que mereces.</h3>
+            </div>
+            <div class="section-footer">
+                <h2 class="h1-banner">CONTACTANOS / RECLAMOS</h2>
+                <div class="reclamos__footer flex-column">
+                    <div class="flex-row section-reclamos__footer">
+                        <img src="../assets/images/footer/phone.png" alt="icono telephono" width="40">
+                        <div >
+                            <h4 >Télefono:</h4>
+                            <h4 >+51 999 666 999</h4>
+                        </div>
                     </div>
-                </section>
-                <section class="flex-row info-middle-footer">
-                    <img src="../assets/images/footer/email.png" alt="icono de email" width="48">
-                    <div class="text-contenido-14 font-roboto">
-                        <h3 class="medium">Correo:</h3>
-                        <h3 class="regular">luckyaircontactos@gmail.com</h3>
+                    <div class="flex-row section-reclamos__footer">
+                        <img src="../assets/images/footer/email.png" alt="icono de email" width="40">
+                        <div >
+                            <h4 >Correo:</h4>
+                            <h4 >luckyaircontactos@gmail.com</h4>
+                        </div>
                     </div>
-                </section>
-                <section class="flex-row info-middle-footer">
-                    <img src="../assets/images/footer/ubication.png" alt="icono de ubicacion" width="48">
-                    <div class="text-contenido-14 font-roboto">
-                        <h3 class="medium">Oficina Central:</h3>
-                        <h3 class="regular">Av. Aviación 123, Lima - Perú</h3>
+                    <div class="flex-row section-reclamos__footer">
+                        <img src="../assets/images/footer/ubication.png" alt="icono de ubicacion" width="40">
+                        <div >
+                            <h4 >Oficina Central:</h4>
+                            <h4 >Av. Aviación 123, Lima - Perú</h4>
+                        </div>
                     </div>
-                </section>
-            </section>
-            <section class="right-content-footer" aria-labelledby="title-escribenos">
-                <form class="flex-column align-center">
-                    <h3 class="text-encabezado-20 medium font-poppins" id="title-escribenos">ESCRÍBENOS</h3>
-                    <input class="contactanos-form regular" type="text" placeholder="Nombre y Apellidos">
-                    <input class="contactanos-form regular" type="text" placeholder="Asunto">
-                    <input class="contactanos-form regular" type="email" placeholder="Correo electrónico">
-                    <textarea class="regular"  rows="5" placeholder="Escribe aquí tu mensaje..."></textarea>
-                    <input class="text-encabezado-20 bold font-roboto boton-form" type="submit" value="CONTACTANOS">
+                </div>
+            </div>
+            <div class="section-footer">
+                <h2 class="h1-banner">ESCRIBENOS</h2>
+                <form action="" class="flex-column align-center form-escribenos__footer">
+                    <input type="text" placeholder="Nombres y Apellidos" required>
+                    <input type="text" placeholder="Asunto" required>
+                    <input type="email" placeholder="Correo electronico" required>
+                    <textarea name="" id="" cols="6" placeholder="Escribe tu mensaje" required></textarea>
+                    <button type="submit" class="flex-column align-center justify-center">CONTACTANOS</button>
                 </form>
-            </section>
+            </div>
         </div>
-        <div class="flex-row align-center justify-center hr-footer">
-            <hr width="100%">
+        <div class="footer-sub flex-column align-center justify-end">
+            <hr width="90%"> 
+            <h4>Lucky Air @2025 | Todos los derechos reservados</h4>
         </div>
-        <div class="flex-row text-contenido-12 font-montserrat secundary-content-footer">
-            <p>Lucky Air © 2026 | Todos los derechos reservados</p> 
-        </div> 
     </footer>
-    <!-- FIN FOOTER JOSE-->
+    <!-- Fin footer -->
+
 </body>
 </html>

@@ -1,1 +1,93 @@
 /* Estilos personalizados login */
+
+/* --- Card --- */
+.login-card {
+    background-color: #112249;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+}
+
+.login-card__icono {
+    font-size: var(--font-size-24);
+}
+
+/* --- Botones sociales --- */
+.login-social__btn {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    border: none;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+}
+
+.login-social__btn:hover {
+    background-color: #dce6f0;
+}
+
+/* --- Separador --- */
+.login-divider {
+    width: 100%;
+}
+
+/* --- Inputs --- */
+.login-form__input {
+    background-color: #1c3257;
+    border: 1.5px solid #2a4a72;
+    border-radius: 8px;
+    color: var(--color-secondary);
+    padding: 0.65rem 0.9rem;
+    outline: none;
+    transition: border-color 0.2s ease;
+    width: 100%;
+}
+
+.login-form__input::placeholder {
+    color: #5a7a9a;
+}
+
+.login-form__input:focus {
+    border-color: var(--color-accent);
+}
+
+/* --- Checkbox --- */
+.login-form__recordar input[type="checkbox"] {
+    accent-color: var(--color-accent);
+    width: 16px;
+    height: 16px;
+}
+
+/* --- Olvidé contraseña --- */
+.login-form__olvide:hover {
+    text-decoration: underline;
+}
+
+/* --- Botón Iniciar Sesión --- */
+.login-form__submit {
+    background: var(--gradient-button-primary);
+    font-size: var(--font-size-16);
+    font-family: var(--font-family-secundaria-roboto);
+    letter-spacing: var(--letter-spacing-small);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-primary);
+    text-align: center;
+    transition: opacity 0.2s ease, transform 0.1s ease;
+}
+
+.login-form__submit:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+.login-form__submit:active {
+    transform: translateY(0);
+}
+
+/* --- Toggle contraseña --- */
+.login-form__toggle-pass img {
+    opacity: 0.5;
+    transition: opacity 0.2s;
+}
+
+.login-form__toggle-pass:hover img {
+    opacity: 1;
+}

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar Contraseña</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <script>
+    function irPaso(num) {
+        document.querySelectorAll('.paso').forEach(p => p.classList.add('oculto'));
+        document.getElementById('paso-' + num).classList.remove('oculto');
+        document.getElementById('paso-label').textContent = num + ' de 2';
+        document.querySelectorAll('.progreso-segmento').forEach((seg, i) => {
+            seg.classList.toggle('activo', i < num);
+        });
+    }
+
+    function cambiarContrasena() {
+        const nueva = document.getElementById('nueva-pass').value;
+        const confirmar = document.getElementById('conf-nueva-pass').value;
+        if (nueva !== confirmar) {
+            alert('Las contraseñas no coinciden');
+            return;
+        }
+        alert('El cambio fue exitoso');
+        window.location.href = 'login.html';
+    }
+</script>
+</head>
+
+<body>
+    <!-- Inicio Header -->
+    <header>
+        <nav class="flex-row align-center justify-between" role="navigation">
+            <a href="/" class="logo__nav flex-row align-center">
+                <img src="../assets/images/header/logo.png" alt="Logo de Lucky Air">
+            </a>
+            <input type="checkbox" id="menu-toggle" />
+            <label for="menu-toggle" class="menu-icon">&#9776;</label>
+            <ul class="enlaces__nav flex-row align-center justify-between">
+                <li>
+                    <a href="/" class="nav-link ">Home</a>
+                </li>
+                <li>
+                    <a href="vuelos.html" class="nav-link ">Vuelos</a>
+                </li>
+                <li>
+                    <a href="beneficios.html" class="nav-link">Beneficios</a>
+                </li>
+                <li class="enlace-login__nav">
+                    <a href="login.html">Login</a>
+                </li>
+            </ul>
+            <a href="login.html" class="boton-login__nav flex-row align-center justify-center hidden-boton">
+                <img src="../assets/images/header/usuario.svg" alt="Icono de usuario" class="icono-user__nav">
+                <span class="">INGRESAR</span>
+            </a>
+        </nav>
+    </header>
+    <!-- Fin Header -->
+
+    <!-- Inicio Main -->
+    <main class="recuperar-main flex-column align-center">
+
+        <!-- Contador de pasos -->
+        <div class="paso-indicador font-montserrat bold text-contenido-14" id="paso-label">1 de 2</div>
+
+        <!-- Barra de progreso -->
+        <div class="progreso-barra flex-row">
+            <div class="progreso-segmento activo" id="seg-1"></div>
+            <div class="progreso-segmento" id="seg-2"></div>
+        </div>
+
+        <!-- Tarjeta -->
+        <div class="recuperar-card flex-column">
+
+            <!-- Logo -->
+            <div class="registro-logo flex-row align-center justify-center">
+                <span class="logo-avion">✈</span>
+                <span class="font-poppins bold text-contenido-18">
+                    Lucky <span class="logo-air">Air</span>
+                </span>
+            </div>
+
+            <!-- ======= PASO 1: Recuperar ======= -->
+            <div class="paso" id="paso-1">
+
+                <h2 class="font-poppins bold text-contenido-18 text-center recuperar-titulo">
+                    Recuperar Contraseña
+                </h2>
+
+                <div class="campo-grupo flex-column">
+                    <label class="font-montserrat bold text-contenido-14" for="correo">
+                        Correo Electrónico:
+                    </label>
+                    <input class="registro-input font-roboto regular text-contenido-14" type="email" id="correo"
+                        placeholder="example@example.com" required />
+                </div>
+
+                <button class="btn-registrar font-montserrat bold text-contenido-14" onclick="irPaso(2)">
+                    Enviar enlace de recuperación
+                </button>
+
+                <hr class="registro-hr">
+
+                <div class="recuperar-nav flex-row justify-center">
+                    <a href="login.html" class="btn-recuperar-nav font-montserrat bold text-contenido-14">
+                        INICIAR SESION
+                    </a>
+                    <a href="registro.html" class="btn-recuperar-nav font-montserrat bold text-contenido-14">
+                        REGISTRATE
+                    </a>
+                </div>
+
+            </div>
+            <!-- ======= FIN PASO 1 ======= -->
+
+            <!-- ======= PASO 2: Restablecer ======= -->
+            <div class="paso oculto" id="paso-2">
+
+                <h2 class="font-poppins bold text-contenido-18 text-center recuperar-titulo">
+                    Restablecer Contraseña
+                </h2>
+
+                <div class="campo-grupo flex-column">
+                    <label class="font-montserrat bold text-contenido-14" for="codigo">
+                        Código de Verificación:
+                    </label>
+                    <input class="registro-input font-roboto regular text-contenido-14" type="text" id="codigo"
+                        placeholder="AXCD-58-69" required />
+                </div>
+
+                <div class="campo-grupo flex-column">
+                    <label class="font-montserrat bold text-contenido-14" for="nueva-pass">
+                        Nueva Contraseña:
+                    </label>
+                    <input class="registro-input font-roboto regular text-contenido-14" type="password" id="nueva-pass"
+                        placeholder="*********" minlength="8" required />
+                </div>
+
+                <div class="campo-grupo flex-column">
+                    <label class="font-montserrat bold text-contenido-14" for="conf-nueva-pass">
+                        Confirmar Contraseña:
+                    </label>
+                    <input class="registro-input font-roboto regular text-contenido-14" type="password"
+                        id="conf-nueva-pass" placeholder="*********" minlength="8" required />
+                </div>
+
+                <button class="btn-registrar font-montserrat bold text-contenido-14" onclick="cambiarContrasena()">
+                    Cambiar contraseña
+                </button>
+
+            </div>
+            <!-- ======= FIN PASO 2 ======= -->
+
+        </div><!-- fin recuperar-card -->
+
+    </main>
+
+    <!-- Fin Main -->
+
+    <!-- Inicio Footer -->
+    <footer class="flex-column">
+        <div class="footer-main flex-row justify-between">
+            <div class="section-footer">
+                <h2 class="h1-banner">SIGUENOS EN REDES</h2>
+                <div class="img-redes-container__footer">
+                    <img class="img-redes" src="../assets/images/footer/facebook.png" alt="Icono de facebook">
+                    <img class="img-redes" src="../assets/images/footer/instagram.png" alt="Icono de instagram">
+                    <img class="img-redes" src="../assets/images/footer/x.png" alt="Icono de x">
+                </div>
+                <h2 class="h1-banner">HORARIO DE ATENCION</h2>
+                <div class="flex-row horario-footer">
+                    <img src="../assets/images/footer/reloj.png" alt="icono de reloj" width="40">
+                    <div>
+                        <h4>Lunes a Viernes: 08:00 AM - 08:00 PM.</h4>
+                        <h4>Lunes a Viernes: 08:00 AM - 08:00 PM.</h4>
+                    </div>
+                </div>
+                <h3>Llevandote mas alto, con la <br>
+                    seguridad que mereces.</h3>
+            </div>
+            <div class="section-footer">
+                <h2 class="h1-banner">CONTACTANOS / RECLAMOS</h2>
+                <div class="reclamos__footer flex-column">
+                    <div class="flex-row section-reclamos__footer">
+                        <img src="../assets/images/footer/phone.png" alt="icono telephono" width="40">
+                        <div>
+                            <h4>Télefono:</h4>
+                            <h4>+51 999 666 999</h4>
+                        </div>
+                    </div>
+                    <div class="flex-row section-reclamos__footer">
+                        <img src="../assets/images/footer/email.png" alt="icono de email" width="40">
+                        <div>
+                            <h4>Correo:</h4>
+                            <h4>luckyaircontactos@gmail.com</h4>
+                        </div>
+                    </div>
+                    <div class="flex-row section-reclamos__footer">
+                        <img src="../assets/images/footer/ubication.png" alt="icono de ubicacion" width="40">
+                        <div>
+                            <h4>Oficina Central:</h4>
+                            <h4>Av. Aviación 123, Lima - Perú</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-footer">
+                <h2 class="h1-banner">ESCRIBENOS</h2>
+                <form action="" class="flex-column align-center form-escribenos__footer">
+                    <input type="text" placeholder="Nombres y Apellidos" required>
+                    <input type="text" placeholder="Asunto" required>
+                    <input type="email" placeholder="Correo electronico" required>
+                    <textarea name="" id="" cols="6" placeholder="Escribe tu mensaje" required></textarea>
+                    <button type="submit" class="flex-column align-center justify-center">CONTACTANOS</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-sub flex-column align-center justify-end">
+            <hr width="90%">
+            <h4>Lucky Air @2025 | Todos los derechos reservados</h4>
+        </div>
+    </footer>
+    <!-- Fin footer -->
+
+</body>
+
+</html>

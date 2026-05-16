@@ -1,0 +1,24 @@
+/* Responsive banner principal home */
+
+@media (max-width: 1024px)  {
+
+    .banner__principal {
+        margin-top: 5vh;
+    }
+}
+
+@media (max-width: 480px)  {
+
+    .banner__principal {
+        height: 100%;
+    }
+
+    .banner-container__home img {
+        height: auto;
+        width: 80%;
+        object-fit: cover;  
+        display: block;
+        
+    }
+
+}

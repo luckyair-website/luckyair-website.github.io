@@ -1,0 +1,31 @@
+/* Layout beneficios home */
+
+.beneficios__home {
+    height: 45vh;
+}
+
+.cards-beneficios__home {
+    height: 100%;
+    width: 85%;
+}
+
+.card-beneficios__home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 250px;
+    width: 250px;
+    /* border: 2px solid var(--color-secondary);
+    border-radius: 20px; */
+    padding: 1rem 0 1rem 0;
+}
+
+.card-beneficios__home img {
+    width: 92px;
+    height: auto;
+}
+
+.card-beneficios__home p {
+    text-align: center;
+}

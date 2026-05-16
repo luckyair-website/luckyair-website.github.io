@@ -1,0 +1,17 @@
+/* Estilos personalizados pago */
+
+.pago-panel h2 {
+    border-bottom: none;
+}
+
+.pago-tarjeta span {
+    line-height: 1.4;
+}
+
+.pago-metodo-card p {
+    margin-top: auto;
+}
+
+.pago-input::placeholder {
+    color: var(--color-text-muted);
+}
