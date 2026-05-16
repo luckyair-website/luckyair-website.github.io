@@ -14,6 +14,8 @@ Opciones de ingreso alternativo (Google, Microsoft, Facebook, Apple).
 📂 Estructura del proyecto
 
 📂 Estructura del proyecto
+
+```text
 LUCKYAIR-WEBSITE.GITHUB.IO/
 │
 ├── assets/
@@ -70,8 +72,8 @@ LUCKYAIR-WEBSITE.GITHUB.IO/
 
 📜 **Versionado**
 - **v1.0** → Proyecto inicial solo con HTML.  
-- **v1.5 (actual)** → Index terminado con HTML + CSS.  
-- **v2.0 (futuro)** → Proyecto completo estilizado con CSS.
+- **v1.5 (Terminado)** → Index terminado con HTML + CSS.  
+- **v2.0 (Actual)** → Proyecto completo estilizado con CSS.
 
 ---
 
