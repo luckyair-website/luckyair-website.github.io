@@ -1,6 +1,4 @@
-/* Clases reutilizables  */
-
-/* Flex */
+/* Estilos reutilizables */
 
 .flex-column {
     display: flex;
@@ -10,6 +8,10 @@
 .flex-row {
     display: flex;
     flex-direction: row;
+}
+
+.align-start {
+    align-items: start;
 }
 
 .align-center {
@@ -28,92 +30,104 @@
     justify-content: center;
 }
 
-.justify-between {
-    justify-content: space-between;
-}
-
 .justify-end {
     justify-content: end;
 }
 
+.justify-between {
+    justify-content: space-between;
+}
 
 
 
 
-/* Tipografia */
-.text-contenido-12 {
+.size-8 {
+    font-size: var(--font-size-8);
+}
+
+.size-10 {
+    font-size: var(--font-size-10);
+}
+
+.size-12 {
     font-size: var(--font-size-12);
-    line-height: var(--line-height);
-    letter-spacing: var(--letter-spacing-small);
 }
 
-.text-contenido-14 {
+.size-14 {
     font-size: var(--font-size-14);
-    line-height: var(--line-height);
-    letter-spacing: var(--letter-spacing-small);
 }
 
-.text-16 {
+.size-16 {
     font-size: var(--font-size-16);
-    line-height: var(--line-height);
-    letter-spacing: var(--letter-spacing-small);
 }
 
-.text-18 {
+.size-18 {
     font-size: var(--font-size-18);
-    line-height: var(--line-height);
-    letter-spacing: var(--letter-spacing-small);
 }
 
-.text-encabezado-20 {
+.size-20 {
     font-size: var(--font-size-20);
-    line-height: var(--line-height);
-    letter-spacing: var(--letter-spacing-medium);
 }
 
-.text-encabezado-24 {
+.size-24 {
     font-size: var(--font-size-24);
-    line-height: var(--line-height);
-    letter-spacing: var(--letter-spacing-medium);
 }
 
-.text-encabezado-28 {
+.size-28 {
     font-size: var(--font-size-28);
-    line-height: var(--line-height);
-    letter-spacing: var(--letter-spacing-big);
 }
 
-.text-encabezado-32 {
+.size-32 {
     font-size: var(--font-size-32);
-    line-height: var(--line-height);
-    letter-spacing: var(--letter-spacing-big);
 }
 
+.size-36 {
+    font-size: var(--font-size-36);
+}
 
+.size-48 {
+    font-size: var(--font-size-48);
+}
 
+.color-accent {
+    color: var(--color-accent);
+}
 
-.regular {
+.color-secundary {
+    color: var(--font-color-secundary);
+}
+
+.color-accent-dark {
+    color: var(--color-accent-dark);
+}
+
+.box-shadow {
+    box-shadow: var(--box-shadow-dark);
+    border-radius: 20px;
+}
+
+.font-regular {
     font-weight: var(--font-weight-regular);
 }
 
-.medium {
+.font-medium {
     font-weight: var(--font-weight-medium);
 }
 
-.bold {
+.font-bold {
     font-weight: var(--font-weight-bold);
 }
 
-.extra-extrabold {
+.font-extrabold {
     font-weight: var(--font-weight-extrabold);
-}
-
-.font-poppins {
-    font-family: var(--font-family-primary-poppins);
 }
 
 .font-montserrat {
     font-family: var(--font-family-primary-montserrat);
+}
+
+.font-poppins {
+    font-family: var(--font-family-primary-poppins);
 }
 
 .font-roboto {
@@ -124,55 +138,16 @@
     font-family: var(--font-family-secundaria-opensans);
 }
 
-.text-center{
+.text-shadow-accent {
+    text-shadow: 2px 2px 3px rgba(0,0,0,1);
+    -webkit-text-stroke: 1px rgba(0,0,0,0.5);
+}
+
+.text-center {
     text-align: center;
-    width: 100%; 
 }
 
-.text-color-accent {
-    color: var(--color-accent);
+.text-end {
+    text-align: end;
 }
 
-.text-color-white {
-    color: var(--color-secondary);
-}
-
-.text-color-primary {
-    color: var(--color-primary);
-}
-
-
-
-/* CARDS */
-.cards {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    flex: 1;
-}
-
-.card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.card-xy {
-    width: 240px;
-    height: 100%;  
-    max-height: 100%; 
-    padding-bottom: 0.5rem;
-}
-
-/* BORDES */
-.borde-white {
-    border: 1px solid white;
-    border-radius: 20px;
-}
-
-/* GAP */
-.gap-1 {
-    gap: 1rem;
-}

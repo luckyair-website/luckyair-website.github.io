@@ -52,3 +52,11 @@ Con actualizaciones se logro maximizar nuestra puntuacion de performance, accesi
 
 ## 🧩 Implementacion css responsive en home.html  y dashboard.html 
 - **feature** se realizo la implementacion de hojas de estilos responsivos, adaptandoles a tamaños como mobile, tablet, laptop, laptop grande
+
+## 🧩 Implementacion de la estructura de javascript 05/06
+- **Feature**: Se implemento la estructura basica de js.
+- **Feature**: Se implemento funcionalidades basicas de js, como:
+    - El cambio de tema oscuro y claro.
+    - Validacion de inputs.
+    - Insercion de cards de manera dinamica desde una lista de js.
+    - Implementacion de cards tipo sliders.

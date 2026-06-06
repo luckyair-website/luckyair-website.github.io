@@ -1,109 +1,93 @@
-/* Estilos generales */
+
 /* importacion de fuentes */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans:wght@300;600&family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap');
 
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-}
-
 
 :root {
-    
-  /* Tipografía */
-  --font-size-8: 8px;
-  --font-size-10: 10px;
-  --font-size-12: 12px;
-  --font-size-14: 14px;
-  --font-size-16: 16px;
-  --font-size-18: 18px;
-  --font-size-20: 20px;
-  --font-size-24: 24px; /* Encabezados */
-  --font-size-28: 28px;
-  --font-size-32: 32px;
-  --font-size-36: 36px;
-  --font-size-48: 48px;
+    --icon-size-sm: 16px;
+    --icon-size-md: 24px;
+    --icon-size-lg: 32px;
+    --color-primary: #041936;
+    --font-color-primary: #ffffff;
+    --font-color-secundary: #333;
 
-  --font-weight-regular: 400;
-  --font-weight-medium: 500;
-  --font-weight-bold: 700;
-  --font-weight-extrabold: 800;
+    /* Amarillos (accent) */
+    --color-accent-light: #F0B02D;
+    --color-accent: #F0BE2B;
+    --color-accent-dark: #AE7A15;
+    --color-accent-500: #F6BF19;
 
-  --line-height: 1.5; 
+    /* Grises */
+    --color-gray-light: #ccc;
+    --color-gray-light2: #ddd;
 
-  --letter-spacing-small: 0.5px;  /* texto pequeño */
-  --letter-spacing-medium: 0.25px;  /* texto mediano */
-  --letter-spacing-big: -0.5px; /* titulos mayores a 32px */
+    /* Border */
+    --border-color-primary: #FFFFFF;
 
 
-  --font-family-primary-montserrat: "Montserrat", sans-serif;
-  --font-family-primary-poppins: "Poppins", sans-serif;
-  --font-family-secundaria-roboto: "Roboto", sans-serif;
-  --font-family-secundaria-opensans: "Open Sans", sans-serif;
 
-  /* Colores principales */
-  --color-primary: #041936;   /* Azul base */
-  --color-secondary: #FFFFFF; /* Blanco */
-  --color-text-muted: #807A7A;
+    /* Colores individuales */
+    --color-button-gradient-start: #AE7A15;
+    --color-button-gradient-end: #F0B02D;
 
-  /* Amarillos (accent) */
-  --color-accent-light: #F0B02D;
-  --color-accent: #F0BE2B;
-  --color-accent-dark: #AE7A15;
-  --color-accent-500: #F6BF19;
+    /* Degradado completo */
+    --gradient-button-primary: linear-gradient(
+        to right,
+        var(--color-button-gradient-start),
+        var(--color-button-gradient-end)
+    );
 
-  /* Colores individuales */
-  --color-button-gradient-start: #AE7A15;
-  --color-button-gradient-end: #F0B02D;
+    /* Tipografía */
+    --font-size-8: 0.5rem;
+    --font-size-10: 0.625rem;
+    --font-size-12: 0.75rem;
+    --font-size-14: 0.875rem;
+    --font-size-16: 1rem;
+    --font-size-18: 1.125rem;
+    --font-size-20: 1.25rem;
+    --font-size-24: 1.5rem; 
+    --font-size-28: 1.75rem;
+    --font-size-32: 2rem;
+    --font-size-36: 2.25rem;
+    --font-size-48: 3rem;
 
-  /* Degradado completo */
-  --gradient-button-primary: linear-gradient(
-    to right,
-    var(--color-button-gradient-start),
-    var(--color-button-gradient-end)
-  );
-  
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+    --font-weight-extrabold: 800;
+
+    --font-family-primary-montserrat: "Montserrat", sans-serif;
+    --font-family-primary-poppins: "Poppins", sans-serif;
+    --font-family-secundaria-roboto: "Roboto", sans-serif;
+    --font-family-secundaria-opensans: "Open Sans", sans-serif;
+
+    /* Sombras */
+    --box-shadow-dark: 0 4px 12px rgba(255,255,255,0.1);
 }
 
-html {
-  height: 100%; 
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
 }
 
 body {
-  min-height: 90vh;   /* al menos el alto de la ventana */
-  width: 95%;          /* ancho fijo */
-  margin: 0 auto;      /* centrado horizontal */
-  display: flex;
-  flex-direction: column;
-  background-color: var(--color-primary);
-  color: var(--color-secondary);
+    background: var(--color-primary);
+    color: var(--font-color-primary);
+    width: 100%;
+    box-sizing: border-box;
+    font-family: var(--font-family-primary-montserrat);
 }
 
 header {
-  height: 10vh;
-  width: 95%;          
-  position: fixed;
-  top: 0;
-  left: 50%;              
-  transform: translateX(-50%); 
-  z-index: 1000;
-  background-color: var(--color-primary);
+    background: var(--color-primary);
 }
-
-
-
 
 main {
-  flex: 1;                /* ocupa el espacio restante dinámicamente */
-  margin-top: 10vh;
+    width: 90%;
+    margin: 0 auto;
+    height: 100%;
 }
 
-/* footer {
-    width: 100%;
-    height: 90vh;
-    background: red;
-    border: 4px solid pink;
-} */
+

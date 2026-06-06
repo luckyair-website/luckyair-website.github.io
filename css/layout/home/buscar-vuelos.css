@@ -1,63 +1,247 @@
-/* Layout buscar vuelos home */
 
-.buscar-vuelos__home {
-    height: 30vh;
+.buscar-vuelo {
+    margin: 5rem 0;
+    width: 100%;
+    gap: 0.5rem;
+    height: 100%;
 }
 
-.buscar-container__home {
-    flex: 1;
+.hero-tittle {
+    display: flex;
+    width: 100%;
+    
+}
+
+.buscar-content {
+    /* border: 2px solid white; */
+    height: 100%;
+    width: 100%;
+    /* background: white; */
+    color: var(--font-color-primary);
+    
+}
+
+.buscar-content form {
+    gap: 0.2rem;
+    padding: 0.5rem 0;
+}
+
+.ofertas-destacadas {
+    margin: -4rem 0;
+    gap: 0.5rem;
+}
+
+.buscar-card {
+    gap: 0.5rem;
+    border: 1px solid var(--font-color-primary);
+    border-radius: 20px;
+    padding: 0.5rem 1rem ;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+    margin: 0.2rem ;
     width: 85%;
-    border-radius: 1.25rem;
-    margin: 0 auto;
 }
 
-.buscar-block__buscar {
+.icons-buscar {
+    height: 48px;
+    width: 48px;
+    display: block;
+}
+
+.buscar-card input {
+    border: none;
+    outline: none;
+    min-height: 20px;
+    min-width: 160px;
+    border-radius: 20px;
+    background: transparent !important;
+    color: var(--font-color-primary);
+}
+
+.buscar-card input::placeholder {
+  color: var(--color-gray-light);
+}
+
+.buscar-card input,
+.buscar-card input:focus,
+.buscar-card input:valid,
+.buscar-card input:invalid {
+  background: transparent !important;
+  color: var(--font-color-primary) !important;
+}
+
+/* Autocompletado (Chrome/Edge/WebKit) */
+.buscar-card input:-webkit-autofill,
+.buscar-card input:-webkit-autofill:focus,
+.buscar-card input:-webkit-autofill:hover {
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
+  -webkit-text-fill-color: var(--font-color-primary) !important;
+  background: transparent !important;
+}
+
+.buscar-card-date input {
+    border: none;
+    outline: none;
+    min-height: 20px;
+    min-width: 160px;
+    border-radius: 20px;
+    background: transparent !important;
+    color: var(--font-color-primary);
+}
+
+.buscar-card-date input,
+.buscar-card-date input:focus,
+.buscar-card-date input:valid,
+.buscar-card-date input:invalid {
+  background: transparent !important;
+  color: var(--font-color-primary) !important;
+}
+
+/* Autocompletado (Chrome/Edge/WebKit) */
+.buscar-card-date input:-webkit-autofill,
+.buscar-card-date input:-webkit-autofill:focus,
+.buscar-card-date input:-webkit-autofill:hover {
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
+  -webkit-text-fill-color: var(--font-color-primary) !important;
+  background: transparent !important;
+}
+
+.buscar-card-date input[type="date"] {
+    color: var(--color-gray-light);
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(80%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(90%);
+  opacity: 0.8;
+}
+
+.buscar-card.success {
+    border: 1px solid green;
+}
+
+.buscar-card.error {
+  border: 1px solid red;
+}
+
+/* .buscar-card.standby {
+  border: 1px solid var(--font-color-primary);
+} */
+
+.input-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.clear-btn {
+    font-size: 12px;
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #ff4081; /* rosa */
+    
+}
+
+.buscar-card-date {
+    gap: 0.5rem;
+    border: 1px solid var(--font-color-primary);
+    border-radius: 20px;
+    padding: 0.5rem 1rem ;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+    /* margin: 0.5rem ; */
+    min-height: 3rem;
+    width: 85%;
+}
+
+.date-container {
+    display: flex;
+    flex-direction: column;
     flex: 1;
     gap: 0.5rem;
-    padding-top: 0.5rem;
 }
 
-.boton-buscar__home {
-    height: 36px;
-    width: 200px;
-    gap: 1.25rem;
-    border-radius: 20px;
+.date-container input {
+    min-width: 40px
 }
 
-.icons__buscar {
-    width: 40px;
-    height: auto;
+.date-divisor {
+    width: 2px;
+    min-height: 80px;
+    background: var(--font-color-primary);
 }
 
-.buscar-icon__buscar {
-    width: 32px;
-    height: auto;
+.buscar-button {
+    height: 2rem;
+    width: 50%;
+    background: #F0BE2B;
+    color: #041936;
+    font-weight: 700;
+    border-radius: 15px;
+    box-shadow: 0 2px 8px rgba(248, 194, 46, 0.5);
 }
 
-.input-select {
-    display: inline-block;
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none; 
-    height: 32px;
-    width: 200px;
-    border-radius: 1.25rem;
-    padding: 0 1.5rem;
-    background: url("../../../assets/images/index/flecha-ampliar.png") no-repeat right 0.75rem center;
-    background-size: 1rem;
+.buscar-button:hover {
+    background: #8B0000;
+    color: #fff;
 }
 
-.input-date__vuelos input, .input-number {
-    display: inline-block;
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none; 
-    height: 30px;
-    width: 200px;
-    border-radius: 1.25rem;
-    padding: 0 1.5rem;
+.mensaje-error {
+    width: 100%;
+    color: rgb(244, 28, 28);
+    font-weight: 500;
 }
 
-.pd-bt__pasajeros {
-    padding-bottom: 1rem;
+.hidden {
+    visibility: hidden;
+}
+
+.mensaje-visible {
+    visibility: visible;
+}
+
+
+/* Font color mensaje */
+
+.success {
+    color: green;
+}
+
+.error {
+    color: red;
+}
+
+/* Border color inputs */
+
+.border-success {
+    border-color: green;
+}
+
+.border-error {
+    border-color: red;
+}
+
+@media (min-width: 768px)  {
+
+    .buscar-vuelo {
+        margin: 5rem auto;
+        width: 90%;
+        gap: 0.5rem;
+        height: 100%;
+    }
+}
+
+@media (min-width: 1024px)  {
+
+    .buscar-content form {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .buscar-card, .buscar-card-date  {
+        width: 40%;
+        height: 5rem;
+    }
 }

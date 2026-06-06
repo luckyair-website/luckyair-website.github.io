@@ -37,9 +37,25 @@ LUCKYAIR-WEBSITE.GITHUB.IO/
 │   ├── global.css
 │   ├── main.css
 │   └── utils.css
-├── js/ (pendiente)
-│   
-│
+├── js/ 
+│   └── data/
+│   │   └── destinos.js
+│   └── utils/
+│   │   └── beneficiosCards.js
+│   │   ├── clearList.js
+│   │   ├── combobox.js
+│   │   ├── dragScrollSlider.js
+│   │   ├── inputBuscar.js
+│   │   ├── inputCantidad.js
+│   │   ├── inputDate.js
+│   │   ├── menuMobile.js
+│   │   ├── ofertasCards.js
+│   │   ├── theme.js
+│   │   ├── validarInputDate.js
+│   │   ├── validarInputForm.js
+│   │   ├── validarInputNumber.js
+│   │   └── footervalidarInputText.js
+│   └── main.js
 ├── pages/
 │   ├── beneficios.html
 │   ├── confirmar-pago.html
@@ -59,21 +75,23 @@ LUCKYAIR-WEBSITE.GITHUB.IO/
 ## 🛠️ Tecnologías utilizadas
 - HTML5
 - Validaciones nativas de formularios
-- CSS (en progreso)
-- JavaScript (pendiente)
+- CSS (terminado)
+- JavaScript (en progreso)
 
 ## 📌 Próximos pasos
 - Completar estilos con CSS → versión **2.0**.
 - Añadir interactividad con JavaScript.
 - Conectar el formulario de registro a un backend.
 - Extender la navegación con más páginas y funcionalidades.
+- Implementar funcionalidades empleando JavaScript.
 
 ---
 
 📜 **Versionado**
 - **v1.0** → Proyecto inicial solo con HTML.  
 - **v1.5 (Terminado)** → Index terminado con HTML + CSS.  
-- **v2.0 (Actual)** → Proyecto completo estilizado con CSS.
+- **v2.0 (Terminado)** → Proyecto completo estilizado con CSS.
+- **v2.5 (Actual)** → Proyecto en progreso HTML + CSS + JS.
 
 ---
 
