@@ -5,6 +5,9 @@ export function validarInputNumber (inputId, mensajeId, clearButonId, inputConta
   const clearButon = document.querySelector(`#${clearButonId}`);
   const inputContainer = document.querySelector(`#${inputContainerId}`);
 
+  // Si alguno de los elementos no existe, no hacemos nada
+  if (!input || !mensajecontainer || !clearButon || !inputContainer) return;
+
   input.addEventListener("input", () => {
     const valor = input.value.trim();
 

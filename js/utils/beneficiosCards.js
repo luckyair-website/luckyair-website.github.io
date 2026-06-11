@@ -8,6 +8,8 @@ export function beneficiosCards() {
   let userInteracting = false;
   let timeout;
 
+  if (!container || !cards) return;
+
   function startCarousel() {
     interval = setInterval(() => {
       if (!userInteracting) { // solo avanza si el usuario no está tocando

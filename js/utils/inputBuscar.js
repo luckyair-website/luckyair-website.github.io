@@ -5,6 +5,9 @@ export function inputBuscar (inputId, clearButonId, buscarId) {
     const clearButon = document.querySelector(`#${clearButonId}`);
     const container = document.querySelector(`#${buscarId}`);
 
+    // Si alguno de los elementos no existe, no hacemos nada
+    if (!inputBuscar || !clearButon || !container) return;
+
     inputBuscar.addEventListener("input", () => {
         container.classList.remove("success", "error");
         

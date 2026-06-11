@@ -5,6 +5,8 @@ export function enableDragScroll(containerId) {
     let startX;
     let scrollLeft;
 
+    if (!container) return;
+
     container.addEventListener('mousedown', (e) => {
         isDown = true;
         startX = e.pageX - container.offsetLeft;

@@ -1,9 +1,9 @@
+import { guardarTema } from "./themeStorage.js";
 
 const themeLight = document.querySelector("#theme-bg");
 const root = document.documentElement;
 
-export function themeMain () {
-    
+export function themeMain() {
     themeLight.addEventListener("click", () => {
         const header = document.querySelector("header");
         // Leer el valor actual de la variable
@@ -13,6 +13,10 @@ export function themeMain () {
         let currentBoxShadowDark = getComputedStyle(root).getPropertyValue("--box-shadow-dark").trim();
         let currentBorderColor = getComputedStyle(root).getPropertyValue("--border-color-primary").trim();
         const boxShadow = document.querySelectorAll(".card");
+
+        // Detectar el tema actual
+        let temaActual = document.documentElement.getAttribute("data-theme") || "oscuro";
+        let nuevoTema = temaActual === "oscuro" ? "claro" : "oscuro";
 
         if (currentBgColor === "#041936") {
             // Cambiar a tema claro
@@ -31,14 +35,15 @@ export function themeMain () {
             root.style.setProperty("--color-primary", "#041936");
             themeLight.src = "../assets/images/header/sol.svg";
             root.style.setProperty("--font-color-primary", "#FFFFFF");
-
             root.style.setProperty("--color-accent", "#F0BE2B");
             root.style.setProperty("--box-shadow-dark", "0 4px 12px rgba(255,255,255,0.1)");
             root.style.setProperty("--border-color-primary", "#041936");
             boxShadow.forEach(card => {
                 card.style.boxShadow = "0 4px 12px rgba(255,255,255,0.1)";
             });
-        };
-    })
-    
+        }
+
+        // Guardar la decisión en localStorage
+        guardarTema(nuevoTema);
+    });
 }

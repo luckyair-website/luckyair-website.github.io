@@ -4,6 +4,9 @@ export function validarInputDate(inputId, mensajeId, inputContainerId) {
   const mensajecontainer = document.querySelector(`#${mensajeId}`);
   const inputContainer = document.querySelector(`#${inputContainerId}`);
 
+  // Si alguno de los elementos no existe, no hacemos nada
+  if (!input || !mensajecontainer || !inputContainer) return;
+
   input.addEventListener("change", () => {
     const valor = input.value.trim();
 

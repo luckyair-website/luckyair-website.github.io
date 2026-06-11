@@ -60,3 +60,7 @@ Con actualizaciones se logro maximizar nuestra puntuacion de performance, accesi
     - Validacion de inputs.
     - Insercion de cards de manera dinamica desde una lista de js.
     - Implementacion de cards tipo sliders.
+
+## 🧩 Implementacion del uso de localStorage 10/06
+- **Feature**: Se implemento la funcionalidad de localStorage en la seccion de busqueda de vuelos del home, en la que se guarda la info de los inputs y luego se procede a recuperarlas para mostrarla en la seccion de pagos.html.
+- **Feature**: Se implemento funcionalidades localStorage en la seccion de seleccionar ofertas del home, en donde se guarda la info y luego se recupera la info para mostrarla en la seccion de pagos.html

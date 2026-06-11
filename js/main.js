@@ -14,6 +14,11 @@ import { validarInputNumber } from "./utils/validarInputNumber.js";
 import { validarInputDate } from "./utils/validarInputDate.js";
 import { validarInputForm } from "./utils/validarInputForm.js";
 import { enableDragScroll } from "./utils/dragScrollSlider.js";
+import { aplicarTemaGuardado, guardarTema } from "./utils/themeStorage.js";
+
+// Forms
+import { buscarVuelos } from "./forms/buscarVuelos.js";
+import { mostrarInfoVuelos } from "./forms/mostrarInfoVuelos.js";
 
 
 
@@ -21,7 +26,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // Menu mobile
     menuMobile();
     // Cambiar tema
-    themeMain();
+    //themeMain();
+        aplicarTemaGuardado();
+        themeMain();
     // Origen
         cargarOpciones("lista-origen", destinos);
         inputBuscar("origen", "clear-origen", "buscar-origen");
@@ -45,4 +52,9 @@ document.addEventListener("DOMContentLoaded", () => {
         validarInputForm("asunto", "mensaje-error-asunto", "clear-asunto", "input-asunto");
         validarInputForm("email", "mensaje-error-email", "clear-email", "input-email");
         validarInputForm("mensaje", "mensaje-error-mensaje", "clear-mensaje", "input-mensaje");
+
+    // Forms
+        buscarVuelos();
+        mostrarInfoVuelos();
+
 });

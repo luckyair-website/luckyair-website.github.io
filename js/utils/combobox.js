@@ -5,7 +5,7 @@ import { destinos } from "../data/destinos.js";
 export function cargarOpciones(dataListId, lista) {
     const datalist = document.querySelector(`#${dataListId}`); // usa el parámetro
     if (!datalist) {
-        console.error(`No se encontró un datalist con id="${dataListId}"`);
+        //console.error(`No se encontró un datalist con id="${dataListId}"`);
         return;
     }
 

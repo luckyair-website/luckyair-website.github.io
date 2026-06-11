@@ -7,6 +7,9 @@ export function validarInputText (inputId, mensajeId, clearButonId, inputContain
     const clearButon = document.querySelector(`#${clearButonId}`);
     const inputContainer = document.querySelector(`#${inputContainerId}`);
 
+    // Si alguno de los elementos no existe, no hacemos nada
+    if (!input || !mensajecontainer || !clearButon || !inputContainer) return;
+
     function validar() {
     const valor = input.value.trim().toLowerCase();
 
