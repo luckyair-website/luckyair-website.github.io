@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lucky Air - Beneficios</title>
-    <!-- Corregido: Se cerraron correctamente las comillas y etiquetas -->
     <link rel="stylesheet" href="../css/main.css">
+    <script type="module" src="../js/main.js" defer></script>
 </head>
 <body class="reset-body">
 
@@ -18,194 +18,152 @@
             <input type="checkbox" id="menu-toggle" />
             <label for="menu-toggle" class="menu-icon">&#9776;</label>
             <ul class="enlaces__nav flex-row align-center justify-between">
-                <li>
-                    <a href="/" class="nav-link ">Home</a>
-                </li>
-                <li>
-                    <a href="vuelos.html" class="nav-link ">Vuelos</a>
-                </li>
-                <li>
-                    <a href="beneficios.html" class="nav-link active">Beneficios</a>
-                </li>
-                <li class="enlace-login__nav">
-                    <a href="login.html">Login</a>
-                </li>
+                <li><a href="/" class="nav-link">Home</a></li>
+                <li><a href="vuelos.html" class="nav-link">Vuelos</a></li>
+                <li><a href="beneficios.html" class="nav-link active">Beneficios</a></li>
+                <li class="enlace-login__nav"><a href="login.html">Login</a></li>
             </ul>
             <a href="login.html" class="boton-login__nav flex-row align-center justify-center">
                 <img src="../assets/images/header/usuario.svg" alt="Icono de usuario" class="icono-user__nav">
-                <span class="">INGRESAR</span>
+                <span>INGRESAR</span>
             </a>
         </nav>
     </header>
     <!-- Fin Header -->
 
-<main>
-    <!-- SECCIÓN HERO ACTUALIZADA -->
-    <section class="rewards-hero flex-column align-center">
-        <h1 class="hero-title">Tus viajes te premian.<br>Bienvenido a Lucky Rewards.</h1>
-        
-        <div class="user-card">
-    <h2 class="user-name">Hola, Juan Martinez</h2>
+    <main>
 
-    <div class="points-box">
-        <p class="points-label">Saldo de Puntos</p>
-        <h1 class="points-number">14,500 pts</h1>
-    </div>
-
-    <div class="level-info">
-        <span class="level-badge">Nivel: Plata</span>
-        <p>Gana 500 pts más para el nivel <strong>ORO</strong></p>
-    </div>
-
-    <div class="progress-bg">
-        <div class="progress-fill" style="width: 80%;"></div>
-    </div>
-
-    <div class="card-buttons">
-        <button class="btn-primary">Canjear Puntos</button>
-        <button class="btn-secondary">Cómo ganar más</button>
-    </div>
-</div>
-    </section>
-</main>
-
-        <!-- SECCIÓN AHORRO EN VIAJES -->
-<!-- CONTENEDOR BLANCO TOTAL -->
-<div class="bg-white-full">
-    
-    <!-- SECCIÓN: ¿CÓMO FUNCIONA? -->
-    <section class="steps-section flex-column align-center">
-        <h2 class="section-title">¿Cómo funciona?</h2>
-        <div class="steps-grid">
-            <div class="step-card">
-                <img src="../assets/images/beneficios/registrate.png" alt="Registro">
-                <h3>REGÍSTRATE</h3>
-                <p>Crea tu cuenta<br>y únete al programa.</p>
+        <!-- SECCIÓN HERO -->
+        <section class="rewards-hero flex-column align-center">
+            <h1 class="hero-title">Tus viajes te premian.<br>Bienvenido a Lucky Rewards.</h1>
+            
+            <div class="user-card">
+                <h2 class="user-name">Hola, Juan Martinez</h2>
+                <div class="points-box">
+                    <p class="points-label">Saldo de Puntos</p>
+                    <h1 class="points-number">14,500 pts</h1>
+                </div>
+                <div class="level-info">
+                    <span class="level-badge">Nivel: Plata</span>
+                    <p>Gana 500 pts más para el nivel <strong>ORO</strong></p>
+                </div>
+                <div class="progress-bg">
+                    <div class="progress-fill" style="width: 80%;"></div>
+                </div>
+                <div class="card-buttons">
+                    <button class="btn-primary">Canjear Puntos</button>
+                    <button class="btn-secondary">Cómo ganar más</button>
+                </div>
             </div>
-            <div class="step-card">
-                <img src="../assets/images/beneficios/vuela.png" alt="Vuelo">
-                <h3>VUELA CON NOSOTROS</h3>
-                <p>Acumula beneficios<br>cada vez que viajes.</p>
-            </div>
-            <div class="step-card">
-                <img src="../assets/images/beneficios/compra.png" alt="Socio">
-                <h3>COMPRA CON SOCIOS</h3>
-                <p>Obtén puntos comprando<br>con nuestros aliados.</p>
-            </div>
-            <div class="step-card">
-                <img src="../assets/images/beneficios/premios.png" alt="Premio">
-                <h3>DISFRUTA TUS PREMIOS</h3>
-                <p>Canjea tus puntos<br>por recompensas exclusivas.</p>
-            </div>
+        </section>
+
+        <!-- CONTENEDOR BLANCO -->
+        <div class="bg-white-full">
+
+            <!-- SECCIÓN: ¿CÓMO FUNCIONA? -->
+            <section class="steps-section flex-column align-center">
+                <h2 class="section-title">¿Cómo funciona?</h2>
+                <div class="steps-grid">
+                    <div class="step-card">
+                        <img src="../assets/images/beneficios/registrate.png" alt="Registro">
+                        <h3>REGÍSTRATE</h3>
+                        <p>Crea tu cuenta<br>y únete al programa.</p>
+                    </div>
+                    <div class="step-card">
+                        <img src="../assets/images/beneficios/vuela.png" alt="Vuelo">
+                        <h3>VUELA CON NOSOTROS</h3>
+                        <p>Acumula beneficios<br>cada vez que viajes.</p>
+                    </div>
+                    <div class="step-card">
+                        <img src="../assets/images/beneficios/compra.png" alt="Socio">
+                        <h3>COMPRA CON SOCIOS</h3>
+                        <p>Obtén puntos comprando<br>con nuestros aliados.</p>
+                    </div>
+                    <div class="step-card">
+                        <img src="../assets/images/beneficios/premios.png" alt="Premio">
+                        <h3>DISFRUTA TUS PREMIOS</h3>
+                        <p>Canjea tus puntos<br>por recompensas exclusivas.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECCIÓN: AHORRO EN VIAJES -->
+            <section class="savings-section flex-column align-center">
+                <h2 class="dark-title main-title">Ahorro en viajes</h2>
+                <p class="subtitle">Beneficios clave para ahorrar en tus viajes</p>
+                <div class="savings-grid">
+                    <div class="save-card flex-column align-center">
+                        <div class="save-icon">
+                            <img src="../assets/images/beneficios/equipaje.png" alt="Equipaje">
+                        </div>
+                        <h3>EQUIPAJE ADICIONAL</h3>
+                        <p>Desde 500 puntos</p>
+                        <button class="btn-canjear">Canjear</button>
+                    </div>
+                    <div class="save-card flex-column align-center">
+                        <div class="save-icon">
+                            <img src="../assets/images/beneficios/asientos.png" alt="Asientos">
+                        </div>
+                        <h3>SELECCIÓN DE ASIENTOS</h3>
+                        <p>Desde 300 puntos</p>
+                        <button class="btn-canjear">Canjear</button>
+                    </div>
+                    <div class="save-card flex-column align-center">
+                        <div class="save-icon">
+                            <img src="../assets/images/beneficios/descuento.png" alt="Descuento">
+                        </div>
+                        <h3>DESCUENTO EN TICKET</h3>
+                        <p>Desde 1000 puntos</p>
+                        <button class="btn-canjear">Canjear</button>
+                    </div>
+                </div>
+            </section>
+
         </div>
-    </section>
 
-    <!-- SECCIÓN: AHORRO EN VIAJES -->
-    <section class="savings-section flex-column align-center">
-        <h2 class="dark-title main-title">Ahorro en viajes</h2>
-        <p class="subtitle">Beneficios clave para ahorrar en tus viajes</p>
-
-        <div class="savings-grid">
-            <div class="save-card flex-column align-center">
-                <div class="save-icon">
-                    <img src="../assets/images/beneficios/equipaje.png" alt="Equipaje">
-                </div>
-                <h3>EQUIPAJE ADICIONAL</h3>
-                <p>Desde 500 puntos</p>
-                <button class="btn-canjear">Canjear</button>
-            </div>
-
-            <div class="save-card flex-column align-center">
-                <div class="save-icon">
-                    <img src="../assets/images/beneficios/asientos.png" alt="Asientos">
-                </div>
-                <h3>SELECCIÓN DE ASIENTOS</h3>
-                <p>Desde 300 puntos</p>
-                <button class="btn-canjear">Canjear</button>
-            </div>
-
-            <div class="save-card flex-column align-center">
-                <div class="save-icon">
-                    <img src="../assets/images/beneficios/descuento.png" alt="Descuento">
-                </div>
-                <h3>DESCUENTO EN TICKET</h3>
-                <p>Desde 1000 puntos</p>
-                <button class="btn-canjear">Canjear</button>
-            </div>
-        </div>
-    </section>
-</div>
-
-        <!-- TIENDA: Fondo azul marino total -->
+        <!-- TIENDA -->
         <section class="lucky-shop">
-    <h2 class="shop-title">La tienda del tio Lucky</h2>
-
-    <div class="shop-grid">
-
-        <!-- ITEM 1 -->
-        <div class="product-card">
-            <div class="product-img">
-                <img src="../assets/images/beneficios/almohada.png">
+            <h2 class="shop-title">La tienda del tio Lucky</h2>
+            <div class="shop-grid">
+                <div class="product-card">
+                    <div class="product-img"><img src="../assets/images/beneficios/almohada.png"></div>
+                    <h3>Almohada</h3>
+                    <p>3,500 pts + $15</p>
+                    <button>Añadir a Carrito</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-img"><img src="../assets/images/beneficios/merch1.png"></div>
+                    <h3>Merch T-shirt</h3>
+                    <p>3,500 pts + $15</p>
+                    <button>Añadir a Carrito</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-img"><img src="../assets/images/beneficios/merch2.png"></div>
+                    <h3>Merch T-shirt</h3>
+                    <p>3,000 pts + $15</p>
+                    <button>Añadir a Carrito</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-img"><img src="../assets/images/beneficios/merch3.png"></div>
+                    <h3>Merch T-shirt</h3>
+                    <p>4,000 pts + $15</p>
+                    <button>Añadir a Carrito</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-img"><img src="../assets/images/beneficios/gorra.png"></div>
+                    <h3>Gorra</h3>
+                    <p>1,500 pts + $10</p>
+                    <button>Añadir a Carrito</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-img"><img src="../assets/images/beneficios/power-adapter.png"></div>
+                    <h3>Power adapter</h3>
+                    <p>1,500 pts + $10</p>
+                    <button>Añadir a Carrito</button>
+                </div>
             </div>
-            <h3>Almohada</h3>
-            <p>3,500 pts + $15</p>
-            <button>Añadir a Carrito</button>
-        </div>
+        </section>
 
-        <!-- ITEM 2 -->
-        <div class="product-card">
-            <div class="product-img">
-                <img src="../assets/images/beneficios/merch1.png">
-            </div>
-            <h3>Merch T-shirt</h3>
-            <p>3,500 pts + $15</p>
-            <button>Añadir a Carrito</button>
-        </div>
-
-        <!-- ITEM 3 -->
-        <div class="product-card">
-            <div class="product-img">
-                <img src="../assets/images/beneficios/merch2.png">
-            </div>
-            <h3>Merch T-shirt</h3>
-            <p>3,000 pts + $15</p>
-            <button>Añadir a Carrito</button>
-        </div>
-
-        <!-- ITEM 4 -->
-        <div class="product-card">
-            <div class="product-img">
-                <img src="../assets/images/beneficios/merch3.png">
-            </div>
-            <h3>Merch T-shirt</h3>
-            <p>4,000 pts + $15</p>
-            <button>Añadir a Carrito</button>
-        </div>
-
-        <!-- ITEM 5 -->
-        <div class="product-card">
-            <div class="product-img">
-                <img src="../assets/images/beneficios/gorra.png">
-            </div>
-            <h3>Gorra</h3>
-            <p>1,500 pts + $10</p>
-            <button>Añadir a Carrito</button>
-        </div>
-
-        <!-- ITEM 6 -->
-       <div class="product-card">
-            <div class="product-img">
-                <img src="../assets/images/beneficios/power-adapter.png">
-            </div>
-            <h3>Power adapter</h3>
-            <p>1,500 pts + $10</p>
-            <button>Añadir a Carrito</button>
-        </div>
-
-    </div>
-
-
-</section>
     </main>
 
     <!-- Inicio Footer -->
@@ -223,51 +181,78 @@
                     <img src="../assets/images/footer/reloj.png" alt="icono de reloj" width="40">
                     <div>
                         <h4>Lunes a Viernes: 08:00 AM - 08:00 PM.</h4>
-                        <h4>Lunes a Viernes: 08:00 AM - 08:00 PM.</h4>
+                        <h4>Sabados y Domingos: 09:00 AM - 05:00 PM.</h4>
                     </div>
                 </div>
-                <h3>Llevandote mas alto, con la <br>
-                    seguridad que mereces.</h3>
+                <h3>Llevandote mas alto, con la <br>seguridad que mereces.</h3>
             </div>
             <div class="section-footer">
                 <h2 class="h1-banner">CONTACTANOS / RECLAMOS</h2>
                 <div class="reclamos__footer flex-column">
                     <div class="flex-row section-reclamos__footer">
                         <img src="../assets/images/footer/phone.png" alt="icono telephono" width="40">
-                        <div >
-                            <h4 >Télefono:</h4>
-                            <h4 >+51 999 666 999</h4>
+                        <div>
+                            <h4>Télefono:</h4>
+                            <h4>+51 999 666 999</h4>
                         </div>
                     </div>
                     <div class="flex-row section-reclamos__footer">
                         <img src="../assets/images/footer/email.png" alt="icono de email" width="40">
-                        <div >
-                            <h4 >Correo:</h4>
-                            <h4 >luckyaircontactos@gmail.com</h4>
+                        <div>
+                            <h4>Correo:</h4>
+                            <h4>luckyaircontactos@gmail.com</h4>
                         </div>
                     </div>
                     <div class="flex-row section-reclamos__footer">
                         <img src="../assets/images/footer/ubication.png" alt="icono de ubicacion" width="40">
-                        <div >
-                            <h4 >Oficina Central:</h4>
-                            <h4 >Av. Aviación 123, Lima - Perú</h4>
+                        <div>
+                            <h4>Oficina Central:</h4>
+                            <h4>Av. Aviación 123, Lima - Perú</h4>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="section-footer">
-                <h2 class="h1-banner">ESCRIBENOS</h2>
-                <form action="" class="flex-column align-center form-escribenos__footer">
-                    <input type="text" placeholder="Nombres y Apellidos" required>
-                    <input type="text" placeholder="Asunto" required>
-                    <input type="email" placeholder="Correo electronico" required>
-                    <textarea name="" id="" cols="6" placeholder="Escribe tu mensaje" required></textarea>
-                    <button type="submit" class="flex-column align-center justify-center">CONTACTANOS</button>
+            <div class="escribenos-container flex-column align-center box-shadow">
+                <span class="size-20">ESCRIBENOS</span>
+                <form class="escribenos-form flex-column align-center" action="">
+                    <div id="input-nya" class="label-container border flex-column">
+                        <label for="nombresyapellidos">Nombres y Apellidos:</label>
+                        <div>
+                            <input id="nombresyapellidos" type="text" placeholder="Jose Torres">
+                            <span id="clear-nya" class="clear-btn hidden">❌</span>
+                        </div>
+                        <small id="mensaje-error-nya" class="mensaje-error hidden text-end">El origen seleccionado es invalido</small>
+                    </div>
+                    <div id="input-asunto" class="label-container border flex-column">
+                        <label for="asunto">Asunto:</label>
+                        <div>
+                            <input id="asunto" type="text" placeholder="Tengo un inconveniente ...">
+                            <span id="clear-asunto" class="clear-btn hidden">❌</span>
+                        </div>
+                        <small id="mensaje-error-asunto" class="mensaje-error hidden text-end">El origen seleccionado es invalido</small>
+                    </div>
+                    <div id="input-email" class="label-container border flex-column">
+                        <label for="email">Correo electronico:</label>
+                        <div>
+                            <input id="email" type="email" placeholder="example@example.com">
+                            <span id="clear-email" class="clear-btn hidden">❌</span>
+                        </div>
+                        <small id="mensaje-error-email" class="mensaje-error hidden text-end">El origen seleccionado es invalido</small>
+                    </div>
+                    <div id="input-mensaje" class="label-container border flex-column">
+                        <label for="mensaje">Mensaje:</label>
+                        <div>
+                            <textarea name="mensaje" id="mensaje" placeholder="Escribe tu mensaje ..."></textarea>
+                            <span id="clear-mensaje" class="clear-btn hidden">❌</span>
+                        </div>
+                        <small id="mensaje-error-mensaje" class="mensaje-error hidden text-end">El origen seleccionado es invalido</small>
+                    </div>
+                    <button type="submit" class="flex-column align-center justify-center font-bold">CONTACTANOS</button>
                 </form>
             </div>
         </div>
         <div class="footer-sub flex-column align-center justify-end">
-            <hr width="90%"> 
+            <hr width="90%">
             <h4>Lucky Air @2025 | Todos los derechos reservados</h4>
         </div>
     </footer>
