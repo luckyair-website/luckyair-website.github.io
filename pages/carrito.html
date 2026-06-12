@@ -2,22 +2,20 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Confirmación</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucky Air - Carrito</title>
     <link rel="stylesheet" href="../css/main.css">
     <script type="module" src="../js/main.js" defer></script>
-    <script type="module" src="../js/utils/pagoFinal.js"></script>
+    <script type="module" src="../js/utils/carrito.js"></script>
 </head>
-<body>
+<body class="reset-body">
 
     <!-- Inicio Header -->
     <header>
         <nav>
-            <!-- <img class="img-fluid pointer-events" id="menu" src="../assets/images/menu.svg" alt="menu icon"> -->
-
             <svg id="menu" class="img-fluid" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0,0,256,256">
                 <defs><linearGradient x1="12.373" y1="0.373" x2="34.611" y2="22.611" gradientUnits="userSpaceOnUse" id="color-1_eofQ1g5BaAx6_gr1"><stop offset="0" stop-color="#fdfdfd"></stop><stop offset="1" stop-color="#fdfdfd"></stop></linearGradient><linearGradient x1="12.373" y1="12.373" x2="34.611" y2="34.611" gradientUnits="userSpaceOnUse" id="color-2_eofQ1g5BaAx6_gr2"><stop offset="0" stop-color="#fdfdfd"></stop><stop offset="1" stop-color="#fdfdfd"></stop></linearGradient><linearGradient x1="12.373" y1="24.373" x2="34.611" y2="46.611" gradientUnits="userSpaceOnUse" id="color-3_eofQ1g5BaAx6_gr3"><stop offset="0" stop-color="#fdfdfd"></stop><stop offset="1" stop-color="#fdfdfd"></stop></linearGradient></defs><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.33333,5.33333)"><path d="M42,15h-36c-1.65,0 -3,-1.35 -3,-3v0c0,-1.65 1.35,-3 3,-3h36c1.65,0 3,1.35 3,3v0c0,1.65 -1.35,3 -3,3z" fill="url(#color-1_eofQ1g5BaAx6_gr1)"></path><path d="M42,27h-36c-1.65,0 -3,-1.35 -3,-3v0c0,-1.65 1.35,-3 3,-3h36c1.65,0 3,1.35 3,3v0c0,1.65 -1.35,3 -3,3z" fill="url(#color-2_eofQ1g5BaAx6_gr2)"></path><path d="M42,39h-36c-1.65,0 -3,-1.35 -3,-3v0c0,-1.65 1.35,-3 3,-3h36c1.65,0 3,1.35 3,3v0c0,1.65 -1.35,3 -3,3z" fill="url(#color-3_eofQ1g5BaAx6_gr3)"></path></g></g>
             </svg>
-            
             <a class="logo-container" href="/">
                 <img class="img-fluid" src="../assets/images/header/logo.svg" alt="logo empresa">
             </a>
@@ -26,9 +24,8 @@
                 <li><a href="vuelos.html">Vuelos</a></li>
                 <li><a href="beneficios.html">Beneficios</a></li>
             </ul>
-            
             <img class="img-fluid pointer-events" id="theme-bg" src="../assets/images/header/sol.svg" alt="sol icon">
-            <a class="boton-login font-poppins size-12 font-medium " href="login.html" >
+            <a class="boton-login font-poppins size-12 font-medium" href="login.html">
                 Iniciar Sesion
             </a>
         </nav>
@@ -36,98 +33,46 @@
     <!-- Fin Header -->
 
     <main>
-        <section class="confirmation-section">
+        <section class="carrito-section flex-column align-center">
 
-    <div class="confirmation-card">
-
-        <!-- ICONO -->
-        <div class="success-icon">
-            ✔
-        </div>
-
-        <!-- TITULO -->
-        <h1>¡GRACIAS POR TU COMPRA!</h1>
-        <p class="confirmation-text">
-            Tu reserva ha sido confirmada exitosamente.
-        </p>
-
-        <!-- CODIGO -->
-        <h2>Código de Reserva</h2>
-
-        <div class="reservation-code">
-            LKQ4R7
-        </div>
-
-        <!-- DETALLES -->
-        <div class="travel-details">
-
-            <h3>✈ Detalles del Viaje</h3>
-
-            <div class="route">
-                <span>LIMA</span>
-                <span class="arrow-route">→</span>
-                <span>CUSCO</span>
+            <div class="hero-tittle flex-row align-center justify-between">
+                <span class="size-18 color-accent font-bold">🛒 Tu Carrito</span>
             </div>
 
-            <div class="details-grid">
+            <div class="carrito-container flex-column">
 
-                <div class="detail-item">
-                    <h4>📅 Fechas</h4>
-                    <p>25 - 30 Junio</p>
+                <!-- Lista de productos -->
+                <div id="carrito-items" class="carrito-items flex-column">
+                    <!-- JS insertará los items aquí -->
                 </div>
 
-                <div class="detail-item">
-                    <h4>👤 Pasajeros</h4>
-                    <p>1 Adulto</p>
+                <!-- Carrito vacío -->
+                <div id="carrito-vacio" class="carrito-vacio flex-column align-center hidden">
+                    <span class="size-24">🛒</span>
+                    <p class="size-18 font-bold">Tu carrito está vacío</p>
+                    <a href="beneficios.html" class="btn-volver">Ver beneficios</a>
+                </div>
+
+                <!-- Resumen total -->
+                <div id="carrito-resumen" class="carrito-resumen flex-column box-shadow">
+                    <h2 class="size-18 font-bold">Resumen del pedido</h2>
+                    <div class="resumen-linea flex-row justify-between">
+                        <span>Productos:</span>
+                        <span id="resumen-cantidad">0</span>
+                    </div>
+                    <hr>
+                    <div class="resumen-linea flex-row justify-between">
+                        <span class="font-bold">Total estimado:</span>
+                        <span id="resumen-total" class="color-accent font-bold">$0</span>
+                    </div>
+                    <button id="btn-vaciar" class="btn-vaciar">🗑 Vaciar carrito</button>
+                    <a href="beneficios.html" class="btn-seguir">← Seguir comprando</a>
                 </div>
 
             </div>
 
-        </div>
-
-        <!-- PASOS -->
-        <div class="next-steps">
-
-            <h3>→ Siguientes pasos:</h3>
-
-            <p>
-                Te hemos enviado un email de confirmación a
-                example@example.com
-            </p>
-
-            <p>
-                Descarga tu comprobante de pago abajo.
-            </p>
-
-            <p>
-                <strong>
-                    Gestiona tu reserva
-                </strong>
-                o haz el check-in online 48 horas antes.
-            </p>
-
-        </div>
-
-        <!-- BOTONES -->
-        <div class="confirmation-buttons">
-
-           <a class="btn-download" href="#">
-    DESCARGAR COMPROBANTE
-</a>
-
-            <a class="btn-home" href="/">
-                VOLVER AL INICIO
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
+        </section>
     </main>
-
-    
-    
 
     <!-- Inicio Footer -->
     <footer>
@@ -191,7 +136,7 @@
                         <label for="nombresyapellidos">Nombres y Apellidos:</label>
                         <div>
                             <input id="nombresyapellidos" type="text" placeholder="Jose Torres">
-                            <span id="clear-nya" class="clear-btn hidden">❌</span> 
+                            <span id="clear-nya" class="clear-btn hidden">❌</span>
                         </div>
                         <small id="mensaje-error-nya" class="mensaje-error hidden text-end">El origen seleccionado es invalido</small>
                     </div>
@@ -199,7 +144,7 @@
                         <label for="asunto">Asunto:</label>
                         <div>
                             <input id="asunto" type="text" placeholder="Tengo un inconveniente ...">
-                            <span id="clear-asunto" class="clear-btn hidden">❌</span> 
+                            <span id="clear-asunto" class="clear-btn hidden">❌</span>
                         </div>
                         <small id="mensaje-error-asunto" class="mensaje-error hidden text-end">El origen seleccionado es invalido</small>
                     </div>
@@ -207,7 +152,7 @@
                         <label for="email">Correo electronico:</label>
                         <div>
                             <input id="email" type="email" placeholder="example@example.com">
-                            <span id="clear-email" class="clear-btn hidden">❌</span> 
+                            <span id="clear-email" class="clear-btn hidden">❌</span>
                         </div>
                         <small id="mensaje-error-email" class="mensaje-error hidden text-end">El origen seleccionado es invalido</small>
                     </div>
@@ -215,19 +160,18 @@
                         <label for="mensaje">Mensaje:</label>
                         <div>
                             <textarea name="mensaje" id="mensaje" placeholder="Escribe tu mensaje ..."></textarea>
-                            <span id="clear-mensaje" class="clear-btn hidden">❌</span> 
+                            <span id="clear-mensaje" class="clear-btn hidden">❌</span>
                         </div>
                         <small id="mensaje-error-mensaje" class="mensaje-error hidden text-end">El origen seleccionado es invalido</small>
                     </div>
-                    <a class="flex-column align-center justify-center font-bold" href="#">CONTACTANOS</a>
+                    <button type="submit" class="flex-column align-center justify-center font-bold">CONTACTANOS</button>
                 </form>
             </div>
         </div>
         <div class="footer-sub flex-column align-center justify-center">
             <hr>
-            <span class="size-12 font-roboto ">Lucky Air @ 2026 | Todos los derechos reservados</span>
+            <span class="size-12 font-roboto">Lucky Air @ 2026 | Todos los derechos reservados</span>
         </div>
-        
     </footer>
     <!-- Fin footer -->
 

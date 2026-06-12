@@ -83,12 +83,27 @@ export function beneficiosInteract() {
       const precio = card?.querySelector("p")?.textContent?.trim()  || "";
 
       carrito.push({ nombre, precio });
-
+localStorage.setItem("carrito", JSON.stringify(carrito));
       boton.textContent      = "✔ Añadido";
       boton.style.background = "#16a34a";
       boton.disabled         = true;
 
       mostrarToast(`"${nombre}" añadido al carrito. (${carrito.length} item${carrito.length > 1 ? "s" : ""})`, true);
+      // Mostrar botón ver carrito
+let btnVerCarrito = document.querySelector("#btn-ver-carrito");
+if (!btnVerCarrito) {
+    btnVerCarrito = document.createElement("a");
+    btnVerCarrito.id = "btn-ver-carrito";
+    btnVerCarrito.href = "carrito.html";
+    btnVerCarrito.textContent = "🛒 Ver carrito";
+    btnVerCarrito.style.cssText = `
+        position: fixed; bottom: 80px; left: 50%; transform: translateX(-50%);
+        background: #1e3a5f; color: #fff; padding: 10px 24px;
+        border-radius: 8px; font-weight: bold; z-index: 9999;
+        text-decoration: none; font-size: 14px;
+    `;
+    document.body.appendChild(btnVerCarrito);
+}
 
       setTimeout(() => {
         boton.textContent      = "Añadir a Carrito";
@@ -101,3 +116,8 @@ export function beneficiosInteract() {
   // Inicializar display de puntos
   actualizarPuntos();
 }
+
+// Auto-ejecutar
+document.addEventListener("DOMContentLoaded", () => {
+    beneficiosInteract();
+});
