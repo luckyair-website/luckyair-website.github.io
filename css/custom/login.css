@@ -91,3 +91,19 @@
 .login-form__toggle-pass:hover img {
     opacity: 1;
 }
+/* Estados de validación login (S11) */
+.login-form__grupo.error .login-form__input {
+    border: 1px solid #dc2626;
+    background: #fef2f2;
+}
+.login-form__grupo.correcto .login-form__input {
+    border: 1px solid #16a34a;
+    background: #f0fdf4;
+}
+.login-form__grupo .mensaje-error {
+    color: #dc2626;
+    font-size: 12px;
+    margin-top: 4px;
+    min-height: 16px;
+    display: block;
+}

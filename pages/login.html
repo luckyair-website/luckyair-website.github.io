@@ -91,38 +91,38 @@
                 </p>
 
                 <!-- Formulario -->
-                <div class="login-form flex-column">
+                <div class="login-form__grupo flex-column">
+    <label for="correo" class="login-form__label text-contenido-14 font-montserrat text-color-white">
+        Correo electrónico
+    </label>
+    <input
+        type="email"
+        id="correo"
+        name="correo"
+        placeholder="ejemplo@correo.com"
+        class="login-form__input text-contenido-14 font-opensans"
+    />
+    <small class="mensaje-error"></small>
+</div>
 
                     <div class="login-form__grupo flex-column">
-                        <label for="correo" class="login-form__label text-contenido-14 font-montserrat text-color-white">
-                            Correo electrónico
-                        </label>
-                        <input
-                            type="email"
-                            id="correo"
-                            name="correo"
-                            placeholder="ejemplo@correo.com"
-                            class="login-form__input text-contenido-14 font-opensans"
-                        />
-                    </div>
-
-                    <div class="login-form__grupo flex-column">
-                        <label for="contrasena" class="login-form__label text-contenido-14 font-montserrat text-color-white">
-                            Contraseña
-                        </label>
-                        <div class="login-form__input-wrapper">
-                            <input
-                                type="password"
-                                id="contrasena"
-                                name="contrasena"
-                                placeholder="Mínimo 8 caracteres"
-                                class="login-form__input text-contenido-14 font-opensans"
-                            />
-                            <button type="button" class="login-form__toggle-pass" aria-label="Mostrar contraseña">
-                                <img src="../assets/images/login/esconder.png" alt="Ver contraseña" />
-                            </button>
-                        </div>
-                    </div>
+    <label for="contrasena" class="login-form__label text-contenido-14 font-montserrat text-color-white">
+        Contraseña
+    </label>
+    <div class="login-form__input-wrapper">
+        <input
+            type="password"
+            id="contrasena"
+            name="contrasena"
+            placeholder="Mínimo 8 caracteres"
+            class="login-form__input text-contenido-14 font-opensans"
+        />
+        <button type="button" class="login-form__toggle-pass" aria-label="Mostrar contraseña">
+            <img src="../assets/images/login/esconder.png" alt="Ver contraseña" />
+        </button>
+    </div>
+    <small class="mensaje-error"></small>
+</div>
 
                     <!-- Recordarme / Olvidé contraseña -->
                     <div class="login-form__opciones flex-row align-center justify-between">
@@ -134,9 +134,15 @@
                         </a>
                     </div>
 
-                    <!-- Botón submit -->
-                    <button type="submit" class="login-form__submit bold font-roboto text-color-primary">
-                        INICIAR SESIÓN
+                   <!-- ANTES -->
+<a href="../pages/pago.html" class="login-form__submit bold font-roboto text-color-primary">
+    INICIAR SESIÓN
+</a>
+
+<!-- DESPUÉS -->
+<button class="login-form__submit bold font-roboto text-color-primary">
+    INICIAR SESIÓN
+</button>
                     </button>
 
                     <!-- Link registro -->

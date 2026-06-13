@@ -115,3 +115,19 @@
 .btn-registrar:hover {
     opacity: 0.85;
 }
+/* Estados de validación (S11) */
+.campo-grupo.error .registro-input {
+    border: 1px solid #dc2626;
+    background: #fef2f2;
+}
+.campo-grupo.correcto .registro-input {
+    border: 1px solid #16a34a;
+    background: #f0fdf4;
+}
+.mensaje-error {
+    color: #dc2626;
+    font-size: 12px;
+    margin-top: 4px;
+    min-height: 16px;
+    display: block;
+}
