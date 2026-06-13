@@ -2,6 +2,7 @@
 import { menuMobile } from "./utils/menuMobile.js";
 import { themeMain } from "./utils/theme.js";
 import { destinos } from "./data/destinos.js";
+import { destinos2 } from "./data/destinos2.js";
 import { cargarOpciones } from "./utils/combobox.js";
 import { clearList } from "./utils/clearList.js";
 import { inputBuscar } from "./utils/inputBuscar.js";
@@ -15,6 +16,9 @@ import { validarInputDate } from "./utils/validarInputDate.js";
 import { validarInputForm } from "./utils/validarInputForm.js";
 import { enableDragScroll } from "./utils/dragScrollSlider.js";
 import { aplicarTemaGuardado, guardarTema } from "./utils/themeStorage.js";
+import { buscarVuelos2 } from "./utils/buscarvuelos.js";
+import { mostrarConfirmacionPago } from "./utils/confirmar-pago.js";
+
 
 // Forms
 import { buscarVuelos } from "./forms/buscarVuelos.js";
@@ -56,5 +60,14 @@ document.addEventListener("DOMContentLoaded", () => {
     // Forms
         buscarVuelos();
         mostrarInfoVuelos();
+        mostrarConfirmacionPago();
+
+       
+
+        // ⚠️ ESTE es tu data (NO la de tu compa)
+        console.log(destinos2);
+
+        // TU sistema de vuelos
+        buscarVuelos2(destinos2);
 
 });

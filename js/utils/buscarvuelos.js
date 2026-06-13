@@ -1,6 +1,6 @@
 import { destinos2 as vuelos } from "../data/destinos2.js";
 
-export function buscarVuelos() {
+export function buscarVuelos2() {
 
     const lista = document.querySelector("#lista-vuelos");
     const input = document.querySelector("#input-destino");

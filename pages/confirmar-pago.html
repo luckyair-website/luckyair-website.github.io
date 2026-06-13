@@ -12,9 +12,8 @@
 </head>
 
 <body>
-
-   <!-- Inicio Header -->
-    <header>
+<!-- inicio Header -->
+<header>
         <nav>
             <!-- <img class="img-fluid pointer-events" id="menu" src="../assets/images/menu.svg" alt="menu icon"> -->
 
@@ -26,126 +25,77 @@
                 <img class="img-fluid" src="../assets/images/header/logo.svg" alt="logo empresa">
             </a>
             <ul class="menu-link" id="menu-link">
-                <li><a href="/">Inicio</a></li>
-                <li><a href="vuelos.html">Vuelos</a></li>
-                <li><a href="beneficios.html">Beneficios</a></li>
+                <li><a href="/" class="nav-link active">Inicio</a></li>
+                <li><a href="pages/vuelos.html">Vuelos</a></li>
+                <li><a href="pages/beneficios.html">Beneficios</a></li>
             </ul>
             
             <img class="img-fluid pointer-events" id="theme-bg" src="../assets/images/header/sol.svg" alt="sol icon">
-            <a class="boton-login font-poppins size-12 font-medium " href="login.html" >
+            <a class="boton-login font-poppins size-12 font-medium " href="pages/login.html" >
                 Iniciar Sesion
             </a>
         </nav>
     </header>
     <!-- Fin Header -->
 
-
-<!-- INICIO MAIN CONFIRMAR -->
 <main class="main-confirmar">
 
     <section class="card-confirmacion">
 
         <!-- HEADER -->
         <div class="top-confirmacion">
-
             <img src="../assets/images/header/logo.webp" alt="Logo avión">
 
             <h1 class="text-encabezado-32 bold font-poppins">
                 RESUMEN DE TU COMPRA SEGURA
             </h1>
-
         </div>
 
-        <!-- CONTENIDO -->
         <div class="contenido-confirmacion">
 
             <!-- DETALLES -->
             <section class="detalle-section">
 
-                <!-- TITULO -->
                 <div class="titulo-section">
-
                     <img src="../assets/images/header/logo.webp" alt="Plane">
 
                     <h2 class="text-encabezado-24 medium font-poppins">
                         Detalles del Viaje
                     </h2>
-
                 </div>
 
                 <!-- RUTA -->
                 <div class="ruta-vuelo">
-
-                    <h2 class="text-encabezado-40 bold font-poppins">
-                        LIMA → CUSCO
+                    <h2 id="ruta-vuelo" class="text-encabezado-40 bold font-poppins">
+                        ---
                     </h2>
-
                 </div>
 
                 <!-- INFO -->
                 <div class="info-vuelo-grid">
 
-                    <!-- FECHAS -->
                     <div class="item-info">
-
-                        <span class="icono-mini">
-                            📅
-                        </span>
-
+                        <span>📅</span>
                         <div>
-
-                            <p class="text-contenido-14 regular font-roboto">
-                                Fechas
-                            </p>
-
-                            <strong class="text-contenido-18 bold font-roboto">
-                                25 - 30 Junio
-                            </strong>
-
+                            <p>Fechas</p>
+                            <strong id="fechas-vuelo">---</strong>
                         </div>
-
                     </div>
 
-                    <!-- VUELO -->
                     <div class="item-info">
-
-                        <span class="icono-mini">
-                            ✈
-                        </span>
-
+                        <span>✈</span>
                         <div>
-
-                            <p class="text-contenido-14 regular font-roboto">
-                                Vuelo
-                            </p>
-
-                            <strong class="text-contenido-18 bold font-roboto">
-                                LK2345
-                            </strong>
-
+                            <p>Vuelo</p>
+                            <strong>LK2345</strong>
                         </div>
-
                     </div>
 
-                    <!-- DURACION -->
                     <div class="item-info">
-
-                        <span class="icono-mini">
-                            🕒
-                        </span>
-
+                        <span>🕒</span>
                         <div>
-
-                            <p class="text-contenido-14 regular font-roboto">
-                                Duración
-                            </p>
-
-                            <strong class="text-contenido-18 bold font-roboto">
-                                1h 20m
-                            </strong>
-
+                            <p>Duración</p>
+                            <strong>1h 20m</strong>
                         </div>
-
                     </div>
 
                 </div>
@@ -154,76 +104,43 @@
 
             <!-- PASAJERO -->
             <section class="fila-info">
-
                 <div class="info-lateral">
-
-                    <span class="icono-info">
-                        👤
-                    </span>
-
-                    <h3 class="text-encabezado-20 medium font-poppins">
-                        Pasajero
-                    </h3>
-
+                    <span>👤</span>
+                    <h3>Pasajero</h3>
                 </div>
 
-                <strong class="text-contenido-20 bold font-roboto">
-                    JUAN PÉREZ
-                </strong>
-
+                <strong id="pasajero">---</strong>
             </section>
 
             <!-- PAGO -->
             <section class="fila-info">
-
                 <div class="info-lateral">
-
-                    <span class="icono-info">
-                        💳
-                    </span>
-
-                    <h3 class="text-encabezado-20 medium font-poppins">
-                        Pago
-                    </h3>
-
+                    <span>💳</span>
+                    <h3>Pago</h3>
                 </div>
 
-                <strong class="text-contenido-20 bold font-roboto">
-                    Visa **** **** **** 1234
-                </strong>
-
+                <strong id="tarjeta">---</strong>
             </section>
 
             <!-- TOTAL -->
             <section class="total-confirmacion">
-
-                <h3 class="text-encabezado-24 bold font-poppins">
-                    TOTAL
-                </h3>
-
-                <h2 class="precio-total text-encabezado-40 bold font-poppins">
-                    $850 USD
-                </h2>
-
+                <h3>TOTAL</h3>
+                <h2 id="total-pago" class="precio-total"> </h2>
             </section>
 
             <!-- BOTONES -->
             <div class="botones-confirmacion">
 
                 <a href="pago.html">
-
                     <button type="button" class="boton-volver">
                         VOLVER
                     </button>
-
                 </a>
 
                 <a href="pagofinal.html">
-
                     <button type="button" class="boton-confirmar">
                         CONFIRMAR Y PAGAR
                     </button>
-
                 </a>
 
             </div>
@@ -233,11 +150,10 @@
     </section>
 
 </main>
-<!-- FIN MAIN CONFIRMAR -->
 
-   
-
-    <!-- Inicio Footer -->
+</body>
+<!-- Inicio footer -->
+ <!-- Inicio Footer -->
     <footer>
         <div class="footer-main flex-column align-center">
             <div class="redes-container flex-column align-center box-shadow">
@@ -299,7 +215,7 @@
                         <label for="nombresyapellidos">Nombres y Apellidos:</label>
                         <div>
                             <input id="nombresyapellidos" type="text" placeholder="Jose Torres">
-                            <span id="clear-nya" class="clear-btn hidden">❌</span> 
+                            <span id="clear-nya" class="clear-btn hidden">❌</span>
                         </div>
                         <small id="mensaje-error-nya" class="mensaje-error hidden text-end">El origen seleccionado es invalido</small>
                     </div>
@@ -307,7 +223,7 @@
                         <label for="asunto">Asunto:</label>
                         <div>
                             <input id="asunto" type="text" placeholder="Tengo un inconveniente ...">
-                            <span id="clear-asunto" class="clear-btn hidden">❌</span> 
+                            <span id="clear-asunto" class="clear-btn hidden">❌</span>
                         </div>
                         <small id="mensaje-error-asunto" class="mensaje-error hidden text-end">El origen seleccionado es invalido</small>
                     </div>
@@ -315,7 +231,7 @@
                         <label for="email">Correo electronico:</label>
                         <div>
                             <input id="email" type="email" placeholder="example@example.com">
-                            <span id="clear-email" class="clear-btn hidden">❌</span> 
+                            <span id="clear-email" class="clear-btn hidden">❌</span>
                         </div>
                         <small id="mensaje-error-email" class="mensaje-error hidden text-end">El origen seleccionado es invalido</small>
                     </div>
@@ -323,21 +239,19 @@
                         <label for="mensaje">Mensaje:</label>
                         <div>
                             <textarea name="mensaje" id="mensaje" placeholder="Escribe tu mensaje ..."></textarea>
-                            <span id="clear-mensaje" class="clear-btn hidden">❌</span> 
+                            <span id="clear-mensaje" class="clear-btn hidden">❌</span>
                         </div>
                         <small id="mensaje-error-mensaje" class="mensaje-error hidden text-end">El origen seleccionado es invalido</small>
                     </div>
-                    <a class="flex-column align-center justify-center font-bold" href="#">CONTACTANOS</a>
+                    <button type="submit" class="flex-column align-center justify-center font-bold">CONTACTANOS</button>
                 </form>
             </div>
         </div>
         <div class="footer-sub flex-column align-center justify-center">
             <hr>
-            <span class="size-12 font-roboto ">Lucky Air @ 2026 | Todos los derechos reservados</span>
+            <span class="size-12 font-roboto">Lucky Air @ 2026 | Todos los derechos reservados</span>
         </div>
-        
     </footer>
     <!-- Fin footer -->
 
-</body>
 </html>

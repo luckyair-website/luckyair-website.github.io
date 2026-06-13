@@ -39,78 +39,54 @@
     <!-- INICIO MAIN VUELOS -->
     <main class="main-vuelos flex-column align-center">
 
-        <!-- HERO -->
-        <section class="hero-vuelos flex-column align-center justify-center">
-            <h1 class="text-encabezado-40 bold font-poppins">Encuentra tu próximo destino</h1>
-            <p class="text-contenido-18 regular font-roboto">Vuela barato y fácil con Lucky Air</p>
-        </section>
+        <section id="vuelos">
 
-        <!-- FORMULARIO BUSQUEDA -->
-        <section class="buscador-vuelos">
-            <form class="form-vuelos flex-column">
-                <h2 class="text-encabezado-24 medium font-poppins">Buscar vuelos</h2>
+  <h2>Vuelos desde Xi’an</h2>
 
-                <div class="grupo-inputs flex-row">
-                    <input type="text" placeholder="Origen">
-                    <input type="text" placeholder="Destino">
-                </div>
+  <!-- FILTROS -->
+  <div id="buscador-vuelos">
+    <input 
+      type="text" 
+      id="input-destino" 
+      placeholder="Buscar destino..."
+    />
 
-               <div class="grupo-inputs flex-row">
+    <select id="filtro-tipo">
+      <option value="todos">Todos</option>
+      <option value="directo">Directos</option>
+      <option value="escala">Con escala</option>
+    </select>
+  </div>
 
-        <div class="input-box flex-column">
-        <label class="text-contenido-16 medium font-roboto">Fecha de ida</label>
-        <input type="date">
-        </div>
+  <!-- LISTA DE VUELOS -->
+  <div id="lista-vuelos"></div>
 
-         <div class="input-box flex-column">
-        <label class="text-contenido-16 medium font-roboto">Fecha de vuelta</label>
-        <input type="date">
-         </div>
+  <!-- PANEL DE DETALLE (AQUÍ ENTRA TODO LO PRO) -->
+  <div id="panel-vuelo">
 
-</div>
+    <h3>Detalle del vuelo</h3>
 
-                <div class="grupo-inputs flex-row">
-                    <input type="number" min="1" value="1" placeholder="Pasajeros">
-                </div>
-
-                <button type="submit" class="boton-buscar">Buscar vuelos</button>
-            </form>
-        </section>
-
-        <!-- OFERTAS -->
-        <section class="ofertas-vuelos flex-column align-center">
-    <h2 class="text-encabezado-32 bold font-poppins titulo-ofertas">Ofertas del día</h2>
-
-    <div class="cards-ofertas flex-row justify-center">
-
-        <article class="card-vuelo flex-column align-center">
-            <img src="../assets/images/vuelos/cusco.png" alt="Destino Cusco">
-            <h3 class="text-encabezado-24 medium font-poppins">Lima → Cusco</h3>
-            <p class="text-contenido-18 regular font-roboto">Desde $120</p>
-            <a href="pago.html">
-                <button type="button">Seleccionar</button>
-            </a>
-        </article>
-
-        <article class="card-vuelo flex-column align-center">
-            <img src="../assets/images/vuelos/arequipa.png" alt="Destino Arequipa">
-            <h3 class="text-encabezado-24 medium font-poppins">Lima → Arequipa</h3>
-            <p class="text-contenido-18 regular font-roboto">Desde $95</p>
-            <a href="pago.html">
-                <button type="button">Seleccionar</button>
-            </a>
-        </article>
-
-        <article class="card-vuelo flex-column align-center">
-            <img src="../assets/images/vuelos/piura.png" alt="Destino Mancora">
-            <h3 class="text-encabezado-24 medium font-poppins">Lima → Piura</h3>
-            <p class="text-contenido-18 regular font-roboto">Desde $135</p>
-            <a href="pago.html">
-                <button type="button">Seleccionar</button>
-            </a>
-        </article>
-
+    <!-- INFO DEL VUELO -->
+    <div id="info-vuelo">
+      <p>Selecciona un vuelo para ver detalles</p>
     </div>
+
+    <!-- ⏱️ SIMULADOR TIEMPO -->
+    <div id="tiempo-vuelo">
+      <p id="salida"></p>
+      <p id="duracion"></p>
+      <p id="llegada"></p>
+      <p id="contador-tiempo"></p>
+    </div>
+
+    <!-- 💰 PRECIO -->
+    <div id="precio-vuelo"></div>
+
+    <!-- 🔥 ALERTAS -->
+    <div id="alerta-vuelo"></div>
+
+  </div>
+
 </section>
 
     </main>
