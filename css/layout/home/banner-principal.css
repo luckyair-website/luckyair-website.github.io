@@ -1,22 +1,41 @@
-/* Layout banner principal */
 
-.banner__principal {
-    height: 90vh;
-    overflow: hidden;
-    padding-bottom: 2rem;
-}
-
-.banner-container__home {
-    flex: 1;
+.banner-main {
+    margin: 5rem 0;
     width: 100%;
-    height: 100%; 
-    
+    gap: 0.5rem;
+    height: 100%;
+}
+
+.banner-container {
+    height: 10rem;
+    width: auto;
+}
+
+.banner-container img {
+    height: 100%;
+    width: auto;
+    border-radius: 20px;
+}
+
+@media (min-width: 768px)  {
+
+    .banner-main {
+        margin: 5rem auto;
+        width: 100%;
+    }
+
+    .banner-container {
+        height: 20rem;
+        width: auto;
+    }
     
 }
 
-.banner-container__home img {
-    height: 90%;
-    width: 90%;
-    object-fit: cover;  
-    display: block;
+@media (min-width: 1024px)  {
+
+    .banner-container {
+        height: 30rem;
+        width: auto;
+    }
+    
 }

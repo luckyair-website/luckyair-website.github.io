@@ -1,1 +1,162 @@
-/* Vuelos layout */
+/* CONTENEDOR GENERAL layout*/
+#vuelos {
+  display: grid;
+  grid-template-columns: 2.2fr 1fr;
+  gap: 25px;
+  padding: 25px;
+  min-height: 100vh;
+}
+
+/* BUSCADOR */
+#buscador-vuelos {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 12px;
+}
+
+/* LISTA */
+#lista-vuelos {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  
+}
+
+/* CARD */
+.vuelo-card {
+  position: relative;
+  padding: 16px;
+}
+
+/* PANEL */
+#panel-vuelo {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 18px;
+
+  position: sticky;
+  top: 20px;
+  align-self: start;
+
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+
+  /* FIX IMPORTANTE */
+  width: 340px;
+  min-width: 340px;
+  max-width: 340px;
+}
+
+/* BLOQUES INTERNOS */
+#info-vuelo,
+#tiempo-vuelo,
+#alerta-vuelo {
+  padding: 12px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  #vuelos {
+    grid-template-columns: 1fr;
+  }
+
+  #buscador-vuelos {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  #vuelos {
+    padding: 12px;
+  }
+}
+/* FONDO GENERAL custom*/
+#vuelos {
+  background: #f5f7fb;
+}
+
+/* BUSCADOR */
+#buscador-vuelos input,
+#buscador-vuelos select {
+  box-sizing: border-box;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  outline: none;
+  transition: 0.2s;
+  
+  
+}
+
+#buscador-vuelos input:focus,
+#buscador-vuelos select:focus {
+  border-color: #2d6cdf;
+  box-shadow: 0 0 0 2px rgba(45, 108, 223, 0.2);
+}
+
+/* CARD */
+.vuelo-card {
+  background: #fff;
+  border-radius: 14px;
+  border: 1px solid transparent;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.vuelo-card:hover {
+  transform: translateY(-4px);
+  border-color: #2d6cdf;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.vuelo-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 4px;
+  background: #2d6cdf;
+  border-radius: 14px 0 0 14px;
+}
+
+/* PANEL */
+#panel-vuelo {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* TITULO */
+#panel-vuelo h3 {
+  font-size: 18px;
+  margin: 0;
+}
+
+/* INFO */
+#info-vuelo {
+  background: #f7f9ff;
+  border-radius: 12px;
+  border-left: 4px solid #2d6cdf;
+}
+
+/* TIEMPO */
+#tiempo-vuelo {
+  background: #eef6ff;
+  border-radius: 12px;
+  font-size: 14px;
+}
+
+/* PRECIO */
+#precio-vuelo {
+  font-size: 26px;
+  font-weight: 700;
+  color: #16a34a;
+}
+
+/* ALERTA */
+#alerta-vuelo {
+  background: #fff7e6;
+  border-radius: 10px;
+  color: #b45309;
+  font-weight: 500;
+}

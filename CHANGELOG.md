@@ -44,3 +44,23 @@ Con actualizaciones se logro maximizar nuestra puntuacion de performance, accesi
 - .
 ## 🧩 Avance recuperar contrasena  13/05 --> Edgard Huaman
 - **feature** se realizo la implementacion de hojas de estilos y avance en la pagina.
+## 🧩 Descripción de cambios recientes - 14/05 --> Diego Zapata
+- **fix**: Se completó y reemplazó la página confirmar-pago.html para corregir estructura y flujo de confirmación.
+- **fix**: Se completó y reemplazó la página vuelos.html para corregir estructura y flujo de confirmación.
+- **Feature** style: Se implementaron y reorganizaron estilos en vuelos.css, separándolos en módulos layout y custom para mejor mantenibilidad.
+- **Feature**style: Se implementaron y reorganizaron estilos en confirmar-pago.css, separándolos también en layout y custom para consistencia del proyecto.
+
+## 🧩 Implementacion css responsive en home.html  y dashboard.html 
+- **feature** se realizo la implementacion de hojas de estilos responsivos, adaptandoles a tamaños como mobile, tablet, laptop, laptop grande
+
+## 🧩 Implementacion de la estructura de javascript 05/06
+- **Feature**: Se implemento la estructura basica de js.
+- **Feature**: Se implemento funcionalidades basicas de js, como:
+    - El cambio de tema oscuro y claro.
+    - Validacion de inputs.
+    - Insercion de cards de manera dinamica desde una lista de js.
+    - Implementacion de cards tipo sliders.
+
+## 🧩 Implementacion del uso de localStorage 10/06
+- **Feature**: Se implemento la funcionalidad de localStorage en la seccion de busqueda de vuelos del home, en la que se guarda la info de los inputs y luego se procede a recuperarlas para mostrarla en la seccion de pagos.html.
+- **Feature**: Se implemento funcionalidades localStorage en la seccion de seleccionar ofertas del home, en donde se guarda la info y luego se recupera la info para mostrarla en la seccion de pagos.html
