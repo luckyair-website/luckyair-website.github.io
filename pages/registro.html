@@ -6,29 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro de usuario</title>
     <link rel="stylesheet" href="../css/main.css">
+    <script type="module" src="../js/mainRegistro.js" defer></script>
 </head>
-<script>
-    function irPaso(num) {
-        document.querySelectorAll('.paso').forEach(p => p.classList.add('oculto'));
-        document.getElementById('paso-' + num).classList.remove('oculto');
-        document.getElementById('paso-label').textContent = num + ' de 3';
-        document.querySelectorAll('.progreso-segmento').forEach((seg, i) => {
-            seg.classList.toggle('activo', i < num);
-        });
-    }
 
+<script>
     function seleccionarDoc(btn) {
         document.querySelectorAll('.doc-btn').forEach(b => b.classList.remove('doc-btn-activo'));
         btn.classList.add('doc-btn-activo');
-    }
-
-    function registrar() {
-        const tc = document.getElementById('check-tc');
-        const pass = document.getElementById('pass').value;
-        const confpass = document.getElementById('confpass').value;
-        if (!tc.checked) { alert('Debes aceptar los T&C'); return; }
-        if (pass !== confpass) { alert('Las contraseñas no coinciden'); return; }
-        alert('¡Registro exitoso!');
     }
 </script>
 
@@ -60,7 +44,7 @@
     </header>
     <!-- Fin Header -->
 
-    <!-- INICIO MAIN ISABEL-->
+    <!-- INICIO MAIN -->
     <main class="registro-main flex-column align-center">
 
         <!-- Contador de pasos -->
@@ -92,18 +76,21 @@
                     <label class="font-montserrat bold text-contenido-14" for="nombres">Nombres:</label>
                     <input class="registro-input font-roboto regular text-contenido-14" type="text" id="nombres"
                         placeholder="Juan Martin" required>
+                    <small class="mensaje-error"></small>
                 </div>
 
                 <div class="campo-grupo flex-column">
                     <label class="font-montserrat bold text-contenido-14" for="apellidos">Apellidos:</label>
                     <input class="registro-input font-roboto regular text-contenido-14" type="text" id="apellidos"
                         placeholder="Peres Perez" required>
+                    <small class="mensaje-error"></small>
                 </div>
 
                 <div class="campo-grupo flex-column">
                     <label class="font-montserrat bold text-contenido-14" for="correo">Correo Electronico:</label>
                     <input class="registro-input font-roboto regular text-contenido-14" type="email" id="correo"
                         placeholder="email@example.com" required>
+                    <small class="mensaje-error"></small>
                 </div>
 
                 <hr class="registro-hr">
@@ -152,6 +139,7 @@
                     <label class="font-montserrat bold text-contenido-14" for="numdoc">Numero de documento:</label>
                     <input class="registro-input font-roboto regular text-contenido-14" type="text" id="numdoc"
                         placeholder="69696969" required>
+                    <small class="mensaje-error"></small>
                 </div>
 
                 <hr class="registro-hr">
@@ -173,12 +161,14 @@
                     <label class="font-montserrat bold text-contenido-14" for="pass">Contraseña:</label>
                     <input class="registro-input font-roboto regular text-contenido-14" type="password" id="pass"
                         placeholder="*********" minlength="8" required>
+                    <small class="mensaje-error"></small>
                 </div>
 
                 <div class="campo-grupo flex-column">
                     <label class="font-montserrat bold text-contenido-14" for="confpass">Confirmar contraseña:</label>
                     <input class="registro-input font-roboto regular text-contenido-14" type="password" id="confpass"
                         placeholder="*********" minlength="8" required>
+                    <small class="mensaje-error"></small>
                 </div>
 
                 <div class="tc-check flex-row align-center">
@@ -202,10 +192,7 @@
         </div><!-- fin registro-card -->
 
     </main>
-
-
-
-    <!-- FIN MAIN ISABEL-->
+    <!-- FIN MAIN -->
 
     <!-- Inicio Footer -->
     <footer>
@@ -308,7 +295,6 @@
         
     </footer>
     <!-- Fin footer -->
-
 
 </body>
 
