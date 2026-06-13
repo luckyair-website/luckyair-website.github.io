@@ -1,9 +1,49 @@
 /* Responsice ofertas home */
+@media (max-width: 1024px)  {
+
+    /* .ofertas__vuelos {
+        margin-top: 5vh;
+    } */
+
+    .card-ofertas__home {
+        /* min-width: 180px; */
+        width: 180px;
+    }
+
+    .card-ofertas__home img{
+        max-width: 180px;
+        height: auto;
+    }
+
+    .tittle-ofertas {
+        padding-top: 2rem;
+    }
+
+}
+
+@media (max-width: 768px)  {
+
+    .ofertas__vuelos {
+        margin-top: 30vh;
+    }
+
+    .cards {
+        gap: 1rem;
+    }
+
+    .card-ofertas__home {
+        width: 220px;
+        height: 250px;
+    }
+
+
+
+}
 
 @media (max-width: 480px)  {
 
     .ofertas__vuelos {
-        height: 180vh;
+        height: 100%;
     }
 
     .cards {
@@ -12,4 +52,12 @@
         padding: 1rem 0 1rem 0;
     }
 
+    .card-ofertas__home {
+        width: 180px;
+        height: 250px;
+    }
+
 }
+
+
+

@@ -1,35 +1,89 @@
-/* Layout ofertas home */
 
-.ofertas__vuelos {
-    height: 60vh;
+.cards-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 1rem;
+  padding-right: 0.4rem;
+  padding-bottom: 1rem;
 }
-.cards {
+
+.card {
+    flex: 0 0 95%; /* mobile: 1 card */
+    scroll-snap-align: start;
+    /* border: 2px solid var(--font-color-primary); */
+    height: 18rem;
+    width: 90%;
+    background: 041936;
+    border-radius: 20px;
+    color: #041936;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    /* box-shadow: 0 4px 12px rgba(255,255,255,0.1); */
+}
+
+.img-container {
     flex: 1;
+    height: 8rem;
+    /* height: 50%; */
     width: 100%;
-    padding: 0 4rem 0 4rem;
-}
-.card-ofertas__home {
-    border: 2px solid white;
-    border-radius: 1.25rem;
-    width: 240px;
-    height: 300px;
-    padding-bottom: 1rem;
     overflow: hidden;
 }
 
-.card-ofertas__home img{
-    height: auto;
-    width: 240px;
+.img-ofertas {
+    height: 100%;
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
 }
 
-.card-ofertas__home a{
-    background: var(--color-secondary);
-    color: var(--color-primary);
-    width: 70%;
-    height: 28px;
-    border: 2px solid var(--color-primary);
-    border-radius: 1.25rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.content-container {
+    flex: 1;
+    color: var(--font-color-primary);
+    padding: 1rem 0;
+    border-top: 2px solid var(--font-color-primary);
+    width: 100%;
+    gap: 0.5rem;
 }
+
+.ofertas-card-boton {
+    /* background: var(--gradient-button-primary); */
+    background: #8B0000;
+    min-height: 40px;
+    min-width: 200px;
+    border-radius: 20px;
+    color: #FFFFFF;
+    /* border: 2px solid var(--font-color-primary); */
+}
+
+.ofertas-card-boton:hover {
+    background: #F0BE2B;
+    color: #041936;
+}
+
+@media (min-width: 768px)  {
+
+    .card {
+        flex: 0 0 33%; /* tablet: 3 card */
+    }
+}
+
+@media (min-width: 1024px)  {
+
+    .cards-container {
+        gap: 2rem;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -ms-overflow-style: none;  /* IE y Edge */
+        scrollbar-width: none;     /* Firefox */
+    }
+
+    .cards-container::-webkit-scrollbar {
+        display: none;             /* Chrome, Safari */
+    }
+
+    .card {
+        flex: 0 0 23%; /* pc: 4 card */
+    }
+}
+

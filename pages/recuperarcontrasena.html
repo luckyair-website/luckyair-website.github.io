@@ -32,29 +32,25 @@
 <body>
     <!-- Inicio Header -->
     <header>
-        <nav class="flex-row align-center justify-between" role="navigation">
-            <a href="/" class="logo__nav flex-row align-center">
-                <img src="../assets/images/header/logo.png" alt="Logo de Lucky Air">
+        <nav>
+            <!-- <img class="img-fluid pointer-events" id="menu" src="../assets/images/menu.svg" alt="menu icon"> -->
+
+            <svg id="menu" class="img-fluid" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0,0,256,256">
+                <defs><linearGradient x1="12.373" y1="0.373" x2="34.611" y2="22.611" gradientUnits="userSpaceOnUse" id="color-1_eofQ1g5BaAx6_gr1"><stop offset="0" stop-color="#fdfdfd"></stop><stop offset="1" stop-color="#fdfdfd"></stop></linearGradient><linearGradient x1="12.373" y1="12.373" x2="34.611" y2="34.611" gradientUnits="userSpaceOnUse" id="color-2_eofQ1g5BaAx6_gr2"><stop offset="0" stop-color="#fdfdfd"></stop><stop offset="1" stop-color="#fdfdfd"></stop></linearGradient><linearGradient x1="12.373" y1="24.373" x2="34.611" y2="46.611" gradientUnits="userSpaceOnUse" id="color-3_eofQ1g5BaAx6_gr3"><stop offset="0" stop-color="#fdfdfd"></stop><stop offset="1" stop-color="#fdfdfd"></stop></linearGradient></defs><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.33333,5.33333)"><path d="M42,15h-36c-1.65,0 -3,-1.35 -3,-3v0c0,-1.65 1.35,-3 3,-3h36c1.65,0 3,1.35 3,3v0c0,1.65 -1.35,3 -3,3z" fill="url(#color-1_eofQ1g5BaAx6_gr1)"></path><path d="M42,27h-36c-1.65,0 -3,-1.35 -3,-3v0c0,-1.65 1.35,-3 3,-3h36c1.65,0 3,1.35 3,3v0c0,1.65 -1.35,3 -3,3z" fill="url(#color-2_eofQ1g5BaAx6_gr2)"></path><path d="M42,39h-36c-1.65,0 -3,-1.35 -3,-3v0c0,-1.65 1.35,-3 3,-3h36c1.65,0 3,1.35 3,3v0c0,1.65 -1.35,3 -3,3z" fill="url(#color-3_eofQ1g5BaAx6_gr3)"></path></g></g>
+            </svg>
+            
+            <a class="logo-container" href="/">
+                <img class="img-fluid" src="../assets/images/header/logo.svg" alt="logo empresa">
             </a>
-            <input type="checkbox" id="menu-toggle" />
-            <label for="menu-toggle" class="menu-icon">&#9776;</label>
-            <ul class="enlaces__nav flex-row align-center justify-between">
-                <li>
-                    <a href="/" class="nav-link ">Home</a>
-                </li>
-                <li>
-                    <a href="vuelos.html" class="nav-link ">Vuelos</a>
-                </li>
-                <li>
-                    <a href="beneficios.html" class="nav-link">Beneficios</a>
-                </li>
-                <li class="enlace-login__nav">
-                    <a href="login.html">Login</a>
-                </li>
+            <ul class="menu-link" id="menu-link">
+                <li><a href="/">Inicio</a></li>
+                <li><a href="vuelos.html">Vuelos</a></li>
+                <li><a href="beneficios.html">Beneficios</a></li>
             </ul>
-            <a href="login.html" class="boton-login__nav flex-row align-center justify-center hidden-boton">
-                <img src="../assets/images/header/usuario.svg" alt="Icono de usuario" class="icono-user__nav">
-                <span class="">INGRESAR</span>
+            
+            <img class="img-fluid pointer-events" id="theme-bg" src="../assets/images/header/sol.svg" alt="sol icon">
+            <a class="boton-login font-poppins size-12 font-medium " href="login.html" >
+                Iniciar Sesion
             </a>
         </nav>
     </header>
@@ -161,67 +157,104 @@
     <!-- Fin Main -->
 
     <!-- Inicio Footer -->
-    <footer class="flex-column">
-        <div class="footer-main flex-row justify-between">
-            <div class="section-footer">
-                <h2 class="h1-banner">SIGUENOS EN REDES</h2>
-                <div class="img-redes-container__footer">
-                    <img class="img-redes" src="../assets/images/footer/facebook.png" alt="Icono de facebook">
-                    <img class="img-redes" src="../assets/images/footer/instagram.png" alt="Icono de instagram">
-                    <img class="img-redes" src="../assets/images/footer/x.png" alt="Icono de x">
+    <footer>
+        <div class="footer-main flex-column align-center">
+            <div class="redes-container flex-column align-center box-shadow">
+                <span class="size-20">SIGUENOS EN REDES</span>
+                <div class="icons-redes-container flex-row">
+                    <a href="https://www.facebook.com/" target="_blank">
+                        <img class="icons-redes" src="../assets/images/footer/facebook.png" alt="imagen de facebook">
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <img class="icons-redes" src="../assets/images/footer/instagram.png" alt="imagen de facebook">
+                    </a>
+                    <a href="https://www.x.com/" target="_blank">
+                        <img class="icons-redes" src="../assets/images/footer/x.png" alt="imagen de facebook">
+                    </a>
                 </div>
-                <h2 class="h1-banner">HORARIO DE ATENCION</h2>
-                <div class="flex-row horario-footer">
-                    <img src="../assets/images/footer/reloj.png" alt="icono de reloj" width="40">
+                <span class="size-20">HORARIO DE ATENCIÓN</span>
+                <div class="horario-container flex-row align-center">
+                    <img class="icons-redes" src="../assets/images/footer/reloj.png" alt="Imagen de reloj">
                     <div>
-                        <h4>Lunes a Viernes: 08:00 AM - 08:00 PM.</h4>
-                        <h4>Lunes a Viernes: 08:00 AM - 08:00 PM.</h4>
+                        <span class="size-12">Lunes a Viernes: 08:00 AM - 08:00 PM</span><br>
+                        <span class="size-12">Sabados y Domingos: 09:00 AM - 05:00 PM</span>
                     </div>
                 </div>
-                <h3>Llevandote mas alto, con la <br>
-                    seguridad que mereces.</h3>
+                <p class="text-center size-20">
+                    Llevandote mas alto, con la <br>
+                    seguridad que mereces.
+                </p>
             </div>
-            <div class="section-footer">
-                <h2 class="h1-banner">CONTACTANOS / RECLAMOS</h2>
-                <div class="reclamos__footer flex-column">
-                    <div class="flex-row section-reclamos__footer">
-                        <img src="../assets/images/footer/phone.png" alt="icono telephono" width="40">
+            <div class="contactanos-container flex-column align-center box-shadow">
+                <span class="size-20">CONTACTANOS / RECLAMOS</span>
+                <div class="info-container flex-column">
+                    <div class="info-contactanos flex-row align-center">
+                        <img class="icons-contactanos" src="../assets/images/footer/phone.png" alt="Imagen de telefono">
                         <div>
-                            <h4>Télefono:</h4>
-                            <h4>+51 999 666 999</h4>
+                            <span class="size-12">Télefono:</span><br>
+                            <span class="size-12">+51 999 666 999</span>
                         </div>
                     </div>
-                    <div class="flex-row section-reclamos__footer">
-                        <img src="../assets/images/footer/email.png" alt="icono de email" width="40">
+                    <div class="info-contactanos flex-row align-center">
+                        <img class="icons-contactanos" src="../assets/images/footer/ubication.png" alt="Imagen de telefono">
                         <div>
-                            <h4>Correo:</h4>
-                            <h4>luckyaircontactos@gmail.com</h4>
+                            <span class="size-12">Correo:</span><br>
+                            <span class="size-12">luckyaircontactos@gmail.com</span>
                         </div>
                     </div>
-                    <div class="flex-row section-reclamos__footer">
-                        <img src="../assets/images/footer/ubication.png" alt="icono de ubicacion" width="40">
+                    <div class="info-contactanos flex-row align-center">
+                        <img class="icons-contactanos" src="../assets/images/footer/email.png" alt="Imagen de telefono">
                         <div>
-                            <h4>Oficina Central:</h4>
-                            <h4>Av. Aviación 123, Lima - Perú</h4>
+                            <span class="size-12">Oficina Central:</span><br>
+                            <span class="size-12">Av. Siempre Viva 667</span>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="section-footer">
-                <h2 class="h1-banner">ESCRIBENOS</h2>
-                <form action="" class="flex-column align-center form-escribenos__footer">
-                    <input type="text" placeholder="Nombres y Apellidos" required>
-                    <input type="text" placeholder="Asunto" required>
-                    <input type="email" placeholder="Correo electronico" required>
-                    <textarea name="" id="" cols="6" placeholder="Escribe tu mensaje" required></textarea>
-                    <button type="submit" class="flex-column align-center justify-center">CONTACTANOS</button>
+            <div class="escribenos-container flex-column align-center box-shadow">
+                <span class="size-20">ESCRIBENOS</span>
+                <form class="escribenos-form flex-column align-center" action="">
+                    <div id="input-nya" class="label-container border flex-column">
+                        <label for="nombresyapellidos">Nombres y Apellidos:</label>
+                        <div>
+                            <input id="nombresyapellidos" type="text" placeholder="Jose Torres">
+                            <span id="clear-nya" class="clear-btn hidden">❌</span> 
+                        </div>
+                        <small id="mensaje-error-nya" class="mensaje-error hidden text-end">El origen seleccionado es invalido</small>
+                    </div>
+                    <div id="input-asunto" class="label-container border flex-column">
+                        <label for="asunto">Asunto:</label>
+                        <div>
+                            <input id="asunto" type="text" placeholder="Tengo un inconveniente ...">
+                            <span id="clear-asunto" class="clear-btn hidden">❌</span> 
+                        </div>
+                        <small id="mensaje-error-asunto" class="mensaje-error hidden text-end">El origen seleccionado es invalido</small>
+                    </div>
+                    <div id="input-email" class="label-container border flex-column">
+                        <label for="email">Correo electronico:</label>
+                        <div>
+                            <input id="email" type="email" placeholder="example@example.com">
+                            <span id="clear-email" class="clear-btn hidden">❌</span> 
+                        </div>
+                        <small id="mensaje-error-email" class="mensaje-error hidden text-end">El origen seleccionado es invalido</small>
+                    </div>
+                    <div id="input-mensaje" class="label-container border flex-column">
+                        <label for="mensaje">Mensaje:</label>
+                        <div>
+                            <textarea name="mensaje" id="mensaje" placeholder="Escribe tu mensaje ..."></textarea>
+                            <span id="clear-mensaje" class="clear-btn hidden">❌</span> 
+                        </div>
+                        <small id="mensaje-error-mensaje" class="mensaje-error hidden text-end">El origen seleccionado es invalido</small>
+                    </div>
+                    <a class="flex-column align-center justify-center font-bold" href="#">CONTACTANOS</a>
                 </form>
             </div>
         </div>
-        <div class="footer-sub flex-column align-center justify-end">
-            <hr width="90%">
-            <h4>Lucky Air @2025 | Todos los derechos reservados</h4>
+        <div class="footer-sub flex-column align-center justify-center">
+            <hr>
+            <span class="size-12 font-roboto ">Lucky Air @ 2026 | Todos los derechos reservados</span>
         </div>
+        
     </footer>
     <!-- Fin footer -->
 
