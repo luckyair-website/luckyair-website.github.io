@@ -91,3 +91,33 @@
 .login-form__toggle-pass:hover img {
     opacity: 1;
 }
+
+/* ── Mensajes de error ── */
+.login-campo-error {
+    color: #ff6b6b;
+    font-size: var(--font-size-12);
+    font-family: var(--font-family-primary-montserrat);
+    margin-top: 2px;
+}
+
+.login-error-general {
+    background-color: rgba(255, 80, 80, 0.15);
+    border: 1px solid rgba(255, 80, 80, 0.5);
+    border-radius: 8px;
+    padding: 0.6rem 0.9rem;
+    width: 100%;
+}
+
+.login-error-msg {
+    color: #ff6b6b;
+    font-size: var(--font-size-12);
+    font-family: var(--font-family-primary-montserrat);
+}
+
+.login-form_grupo.input-error .login-form_input {
+    border-color: #ff6b6b;
+}
+
+.hidden {
+    display: none !important;
+}

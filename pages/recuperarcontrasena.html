@@ -4,41 +4,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recuperar Contraseña</title>
+    <title>Recuperar Contraseña - Lucky Air</title>
     <link rel="stylesheet" href="../css/main.css">
-    <script>
-    function irPaso(num) {
-        document.querySelectorAll('.paso').forEach(p => p.classList.add('oculto'));
-        document.getElementById('paso-' + num).classList.remove('oculto');
-        document.getElementById('paso-label').textContent = num + ' de 2';
-        document.querySelectorAll('.progreso-segmento').forEach((seg, i) => {
-            seg.classList.toggle('activo', i < num);
-        });
-    }
-
-    function cambiarContrasena() {
-        const nueva = document.getElementById('nueva-pass').value;
-        const confirmar = document.getElementById('conf-nueva-pass').value;
-        if (nueva !== confirmar) {
-            alert('Las contraseñas no coinciden');
-            return;
-        }
-        alert('El cambio fue exitoso');
-        window.location.href = 'login.html';
-    }
-</script>
+    <script type="module" src="../js/main.js" defer></script>
 </head>
 
 <body>
+
     <!-- Inicio Header -->
     <header>
         <nav>
-            <!-- <img class="img-fluid pointer-events" id="menu" src="../assets/images/menu.svg" alt="menu icon"> -->
-
-            <svg id="menu" class="img-fluid" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0,0,256,256">
-                <defs><linearGradient x1="12.373" y1="0.373" x2="34.611" y2="22.611" gradientUnits="userSpaceOnUse" id="color-1_eofQ1g5BaAx6_gr1"><stop offset="0" stop-color="#fdfdfd"></stop><stop offset="1" stop-color="#fdfdfd"></stop></linearGradient><linearGradient x1="12.373" y1="12.373" x2="34.611" y2="34.611" gradientUnits="userSpaceOnUse" id="color-2_eofQ1g5BaAx6_gr2"><stop offset="0" stop-color="#fdfdfd"></stop><stop offset="1" stop-color="#fdfdfd"></stop></linearGradient><linearGradient x1="12.373" y1="24.373" x2="34.611" y2="46.611" gradientUnits="userSpaceOnUse" id="color-3_eofQ1g5BaAx6_gr3"><stop offset="0" stop-color="#fdfdfd"></stop><stop offset="1" stop-color="#fdfdfd"></stop></linearGradient></defs><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.33333,5.33333)"><path d="M42,15h-36c-1.65,0 -3,-1.35 -3,-3v0c0,-1.65 1.35,-3 3,-3h36c1.65,0 3,1.35 3,3v0c0,1.65 -1.35,3 -3,3z" fill="url(#color-1_eofQ1g5BaAx6_gr1)"></path><path d="M42,27h-36c-1.65,0 -3,-1.35 -3,-3v0c0,-1.65 1.35,-3 3,-3h36c1.65,0 3,1.35 3,3v0c0,1.65 -1.35,3 -3,3z" fill="url(#color-2_eofQ1g5BaAx6_gr2)"></path><path d="M42,39h-36c-1.65,0 -3,-1.35 -3,-3v0c0,-1.65 1.35,-3 3,-3h36c1.65,0 3,1.35 3,3v0c0,1.65 -1.35,3 -3,3z" fill="url(#color-3_eofQ1g5BaAx6_gr3)"></path></g></g>
+            <svg id="menu" class="img-fluid" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24"
+                viewBox="0,0,256,256">
+                <defs>
+                    <linearGradient x1="12.373" y1="0.373" x2="34.611" y2="22.611" gradientUnits="userSpaceOnUse"
+                        id="color-1_eofQ1g5BaAx6_gr1">
+                        <stop offset="0" stop-color="#fdfdfd"></stop>
+                        <stop offset="1" stop-color="#fdfdfd"></stop>
+                    </linearGradient>
+                    <linearGradient x1="12.373" y1="12.373" x2="34.611" y2="34.611" gradientUnits="userSpaceOnUse"
+                        id="color-2_eofQ1g5BaAx6_gr2">
+                        <stop offset="0" stop-color="#fdfdfd"></stop>
+                        <stop offset="1" stop-color="#fdfdfd"></stop>
+                    </linearGradient>
+                    <linearGradient x1="12.373" y1="24.373" x2="34.611" y2="46.611" gradientUnits="userSpaceOnUse"
+                        id="color-3_eofQ1g5BaAx6_gr3">
+                        <stop offset="0" stop-color="#fdfdfd"></stop>
+                        <stop offset="1" stop-color="#fdfdfd"></stop>
+                    </linearGradient>
+                </defs>
+                <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                    stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                    font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                    style="mix-blend-mode: normal">
+                    <g transform="scale(5.33333,5.33333)">
+                        <path
+                            d="M42,15h-36c-1.65,0 -3,-1.35 -3,-3v0c0,-1.65 1.35,-3 3,-3h36c1.65,0 3,1.35 3,3v0c0,1.65 -1.35,3 -3,3z"
+                            fill="url(#color-1_eofQ1g5BaAx6_gr1)"></path>
+                        <path
+                            d="M42,27h-36c-1.65,0 -3,-1.35 -3,-3v0c0,-1.65 1.35,-3 3,-3h36c1.65,0 3,1.35 3,3v0c0,1.65 -1.35,3 -3,3z"
+                            fill="url(#color-2_eofQ1g5BaAx6_gr2)"></path>
+                        <path
+                            d="M42,39h-36c-1.65,0 -3,-1.35 -3,-3v0c0,-1.65 1.35,-3 3,-3h36c1.65,0 3,1.35 3,3v0c0,1.65 -1.35,3 -3,3z"
+                            fill="url(#color-3_eofQ1g5BaAx6_gr3)"></path>
+                    </g>
+                </g>
             </svg>
-            
+
             <a class="logo-container" href="/">
                 <img class="img-fluid" src="../assets/images/header/logo.svg" alt="logo empresa">
             </a>
@@ -47,16 +59,16 @@
                 <li><a href="vuelos.html">Vuelos</a></li>
                 <li><a href="beneficios.html">Beneficios</a></li>
             </ul>
-            
+
             <img class="img-fluid pointer-events" id="theme-bg" src="../assets/images/header/sol.svg" alt="sol icon">
-            <a class="boton-login font-poppins size-12 font-medium " href="login.html" >
+            <a class="boton-login font-poppins size-12 font-medium" href="login.html">
                 Iniciar Sesion
             </a>
         </nav>
     </header>
     <!-- Fin Header -->
 
-    <!-- Inicio Main -->
+    <!-- INICIO MAIN -->
     <main class="recuperar-main flex-column align-center">
 
         <!-- Contador de pasos -->
@@ -73,88 +85,94 @@
 
             <!-- Logo -->
             <div class="registro-logo flex-row align-center justify-center">
-                <span class="logo-avion">✈</span>
+                <span class="logo-avion">✈️</span>
                 <span class="font-poppins bold text-contenido-18">
                     Lucky <span class="logo-air">Air</span>
                 </span>
             </div>
 
-            <!-- ======= PASO 1: Recuperar ======= -->
+            <!-- PASO 1 -->
             <div class="paso" id="paso-1">
-
                 <h2 class="font-poppins bold text-contenido-18 text-center recuperar-titulo">
                     Recuperar Contraseña
                 </h2>
 
-                <div class="campo-grupo flex-column">
-                    <label class="font-montserrat bold text-contenido-14" for="correo">
+                <div class="campo-grupo flex-column" id="grupo-correo-rec">
+                    <label class="font-montserrat bold text-contenido-14" for="correo-rec">
                         Correo Electrónico:
                     </label>
-                    <input class="registro-input font-roboto regular text-contenido-14" type="email" id="correo"
-                        placeholder="example@example.com" required />
+                    <input class="registro-input font-roboto regular text-contenido-14" type="email" id="correo-rec"
+                        placeholder="example@example.com" />
+                    <small class="login-campo-error hidden" id="error-correo-rec"></small>
                 </div>
 
-                <button class="btn-registrar font-montserrat bold text-contenido-14" onclick="irPaso(2)">
+                <button type="button" class="btn-registrar font-montserrat bold text-contenido-14"
+                    id="btn-enviar-codigo">
                     Enviar enlace de recuperación
                 </button>
 
                 <hr class="registro-hr">
 
                 <div class="recuperar-nav flex-row justify-center">
-                    <a href="login.html" class="btn-recuperar-nav font-montserrat bold text-contenido-14">
-                        INICIAR SESION
+                    <a href="#" id="link-ir-login" class="btn-recuperar-nav font-montserrat bold text-contenido-14">
+                        INICIAR SESIÓN
                     </a>
-                    <a href="registro.html" class="btn-recuperar-nav font-montserrat bold text-contenido-14">
-                        REGISTRATE
+                    <a href="#" id="link-ir-registro" class="btn-recuperar-nav font-montserrat bold text-contenido-14">
+                        REGÍSTRATE
                     </a>
                 </div>
-
             </div>
-            <!-- ======= FIN PASO 1 ======= -->
+            <!-- FIN PASO 1 -->
 
-            <!-- ======= PASO 2: Restablecer ======= -->
+            <!-- PASO 2 -->
             <div class="paso oculto" id="paso-2">
-
                 <h2 class="font-poppins bold text-contenido-18 text-center recuperar-titulo">
                     Restablecer Contraseña
                 </h2>
 
-                <div class="campo-grupo flex-column">
+                <div class="campo-grupo flex-column" id="grupo-codigo">
                     <label class="font-montserrat bold text-contenido-14" for="codigo">
                         Código de Verificación:
                     </label>
                     <input class="registro-input font-roboto regular text-contenido-14" type="text" id="codigo"
-                        placeholder="AXCD-58-69" required />
+                        placeholder="AXCD-58-69" maxlength="9" />
+                    <small class="login-campo-error hidden" id="error-codigo"></small>
                 </div>
 
-                <div class="campo-grupo flex-column">
+                <div class="campo-grupo flex-column" id="grupo-nueva-pass">
                     <label class="font-montserrat bold text-contenido-14" for="nueva-pass">
                         Nueva Contraseña:
                     </label>
                     <input class="registro-input font-roboto regular text-contenido-14" type="password" id="nueva-pass"
-                        placeholder="*********" minlength="8" required />
+                        placeholder="Mínimo 8 caracteres" minlength="8" />
+                    <small class="login-campo-error hidden" id="error-nueva-pass"></small>
                 </div>
 
-                <div class="campo-grupo flex-column">
+                <div class="campo-grupo flex-column" id="grupo-conf-pass">
                     <label class="font-montserrat bold text-contenido-14" for="conf-nueva-pass">
                         Confirmar Contraseña:
                     </label>
                     <input class="registro-input font-roboto regular text-contenido-14" type="password"
-                        id="conf-nueva-pass" placeholder="*********" minlength="8" required />
+                        id="conf-nueva-pass" placeholder="Mínimo 8 caracteres" minlength="8" />
+                    <small class="login-campo-error hidden" id="error-conf-pass"></small>
                 </div>
 
-                <button class="btn-registrar font-montserrat bold text-contenido-14" onclick="cambiarContrasena()">
+                <!-- Mensaje éxito -->
+                <div class="recuperar-exito hidden" id="recuperar-exito">
+                    <small>✅ Contraseña actualizada. Redirigiendo a login...</small>
+                </div>
+
+                <button type="button" class="btn-registrar font-montserrat bold text-contenido-14"
+                    id="btn-cambiar-pass">
                     Cambiar contraseña
                 </button>
-
             </div>
-            <!-- ======= FIN PASO 2 ======= -->
+            <!-- FIN PASO 2 -->
 
         </div><!-- fin recuperar-card -->
 
     </main>
-
-    <!-- Fin Main -->
+    <!-- FIN MAIN -->
 
     <!-- Inicio Footer -->
     <footer>
@@ -166,10 +184,10 @@
                         <img class="icons-redes" src="../assets/images/footer/facebook.png" alt="imagen de facebook">
                     </a>
                     <a href="https://www.instagram.com/" target="_blank">
-                        <img class="icons-redes" src="../assets/images/footer/instagram.png" alt="imagen de facebook">
+                        <img class="icons-redes" src="../assets/images/footer/instagram.png" alt="imagen de instagram">
                     </a>
                     <a href="https://www.x.com/" target="_blank">
-                        <img class="icons-redes" src="../assets/images/footer/x.png" alt="imagen de facebook">
+                        <img class="icons-redes" src="../assets/images/footer/x.png" alt="imagen de x">
                     </a>
                 </div>
                 <span class="size-20">HORARIO DE ATENCIÓN</span>
@@ -196,14 +214,15 @@
                         </div>
                     </div>
                     <div class="info-contactanos flex-row align-center">
-                        <img class="icons-contactanos" src="../assets/images/footer/ubication.png" alt="Imagen de telefono">
+                        <img class="icons-contactanos" src="../assets/images/footer/ubication.png"
+                            alt="Imagen de ubicacion">
                         <div>
                             <span class="size-12">Correo:</span><br>
                             <span class="size-12">luckyaircontactos@gmail.com</span>
                         </div>
                     </div>
                     <div class="info-contactanos flex-row align-center">
-                        <img class="icons-contactanos" src="../assets/images/footer/email.png" alt="Imagen de telefono">
+                        <img class="icons-contactanos" src="../assets/images/footer/email.png" alt="Imagen de email">
                         <div>
                             <span class="size-12">Oficina Central:</span><br>
                             <span class="size-12">Av. Siempre Viva 667</span>
@@ -218,33 +237,34 @@
                         <label for="nombresyapellidos">Nombres y Apellidos:</label>
                         <div>
                             <input id="nombresyapellidos" type="text" placeholder="Jose Torres">
-                            <span id="clear-nya" class="clear-btn hidden">❌</span> 
+                            <span id="clear-nya" class="clear-btn hidden">❌</span>
                         </div>
-                        <small id="mensaje-error-nya" class="mensaje-error hidden text-end">El origen seleccionado es invalido</small>
+                        <small id="mensaje-error-nya" class="mensaje-error hidden text-end">Ingreso no válido</small>
                     </div>
                     <div id="input-asunto" class="label-container border flex-column">
                         <label for="asunto">Asunto:</label>
                         <div>
                             <input id="asunto" type="text" placeholder="Tengo un inconveniente ...">
-                            <span id="clear-asunto" class="clear-btn hidden">❌</span> 
+                            <span id="clear-asunto" class="clear-btn hidden">❌</span>
                         </div>
-                        <small id="mensaje-error-asunto" class="mensaje-error hidden text-end">El origen seleccionado es invalido</small>
+                        <small id="mensaje-error-asunto" class="mensaje-error hidden text-end">Ingreso no válido</small>
                     </div>
                     <div id="input-email" class="label-container border flex-column">
                         <label for="email">Correo electronico:</label>
                         <div>
                             <input id="email" type="email" placeholder="example@example.com">
-                            <span id="clear-email" class="clear-btn hidden">❌</span> 
+                            <span id="clear-email" class="clear-btn hidden">❌</span>
                         </div>
-                        <small id="mensaje-error-email" class="mensaje-error hidden text-end">El origen seleccionado es invalido</small>
+                        <small id="mensaje-error-email" class="mensaje-error hidden text-end">Ingreso no válido</small>
                     </div>
                     <div id="input-mensaje" class="label-container border flex-column">
                         <label for="mensaje">Mensaje:</label>
                         <div>
                             <textarea name="mensaje" id="mensaje" placeholder="Escribe tu mensaje ..."></textarea>
-                            <span id="clear-mensaje" class="clear-btn hidden">❌</span> 
+                            <span id="clear-mensaje" class="clear-btn hidden">❌</span>
                         </div>
-                        <small id="mensaje-error-mensaje" class="mensaje-error hidden text-end">El origen seleccionado es invalido</small>
+                        <small id="mensaje-error-mensaje" class="mensaje-error hidden text-end">Ingreso no
+                            válido</small>
                     </div>
                     <a class="flex-column align-center justify-center font-bold" href="#">CONTACTANOS</a>
                 </form>
@@ -252,9 +272,8 @@
         </div>
         <div class="footer-sub flex-column align-center justify-center">
             <hr>
-            <span class="size-12 font-roboto ">Lucky Air @ 2026 | Todos los derechos reservados</span>
+            <span class="size-12 font-roboto">Lucky Air @ 2026 | Todos los derechos reservados</span>
         </div>
-        
     </footer>
     <!-- Fin footer -->
 

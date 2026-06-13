@@ -1,8 +1,14 @@
-/* Responsive recuperar contrasena */
+/* Responsive recuperar contraseña */
 
 @media (max-width: 768px) {
+    .recuperar-main {
+        padding: 20px 12px 50px;
+        width: 100%;
+    }
+
     .recuperar-card {
         padding: 20px 18px;
+        max-width: 100%;
     }
 
     .recuperar-nav {
@@ -12,6 +18,7 @@
 
     .btn-recuperar-nav {
         width: 100%;
+        text-align: center;
     }
 }
 
@@ -26,5 +33,25 @@
 
     .recuperar-titulo {
         font-size: var(--font-size-16);
+    }
+
+    .registro-input {
+        padding: 8px 10px;
+        font-size: var(--font-size-12);
+    }
+
+    .btn-registrar {
+        padding: 11px;
+        font-size: var(--font-size-12);
+    }
+}
+
+@media (max-width: 360px) {
+    .recuperar-card {
+        padding: 12px 10px;
+    }
+
+    .recuperar-nav {
+        gap: 8px;
     }
 }
