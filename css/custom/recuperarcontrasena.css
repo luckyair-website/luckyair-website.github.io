@@ -1,4 +1,4 @@
-/* Estilos personalizados recuperar contraseña */
+/* Estilos personalizados recuperar contrasena */
 
 /* Tarjeta — mismo estilo glassmorphism que registro */
 .recuperar-card {
@@ -13,4 +13,32 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+/* ── Mensajes de error y éxito ── */
+.login-campo-error {
+    color: #ff6b6b;
+    font-size: var(--font-size-12);
+    font-family: var(--font-family-primary-montserrat);
+    margin-top: 2px;
+}
+
+.recuperar-card .campo-grupo.input-error .registro-input {
+    border: 1.5px solid #ff6b6b;
+}
+
+.recuperar-exito {
+    background-color: rgba(80, 200, 120, 0.15);
+    border: 1px solid rgba(80, 200, 120, 0.5);
+    border-radius: 8px;
+    padding: 0.6rem 0.9rem;
+    color: #50c878;
+    font-size: var(--font-size-12);
+    font-family: var(--font-family-primary-montserrat);
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.hidden {
+    display: none !important;
 }
