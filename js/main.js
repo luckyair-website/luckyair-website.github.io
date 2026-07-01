@@ -18,6 +18,9 @@ import { enableDragScroll } from "./utils/dragScrollSlider.js";
 import { aplicarTemaGuardado, guardarTema } from "./utils/themeStorage.js";
 import { buscarVuelos2 } from "./utils/buscarvuelos.js";
 import { mostrarConfirmacionPago } from "./utils/confirmar-pago.js";
+import { usuarioFrecuente, nuevoUsuario } from "./utils/pago.js";
+import { estadosJson } from "./utils/estadosJson.js";
+
 
 
 // Forms
@@ -34,11 +37,11 @@ document.addEventListener("DOMContentLoaded", () => {
         aplicarTemaGuardado();
         themeMain();
     // Origen
-        cargarOpciones("lista-origen", destinos);
+        cargarOpciones("lista-origen");
         inputBuscar("origen", "clear-origen", "buscar-origen");
         validarInputText("origen", "mensaje-error-origen", "clear-origen", "buscar-origen");
     // Destino
-        cargarOpciones("lista-destinos", destinos);
+        cargarOpciones("lista-destinos");
         inputBuscar("destino", "clear-destinos", "buscar-destino");
         validarInputText("destino", "mensaje-error-destinos", "clear-destinos", "buscar-destino");
     // Fechas
@@ -49,6 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Ofertas cards
         renderCards();
         enableDragScroll("cards-container");
+        
     //beneficios cards
         beneficiosCards();
     // Footer form
@@ -61,11 +65,11 @@ document.addEventListener("DOMContentLoaded", () => {
         buscarVuelos();
         mostrarInfoVuelos();
         mostrarConfirmacionPago();
+        usuarioFrecuente("buttonUsuarioFrecuente");
+        nuevoUsuario("pagar-nuevo-usuario");
 
-       
 
-        // ⚠️ ESTE es tu data (NO la de tu compa)
-        console.log(destinos2);
+
 
         // TU sistema de vuelos
         buscarVuelos2(destinos2);

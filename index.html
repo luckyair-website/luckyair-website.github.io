@@ -98,8 +98,9 @@
             </div>
         </section>
         <section class="ofertas-destacadas flex-column">
-            <div class="hero-tittle flex-row align-center justify-between">
+            <div class="hero-tittle flex-column align-center justify-between">
                 <span class="size-18 color-accent font-bold">Ofertas destacadas </span>
+                <p id="estados-card" class="hidden size-12">cargando...</p>
             </div>
             <div class="cards-container flex-row align-center ">
                 <!-- JS insertará aquí todos los cards -->
@@ -117,7 +118,7 @@
         <section class="beneficios-container flex-row">
             <div class="beneficios-card box-shadow">
                 <div class="hero-tittle flex-column align-center justify-between">
-                    <span class="size-18 color-accent font-bold ">¿Por qué volar con Lucky Air?</span>
+                    <span class="size-18 color-accent font-bold text-center">¿Por qué volar con Lucky Air?</span>
                 </div>
                 <div class="beneficios-main flex-column align-center">
                     <img src="assets/images/others/puntualidad.png" alt="Imagen de puntualidad">
@@ -127,7 +128,7 @@
             </div>
             <div class="beneficios-card box-shadow">
                 <div class="hero-tittle flex-column align-center justify-between">
-                    <span class="size-18 color-accent font-bold">¿Por qué volar con Lucky Air?</span>
+                    <span class="size-18 color-accent font-bold text-center">¿Por qué volar con Lucky Air?</span>
                 </div>
                 <div class="beneficios-main flex-column align-center">
                     <img src="assets/images/others/ahorro.png" alt="Imagen de ahorro">
@@ -137,7 +138,7 @@
             </div>
             <div class="beneficios-card box-shadow">
                 <div class="hero-tittle flex-column align-center justify-between">
-                    <span class="size-18 color-accent font-bold">¿Por qué volar con Lucky Air?</span>
+                    <span class="size-18 color-accent font-bold text-center">¿Por qué volar con Lucky Air?</span>
                 </div>
                 <div class="beneficios-main flex-column align-center">
                     <img src="assets/images/others/servicio-amable.png" alt="Imagen de servicio amable">
@@ -148,7 +149,7 @@
         </section>
         <section class="resenas-container flex-column">
             <div class="hero-tittle flex-column align-center justify-between">
-                <span class="size-18 color-accent font-bold">Lo que dicen nuestros pasajeros.</span>
+                <span class="size-18 color-accent font-bold text-center">Lo que dicen nuestros pasajeros.</span>
             </div>
             <div class="resenas-main flex-row">
                 <div class="resenas-card box-shadow">
@@ -261,11 +262,11 @@
             </div>
             <div class="escribenos-container flex-column align-center box-shadow">
                 <span class="size-20">ESCRIBENOS</span>
-                <form class="escribenos-form flex-column align-center" action="">
+                <form id="escribenos-form" class="escribenos-form flex-column align-center" action="">
                     <div id="input-nya" class="label-container border flex-column">
                         <label for="nombresyapellidos">Nombres y Apellidos:</label>
                         <div>
-                            <input id="nombresyapellidos" type="text" placeholder="Jose Torres">
+                            <input id="nombresyapellidos" type="text" placeholder="Jose Torres" required>
                             <span id="clear-nya" class="clear-btn hidden">❌</span> 
                         </div>
                         <small id="mensaje-error-nya" class="mensaje-error hidden text-end">El origen seleccionado es invalido</small>
@@ -273,7 +274,7 @@
                     <div id="input-asunto" class="label-container border flex-column">
                         <label for="asunto">Asunto:</label>
                         <div>
-                            <input id="asunto" type="text" placeholder="Tengo un inconveniente ...">
+                            <input id="asunto" type="text" placeholder="Tengo un inconveniente ..." required>
                             <span id="clear-asunto" class="clear-btn hidden">❌</span> 
                         </div>
                         <small id="mensaje-error-asunto" class="mensaje-error hidden text-end">El origen seleccionado es invalido</small>
@@ -281,7 +282,7 @@
                     <div id="input-email" class="label-container border flex-column">
                         <label for="email">Correo electronico:</label>
                         <div>
-                            <input id="email" type="email" placeholder="example@example.com">
+                            <input id="email" type="email" placeholder="example@example.com" required>
                             <span id="clear-email" class="clear-btn hidden">❌</span> 
                         </div>
                         <small id="mensaje-error-email" class="mensaje-error hidden text-end">El origen seleccionado es invalido</small>
@@ -289,12 +290,13 @@
                     <div id="input-mensaje" class="label-container border flex-column">
                         <label for="mensaje">Mensaje:</label>
                         <div>
-                            <textarea name="mensaje" id="mensaje" placeholder="Escribe tu mensaje ..."></textarea>
+                            <textarea name="mensaje" id="mensaje" placeholder="Escribe tu mensaje ..." required></textarea>
                             <span id="clear-mensaje" class="clear-btn hidden">❌</span> 
                         </div>
                         <small id="mensaje-error-mensaje" class="mensaje-error hidden text-end">El origen seleccionado es invalido</small>
                     </div>
-                    <a class="flex-column align-center justify-center font-bold" href="#">CONTACTANOS</a>
+                    <button id="a-submit" class="flex-column align-center justify-center font-bold">CONTACTANOS</button>
+                    
                 </form>
             </div>
         </div>

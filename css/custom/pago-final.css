@@ -1,32 +1,24 @@
 /* ================= CONFIRMACION ================= */
 
 .confirmation-section {
-    min-height: 100vh;
-    background: #001026;
-
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-
-    padding-top: 120px;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-bottom: 40px;
+    align-items: center;
+    margin: 15rem 0;
+    height: 100%;
+    width: 100%;
 }
 
 /* CUADRO BLANCO */
 
 .confirmation-card {
     background: #f5f5f5;
-
     width: 100%;
     max-width: 520px;
-
     border-radius: 25px;
-
     padding: 35px 30px;
-
     text-align: center;
+    padding: 15rem 4rem;
 }
 
 /* ICONO */
@@ -220,3 +212,19 @@
     transform: translateY(-3px);
 }
 
+@media (min-width: 425px)  {
+    .confirmation-section {
+        margin: 0 0;
+    }
+    .confirmation-card {
+        padding: 5rem 4rem;
+    }
+}
+
+
+@media (min-width: 768px)  {
+    .confirmation-section {
+        margin: 8rem 0;
+    }
+
+}

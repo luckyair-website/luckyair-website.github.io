@@ -12,13 +12,17 @@
     flex: 0 0 95%; /* mobile: 1 card */
     scroll-snap-align: start;
     /* border: 2px solid var(--font-color-primary); */
-    height: 18rem;
+    height: 20rem;
     width: 90%;
     background: 041936;
     border-radius: 20px;
     color: #041936;
     box-shadow: 0 2px 8px rgba(0,0,0,0.5);
     /* box-shadow: 0 4px 12px rgba(255,255,255,0.1); */
+}
+
+.dest-ori{
+    height: 4rem;
 }
 
 .img-container {

@@ -14,7 +14,7 @@
 <body>
 <!-- inicio Header -->
 <header>
-        <nav>
+    <nav>
             <!-- <img class="img-fluid pointer-events" id="menu" src="../assets/images/menu.svg" alt="menu icon"> -->
 
             <svg id="menu" class="img-fluid" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0,0,256,256">
@@ -34,74 +34,66 @@
             <a class="boton-login font-poppins size-12 font-medium " href="pages/login.html" >
                 Iniciar Sesion
             </a>
-        </nav>
-    </header>
+    </nav>
+</header>
     <!-- Fin Header -->
-
-<main class="main-confirmar">
-
-    <section class="card-confirmacion">
-
+<main>
+    <section class="card-confirmacion box-shadow">
         <!-- HEADER -->
         <div class="top-confirmacion">
             <img src="../assets/images/header/logo.webp" alt="Logo avión">
-
-            <h1 class="text-encabezado-32 bold font-poppins">
+            <h1 class="size-28 bold font-poppins">
                 RESUMEN DE TU COMPRA SEGURA
             </h1>
         </div>
 
         <div class="contenido-confirmacion">
-
             <!-- DETALLES -->
             <section class="detalle-section">
-
                 <div class="titulo-section">
-                    <img src="../assets/images/header/logo.webp" alt="Plane">
+                    <!-- <img src="../assets/images/header/logo.webp" alt="Plane"> -->
 
-                    <h2 class="text-encabezado-24 medium font-poppins">
+                    <h2 class="size-24 text-center font-poppins">
                         Detalles del Viaje
                     </h2>
                 </div>
-
                 <!-- RUTA -->
                 <div class="ruta-vuelo">
-                    <h2 id="ruta-vuelo" class="text-encabezado-40 bold font-poppins">
-                        ---
+                    <h2 id="ruta-vuelo" class="font-poppins size-14">
+                        <span id="content-origen"></span>
+                        <span> - </span>
+                        <span id="content-destino"></span>
                     </h2>
                 </div>
-
                 <!-- INFO -->
                 <div class="info-vuelo-grid">
 
                     <div class="item-info">
                         <span>📅</span>
                         <div>
-                            <p>Fechas</p>
-                            <strong id="fechas-vuelo">---</strong>
+                            <p class="size-20 font-bold">Fechas</p>
+                            <strong id="content-fecha">---</strong>
                         </div>
                     </div>
 
                     <div class="item-info">
                         <span>✈</span>
                         <div>
-                            <p>Vuelo</p>
-                            <strong>LK2345</strong>
+                            <p class="size-20 font-bold">Vuelo</p>
+                            <strong id="content-numero-vuelo"></strong>
                         </div>
                     </div>
 
                     <div class="item-info">
                         <span>🕒</span>
                         <div>
-                            <p>Duración</p>
-                            <strong>1h 20m</strong>
+                            <p class="size-20 font-bold">Duración</p>
+                            <strong id="content-duracion"></strong>
                         </div>
                     </div>
 
                 </div>
-
             </section>
-
             <!-- PASAJERO -->
             <section class="fila-info">
                 <div class="info-lateral">
@@ -111,23 +103,20 @@
 
                 <strong id="pasajero">---</strong>
             </section>
-
             <!-- PAGO -->
             <section class="fila-info">
                 <div class="info-lateral">
                     <span>💳</span>
                     <h3>Pago</h3>
                 </div>
-
-                <strong id="tarjeta">---</strong>
+                <strong id="metodo" class="content">---</strong>
+                <strong id="tarjeta" class="content">---</strong>
             </section>
-
             <!-- TOTAL -->
             <section class="total-confirmacion">
                 <h3>TOTAL</h3>
-                <h2 id="total-pago" class="precio-total"> </h2>
+                <h2 id="total-pago"> </h2>
             </section>
-
             <!-- BOTONES -->
             <div class="botones-confirmacion">
 
@@ -144,17 +133,11 @@
                 </a>
 
             </div>
-
         </div>
-
     </section>
-
 </main>
-
-</body>
-<!-- Inicio footer -->
  <!-- Inicio Footer -->
-    <footer>
+<footer>
         <div class="footer-main flex-column align-center">
             <div class="redes-container flex-column align-center box-shadow">
                 <span class="size-20">SIGUENOS EN REDES</span>
@@ -183,7 +166,7 @@
                 </p>
             </div>
             <div class="contactanos-container flex-column align-center box-shadow">
-                <span class="size-20">CONTACTANOS / RECLAMOS</span>
+                <span class="size-20 text-center">CONTACTANOS / RECLAMOS</span>
                 <div class="info-container flex-column">
                     <div class="info-contactanos flex-row align-center">
                         <img class="icons-contactanos" src="../assets/images/footer/phone.png" alt="Imagen de telefono">
@@ -215,7 +198,7 @@
                         <label for="nombresyapellidos">Nombres y Apellidos:</label>
                         <div>
                             <input id="nombresyapellidos" type="text" placeholder="Jose Torres">
-                            <span id="clear-nya" class="clear-btn hidden">❌</span>
+                            <span id="clear-nya" class="clear-btn hidden">❌</span> 
                         </div>
                         <small id="mensaje-error-nya" class="mensaje-error hidden text-end">El origen seleccionado es invalido</small>
                     </div>
@@ -223,7 +206,7 @@
                         <label for="asunto">Asunto:</label>
                         <div>
                             <input id="asunto" type="text" placeholder="Tengo un inconveniente ...">
-                            <span id="clear-asunto" class="clear-btn hidden">❌</span>
+                            <span id="clear-asunto" class="clear-btn hidden">❌</span> 
                         </div>
                         <small id="mensaje-error-asunto" class="mensaje-error hidden text-end">El origen seleccionado es invalido</small>
                     </div>
@@ -231,7 +214,7 @@
                         <label for="email">Correo electronico:</label>
                         <div>
                             <input id="email" type="email" placeholder="example@example.com">
-                            <span id="clear-email" class="clear-btn hidden">❌</span>
+                            <span id="clear-email" class="clear-btn hidden">❌</span> 
                         </div>
                         <small id="mensaje-error-email" class="mensaje-error hidden text-end">El origen seleccionado es invalido</small>
                     </div>
@@ -239,19 +222,20 @@
                         <label for="mensaje">Mensaje:</label>
                         <div>
                             <textarea name="mensaje" id="mensaje" placeholder="Escribe tu mensaje ..."></textarea>
-                            <span id="clear-mensaje" class="clear-btn hidden">❌</span>
+                            <span id="clear-mensaje" class="clear-btn hidden">❌</span> 
                         </div>
                         <small id="mensaje-error-mensaje" class="mensaje-error hidden text-end">El origen seleccionado es invalido</small>
                     </div>
-                    <button type="submit" class="flex-column align-center justify-center font-bold">CONTACTANOS</button>
+                    <button id="a-submit" class="flex-column align-center justify-center font-bold">CONTACTANOS</button>
                 </form>
             </div>
         </div>
         <div class="footer-sub flex-column align-center justify-center">
             <hr>
-            <span class="size-12 font-roboto">Lucky Air @ 2026 | Todos los derechos reservados</span>
+            <span class="size-12 font-roboto ">Lucky Air @ 2026 | Todos los derechos reservados</span>
         </div>
-    </footer>
-    <!-- Fin footer -->
-
+        
+</footer>
+<!-- Fin footer -->
+</body>
 </html>

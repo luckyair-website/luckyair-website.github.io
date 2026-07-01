@@ -3,18 +3,8 @@
 ========================= */
 .main-confirmar{
     width:100%;
+    /* padding:160px 20px 100px; */
 
-    min-height:100vh;
-
-    padding:160px 20px 100px;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    flex-direction:column;
 }
 
 /* =========================
@@ -23,10 +13,9 @@
 
 .card-confirmacion{
     width:100%;
-
-    max-width:450px;
-
     overflow:hidden;
+    margin: 5rem 0;
+    color:#001b4e;
 }
 
 /* =========================
@@ -43,6 +32,11 @@
     align-items:center;
 
     gap:18px;
+}
+
+.top-confirmacion img {
+    width: 8rem;
+    height: auto;
 }
 
 /* =========================
@@ -75,17 +69,11 @@
 
 .titulo-section{
     display:grid;
-
-    grid-template-columns:40px 1fr;
-
+    grid-template-columns:1 1fr;
     align-items:center;
-
     gap:14px;
 }
 
-.titulo-section img{
-    width:35px;
-}
 
 /* RUTA */
 
@@ -97,6 +85,7 @@
     align-items:center;
 
     text-align:center;
+    color: #8B0000;
 }
 
 /* =========================
@@ -105,36 +94,27 @@
 
 .info-vuelo-grid{
     display:flex;
-
     justify-content:center;
-
     align-items:center;
-
     gap:35px;
-
     padding-bottom:16px;
-
     border-bottom:2px solid #9e9e9e;
-
     text-align:center;
-
     flex-wrap:wrap;
 }
 
 .item-info{
     display:flex;
-
     align-items:center;
-
     gap:10px;
+    justify-content: center;
 }
 
 .item-info div{
     display:flex;
-
     flex-direction:column;
-
     align-items:center;
+    width: 6rem;
 }
 
 .icono-mini{
@@ -224,9 +204,9 @@
         padding:24px;
     }
 
-    .ruta-vuelo h2{
+    /* .ruta-vuelo h2{
         font-size:28px;
-    }
+    } */
 
     .info-vuelo-grid{
         flex-direction:column;

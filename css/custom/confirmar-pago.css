@@ -2,22 +2,16 @@
    CONFIRMAR PAGO CUSTOM
 ========================= */
 
-.main-confirmar{
-    background:#001b4e;
-}
 
 /* =========================
    CARD
 ========================= */
 
 .card-confirmacion{
-    background:#f3f3f3;
-
+    background: #fff;
     border-radius:24px;
-
-    border:1px solid #d4d4d4;
-
-    box-shadow:0 12px 30px rgba(0,0,0,0.25);
+    /* border:1px solid #d4d4d4;
+    box-shadow:0 12px 30px rgba(0,0,0,0.25); */
 }
 
 /* =========================
@@ -35,12 +29,7 @@
 }
 
 .top-confirmacion h1{
-    color:#001b4e;
-
-    font-size:18px;
-
     font-weight:700;
-
     letter-spacing:0.3px;
 }
 
@@ -50,19 +39,13 @@
 
 .titulo-section h2{
     color:#001b4e;
-
-    font-size:20px;
-
     font-weight:700;
+    width: 100%;
 }
 
 .ruta-vuelo h2{
-    color:#001b4e;
-
-    font-size:34px;
-
+    /* color:#001b4e; */
     font-weight:800;
-
     letter-spacing:1px;
 }
 
@@ -72,27 +55,22 @@
 
 .item-info{
     color:#001b4e;
+    width: 100%;
 }
 
 .item-info span{
     display:block;
-
-    font-size:15px;
-
+    font-size:20px;
     color:#4b5563;
-
     margin-bottom:4px;
 }
 
 .item-info strong{
     display:block;
-
-    font-size:16px;
-
-    color:#001b4e;
-
+    color: #8B0000;
     font-weight:700;
 }
+
 
 /* =========================
    FILAS
@@ -107,10 +85,8 @@
 }
 
 .fila-info strong{
-    color:#001b4e;
-
+    color: #8B0000;
     font-size:18px;
-
     font-weight:700;
 }
 
@@ -128,6 +104,14 @@
 
 .total-confirmacion h3{
     color:#001b4e;
+
+    font-size:18px;
+
+    font-weight:700;
+}
+
+.total-confirmacion h2{
+    color: #8B0000;
 
     font-size:18px;
 

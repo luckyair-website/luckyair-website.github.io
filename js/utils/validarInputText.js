@@ -54,7 +54,7 @@ export function validarInputText (inputId, mensajeId, clearButonId, inputContain
     });
 
     function capitalizar(texto) {
-    return texto.charAt(0).toUpperCase() + texto.slice(1);
-}
+        return texto.charAt(0).toUpperCase() + texto.slice(1);
+    }
 
 }

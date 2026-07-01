@@ -1,0 +1,234 @@
+{
+    "ofertas": [
+    {
+        "origen": "Shanghái",
+        "destino": "Pekín (Beijing)",
+        "costo": "$1200",
+        "descripcion": "Capital de China, rica en historia.",
+        "imagen": "../../assets/images/ofertas/pekin.webp",
+        "fecha": "CURRENT_DATE",
+        "numeroVuelo": "CN1001",
+        "duracion": "2h 30m"
+    },
+    {
+        "origen": "Guangzhou",
+        "destino": "Xi’an",
+        "costo": "$950",
+        "descripcion": "Famosa por los Guerreros de Terracota.",
+        "imagen": "../../assets/images/ofertas/xian.jpg",
+        "fecha": "CURRENT_DATE",
+        "numeroVuelo": "CN1002",
+        "duracion": "2h 10m"
+    },
+    {
+        "origen": "Pekín (Beijing)",
+        "destino": "Shanghái",
+        "costo": "$1100",
+        "descripcion": "Ciudad moderna y vibrante.",
+        "imagen": "../../assets/images/ofertas/Shanghái.webp",
+        "fecha": "CURRENT_DATE",
+        "numeroVuelo": "CN1003",
+        "duracion": "2h 45m"
+    },
+    {
+        "origen": "Xi’an",
+        "destino": "Guangzhou",
+        "costo": "$900",
+        "descripcion": "Centro comercial y cultural del sur de China.",
+        "imagen": "../../assets/images/ofertas/Guangzhou.jpg",
+        "fecha": "CURRENT_DATE",
+        "numeroVuelo": "CN1004",
+        "duracion": "2h 20m"
+    },
+    {
+        "origen": "Chengdu",
+        "destino": "Shenzhen",
+        "costo": "$980",
+        "descripcion": "Ciudad tecnológica y moderna cerca de Hong Kong.",
+        "imagen": "../../assets/images/ofertas/Shenzhen.jpg",
+        "fecha": "CURRENT_DATE",
+        "numeroVuelo": "CN1005",
+        "duracion": "2h 15m"
+    },
+    {
+        "origen": "Wuhan",
+        "destino": "Chengdu",
+        "costo": "$870",
+        "descripcion": "Famosa por los osos panda y su gastronomía.",
+        "imagen": "../../assets/images/ofertas/Chengdu.jpg",
+        "fecha": "CURRENT_DATE",
+        "numeroVuelo": "CN1006",
+        "duracion": "2h 40m"
+    },
+    {
+        "origen": "Hangzhou",
+        "destino": "Chongqing",
+        "costo": "$890",
+        "descripcion": "Ciudad montañosa con paisajes únicos y picante cocina.",
+        "imagen": "../../assets/images/ofertas/Chongqing.webp",
+        "fecha": "CURRENT_DATE",
+        "numeroVuelo": "CN1007",
+        "duracion": "2h 25m"
+    },
+    {
+        "origen": "Suzhou",
+        "destino": "Hangzhou",
+        "costo": "$950",
+        "descripcion": "Conocida por el Lago del Oeste y su belleza natural.",
+        "imagen": "../../assets/images/ofertas/Hangzhou.webp",
+        "fecha": "CURRENT_DATE",
+        "numeroVuelo": "CN1008",
+        "duracion": "1h 50m"
+    },
+    {
+        "origen": "Hong Kong",
+        "destino": "Nanjing",
+        "costo": "$920",
+        "descripcion": "Ciudad histórica con murallas y templos.",
+        "imagen": "../../assets/images/ofertas/Nanjing.jpg",
+        "fecha": "CURRENT_DATE",
+        "numeroVuelo": "CN1009",
+        "duracion": "2h 00m"
+    },
+    {
+        "origen": "Macau",
+        "destino": "Wuhan",
+        "costo": "$880",
+        "descripcion": "Importante centro de transporte y cultura.",
+        "imagen": "../../assets/images/ofertas/Wuhan.webp",
+        "fecha": "CURRENT_DATE",
+        "numeroVuelo": "CN1010",
+        "duracion": "2h 10m"
+    },
+    {
+        "origen": "Shenyang",
+        "destino": "Tianjin",
+        "costo": "$870",
+        "descripcion": "Ciudad portuaria con arquitectura colonial.",
+        "imagen": "../../assets/images/ofertas/Tianjin.webp",
+        "fecha": "CURRENT_DATE",
+        "numeroVuelo": "CN1011",
+        "duracion": "1h 30m"
+    },
+    {
+        "origen": "Qingdao",
+        "destino": "Harbin",
+        "costo": "$960",
+        "descripcion": "Famosa por su festival de esculturas de hielo.",
+        "imagen": "../../assets/images/ofertas/Harbin.jpg",
+        "fecha": "CURRENT_DATE",
+        "numeroVuelo": "CN1012",
+        "duracion": "2h 50m"
+    },
+    {
+        "origen": "Dalian",
+        "destino": "Suzhou",
+        "costo": "$940",
+        "descripcion": "Conocida por sus jardines clásicos y canales.",
+        "imagen": "../../assets/images/ofertas/Suzhou.jpg",
+        "fecha": "CURRENT_DATE",
+        "numeroVuelo": "CN1013",
+        "duracion": "1h 40m"
+    },
+    {
+        "origen": "Xiamen",
+        "destino": "Hong Kong",
+        "costo": "$1300",
+        "descripcion": "Mezcla de tradición china y modernidad.",
+        "imagen": "../../assets/images/ofertas/HongKong.jpg",
+        "fecha": "CURRENT_DATE",
+        "numeroVuelo": "CN1014",
+        "duracion": "2h 30m"
+    },
+    {
+        "origen": "Kunming",
+        "destino": "Macau",
+        "costo": "$1250",
+        "descripcion": "Fusión de cultura portuguesa y china.",
+        "imagen": "../../assets/images/ofertas/Macau.webp",
+        "fecha": "CURRENT_DATE",
+        "numeroVuelo": "CN1015",
+        "duracion": "2h 20m"
+    },
+    {
+        "origen": "Urumqi",
+        "destino": "Shenyang",
+        "costo": "$910",
+        "descripcion": "Ciudad industrial con palacios históricos.",
+        "imagen": "../../assets/images/ofertas/Shenyang.png",
+        "fecha": "CURRENT_DATE",
+        "numeroVuelo": "CN1016",
+        "duracion": "2h 15m"
+    },
+    {
+        "origen": "Lhasa (Tíbet)",
+        "destino": "Qingdao",
+        "costo": "$950",
+        "descripcion": "Ciudad costera famosa por su cerveza.",
+        "imagen": "../../assets/images/ofertas/Qingdao.jpg",
+        "fecha": "CURRENT_DATE",
+        "numeroVuelo": "CN1017",
+        "duracion": "2h 00m"
+    },
+    {
+        "origen": "Pekín (Beijing)",
+        "destino": "Dalian",
+        "costo": "$930",
+        "descripcion": "Puerto importante con playas y parques.",
+        "imagen": "../../assets/images/ofertas/Dalian.webp",
+        "fecha": "CURRENT_DATE",
+        "numeroVuelo": "CN1018",
+        "duracion": "2h 10m"
+    },
+    {
+        "origen": "Shanghái",
+        "destino": "Xiamen",
+        "costo": "$920",
+        "descripcion": "Ciudad costera con arquitectura colonial.",
+        "imagen": "../../assets/images/ofertas/Xiamen.webp",
+        "fecha": "CURRENT_DATE",
+        "numeroVuelo": "CN1019",
+        "duracion": "2h 20m"
+    },
+    {
+        "origen": "Guangzhou",
+        "destino": "Kunming",
+        "costo": "$880",
+        "descripcion": "Conocida como la ciudad de la eterna primavera.",
+        "imagen": "../../assets/images/ofertas/Kunming.webp",
+        "fecha": "CURRENT_DATE",
+        "numeroVuelo": "CN1020",
+        "duracion": "2h 30m"
+    },
+    {
+        "origen": "Shenzhen",
+        "destino": "Urumqi",
+        "costo": "$970",
+        "descripcion": "Capital de Xinjiang, mezcla de culturas.",
+        "imagen": "../../assets/images/ofertas/Urumqi.jpg",
+        "fecha": "CURRENT_DATE",
+        "numeroVuelo": "CN1021",
+        "duracion": "3h 00m"
+    },
+    {
+        "origen": "Chengdu",
+        "destino": "Lhasa (Tíbet)",
+        "costo": "$1400",
+        "descripcion": "Centro espiritual con el Palacio de Potala.",
+        "imagen": "../../assets/images/ofertas/Lhasa.webp",
+        "fecha": "CURRENT_DATE",
+        "numeroVuelo": "CN1022",
+        "duracion": "3h 20m"
+    },
+    {
+        "origen": "Shanghái",
+        "destino": "Guangzhou",
+        "costo": "$1400",
+        "descripcion": "Centro espiritual con el Palacio de Potala.",
+        "imagen": "../../assets/images/ofertas/Guangzhou.jpg",
+        "fecha": "CURRENT_DATE",
+        "numeroVuelo": "CN1022",
+        "duracion": "3h 20m"
+    }
+    ]
+}

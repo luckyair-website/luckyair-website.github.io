@@ -101,6 +101,14 @@
     color: var(--color-accent-dark);
 }
 
+.color-error {
+    color: red;
+}
+
+.color-success {
+    color: green;
+}
+
 .box-shadow {
     box-shadow: var(--box-shadow-dark);
     border-radius: 20px;

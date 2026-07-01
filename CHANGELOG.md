@@ -64,3 +64,9 @@ Con actualizaciones se logro maximizar nuestra puntuacion de performance, accesi
 ## 🧩 Implementacion del uso de localStorage 10/06
 - **Feature**: Se implemento la funcionalidad de localStorage en la seccion de busqueda de vuelos del home, en la que se guarda la info de los inputs y luego se procede a recuperarlas para mostrarla en la seccion de pagos.html.
 - **Feature**: Se implemento funcionalidades localStorage en la seccion de seleccionar ofertas del home, en donde se guarda la info y luego se recupera la info para mostrarla en la seccion de pagos.html
+
+## 🧩 Implementacion del uso de try & catch, para el manejo de erroes
+- **Feature**: Se implemento la funcionalidad de "try & catch" para manejar errores.
+
+## 🧩 Implementacion del uso de archivos .json
+- **Feature**: Se implemento la funcionalidad de emplear archivos .json junto a "fetch, async y await", en lugar de las listas ordenadas. Ademas se coloca los estados del .json durante el renderizado de las ofertas.

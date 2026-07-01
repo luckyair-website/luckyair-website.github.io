@@ -86,7 +86,7 @@
     border-radius: 10px;
 }
 
-.escribenos-form a {
+.escribenos-form button {
     /* color: var(--font-color-primary); */
     color: #041936;
     /* background: var(--gradient-button-primary); */

@@ -2,10 +2,12 @@
 
 /* ── Contenedor principal ───────────────────────── */
 .pago-container {
+    gap: 1.5rem;
+    /* margin: 4rem -0.9rem; */
+    margin: 4rem auto;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
-    padding: 2rem 0 3rem;
 }
 
 /* ── Título ─────────────────────────────────────── */
@@ -16,16 +18,17 @@
 /* ── GRID métodos de pago (fila superior, 3 cols) ─ */
 .pago-metodos {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     gap: 1rem;
 }
 
 .pago-metodo-card {
-    background: var(--color-secondary);
+    background: white;
     border-radius: 20px;
     padding: 1.75rem 1rem 1.25rem;
     gap: 1rem;
     min-height: 150px;
+    color: #041936;
 }
 
 .pago-metodo-card > img {
@@ -63,25 +66,31 @@
 /* ── GRID paneles (fila inferior, 2 cols) ────────── */
 .pago-paneles {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(1, 1fr) ;
     gap: 1rem;
-    align-items: start;
+    box-sizing: border-box;
+    width: 100%;
+    align-items: center;
 }
 
 .pago-panel {
     background: var(--color-secondary);
     border-radius: 20px;
-    padding: 2rem;
     gap: 1.25rem;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 2rem 0;
 }
 
 /* ── Tarjetas guardadas ─────────────────────────── */
 .pago-tarjeta {
     border: 2px solid #d0d0d0;
     border-radius: 14px;
-    padding: 1rem 1.25rem;
+    padding: 1rem 0.5rem;
     gap: 1rem;
     cursor: pointer;
+    width: 90%;
+    box-sizing: border-box;
 }
 
 .pago-tarjeta--activa {
@@ -104,13 +113,15 @@
 /* ── Formulario nuevo usuario ───────────────────── */
 .pago-form-fila {
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: repeat(1, 1fr);
     gap: 1rem;
-    align-items: end;
+    box-sizing: border-box;
+    width: 90%;
 }
 
 .pago-field {
     gap: 0.35rem;
+    box-sizing: border-box;
     width: 100%;
 }
 
@@ -124,6 +135,7 @@
 
 .pago-cvv-row {
     gap: 0.5rem;
+    width: 100%;
 }
 
 .pago-input {
@@ -132,8 +144,8 @@
     border-radius: 10px;
     outline: none;
     background: var(--color-secondary);
-    color: var(--color-primary);
-    width: 100%;
+    color: var(--color-secondary);
+    box-sizing: border-box;
 }
 
 .pago-input:focus {
@@ -142,7 +154,7 @@
 
 /* inputs CVV pequeños */
 .pago-cvv-row .pago-input {
-    width: 90px;
+    width: 100px;
 }
 
 /* input nombre (ancho completo) */
@@ -168,6 +180,7 @@
     margin-top: auto;
     flex-wrap: wrap;
     justify-content: center;
+    width: 100%;
 }
 
 .pago-qr-wrap {
@@ -191,7 +204,7 @@
     letter-spacing: var(--letter-spacing-small);
     transition: opacity 0.2s;
     white-space: nowrap;
-    width: 100%;
+    width: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -199,4 +212,13 @@
 
 .pago-btn:hover {
     opacity: 0.88;
+}
+
+.radio-container {
+    width: 100%;
+}
+
+.radio-container small {
+    width: 100%;
+    padding-right: 3rem;
 }
