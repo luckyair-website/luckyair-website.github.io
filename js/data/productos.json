@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "nombre": "Almohada",
+    "precio": "3,500 pts + $15",
+    "img": "../assets/images/beneficios/almohada.png"
+  },
+  {
+    "id": 2,
+    "nombre": "Merch T-shirt",
+    "precio": "3,500 pts + $15",
+    "img": "../assets/images/beneficios/merch1.png"
+  },
+  {
+    "id": 3,
+    "nombre": "Merch T-shirt",
+    "precio": "3,000 pts + $15",
+    "img": "../assets/images/beneficios/merch2.png"
+  },
+  {
+    "id": 4,
+    "nombre": "Merch T-shirt",
+    "precio": "4,000 pts + $15",
+    "img": "../assets/images/beneficios/merch3.png"
+  },
+  {
+    "id": 5,
+    "nombre": "Gorra",
+    "precio": "1,500 pts + $10",
+    "img": "../assets/images/beneficios/gorra.png"
+  },
+  {
+    "id": 6,
+    "nombre": "Power adapter",
+    "precio": "1,500 pts + $10",
+    "img": "../assets/images/beneficios/power-adapter.png"
+  }
+]

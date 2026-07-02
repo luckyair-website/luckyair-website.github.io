@@ -1,214 +1,148 @@
+const LS_KEY = "luckyair_registro";
 
-const LS_USUARIOS = "luckyair_usuarios";
-
-// ── 1. FUNCIONES marcarError / marcarCorrecto (S11) ──────────
-function marcarError(campo, mensaje) {
-    const grupo = campo.parentElement;
-    const mensajeError = grupo.querySelector(".mensaje-error");
-    grupo.classList.add("error");
-    grupo.classList.remove("correcto");
-    if (mensajeError) mensajeError.textContent = mensaje;
-}
-
-function marcarCorrecto(campo) {
-    const grupo = campo.parentElement;
-    const mensajeError = grupo.querySelector(".mensaje-error");
-    grupo.classList.remove("error");
-    grupo.classList.add("correcto");
-    if (mensajeError) mensajeError.textContent = "";
-}
-
-// ── 2. FUNCIONES DE VALIDACIÓN (S11) ─────────────────────────
-function estaVacio(campo) {
-    return campo.value.trim() === "";
-}
-
-function correoValido(campo) {
-    const valor = campo.value.trim();
-    return valor.includes("@") && valor.includes(".");
-}
-
-function soloLetras(campo) {
-    return /^[a-zA-ZÁÉÍÓÚáéíóúÑñ\s]+$/.test(campo.value.trim());
-}
-
-function dniValido(campo) {
-    return /^\d{8}$/.test(campo.value.trim());
-}
-
-function pasaporteValido(campo) {
-    return /^[A-Z0-9]{6,12}$/i.test(campo.value.trim());
-}
-
-function passSegura(campo) {
-    return campo.value.trim().length >= 8;
-}
-
-// ── 3. GUARDAR USUARIO EN LOCALSTORAGE (S12) ─────────────────
-export function guardarUsuario() {
-    const usuario = {
-        nombres:       document.getElementById("nombres").value.trim(),
-        apellidos:     document.getElementById("apellidos").value.trim(),
-        correo:        document.getElementById("correo").value.trim(),
-        tipoDoc:       document.querySelector(".doc-btn-activo")?.textContent.trim() || "DNI",
-        numdoc:        document.getElementById("numdoc").value.trim(),
-        password:      document.getElementById("pass").value,
-        fechaRegistro: new Date().toLocaleString("es-PE"),
-    };
-
-    let usuarios = [];
-    try {
-        usuarios = JSON.parse(localStorage.getItem(LS_USUARIOS)) || [];
-    } catch (e) {
-        usuarios = [];
+// ── UTILIDADES VISUALES ──────────────────────────────────────
+function marcarError(input, mensaje) {
+    const grupo = input.closest(".campo-grupo");
+    grupo.classList.add("campo-error");
+    grupo.classList.remove("campo-ok");
+    let small = grupo.querySelector(".msg-validacion");
+    if (!small) {
+        small = document.createElement("small");
+        small.className = "msg-validacion";
+        grupo.appendChild(small);
     }
+    small.textContent = "❌ " + mensaje;
+}
 
-    const yaExiste = usuarios.some(u => u.correo === usuario.correo);
-    if (yaExiste) {
-        console.warn("⚠️ Ya existe un usuario registrado con ese correo.");
-        return false;
+function marcarOk(input) {
+    const grupo = input.closest(".campo-grupo");
+    grupo.classList.remove("campo-error");
+    grupo.classList.add("campo-ok");
+    let small = grupo.querySelector(".msg-validacion");
+    if (!small) {
+        small = document.createElement("small");
+        small.className = "msg-validacion";
+        grupo.appendChild(small);
     }
+    small.textContent = "✅ Correcto";
+}
 
-    usuarios.push(usuario);
-    localStorage.setItem(LS_USUARIOS, JSON.stringify(usuarios));
-    mostrarUsuariosEnConsola();
+// ── REGLAS DE VALIDACIÓN ─────────────────────────────────────
+function validarNombres(input) {
+    const v = input.value.trim();
+    if (!v) return marcarError(input, "El nombre es obligatorio.");
+    if (!/^[a-zA-ZÁÉÍÓÚáéíóúÑñ\s]+$/.test(v)) return marcarError(input, "Solo se permiten letras.");
+    marcarOk(input);
     return true;
 }
 
-// ── 4. MOSTRAR USUARIOS EN CONSOLA (S12) ─────────────────────
-export function mostrarUsuariosEnConsola() {
-    let usuarios = [];
-    try {
-        usuarios = JSON.parse(localStorage.getItem(LS_USUARIOS)) || [];
-    } catch (e) {
-        usuarios = [];
-    }
-
-    if (usuarios.length === 0) {
-        console.log("📋 No hay usuarios registrados aún.");
-        return;
-    }
-
-    console.log(`👥 Usuarios registrados (${usuarios.length}):`);
-    console.table(usuarios.map(u => ({
-        Nombres:    u.nombres,
-        Apellidos:  u.apellidos,
-        Correo:     u.correo,
-        TipoDoc:    u.tipoDoc,
-        NroDoc:     u.numdoc,
-        Contraseña: u.password,
-        Fecha:      u.fechaRegistro,
-    })));
+function validarApellidos(input) {
+    const v = input.value.trim();
+    if (!v) return marcarError(input, "El apellido es obligatorio.");
+    if (!/^[a-zA-ZÁÉÍÓÚáéíóúÑñ\s]+$/.test(v)) return marcarError(input, "Solo se permiten letras.");
+    marcarOk(input);
+    return true;
 }
 
-// ── 5. INIT: validación + eventos (S11 + S12) ─────────────────
-export function initRegistro() {
-    const inputNombres    = document.getElementById("nombres");
-    const inputApellidos  = document.getElementById("apellidos");
-    const inputCorreo     = document.getElementById("correo");
-    const inputNumdoc     = document.getElementById("numdoc");
-    const inputPass       = document.getElementById("pass");
-    const inputConfpass   = document.getElementById("confpass");
+function validarCorreo(input) {
+    const v = input.value.trim();
+    if (!v) return marcarError(input, "El correo es obligatorio.");
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)) return marcarError(input, "Ingresa un correo válido.");
+    marcarOk(input);
+    return true;
+}
 
-    mostrarUsuariosEnConsola();
+function validarNumdoc(input) {
+    const v = input.value.trim();
+    const esPasaporte = document.querySelector(".doc-btn-activo")?.textContent?.trim() === "Pasaporte";
+    if (!v) return marcarError(input, "El número de documento es obligatorio.");
+    if (esPasaporte && !/^[A-Z0-9]{6,12}$/i.test(v)) return marcarError(input, "Pasaporte: 6-12 caracteres alfanuméricos.");
+    if (!esPasaporte && !/^\d{8}$/.test(v)) return marcarError(input, "El DNI debe tener exactamente 8 dígitos.");
+    marcarOk(input);
+    return true;
+}
 
-    // ── Validación en tiempo real (S11) ──────────────────────
-    inputNombres.addEventListener("input", () => {
-        if (estaVacio(inputNombres)) {
-            marcarError(inputNombres, "Ingrese su nombre.");
-        } else if (!soloLetras(inputNombres)) {
-            marcarError(inputNombres, "Solo se permiten letras.");
-        } else {
-            marcarCorrecto(inputNombres);
+function validarPass(input) {
+    const v = input.value;
+    if (!v) return marcarError(input, "La contraseña es obligatoria.");
+    if (v.length < 8) return marcarError(input, "Mínimo 8 caracteres.");
+    marcarOk(input);
+    return true;
+}
+
+function validarConfpass(inputPass, inputConf) {
+    const v = inputConf.value;
+    if (!v) return marcarError(inputConf, "Confirma tu contraseña.");
+    if (v !== inputPass.value) return marcarError(inputConf, "Las contraseñas no coinciden.");
+    marcarOk(inputConf);
+    return true;
+}
+
+// ── GUARDAR EN LOCALSTORAGE ───────────────────────────────────
+function guardarRegistro() {
+    const datos = {
+        nombres: document.getElementById("nombres")?.value || "",
+        apellidos: document.getElementById("apellidos")?.value || "",
+        correo: document.getElementById("correo")?.value || "",
+        numdoc: document.getElementById("numdoc")?.value || "",
+        tipoDoc: document.querySelector(".doc-btn-activo")?.textContent?.trim() || "DNI",
+    };
+    localStorage.setItem(LS_KEY, JSON.stringify(datos));
+}
+
+// ── RESTAURAR DESDE LOCALSTORAGE ─────────────────────────────
+function restaurarRegistro() {
+    const raw = localStorage.getItem(LS_KEY);
+    if (!raw) return;
+    try {
+        const d = JSON.parse(raw);
+        if (d.nombres) document.getElementById("nombres").value = d.nombres;
+        if (d.apellidos) document.getElementById("apellidos").value = d.apellidos;
+        if (d.correo) document.getElementById("correo").value = d.correo;
+        if (d.numdoc) document.getElementById("numdoc").value = d.numdoc;
+        if (d.tipoDoc) {
+            document.querySelectorAll(".doc-btn").forEach(btn => {
+                btn.classList.toggle("doc-btn-activo", btn.textContent.trim() === d.tipoDoc);
+            });
         }
-    });
+        console.log("📋 Borrador restaurado desde localStorage:");
+        console.table(d);
+    } catch (e) {
+        localStorage.removeItem(LS_KEY);
+    }
+}
 
-    inputApellidos.addEventListener("input", () => {
-        if (estaVacio(inputApellidos)) {
-            marcarError(inputApellidos, "Ingrese sus apellidos.");
-        } else if (!soloLetras(inputApellidos)) {
-            marcarError(inputApellidos, "Solo se permiten letras.");
-        } else {
-            marcarCorrecto(inputApellidos);
-        }
-    });
+// ── MOSTRAR EN CONSOLA ────────────────────────────────────────
+function mostrarUsuariosEnConsola() {
+    const raw = localStorage.getItem(LS_KEY);
+    if (!raw) {
+        console.log("📋 No hay datos de registro guardados.");
+        return;
+    }
+    console.log("👤 Datos de registro en localStorage:");
+    console.table(JSON.parse(raw));
+}
 
-    inputCorreo.addEventListener("input", () => {
-        if (estaVacio(inputCorreo)) {
-            marcarError(inputCorreo, "Ingrese su correo.");
-        } else if (!correoValido(inputCorreo)) {
-            marcarError(inputCorreo, "Ingrese un correo válido.");
-        } else {
-            marcarCorrecto(inputCorreo);
-        }
-    });
+// ── REEMPLAZAR irPaso CON VALIDACIÓN ─────────────────────────
+function sobreescribirIrPaso() {
+    const inputNombres = document.getElementById("nombres");
+    const inputApellidos = document.getElementById("apellidos");
+    const inputCorreo = document.getElementById("correo");
+    const inputNumdoc = document.getElementById("numdoc");
 
-    inputNumdoc.addEventListener("input", () => {
-        const esPasaporte = document.querySelector(".doc-btn-activo")?.textContent.trim() === "Pasaporte";
-        if (estaVacio(inputNumdoc)) {
-            marcarError(inputNumdoc, "Ingrese su número de documento.");
-        } else if (esPasaporte && !pasaporteValido(inputNumdoc)) {
-            marcarError(inputNumdoc, "Pasaporte: 6 a 12 caracteres alfanuméricos.");
-        } else if (!esPasaporte && !dniValido(inputNumdoc)) {
-            marcarError(inputNumdoc, "El DNI debe tener exactamente 8 dígitos.");
-        } else {
-            marcarCorrecto(inputNumdoc);
-        }
-    });
-
-    inputPass.addEventListener("input", () => {
-        if (estaVacio(inputPass)) {
-            marcarError(inputPass, "Ingrese una contraseña.");
-        } else if (!passSegura(inputPass)) {
-            marcarError(inputPass, "Mínimo 8 caracteres.");
-        } else {
-            marcarCorrecto(inputPass);
-        }
-    });
-
-    inputConfpass.addEventListener("input", () => {
-        if (estaVacio(inputConfpass)) {
-            marcarError(inputConfpass, "Confirme su contraseña.");
-        } else if (inputConfpass.value !== inputPass.value) {
-            marcarError(inputConfpass, "Las contraseñas no coinciden.");
-        } else {
-            marcarCorrecto(inputConfpass);
-        }
-    });
-
-    // ── Sobreescribir irPaso con validación por paso ─────────
     window.irPaso = function (num) {
         if (num === 2) {
-            let valido = true;
-            if (estaVacio(inputNombres) || !soloLetras(inputNombres)) {
-                marcarError(inputNombres, estaVacio(inputNombres) ? "Ingrese su nombre." : "Solo letras."); valido = false;
-            } else { marcarCorrecto(inputNombres); }
-
-            if (estaVacio(inputApellidos) || !soloLetras(inputApellidos)) {
-                marcarError(inputApellidos, estaVacio(inputApellidos) ? "Ingrese sus apellidos." : "Solo letras."); valido = false;
-            } else { marcarCorrecto(inputApellidos); }
-
-            if (estaVacio(inputCorreo) || !correoValido(inputCorreo)) {
-                marcarError(inputCorreo, estaVacio(inputCorreo) ? "Ingrese su correo." : "Correo inválido."); valido = false;
-            } else { marcarCorrecto(inputCorreo); }
-
-            if (!valido) return;
+            const v1 = validarNombres(inputNombres);
+            const v2 = validarApellidos(inputApellidos);
+            const v3 = validarCorreo(inputCorreo);
+            if (!v1 || !v2 || !v3) return;
+            guardarRegistro();
         }
-
         if (num === 3) {
-            const esPasaporte = document.querySelector(".doc-btn-activo")?.textContent.trim() === "Pasaporte";
-            let valido = true;
-            if (estaVacio(inputNumdoc)) {
-                marcarError(inputNumdoc, "Ingrese su número de documento."); valido = false;
-            } else if (esPasaporte && !pasaporteValido(inputNumdoc)) {
-                marcarError(inputNumdoc, "Pasaporte inválido."); valido = false;
-            } else if (!esPasaporte && !dniValido(inputNumdoc)) {
-                marcarError(inputNumdoc, "El DNI debe tener 8 dígitos."); valido = false;
-            } else { marcarCorrecto(inputNumdoc); }
-
-            if (!valido) return;
+            const v4 = validarNumdoc(inputNumdoc);
+            if (!v4) return;
+            guardarRegistro();
         }
-
         document.querySelectorAll(".paso").forEach(p => p.classList.add("oculto"));
         document.getElementById("paso-" + num).classList.remove("oculto");
         document.getElementById("paso-label").textContent = num + " de 3";
@@ -216,29 +150,88 @@ export function initRegistro() {
             seg.classList.toggle("activo", i < num);
         });
     };
+}
 
-    // ── Sobreescribir registrar() con validación + localStorage
+// ── REEMPLAZAR registrar() CON VALIDACIÓN ────────────────────
+function sobreescribirRegistrar() {
+    const inputPass = document.getElementById("pass");
+    const inputConfpass = document.getElementById("confpass");
+
     window.registrar = function () {
-        let valido = true;
-
-        if (estaVacio(inputPass) || !passSegura(inputPass)) {
-            marcarError(inputPass, estaVacio(inputPass) ? "Ingrese una contraseña." : "Mínimo 8 caracteres."); valido = false;
-        } else { marcarCorrecto(inputPass); }
-
-        if (estaVacio(inputConfpass) || inputConfpass.value !== inputPass.value) {
-            marcarError(inputConfpass, estaVacio(inputConfpass) ? "Confirme su contraseña." : "Las contraseñas no coinciden."); valido = false;
-        } else { marcarCorrecto(inputConfpass); }
-
+        const v1 = validarPass(inputPass);
+        const v2 = validarConfpass(inputPass, inputConfpass);
         const tc = document.getElementById("check-tc");
-        if (!tc.checked) { alert("Debes aceptar los Términos y Condiciones."); return; }
+        if (!tc.checked) { alert("Debes aceptar los T&C"); return; }
+        if (!v1 || !v2) return;
 
-        if (!valido) return;
+        // Guardar usuario registrado
+        const datos = JSON.parse(localStorage.getItem(LS_KEY) || "{}");
+        datos.fechaRegistro = new Date().toLocaleString("es-PE");
+        localStorage.setItem("luckyair_usuario", JSON.stringify(datos));
+        localStorage.removeItem(LS_KEY);
 
-        const exito = guardarUsuario();
-        if (exito) {
-            alert("¡Registro exitoso! Bienvenido a LuckyAir ✈");
-        } else {
-            alert("Este correo ya está registrado.");
-        }
+        console.log("✅ Usuario registrado:");
+        console.table(datos);
+        alert("¡Registro exitoso! Bienvenido a LuckyAir ✈");
     };
+}
+
+// ── CSS ESTADOS VISUALES ─────────────────────────────────────
+function inyectarEstilos() {
+    const style = document.createElement("style");
+    style.textContent = `
+        .campo-grupo.campo-error .registro-input {
+            border: 1.5px solid #dc2626;
+            background-color: #fef2f2;
+        }
+        .campo-grupo.campo-ok .registro-input {
+            border: 1.5px solid #16a34a;
+            background-color: #f0fdf4;
+        }
+        .msg-validacion {
+            font-size: 12px;
+            margin-top: 3px;
+            display: block;
+            min-height: 16px;
+        }
+        .campo-error .msg-validacion { color: #dc2626; }
+        .campo-ok    .msg-validacion { color: #16a34a; }
+    `;
+    document.head.appendChild(style);
+}
+
+// ── INIT PRINCIPAL ────────────────────────────────────────────
+export function initRegistroStorage() {
+    inyectarEstilos();
+    restaurarRegistro();
+    mostrarUsuariosEnConsola();
+    sobreescribirIrPaso();
+    sobreescribirRegistrar();
+
+    // Validación en tiempo real
+    const campos = [
+        { id: "nombres", fn: (i) => validarNombres(i) },
+        { id: "apellidos", fn: (i) => validarApellidos(i) },
+        { id: "correo", fn: (i) => validarCorreo(i) },
+        { id: "numdoc", fn: (i) => validarNumdoc(i) },
+        { id: "pass", fn: (i) => validarPass(i) },
+    ];
+    campos.forEach(({ id, fn }) => {
+        const input = document.getElementById(id);
+        if (input) {
+            input.addEventListener("input", () => { fn(input); guardarRegistro(); });
+        }
+    });
+
+    // Validar confirmación en tiempo real
+    const inputConf = document.getElementById("confpass");
+    const inputPass = document.getElementById("pass");
+    if (inputConf) {
+        inputConf.addEventListener("input", () => validarConfpass(inputPass, inputConf));
+    }
+
+    // Guardar al cambiar tipo de documento
+    document.querySelectorAll(".doc-btn").forEach(btn => {
+        btn.addEventListener("click", guardarRegistro);
+    });
 }

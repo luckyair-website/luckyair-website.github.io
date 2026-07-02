@@ -1,4 +1,3 @@
-
 import { menuMobile } from "./utils/menuMobile.js";
 import { themeMain } from "./utils/theme.js";
 import { destinos } from "./data/destinos.js";
@@ -22,20 +21,20 @@ import { usuarioFrecuente, nuevoUsuario } from "./utils/pago.js";
 import { estadosJson } from "./utils/estadosJson.js";
 
 
+import { loginForm } from "./utils/loginForm.js";
+import { recuperarForm } from "./utils/recuperarForm.js";
+import { registroForm } from "./utils/registroForm.js";
 
 // Forms
 import { buscarVuelos } from "./forms/buscarVuelos.js";
 import { mostrarInfoVuelos } from "./forms/mostrarInfoVuelos.js";
 
-
-
 document.addEventListener("DOMContentLoaded", () => {
-    // Menu mobile
+    // Menú mobile
     menuMobile();
-    // Cambiar tema
-    //themeMain();
-        aplicarTemaGuardado();
-        themeMain();
+    // Tema
+    aplicarTemaGuardado();
+    themeMain();
     // Origen
         cargarOpciones("lista-origen");
         inputBuscar("origen", "clear-origen", "buscar-origen");
@@ -44,23 +43,33 @@ document.addEventListener("DOMContentLoaded", () => {
         cargarOpciones("lista-destinos");
         inputBuscar("destino", "clear-destinos", "buscar-destino");
         validarInputText("destino", "mensaje-error-destinos", "clear-destinos", "buscar-destino");
+    cargarOpciones("lista-origen", destinos);
+    inputBuscar("origen", "clear-origen", "buscar-origen");
+    validarInputText("origen", "mensaje-error-origen", "clear-origen", "buscar-origen");
+    // Destino
+    cargarOpciones("lista-destinos", destinos);
+    inputBuscar("destino", "clear-destinos", "buscar-destino");
+    validarInputText("destino", "mensaje-error-destinos", "clear-destinos", "buscar-destino");
     // Fechas
-        validarInputDate("ida", "mensaje-error-ida", "buscar-date");
-        validarInputDate("vuelta", "mensaje-error-vuelta", "buscar-date");
-    // Inputcantidad
-        validarInputNumber("cantidad", "mensaje-error-cantidad", "clear-cantidad", "buscar-cantidad");
+    validarInputDate("ida", "mensaje-error-ida", "buscar-date");
+    validarInputDate("vuelta", "mensaje-error-vuelta", "buscar-date");
+    // Cantidad
+    validarInputNumber("cantidad", "mensaje-error-cantidad", "clear-cantidad", "buscar-cantidad");
     // Ofertas cards
         renderCards();
         enableDragScroll("cards-container");
         
     //beneficios cards
         beneficiosCards();
+    renderCards();
+    enableDragScroll("cards-container");
+    // Beneficios cards
+    beneficiosCards();
     // Footer form
-        validarInputForm("nombresyapellidos", "mensaje-error-nya", "clear-nya", "input-nya");
-        validarInputForm("asunto", "mensaje-error-asunto", "clear-asunto", "input-asunto");
-        validarInputForm("email", "mensaje-error-email", "clear-email", "input-email");
-        validarInputForm("mensaje", "mensaje-error-mensaje", "clear-mensaje", "input-mensaje");
-
+    validarInputForm("nombresyapellidos", "mensaje-error-nya", "clear-nya", "input-nya");
+    validarInputForm("asunto", "mensaje-error-asunto", "clear-asunto", "input-asunto");
+    validarInputForm("email", "mensaje-error-email", "clear-email", "input-email");
+    validarInputForm("mensaje", "mensaje-error-mensaje", "clear-mensaje", "input-mensaje");
     // Forms
         buscarVuelos();
         mostrarInfoVuelos();
@@ -68,10 +77,15 @@ document.addEventListener("DOMContentLoaded", () => {
         usuarioFrecuente("buttonUsuarioFrecuente");
         nuevoUsuario("pagar-nuevo-usuario");
 
+    // Páginas específicas
+        loginForm();
+        recuperarForm();
+        registroForm();
 
 
 
-        // TU sistema de vuelos
+
+    // TU sistema de vuelos
         buscarVuelos2(destinos2);
 
 });
