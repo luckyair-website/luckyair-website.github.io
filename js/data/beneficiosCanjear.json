@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "nombre": "EQUIPAJE ADICIONAL",
+    "costo": 500,
+    "img": "../assets/images/beneficios/equipaje.png",
+    "descripcion": "Desde 500 puntos"
+  },
+  {
+    "id": 2,
+    "nombre": "SELECCIÓN DE ASIENTOS",
+    "costo": 300,
+    "img": "../assets/images/beneficios/asientos.png",
+    "descripcion": "Desde 300 puntos"
+  },
+  {
+    "id": 3,
+    "nombre": "DESCUENTO EN TICKET",
+    "costo": 1000,
+    "img": "../assets/images/beneficios/descuento.png",
+    "descripcion": "Desde 1000 puntos"
+  }
+]
