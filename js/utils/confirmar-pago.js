@@ -69,6 +69,11 @@ export function mostrarConfirmacionPago() {
 
   if (!origen || !destino) return;
 
-  document.querySelector("#content-origen").textContent = origen;
-  document.querySelector("#content-destino").textContent = destino;
+    document.querySelector("#pasajero").textContent = usuarioObj.nombre || "Usuario Frecuente"; 
+    
+    document.querySelector("#metodo").textContent = usuarioObj.metodo; 
+    document.querySelector("#tarjeta").textContent = usuarioObj.cardMask; 
+
+    document.querySelector("#total-pago").textContent = vueloSeleccionado.costo || vueloSeleccionado.costoTotal; 
+
 }

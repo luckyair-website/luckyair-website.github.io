@@ -1,6 +1,6 @@
 /* Lista de destinos turisticos de china */
 
-export const destinos = [
+export const destinos =  [
     {
         nombre: "Pekín (Beijing)",
         costo: "$1200",
