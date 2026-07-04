@@ -7,7 +7,6 @@ export function mostrarConfirmacionPago() {
   const tarjeta = document.querySelector("#tarjeta");
   const total = document.querySelector("#total-pago");
 
-  // ❗ evitar errores si la página no es esta
   if (!ruta || !fechas || !pasajero || !tarjeta || !total) return;
 
   const vueloSeleccionado = JSON.parse(localStorage.getItem("vueloSeleccionado"));
@@ -24,11 +23,22 @@ export function mostrarConfirmacionPago() {
 
     document.querySelector("#content-destino").textContent =
       vueloSeleccionado.nombre || vueloSeleccionado.destino || "---";
-    
-      document.querySelector("#content-fecha").textContent =
-  vueloSeleccionado.fecha && vueloSeleccionado.fecha !== "CURRENT_DATE"
-    ? vueloSeleccionado.fecha
-    : `Salida: ${vueloSeleccionado.salida || "---"}`;
+
+    // 🔥 AQUÍ VA (FECHA)
+    let fechaFinal = "";
+
+    if (
+      vueloSeleccionado.fecha &&
+      vueloSeleccionado.fecha !== "CURRENT_DATE"
+    ) {
+      fechaFinal = vueloSeleccionado.fecha;
+    } else if (vueloSeleccionado.salida) {
+      fechaFinal = `Salida: ${vueloSeleccionado.salida}`;
+    } else {
+      fechaFinal = "---";
+    }
+
+    document.querySelector("#content-fecha").textContent = fechaFinal;
 
     document.querySelector("#content-numero-vuelo").textContent =
       vueloSeleccionado.numeroVuelo || "LK2345";
