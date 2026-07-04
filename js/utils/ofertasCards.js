@@ -25,9 +25,6 @@ export async function renderCards() {
       const costoDescuento = (costoOriginal * 0.4).toFixed(2); // dos decimales
       // Paso 3: formatear
       const costoOferta = `$${costoDescuento}`;
-      
-
-
       return `
       <div class="card">
         <div class="img-container">
@@ -63,3 +60,5 @@ export async function renderCards() {
     estados.errorState();
   }
 }
+
+
