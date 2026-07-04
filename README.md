@@ -91,7 +91,9 @@ LUCKYAIR-WEBSITE.GITHUB.IO/
 - **v1.0** → Proyecto inicial solo con HTML.  
 - **v1.5 (Terminado)** → Index terminado con HTML + CSS.  
 - **v2.0 (Terminado)** → Proyecto completo estilizado con CSS.
-- **v2.5 (Actual)** → Proyecto en progreso HTML + CSS + JS.
+- **v2.5 (Terminado)** → Proyecto en progreso HTML + CSS + JS.
+- **v3.0 (Terminado)** → Proyecto en progreso HTML + CSS + JS + localStorage.
+- **v4.0 (Terminado)** → Proyecto en progreso HTML + CSS + JS + JSON.
 
 ---
 
