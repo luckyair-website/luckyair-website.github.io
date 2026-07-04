@@ -94,18 +94,8 @@ function procesarLogin() {
     const contrasena = document.getElementById("contrasena-login").value.trim();
     const recordarme = document.getElementById("recordarme")?.checked;
 
-    // NUEVO: try/catch alrededor de todo lo que toca localStorage.
-    // JSON.parse() puede "explotar" (lanzar un error) si lo que está
-    // guardado no es un JSON válido (por ejemplo, si alguien lo edita a
-    // mano desde las herramientas del navegador). Sin este try/catch,
-    // ese error rompería el login por completo y sin ningún aviso.
     try {
-        // BUG CORREGIDO: aquí se leía la clave "usuario_registrado", pero
-        // el registro en realidad guarda al usuario bajo la clave
-        // "luckyair_usuario" (ver js/utils/registroStorage.js). Por eso,
-        // aunque te registraras bien, el login SIEMPRE decía "no hay
-        // ningún usuario registrado": estaba buscando en el cajón
-        // equivocado.
+      
         const usuarioGuardado = JSON.parse(localStorage.getItem("luckyair_usuario") || "null");
 
         if (!usuarioGuardado) {
@@ -132,8 +122,6 @@ function procesarLogin() {
         window.location.href = "../pages/pago.html";
 
     } catch (error) {
-        // Si algo falla leyendo/guardando en localStorage, se avisa al
-        // usuario en vez de dejar la página "muerta" sin explicación.
         console.error("Error al procesar el login:", error);
         mostrarErrorGeneral("Ocurrió un problema al iniciar sesión. Intenta registrarte de nuevo.");
     }
@@ -171,9 +159,7 @@ function limpiarError(grupoId, errorId) {
     el?.classList.remove("login-campo-exito");
 }
 
-// NUEVO: decide si mostrar el ✅, el ❌, o nada (si el campo está vacío
-// todavía no se le muestra error, para no molestar antes de que el
-// usuario termine de escribir).
+
 function validarCampoEnVivo(input, grupoId, errorId, esValido, mensajeError) {
     if (!input.value.trim()) {
         limpiarError(grupoId, errorId);
