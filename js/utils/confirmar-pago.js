@@ -2,47 +2,62 @@ import { destinos } from "../data/destinos.js";
 
 export function mostrarConfirmacionPago() {
   const ruta = document.querySelector("#ruta-vuelo");
-  const fechas = document.querySelector("#content-fecha");
+  const fechas = document.querySelector("#fechas-vuelo");
   const pasajero = document.querySelector("#pasajero");
   const tarjeta = document.querySelector("#tarjeta");
   const total = document.querySelector("#total-pago");
 
-  const vueloSeleccionado = JSON.parse(localStorage.getItem("vueloSeleccionado"));
-  const usuarioInfo = localStorage.getItem("pagoInfo");
-
   // ❗ evitar errores si la página no es esta
   if (!ruta || !fechas || !pasajero || !tarjeta || !total) return;
 
-  const usuarioObj = JSON.parse(usuarioInfo);
+  // ==========================
+  // NUEVO FLUJO (VUELOS)
+  // ==========================
+  const vuelo = JSON.parse(localStorage.getItem("vueloSeleccionado"));
 
+  if (vuelo) {
+    ruta.textContent = vuelo.nombre;
+    fechas.textContent = `Salida: ${vuelo.salida || "---"}`;
+    pasajero.textContent = "PASAJERO DEMO";
+    tarjeta.textContent = "Visa **** **** **** 1234";
+    total.textContent = vuelo.costo;
+    return;
+  }
+
+  // ==========================
+  // FLUJO ANTIGUO (BUSCADOR)
+  // ==========================
   const origen = localStorage.getItem("origen");
   const destino = localStorage.getItem("destino");
+  const ida = localStorage.getItem("ida");
+  const vuelta = localStorage.getItem("vuelta");
+  const cantidad = Number(localStorage.getItem("cantidad") || 1);
 
-   if (!origen || !destino) return;
-    document.querySelector("#content-origen").textContent = vueloSeleccionado.origen; 
-    document.querySelector("#content-destino").textContent = vueloSeleccionado.destino; 
-    let fechaMostrar = vueloSeleccionado.fecha;
-    
-    if (fechaMostrar === "CURRENT_DATE") {
-      const hoy = new Date();
-      // Formato YYYY-MM-DD
-      fechaMostrar = hoy.toISOString().split("T")[0];
-    } else {
-      const ida = vueloSeleccionado.ida || "";
-      const vuelta = vueloSeleccionado.vuelta || "";
-      fechaMostrar = `${ida}  ${vuelta}`;
-    }
-    console.log(vueloSeleccionado);
-    console.log(usuarioObj);
-    document.querySelector("#content-fecha").textContent = fechaMostrar; 
-    document.querySelector("#content-numero-vuelo").textContent = vueloSeleccionado.numeroVuelo; 
-    document.querySelector("#content-duracion").textContent = vueloSeleccionado.duracion; 
+  if (!origen || !destino) return;
 
-    document.querySelector("#pasajero").textContent = usuarioObj.nombre || "Usuario Frecuente"; 
-    
-    document.querySelector("#metodo").textContent = usuarioObj.metodo; 
-    document.querySelector("#tarjeta").textContent = usuarioObj.cardMask; 
+  // ✈️ RUTA
+  ruta.textContent = `${origen.toUpperCase()} → ${destino.toUpperCase()}`;
 
-    document.querySelector("#total-pago").textContent = vueloSeleccionado.costo || vueloSeleccionado.costoTotal; 
+  // 📅 FECHAS
+  fechas.textContent = `${ida} - ${vuelta}`;
 
+  // 👤 DEMO
+  pasajero.textContent = "PASAJERO DEMO";
+
+  // 💳 DEMO
+  tarjeta.textContent = "Visa **** **** **** 1234";
+
+  // 🔥 BUSCAR DESTINO REAL
+  const destinoObj = destinos.find(d => d.nombre === destino);
+
+  if (!destinoObj) {
+    console.error("Destino no encontrado:", destino);
+    return;
+  }
+
+  // 💰 CÁLCULO
+  const precioBase = Number(destinoObj.costo.replace("$", ""));
+  const precioTotal = precioBase * cantidad;
+
+  total.textContent = `$${precioTotal} USD`;
 }
