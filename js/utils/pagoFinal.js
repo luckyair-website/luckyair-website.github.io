@@ -28,11 +28,7 @@ export function pagoFinal() {
     console.log(vueloSeleccionado);
     origen  = vueloSeleccionado.origen;
     destino = vueloSeleccionado.destino;
-    precio =
-  vueloSeleccionado.costo ||
-  vueloSeleccionado.costoTotal ||
-  vueloSeleccionado.precio ||
-  "$0";
+    precio = vueloSeleccionado.costoTotal;
     fechaIda = vueloSeleccionado.ida || hoy;
     fechaVuelta = vueloSeleccionado.vuelta || "";
     pasajeros = vueloSeleccionado.cantidad || 1;
@@ -80,11 +76,8 @@ export function pagoFinal() {
   }
   const costoUni = document.querySelector("#costo-unitario");
   const costoTot = document.querySelector("#costo-total");
-  const precioFinal = vueloSeleccionado.costo || "$0";
-
-    costoUni.textContent = precioFinal;
-    costoTot.textContent = precioFinal;
-
+  costoUni.textContent = vueloSeleccionado.costoUnitario || vueloSeleccionado.costo;
+  costoTot.textContent = vueloSeleccionado.costoTotal || vueloSeleccionado.costo;
   // ── BOTÓN DESCARGAR COMPROBANTE ───────────────
   const btnDescargar = document.querySelector(".btn-download");
   if (!btnDescargar) return;
