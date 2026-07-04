@@ -37,14 +37,26 @@ export function loginForm() {
         if (checkRecordar) checkRecordar.checked = true;
     }
 
-    // ── Limpiar errores en tiempo real (evento input) ─────────────────
+    // ── Validación en tiempo real (con ícono ✅ / ❌) ──────────────────
     inputCorreo?.addEventListener("input", () => {
-        limpiarError("grupo-correo-login", "error-correo-login");
+        validarCampoEnVivo(
+            inputCorreo,
+            "grupo-correo-login",
+            "error-correo-login",
+            esCorreoValido(inputCorreo.value),
+            "Ingresa un correo válido."
+        );
         ocultarErrorGeneral();
     });
 
     inputPass?.addEventListener("input", () => {
-        limpiarError("grupo-contrasena-login", "error-contrasena-login");
+        validarCampoEnVivo(
+            inputPass,
+            "grupo-contrasena-login",
+            "error-contrasena-login",
+            inputPass.value.trim().length >= 8,
+            "Mínimo 8 caracteres."
+        );
         ocultarErrorGeneral();
     });
 
@@ -52,6 +64,10 @@ export function loginForm() {
     btnLogin.addEventListener("click", () => {
         if (validarFormLogin()) procesarLogin();
     });
+}
+
+function esCorreoValido(valor) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(valor.trim());
 }
 
 function validarFormLogin() {
@@ -78,44 +94,96 @@ function procesarLogin() {
     const contrasena = document.getElementById("contrasena-login").value.trim();
     const recordarme = document.getElementById("recordarme")?.checked;
 
-    const usuarioGuardado = JSON.parse(localStorage.getItem("usuario_registrado") || "null");
+    // NUEVO: try/catch alrededor de todo lo que toca localStorage.
+    // JSON.parse() puede "explotar" (lanzar un error) si lo que está
+    // guardado no es un JSON válido (por ejemplo, si alguien lo edita a
+    // mano desde las herramientas del navegador). Sin este try/catch,
+    // ese error rompería el login por completo y sin ningún aviso.
+    try {
+        // BUG CORREGIDO: aquí se leía la clave "usuario_registrado", pero
+        // el registro en realidad guarda al usuario bajo la clave
+        // "luckyair_usuario" (ver js/utils/registroStorage.js). Por eso,
+        // aunque te registraras bien, el login SIEMPRE decía "no hay
+        // ningún usuario registrado": estaba buscando en el cajón
+        // equivocado.
+        const usuarioGuardado = JSON.parse(localStorage.getItem("luckyair_usuario") || "null");
 
-    if (!usuarioGuardado) {
-        mostrarErrorGeneral("No hay ningún usuario registrado. Por favor regístrate primero.");
-        return;
+        if (!usuarioGuardado) {
+            mostrarErrorGeneral("No hay ningún usuario registrado. Por favor regístrate primero.");
+            return;
+        }
+
+        if (usuarioGuardado.correo !== correo || usuarioGuardado.contrasena !== contrasena) {
+            mostrarErrorGeneral("Correo o contraseña incorrectos.");
+            return;
+        }
+
+        if (recordarme) {
+            localStorage.setItem("login_correo_recordado", correo);
+        } else {
+            localStorage.removeItem("login_correo_recordado");
+        }
+
+        localStorage.setItem("sesion_activa", JSON.stringify({
+            correo: usuarioGuardado.correo,
+            nombre: usuarioGuardado.nombres
+        }));
+
+        window.location.href = "../pages/pago.html";
+
+    } catch (error) {
+        // Si algo falla leyendo/guardando en localStorage, se avisa al
+        // usuario en vez de dejar la página "muerta" sin explicación.
+        console.error("Error al procesar el login:", error);
+        mostrarErrorGeneral("Ocurrió un problema al iniciar sesión. Intenta registrarte de nuevo.");
     }
-
-    if (usuarioGuardado.correo !== correo || usuarioGuardado.contrasena !== contrasena) {
-        mostrarErrorGeneral("Correo o contraseña incorrectos.");
-        return;
-    }
-
-    if (recordarme) {
-        localStorage.setItem("login_correo_recordado", correo);
-    } else {
-        localStorage.removeItem("login_correo_recordado");
-    }
-
-    localStorage.setItem("sesion_activa", JSON.stringify({
-        correo: usuarioGuardado.correo,
-        nombre: usuarioGuardado.nombres
-    }));
-
-    window.location.href = "../pages/pago.html";
 }
 
 function mostrarError(grupoId, errorId, msg) {
-    document.getElementById(grupoId)?.classList.add("input-error");
+    const grupo = document.getElementById(grupoId);
+    grupo?.classList.add("input-error");
+    grupo?.classList.remove("input-success");
     const el = document.getElementById(errorId);
     if (el) {
-        el.textContent = msg;
+        el.textContent = "❌ " + msg;
+        el.classList.remove("hidden", "login-campo-exito");
+    }
+}
+
+// NUEVO: muestra un ícono ✅ verde cuando el campo SÍ es válido
+function mostrarExito(grupoId, errorId) {
+    const grupo = document.getElementById(grupoId);
+    grupo?.classList.add("input-success");
+    grupo?.classList.remove("input-error");
+    const el = document.getElementById(errorId);
+    if (el) {
+        el.textContent = "✅ Correcto";
         el.classList.remove("hidden");
+        el.classList.add("login-campo-exito");
     }
 }
 
 function limpiarError(grupoId, errorId) {
-    document.getElementById(grupoId)?.classList.remove("input-error");
-    document.getElementById(errorId)?.classList.add("hidden");
+    const grupo = document.getElementById(grupoId);
+    grupo?.classList.remove("input-error", "input-success");
+    const el = document.getElementById(errorId);
+    el?.classList.add("hidden");
+    el?.classList.remove("login-campo-exito");
+}
+
+// NUEVO: decide si mostrar el ✅, el ❌, o nada (si el campo está vacío
+// todavía no se le muestra error, para no molestar antes de que el
+// usuario termine de escribir).
+function validarCampoEnVivo(input, grupoId, errorId, esValido, mensajeError) {
+    if (!input.value.trim()) {
+        limpiarError(grupoId, errorId);
+        return;
+    }
+    if (esValido) {
+        mostrarExito(grupoId, errorId);
+    } else {
+        mostrarError(grupoId, errorId, mensajeError);
+    }
 }
 
 function mostrarErrorGeneral(msg) {

@@ -64,12 +64,28 @@
 
     /* Sombras */
     --box-shadow-dark: 0 4px 12px rgba(255,255,255,0.1);
+
+    /* AGREGADO: estas variables las usan login.css y registro.css
+       (var(--color-secondary), var(--color-text-muted), etc.) pero no
+       estaban definidas aquí, así que el navegador las ignoraba y
+       algunos textos/bordes no tomaban el color correcto. */
+    --color-secondary: #FFFFFF;
+    --color-text-muted: #807A7A;
+    --letter-spacing-small: 0.5px;
+    --letter-spacing-medium: 0.25px;
+    --letter-spacing-big: -0.5px;
 }
 
 * {
     margin: 0;
     padding: 0;
     text-decoration: none;
+    /* BUG CORREGIDO: sin esto, el navegador suma el padding y el borde
+       AL ANCHO que ya definiste (ej: width:100%). Eso hace que inputs y
+       botones terminen midiendo más que su contenedor y se salgan
+       (efecto "se corta" o "se desborda"). Con border-box, el padding
+       y el borde quedan DENTRO del ancho indicado. */
+    box-sizing: border-box;
 }
 
 body {
