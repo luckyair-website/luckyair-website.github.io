@@ -28,7 +28,11 @@ export function pagoFinal() {
     console.log(vueloSeleccionado);
     origen  = vueloSeleccionado.origen;
     destino = vueloSeleccionado.destino;
-    precio = vueloSeleccionado.costoTotal;
+    precio =
+  vueloSeleccionado.costo ||
+  vueloSeleccionado.costoTotal ||
+  vueloSeleccionado.precio ||
+  "$0";
     fechaIda = vueloSeleccionado.ida || hoy;
     fechaVuelta = vueloSeleccionado.vuelta || "";
     pasajeros = vueloSeleccionado.cantidad || 1;
