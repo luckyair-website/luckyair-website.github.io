@@ -35,7 +35,10 @@ export function mostrarConfirmacionPago() {
     } else if (vueloSeleccionado.salida) {
       fechaFinal = `Salida: ${vueloSeleccionado.salida}`;
     } else {
-      fechaFinal = "---";
+      /* fechaFinal = "---"; */
+      const hoy = new Date();
+      // Formato YYYY-MM-DD
+      fechaFinal = hoy.toISOString().split("T")[0];
     }
 
     document.querySelector("#content-fecha").textContent = fechaFinal;
@@ -57,6 +60,9 @@ export function mostrarConfirmacionPago() {
 
     document.querySelector("#total-pago").textContent =
       vueloSeleccionado.costo;
+
+      console.log(vueloSeleccionado);
+      console.log(usuarioInfo);
 
     return;
   }

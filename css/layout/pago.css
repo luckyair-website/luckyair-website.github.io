@@ -123,6 +123,7 @@
     gap: 0.35rem;
     box-sizing: border-box;
     width: 100%;
+
 }
 
 .pago-field--grow {
@@ -216,6 +217,7 @@
 
 .radio-container {
     width: 100%;
+    color: #041936;
 }
 
 .radio-container small {
