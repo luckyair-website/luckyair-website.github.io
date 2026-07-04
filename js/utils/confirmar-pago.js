@@ -7,18 +7,6 @@ export function mostrarConfirmacionPago() {
   const tarjeta = document.querySelector("#tarjeta");
   const total = document.querySelector("#total-pago");
 
-<<<<<<< HEAD
-  if (!ruta || !fechas || !pasajero || !tarjeta || !total) return;
-
-  const vueloSeleccionado = JSON.parse(localStorage.getItem("vueloSeleccionado"));
-  const usuarioInfo = localStorage.getItem("pagoInfo");
-  const usuarioObj = usuarioInfo ? JSON.parse(usuarioInfo) : {};
-
-  // ===================================================
-  // NUEVO FLUJO (buscarVuelos2)
-  // ===================================================
-  if (vueloSeleccionado) {
-=======
   const vueloSeleccionado = JSON.parse(localStorage.getItem("vueloSeleccionado"));
   const usuarioInfo = localStorage.getItem("pagoInfo");
 
@@ -26,7 +14,6 @@ export function mostrarConfirmacionPago() {
   if (!ruta || !fechas || !pasajero || !tarjeta || !total) return;
 
   const usuarioObj = JSON.parse(usuarioInfo);
->>>>>>> 9425a7b (Update confirmar-pago.js)
 
     document.querySelector("#content-origen").textContent =
       vueloSeleccionado.origen || "---";
@@ -75,7 +62,7 @@ export function mostrarConfirmacionPago() {
       console.log(usuarioInfo);
 
     return;
-  }
+  
 
   // ===================================================
   // FLUJO ANTIGUO (NO TOCAR)
@@ -83,9 +70,6 @@ export function mostrarConfirmacionPago() {
   const origen = localStorage.getItem("origen");
   const destino = localStorage.getItem("destino");
 
-<<<<<<< HEAD
-  if (!origen || !destino) return;
-=======
    if (!origen || !destino) return;
     document.querySelector("#content-origen").textContent = vueloSeleccionado.origen; 
     document.querySelector("#content-destino").textContent = vueloSeleccionado.destino; 
@@ -105,7 +89,6 @@ export function mostrarConfirmacionPago() {
     document.querySelector("#content-fecha").textContent = fechaMostrar; 
     document.querySelector("#content-numero-vuelo").textContent = vueloSeleccionado.numeroVuelo; 
     document.querySelector("#content-duracion").textContent = vueloSeleccionado.duracion; 
->>>>>>> 9425a7b (Update confirmar-pago.js)
 
     document.querySelector("#pasajero").textContent = usuarioObj.nombre || "Usuario Frecuente"; 
     
