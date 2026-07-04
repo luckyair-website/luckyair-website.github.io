@@ -1,4 +1,4 @@
-import { destinos2 as vuelos } from "../data/destinos2.js";
+import { destinos as vuelos } from "../data/destinos.js";
 
 export function buscarVuelos2() {
 
@@ -94,29 +94,41 @@ lista.appendChild(card);
     // -----------------------------
     function mostrarDetalle(vuelo) {
 
-        info.innerHTML = `
-            <strong>${vuelo.nombre}</strong>
-            <p>${vuelo.descripcion}</p>
-            <p>Tipo: ${vuelo.tipo}</p>
-            <p>Asientos disponibles: ${vuelo.asientos}</p>
-        `;
+    info.innerHTML = `
+        <strong>${vuelo.nombre}</strong>
+        <p>${vuelo.descripcion}</p>
+        <p>Tipo: ${vuelo.tipo}</p>
+        <p>Asientos disponibles: ${vuelo.asientos}</p>
 
-        salida.textContent = `Salida: ${vuelo.salida}`;
-        duracion.textContent = `Duración: ${vuelo.duracion}`;
-        precio.textContent = vuelo.costo;
+        <button id="btn-comprar-vuelo">
+            COMPRAR
+        </button>
+    `;
 
-        let mensaje = "";
+    salida.textContent = `Salida: ${vuelo.salida}`;
+    duracion.textContent = `Duración: ${vuelo.duracion}`;
+    precio.textContent = vuelo.costo;
 
-        if (vuelo.asientos <= 3) {
-            mensaje = "🔥 Últimos asientos disponibles";
-        } else if (vuelo.variacionPrecio < 0) {
-            mensaje = "📉 Este vuelo está en oferta";
-        } else {
-            mensaje = "✈ Vuelo estable";
-        }
+    let mensaje = "";
 
-        alerta.textContent = mensaje;
+    if (vuelo.asientos <= 3) {
+        mensaje = "🔥 Últimos asientos disponibles";
+    } else if (vuelo.variacionPrecio < 0) {
+        mensaje = "📉 Este vuelo está en oferta";
+    } else {
+        mensaje = "✈ Vuelo estable";
     }
+
+    alerta.textContent = mensaje;
+
+    const btnComprar = document.querySelector("#btn-comprar-vuelo");
+
+    btnComprar.addEventListener("click", () => {
+        localStorage.setItem("vueloSeleccionado", JSON.stringify(vuelo));
+
+        window.location.href = "../../pages/pago.html";
+    });
+}
 
     // -----------------------------
     // FILTROS
