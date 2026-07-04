@@ -78,7 +78,6 @@ export function pagoFinal() {
   const costoTot = document.querySelector("#costo-total");
   costoUni.textContent = vueloSeleccionado.costoUnitario || vueloSeleccionado.costo;
   costoTot.textContent = vueloSeleccionado.costoTotal || vueloSeleccionado.costo;
-
   // ── BOTÓN DESCARGAR COMPROBANTE ───────────────
   const btnDescargar = document.querySelector(".btn-download");
   if (!btnDescargar) return;
