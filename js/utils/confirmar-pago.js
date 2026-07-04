@@ -24,9 +24,11 @@ export function mostrarConfirmacionPago() {
 
     document.querySelector("#content-destino").textContent =
       vueloSeleccionado.nombre || vueloSeleccionado.destino || "---";
-
-    document.querySelector("#content-fecha").textContent =
-      vueloSeleccionado.salida || "---";
+    
+      document.querySelector("#content-fecha").textContent =
+      vueloSeleccionado.fecha
+      ? vueloSeleccionado.fecha
+      : `Salida: ${vueloSeleccionado.salida || "---"}`;
 
     document.querySelector("#content-numero-vuelo").textContent =
       vueloSeleccionado.numeroVuelo || "LK2345";
