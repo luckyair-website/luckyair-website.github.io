@@ -154,8 +154,12 @@ function sobreescribirIrPaso() {
 
 // ── REEMPLAZAR registrar() CON VALIDACIÓN ────────────────────
 function sobreescribirRegistrar() {
-    const inputPass = document.getElementById("pass");
-    const inputConfpass = document.getElementById("confpass");
+    const inputNombres   = document.getElementById("nombres");
+    const inputApellidos = document.getElementById("apellidos");
+    const inputCorreo    = document.getElementById("correo");
+    const inputNumdoc    = document.getElementById("numdoc");
+    const inputPass      = document.getElementById("pass");
+    const inputConfpass  = document.getElementById("confpass");
 
     window.registrar = function () {
         const v1 = validarPass(inputPass);
@@ -164,15 +168,48 @@ function sobreescribirRegistrar() {
         if (!tc.checked) { alert("Debes aceptar los T&C"); return; }
         if (!v1 || !v2) return;
 
-        // Guardar usuario registrado
-        const datos = JSON.parse(localStorage.getItem(LS_KEY) || "{}");
-        datos.fechaRegistro = new Date().toLocaleString("es-PE");
-        localStorage.setItem("luckyair_usuario", JSON.stringify(datos));
-        localStorage.removeItem(LS_KEY);
+        // NUEVO: try/catch alrededor del guardado. localStorage.setItem()
+        // puede fallar en casos raros (por ejemplo si el navegador está
+        // en modo privado y bloquea el almacenamiento, o si se llenó el
+        // espacio disponible). Sin esto, ese error dejaría al usuario sin
+        // ningún aviso, pensando que sí se registró cuando en realidad no.
+        try {
+            // BUG CORREGIDO: antes se guardaba el "borrador" de los pasos 1
+            // y 2 (localStorage.getItem(LS_KEY)), pero ese borrador NUNCA
+            // incluía la contraseña (se pedía recién en el paso 3).
+            // Resultado: el usuario se guardaba SIN contraseña, y el login
+            // nunca podía comparar nada. Ahora se arma el objeto completo,
+            // tomando todos los datos directamente de los inputs en este
+            // mismo momento.
+            const usuario = {
+                nombres: inputNombres.value.trim(),
+                apellidos: inputApellidos.value.trim(),
+                correo: inputCorreo.value.trim(),
+                numdoc: inputNumdoc.value.trim(),
+                tipoDoc: document.querySelector(".doc-btn-activo")?.textContent?.trim() || "DNI",
+                contrasena: inputPass.value,
+                fechaRegistro: new Date().toLocaleString("es-PE"),
+            };
 
-        console.log("✅ Usuario registrado:");
-        console.table(datos);
-        alert("¡Registro exitoso! Bienvenido a LuckyAir ✈");
+            // Guardamos el usuario en localStorage. Esta es la MISMA clave
+            // ("luckyair_usuario") que después revisa js/utils/loginForm.js
+            // para dejarte entrar.
+            localStorage.setItem("luckyair_usuario", JSON.stringify(usuario));
+            localStorage.removeItem(LS_KEY); // el borrador ya no se necesita
+
+            // Requisito: mostrar el usuario creado en la consola del navegador
+            console.log("✅ Nuevo usuario registrado:");
+            console.table(usuario);
+
+            alert(`¡Registro exitoso! Bienvenido a LuckyAir, ${usuario.nombres} ✈`);
+
+            // Llevamos al usuario a la pantalla de login para que inicie sesión
+            window.location.href = "login.html";
+
+        } catch (error) {
+            console.error("Error al guardar el usuario registrado:", error);
+            alert("No se pudo completar el registro. Intenta de nuevo.");
+        }
     };
 }
 
