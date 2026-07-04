@@ -168,19 +168,7 @@ function sobreescribirRegistrar() {
         if (!tc.checked) { alert("Debes aceptar los T&C"); return; }
         if (!v1 || !v2) return;
 
-        // NUEVO: try/catch alrededor del guardado. localStorage.setItem()
-        // puede fallar en casos raros (por ejemplo si el navegador está
-        // en modo privado y bloquea el almacenamiento, o si se llenó el
-        // espacio disponible). Sin esto, ese error dejaría al usuario sin
-        // ningún aviso, pensando que sí se registró cuando en realidad no.
         try {
-            // BUG CORREGIDO: antes se guardaba el "borrador" de los pasos 1
-            // y 2 (localStorage.getItem(LS_KEY)), pero ese borrador NUNCA
-            // incluía la contraseña (se pedía recién en el paso 3).
-            // Resultado: el usuario se guardaba SIN contraseña, y el login
-            // nunca podía comparar nada. Ahora se arma el objeto completo,
-            // tomando todos los datos directamente de los inputs en este
-            // mismo momento.
             const usuario = {
                 nombres: inputNombres.value.trim(),
                 apellidos: inputApellidos.value.trim(),
@@ -191,9 +179,6 @@ function sobreescribirRegistrar() {
                 fechaRegistro: new Date().toLocaleString("es-PE"),
             };
 
-            // Guardamos el usuario en localStorage. Esta es la MISMA clave
-            // ("luckyair_usuario") que después revisa js/utils/loginForm.js
-            // para dejarte entrar.
             localStorage.setItem("luckyair_usuario", JSON.stringify(usuario));
             localStorage.removeItem(LS_KEY); // el borrador ya no se necesita
 

@@ -114,15 +114,10 @@
     font-family: var(--font-family-primary-montserrat);
 }
 
-/* BUG CORREGIDO: antes decía ".login-form_grupo" y ".login-form_input"
-   (con un solo guion bajo), pero en el HTML las clases reales son
-   ".login-form__grupo" y ".login-form__input" (doble guion bajo, estilo BEM).
-   Como no coincidían, el borde rojo de error nunca se mostraba. */
 .login-form__grupo.input-error .login-form__input {
     border-color: #ff6b6b;
 }
 
-/* NUEVO: estado "correcto" para cuando el campo pasa la validación */
 .login-form__grupo.input-success .login-form__input {
     border-color: #22c55e;
 }
