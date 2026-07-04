@@ -5,132 +5,264 @@ export const destinos = [
         nombre: "Pekín (Beijing)",
         costo: "$1200",
         descripcion: "Capital de China, rica en historia.",
-        imagen: "../../assets/images/ofertas/pekin.webp"
+        imagen: "../../assets/images/ofertas/pekin.webp",
+        tipo: "directo",
+        duracion: "2h 15m",
+        salida: "08:00",
+        asientos: 12,
+        variacionPrecio: -5,
+        estado: "estable"
     },
     {
         nombre: "Xi’an",
         costo: "$950",
         descripcion: "Famosa por los Guerreros de Terracota.",
-        imagen: "../../assets/images/ofertas/xian.jpg"
+        imagen: "/assets/images/ofertas/xian.jpg",
+        tipo: "directo",
+        duracion: "1h 30m",
+        salida: "09:15",
+        asientos: 8,
+        variacionPrecio: 0,
+        estado: "estable"
     },
     {
         nombre: "Shanghái",
         costo: "$1100",
         descripcion: "Ciudad moderna y vibrante.",
-        imagen: "../../assets/images/ofertas/Shanghái.webp"
+        imagen: "../../assets/images/ofertas/Shanghái.webp",
+        tipo: "directo",
+        duracion: "2h 45m",
+        salida: "10:30",
+        asientos: 15,
+        variacionPrecio: 10,
+        estado: "alta_demanda"
     },
     {
         nombre: "Guangzhou",
         costo: "$900",
         descripcion: "Centro comercial y cultural del sur de China.",
-        imagen: "../../assets/images/ofertas/Guangzhou.jpg"
+        imagen: "../../assets/images/ofertas/Guangzhou.jpg",
+        tipo: "escala",
+        duracion: "4h 10m",
+        salida: "07:20",
+        asientos: 6,
+        variacionPrecio: 0,
+        estado: "estable"
     },
     {
         nombre: "Shenzhen",
         costo: "$980",
         descripcion: "Ciudad tecnológica y moderna cerca de Hong Kong.",
-        imagen: "../../assets/images/ofertas/Shenzhen.jpg"
+        imagen: "../../assets/images/ofertas/Shenzhen.jpg",
+        tipo: "directo",
+        duracion: "3h 05m",
+        salida: "11:40",
+        asientos: 4,
+        variacionPrecio: 5,
+        estado: "poca_disponibilidad"
     },
     {
         nombre: "Chengdu",
         costo: "$870",
         descripcion: "Famosa por los osos panda y su gastronomía.",
-        imagen: "../../assets/images/ofertas/Chengdu.jpg"
+        imagen: "../../assets/images/ofertas/Chengdu.jpg",
+        tipo: "directo",
+        duracion: "2h 20m",
+        salida: "12:10",
+        asientos: 9,
+        variacionPrecio: 0,
+        estado: "estable"
     },
     {
         nombre: "Chongqing",
         costo: "$890",
         descripcion: "Ciudad montañosa con paisajes únicos y picante cocina.",
-        imagen: "../../assets/images/ofertas/Chongqing.webp"
+        imagen: "../../assets/images/ofertas/Chongqing.webp",
+        tipo: "escala",
+        duracion: "4h 40m",
+        salida: "06:50",
+        asientos: 3,
+        variacionPrecio: 15,
+        estado: "critico"
     },
     {
         nombre: "Hangzhou",
         costo: "$950",
         descripcion: "Conocida por el Lago del Oeste y su belleza natural.",
-        imagen: "../../assets/images/ofertas/Hangzhou.webp"
+        imagen: "../../assets/images/ofertas/Hangzhou.webp",
+        tipo: "directo",
+        duracion: "2h 50m",
+        salida: "13:30",
+        asientos: 7,
+        variacionPrecio: 0,
+        estado: "estable"
     },
     {
         nombre: "Nanjing",
         costo: "$920",
         descripcion: "Ciudad histórica con murallas y templos.",
-        imagen: "../../assets/images/ofertas/Nanjing.jpg"
+        imagen: "../../assets/images/ofertas/Nanjing.jpg",
+        tipo: "directo",
+        duracion: "2h 35m",
+        salida: "15:00",
+        asientos: 5,
+        variacionPrecio: 0,
+        estado: "estable"
     },
     {
         nombre: "Wuhan",
         costo: "$880",
         descripcion: "Importante centro de transporte y cultura.",
-        imagen: "../../assets/images/ofertas/Wuhan.webp"
+        imagen: "../../assets/images/ofertas/Wuhan.webp",
+        tipo: "directo",
+        duracion: "2h 05m",
+        salida: "14:20",
+        asientos: 11,
+        variacionPrecio: -3,
+        estado: "estable"
     },
     {
         nombre: "Tianjin",
         costo: "$870",
         descripcion: "Ciudad portuaria con arquitectura colonial.",
-        imagen: "../../assets/images/ofertas/Tianjin.webp"
+        imagen: "../../assets/images/ofertas/Tianjin.webp",
+        tipo: "escala",
+        duracion: "3h 50m",
+        salida: "16:40",
+        asientos: 2,
+        variacionPrecio: 20,
+        estado: "critico"
     },
     {
         nombre: "Harbin",
         costo: "$960",
         descripcion: "Famosa por su festival de esculturas de hielo.",
-        imagen: "../../assets/images/ofertas/Harbin.jpg"
+        imagen: "../../assets/images/ofertas/Harbin.jpg",
+        tipo: "escala",
+        duracion: "5h 15m",
+        salida: "08:45",
+        asientos: 10,
+        variacionPrecio: 0,
+        estado: "estable"
     },
     {
         nombre: "Suzhou",
         costo: "$940",
         descripcion: "Conocida por sus jardines clásicos y canales.",
-        imagen: "../../assets/images/ofertas/Suzhou.jpg"
+        imagen: "../../assets/images/ofertas/Suzhou.jpg",
+        tipo: "directo",
+        duracion: "2h 40m",
+        salida: "17:10",
+        asientos: 13,
+        variacionPrecio: -2,
+        estado: "estable"
     },
     {
         nombre: "Hong Kong",
         costo: "$1300",
         descripcion: "Mezcla de tradición china y modernidad.",
-        imagen: "../../assets/images/ofertas/HongKong.jpg"
+        imagen: "../../assets/images/ofertas/HongKong.jpg",
+        tipo: "directo",
+        duracion: "3h 30m",
+        salida: "09:50",
+        asientos: 6,
+        variacionPrecio: 8,
+        estado: "alta_demanda"
     },
     {
         nombre: "Macau",
         costo: "$1250",
         descripcion: "Fusión de cultura portuguesa y china.",
-        imagen: "../../assets/images/ofertas/Macau.webp"
+        imagen: "../../assets/images/ofertas/Macau.webp",
+        tipo: "escala",
+        duracion: "4h 20m",
+        salida: "18:00",
+        asientos: 4,
+        variacionPrecio: 10,
+        estado: "poca_disponibilidad"
     },
     {
         nombre: "Shenyang",
         costo: "$910",
         descripcion: "Ciudad industrial con palacios históricos.",
-        imagen: "../../assets/images/ofertas/Shenyang.png"
+        imagen: "../../assets/images/ofertas/Shenyang.png",
+        tipo: "escala",
+        duracion: "4h 35m",
+        salida: "07:40",
+        asientos: 9,
+        variacionPrecio: 0,
+        estado: "estable"
     },
     {
         nombre: "Qingdao",
         costo: "$950",
         descripcion: "Ciudad costera famosa por su cerveza.",
-        imagen: "../../assets/images/ofertas/Qingdao.jpg"
+        imagen: "../../assets/images/ofertas/Qingdao.jpg",
+        tipo: "directo",
+        duracion: "2h 55m",
+        salida: "10:10",
+        asientos: 8,
+        variacionPrecio: -4,
+        estado: "estable"
     },
     {
         nombre: "Dalian",
         costo: "$930",
         descripcion: "Puerto importante con playas y parques.",
-        imagen: "../../assets/images/ofertas/Dalian.webp"
+        imagen: "../../assets/images/ofertas/Dalian.webp",
+        tipo: "escala",
+        duracion: "4h 05m",
+        salida: "11:25",
+        asientos: 5,
+        variacionPrecio: 0,
+        estado: "estable"
     },
     {
         nombre: "Xiamen",
         costo: "$920",
         descripcion: "Ciudad costera con arquitectura colonial.",
-        imagen: "../../assets/images/ofertas/Xiamen.webp"
+        imagen: "../../assets/images/ofertas/Xiamen.webp",
+        tipo: "directo",
+        duracion: "3h 10m",
+        salida: "12:55",
+        asientos: 7,
+        variacionPrecio: 0,
+        estado: "estable"
     },
     {
         nombre: "Kunming",
         costo: "$880",
         descripcion: "Conocida como la ciudad de la eterna primavera.",
-        imagen: "../../assets/images/ofertas/Kunming.webp"
+        imagen: "../../assets/images/ofertas/Kunming.webp",
+        tipo: "directo",
+        duracion: "2h 45m",
+        salida: "14:45",
+        asientos: 12,
+        variacionPrecio: -3,
+        estado: "estable"
     },
     {
         nombre: "Urumqi",
         costo: "$970",
         descripcion: "Capital de Xinjiang, mezcla de culturas.",
-        imagen: "../../assets/images/ofertas/Urumqi.jpg"
+        imagen: "../../assets/images/ofertas/Urumqi.jpg",
+        tipo: "escala",
+        duracion: "5h 50m",
+        salida: "06:30",
+        asientos: 3,
+        variacionPrecio: 18,
+        estado: "critico"
     },
     {
         nombre: "Lhasa (Tíbet)",
         costo: "$1400",
         descripcion: "Centro espiritual con el Palacio de Potala.",
-        imagen: "../../assets/images/ofertas/Lhasa.webp"
+        imagen: "../../assets/images/ofertas/Lhasa.webp",
+        tipo: "escala",
+        duracion: "6h 20m",
+        salida: "08:20",
+        asientos: 2,
+        variacionPrecio: 25,
+        estado: "critico"
     }
-]
+];
